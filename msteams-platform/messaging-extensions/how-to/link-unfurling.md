@@ -5,12 +5,12 @@ description: Neste módulo, saiba como adicionar link desfralizando com a extens
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
+ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312217"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833387"
 ---
 # <a name="add-link-unfurling"></a>Adicionar desenrolamento de link
 
@@ -22,6 +22,7 @@ Este documento orienta você sobre como adicionar link desfralhamento ao manifes
 >
 > * Atualmente, não há suporte para desenrolamento de link em clientes móveis.
 > * O resultado da desenrolamento de link é armazenado em cache por 30 minutos.
+> * Os comandos de extensão de mensagens não são necessários para a desfralização do Link. No entanto, deve haver pelo menos um comando no manifesto, pois é uma propriedade obrigatória em extensões de mensagens. Para obter mais informações, consulte [extensões de composição](/microsoftteams/platform/resources/schema/manifest-schema)
 
 A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário coleu uma URL para um item no Azure DevOps que a extensão de mensagem resolveu em um cartão:
 
