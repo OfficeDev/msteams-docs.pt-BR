@@ -8,7 +8,7 @@ Obtenha documentação, código de exemplo, tutoriais e muito mais para ajudá-l
 
 A documentação do Teams faz parte da documentação técnica de Microsoft Docs. O conteúdo é organizado em grupos chamados docsets, cada um representando um grupo de documentos relacionados gerenciados como uma única entidade. Você pode fazer perguntas, fornecer sugestões ou fornecer atualizações. Veja [como contribuir com a documentação do Teams](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).
 
-Para contribuir com qualquer documento da Microsoft, consulte a visão geral [do guia do colaborador](https://learn.microsoft.com/contribute/).
+Para contribuir com Microsoft Docs, confira a visão geral [do guia do colaborador](https://learn.microsoft.com/contribute/).
 
 Para saber mais sobre os padrões e o guia de estilo da Microsoft, confira o [guia de estilo da Microsoft](https://learn.microsoft.com/style-guide/welcome/).
 

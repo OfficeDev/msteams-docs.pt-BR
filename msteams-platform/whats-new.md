@@ -3,12 +3,12 @@ title: O que há de novo e atualizado para desenvolvedores no Teams
 description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833736"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858899"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -169,7 +169,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
-|30/11/2020|Integração da plataforma de identidade com o Teams Toolkit e Visual Studio Code para guias |[Autenticação de logon único com o Kit de Ferramentas do Teams e Visual Studio Code para guias](toolkit/visual-studio-code-tab-sso.md)|
+|30/11/2020|Integração da plataforma de identidade com o Teams Toolkit e Visual Studio Code para guias |[Autenticação de logon único com o Kit de Ferramentas do Teams e Visual Studio Code para guias](toolkit/add-single-sign-on.md)|
 |16/11/2020|Manifesto do aplicativo Teams atualizado para a versão 1.8.|[Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 |10/11/2020|Diretrizes de design de bot do Teams |[Diretrizes de design de bot](bots/design/bots.md)|
 |30/09/2020|Agora há suporte para o envio e recebimento de arquivos para bots em dispositivos móveis |[Enviar e receber arquivos por meio do seu bot](resources/bot-v3/bots-files.md)|
@@ -184,7 +184,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 |20/07/2020|Ferramenta de Validação de Aplicativo do Teams para envios do AppSource |[Ferramenta de Validação de Aplicativo do Teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |15/07/2020|Crie um assistente virtual para o Teams |[Assistente Virtual para o Microsoft Teams](samples/virtual-assistant.md)|
 |14/07/2020|Exibir uma documentação do indicador de carregamento nativo |[Mostrando um indicador de carregamento nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|01/07/2020|Comece a criar aplicativos do Teams com o Visual Studio Code Toolkit |[Criar aplicativos com o Kit de Ferramentas do Microsoft Teams e Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|01/07/2020|Comece a criar aplicativos do Teams com o Visual Studio Code Toolkit |[Criar aplicativos com o Kit de Ferramentas do Microsoft Teams e Visual Studio Code](sbs-gs-javascript.yml) |
 |01/07/2020|Logon único para guias GA para clientes da Web e da área de trabalho do Teams |[SSO (logon único)](tabs/how-to/authentication/tab-sso-overview.md)|
 |05/06/2020| Esquema de manifesto atualizado para a versão 1.7.| [Referência: esquema de manifesto para o Microsoft Teams](resources/schema/manifest-schema.md)|
 |18/05/2020|Integrar Power Virtual Agents com o Teams |[Integrar um chatbot Power Virtual Agents com o Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

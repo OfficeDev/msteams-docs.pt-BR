@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Leia mais sobre a autenticação de SSO para guias.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: c0e9ff9397c2afd70ab7de1a03b4fb04727dcec3
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 7932c22485aaeffc39bd1339e92740afe51396e6
+  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806861"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67858927"
 items:
 - durationInMinutes: 1
   content: "O logon único do Azure Active Directory (Azure AD SSO) ajuda a autenticar usuários no Teams. \n\n**Principais aspectos do guia passo a passo do Azure AD SSO para guias e extensões de mensagem**:\n\n * Após a primeira entrada, o Azure AD SSO permite que o usuário entre automaticamente.\n * Permite que o usuário entre em outros dispositivos sem inserir credenciais de entrada novamente.\n * Obtém o token para o usuário conectado.   \n\nEste guia passo a passo ajuda você a criar guias e extensões de mensagem que habilitam a Azure AD SSO. Você verá a seguinte saída:\n\n  ![Imagem de congratulação](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   \n"

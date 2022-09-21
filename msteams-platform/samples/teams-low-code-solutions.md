@@ -5,12 +5,12 @@ description: Saiba mais sobre as soluções de código disponíveis da Microsoft
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382934"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858906"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Criar aplicativos personalizados de baixo código para o Teams
 
@@ -59,10 +59,10 @@ O Assistente Virtual é um modelo de software livre da Microsoft que permite cri
 
 |  Tópico  |  Links  |
 |:---------|:----------------------|
-|Power BI|[Power BI para criadores de aplicativos](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI para desenvolvedores](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power BI para criadores de aplicativos](/learn/browse/?products=power-apps&roles=maker)</br>[Power BI para desenvolvedores](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate para criadores de aplicativos](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate para desenvolvedores](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Agentes virtuais do Power|[Power Virtual Agents para criadores de aplicativos e desenvolvedores](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI para criadores de aplicativos](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI para desenvolvedores](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power BI para criadores de aplicativos](/training/browse/?products=power-apps&roles=maker)</br>[Power BI para desenvolvedores](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate para criadores de aplicativos](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate para desenvolvedores](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Agentes virtuais do Power|[Power Virtual Agents para criadores de aplicativos e desenvolvedores](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### <a name="-project-oakdale-preview"></a>✔ Projeto Oakdale(versão prévia)
 
