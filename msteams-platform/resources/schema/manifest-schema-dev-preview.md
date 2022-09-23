@@ -4,12 +4,12 @@ description: Saiba mais sobre o arquivo de manifesto de exemplo e a descrição 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: e7b74ab4c610e1cb3b71c8045c3cb93626f0efc9
-ms.sourcegitcommit: 3215a931285ae738c248d145c07fb98656dd42ed
+ms.openlocfilehash: c019b686d27df4927ca721f36bacb5018c5ad596
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2022
-ms.locfileid: "67675830"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990921"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
@@ -395,11 +395,11 @@ O objeto é uma matriz com todos os elementos do tipo `object`. Esse bloco é ne
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`configurationUrl`|Cadeia de caracteres|2048 caracteres|✔️|A URL https:// a ser usada ao configurar a guia.|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. Padrão: `true`|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Matriz de enumeração|1|✔️|Atualmente, as guias configuráveis são compatíveis apenas com os escopos `team` e `groupchat`. |
 |`context` |matriz de enumerações|6||O conjunto de `contextItem` escopos em que uma [guia é compatível](../../tabs/how-to/access-teams-context.md). Padrão: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`.|
-|`sharePointPreviewImage`|Cadeia de caracteres|2048||Um caminho de arquivo relativo para uma imagem de visualização de guia para uso no SharePoint. Tamanho 1024x768. |
-|`supportedSharePointHosts`|Matriz de enumeração|1||Define como sua guia será disponibilizada no SharePoint. As opções são `sharePointFullPage` e `sharePointWebPart` |
+|`sharePointPreviewImage`|Cadeia de caracteres|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|Matriz de enumeração|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -431,10 +431,10 @@ O objeto é uma matriz (máximo de apenas um elemento &mdash;, atualmente apenas
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|String|64 caracteres|✔️|O ID exclusivo do aplicativo Microsoft para o bot conforme registrado na estrutura do bot. Isso pode ser o mesmo que a [ID de aplicativo](#id) geral.|
-|`needsChannelSelector`|Boolean|||Descreve se o bot usa ou não uma dica de usuário para adicionar o bot a um canal específico. Padrão: `false`|
-|`isNotificationOnly`|Boolean|||Indica se um bot é um bot unidirecional, somente para notificação, em vez de um bot de conversa. Padrão: `false`|
-|`supportsFiles`|Boolean|||Indica se o bot é compatível com a capacidade de carregar/baixar arquivos em chat pessoal. Padrão: `false`|
-|`scopes`|Matriz de enumeração|3|✔️|Especifica se o bot oferece uma experiência no contexto de um canal em um `team`, em um chat de grupo (`groupchat`) ou uma experiência delimitada apenas a um usuário individual (`personal`). Essas opções são não exclusivas.|
+|`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
+|`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
+|`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
+|`scopes`|Matriz de enumeração|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -442,7 +442,7 @@ Uma lista opcional de comandos que seu bot pode recomendar aos usuários. O obje
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`items.scopes`|matriz de enumeração|3|✔️|Especifica o escopo para o qual a lista de comandos é válida. As opções são `team`, `personal` e `groupchat`.|
+|`items.scopes`|matriz de enumeração|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|matriz de objetos|10|✔️|Uma matriz de comandos que o bot suporta:<br>`title`: o nome do comando do bot (cadeia de caracteres, 32).<br>`description`: uma descrição simples ou exemplo da sintaxe do comando e seu argumento (cadeia, 128)|
 
 ## <a name="connectors"></a>conectores
@@ -457,7 +457,7 @@ O objeto é uma matriz (máximo de um elemento) com todos os elementos do tipo `
 |---|---|---|---|---|
 |`configurationUrl`|Cadeia de caracteres|2048 caracteres|✔️|A URL https:// a ser usada ao configurar o conector.|
 |`connectorId`|String|64 caracteres|✔️|Um identificador exclusivo para o Conector que corresponde a sua ID no [Painel do Desenvolvedor de Conectores](https://aka.ms/connectorsdashboard).|
-|`scopes`|Matriz de enumeração|1|✔️|Especifica se o Conector oferece uma experiência no contexto de um canal em um `team`, ou uma experiência com escopo apenas para um usuário individual (`personal`). Atualmente, somente o escopo `team` é compatível.|
+|`scopes`|Matriz de enumeração|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -473,7 +473,7 @@ O objeto é uma matriz (máximo de um elemento) com todos os elementos do tipo `
 |Nome| Tipo | Tamanho Máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`botId`|Cadeia de caracteres|64|✔️|A ID exclusiva do aplicativo da Microsoft para o bot que oferece suporte à extensão de mensagens, conforme registrado no Bot Framework. Isso pode ser o mesmo que a [ID de aplicativo](#id) geral.|
-|`canUpdateConfiguration`|Boolean|||Um valor que indica se a configuração de uma extensão de mensagem pode ser atualizada pelo usuário. O padrão é `false`.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
 |`commands`|Matriz de objeto|10|✔️|Matriz de comandos com suporte da extensão de mensagem.|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -496,11 +496,11 @@ Cada item de comando é um objeto com a seguinte estrutura:
 |`taskInfo.width`|Cadeia de caracteres|||Largura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.height`|Cadeia de caracteres|||Altura da caixa de diálogo - um número em pixels ou layout padrão, como 'grande', 'médio' ou 'pequeno'.|
 |`taskInfo.url`|Cadeia de caracteres|||URL inicial da webview.|
-|`messageHandlers`|Matriz de Objetos|5||Uma lista de manipuladores que permitem que aplicativos sejam invocados quando determinadas condições são atendidas. Os domínios também devem ser listados em `validDomains`.|
-|`messageHandlers.type`|Cadeia de caracteres|||O tipo de manipulador de mensagens. Deve ser `"link"`.|
+|`messageHandlers`|Matriz de Objetos|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
+|`messageHandlers.type`|Cadeia de caracteres|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Matriz de cadeias de caracteres|||Matriz de domínios para os quais o manipulador de mensagens de link pode se registrar.|
 |`parameters`|Matriz de objeto|5|✔️|A lista de parâmetros que o comando usa. Mínimo: 1; máximo: 5.|
-|`parameter.name`|String|64 caracteres|✔️|O nome do parâmetro como aparece no cliente. Isso está incluído na solicitação de usuário.|
+|`parameter.name`|String|64 caracteres|✔️|O nome do parâmetro como ele aparece no cliente. Isso está incluído na solicitação do usuário.|
 |`parameter.title`|Cadeia de caracteres|32 caracteres|✔️|Título amigável para o parâmetro.|
 |`parameter.description`|Cadeia de caracteres|128 caracteres||Cadeia de caracteres amigável que descreve a finalidade desse parâmetro.|
 |`parameter.inputType`|Cadeia de caracteres|128 caracteres||Define o tipo de controle exibido em um módulo de tarefa para `fetchTask: true`. Um de `text`, `textarea`, `number`, `date`, `time`, `toggle` e `choiceset`.|
@@ -523,7 +523,7 @@ Alterar essas permissões ao atualizar o aplicativo fará com que seus usuários
 
 **Opcional** Matriz de cadeias de caracteres
 
-Especifica os recursos nativos no dispositivo de um usuário aos quais o seu aplicativo pode solicitar acesso. As opções são:
+Specifies the native features on a user's device that your app may request access to. Options are:
 
 * `geolocation`
 * `media`
@@ -578,7 +578,7 @@ Indica se o indicador de carregamento deve ou não ser mostrado quando um aplica
 
  **Opcional**—booliano
 
-Indique onde um aplicativo pessoal é renderizado com ou sem uma barra de cabeçalho de guia. O padrão é **false**.
+Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
 > `isFullScreen` funciona apenas para aplicativos publicados em sua organização.
@@ -598,7 +598,7 @@ Defina as propriedades que o seu aplicativo usa para postar um feed de atividade
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`type`|string|32 caracteres|✔️|O tipo de notificação. *Confira a seguir*.|
-|`description`|string|128 caracteres|✔️|Uma breve descrição da notificação. *Veja abaixo*.|
+|`description`|string|128 caracteres|✔️|A brief description of the notification. *See below*.|
 |`templateText`|string|128 caracteres|✔️|Ex: "{actor} criou a tarefa {taskId} para você"|
 
 ```json
@@ -694,7 +694,7 @@ Especifica o escopo de instalação definido para este aplicativo por padrão. O
 
 **Opcional** - objeto
 
-Quando um escopo de instalação de grupo é selecionado, ele definirá o recurso padrão quando o usuário instalar o aplicativo. As opções são:
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
@@ -702,9 +702,9 @@ Quando um escopo de instalação de grupo é selecionado, ele definirá o recurs
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`team`|string|||Quando o escopo de instalação selecionado é `team`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`groupchat`|string|||Quando o escopo de instalação selecionado é `groupchat`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
-|`meetings`|cadeia de caracteres|||Quando o escopo de instalação selecionado é `meetings`, este campo especifica o recurso padrão disponível. Opções: `tab`, `bot`ou `connector`.|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -714,13 +714,13 @@ Especifica a oferta de SaaS associada ao seu aplicativo.
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 caracteres | ✔️ | Um identificador exclusivo que inclui a sua ID de editor e ID de oferta, que você pode encontrar no [Partner Center](https://partner.microsoft.com/dashboard). Você deve formatar a cadeia de caracteres como `publisherId.offerId`.|
+|`offerId`| string | 2,048 caracteres | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
 **Opcional** - objeto
 
-Para obter mais informações, consulte [cenas personalizadas do Modo Juntos no Teams](../../apps-in-teams-meetings/teams-together-mode.md).
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -758,7 +758,7 @@ Especifique e consolide as informações relacionadas à autorização para o ap
 
 |Nome| Tipo|Tamanho máximo|Obrigatório |Descrição|
 |---|---|---|---|---|
-|`type`|string||✔️| O tipo da permissão específica do recurso. Opções: `Application` e `Delegated`.|
+|`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 caracteres|✔️|O nome da permissão específica do recurso. Para obter mais informações, consulte [Permissões de aplicativo específicas do recurso](#resource-specific-application-permissions) e [Permissões delegadas específicas do recurso](#resource-specific-delegated-permissions)|
 
 #### <a name="resource-specific-application-permissions"></a>Permissões de aplicativo específicas do recurso
@@ -776,6 +776,7 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |`ChannelMeetingParticipant.Read.Group`| Permite que o aplicativo leia as informações dos participantes, incluindo nome, função, ID, horários de ingresso e de saída, de reuniões de canal associadas a esta equipe, em nome do usuário conectado.|
     |`InAppPurchase.Allow.Group`| Permite que o aplicativo mostre ofertas do marketplace aos usuários nesta equipe e conclua suas compras dentro do aplicativo, em nome do usuário conectado.|
     |`ChannelMeetingStage.Write.Group`| Permite que o aplicativo mostre o conteúdo na janela de conteúdo compartilhado nas reuniões de canal associadas a essa equipe, em nome do usuário conectado.|
+    |`LiveShareSession.ReadWrite.Group`|Permite que o aplicativo crie e sincronize sessões do Live Share para reuniões associadas a essa equipe e acesse informações relacionadas sobre a lista de participantes da reunião, como a função de reunião do membro, em nome do usuário conectado.|
 
 * **Permissões delegadas específicas do recurso para chats ou reuniões**
 
@@ -785,21 +786,14 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |`MeetingStage.Write.Chat`|Permite que o aplicativo mostre o conteúdo na janela de conteúdo compartilhado nas reuniões associadas a este chat, em nome do usuário conectado.|
     |`OnlineMeetingParticipant.Read.Chat`|Permite que o aplicativo leia as informações do participante, incluindo nome, função, ID, horários de ingresso e de saída, da reuniões associadas a este chat, em nome do usuário conectado.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permite que o aplicativo alterne o áudio de entrada para participantes em reuniões associadas a este chat, em nome do usuário conectado.|
+    |`LiveShareSession.ReadWrite.Chat`|Permite que o aplicativo crie e sincronize sessões do Live Share para reuniões associadas a esse chat e acesse informações relacionadas sobre a lista de participantes da reunião, como a função de reunião do membro, em nome do usuário conectado.|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|Permite que o aplicativo detecte alterações no status do áudio de entrada em reuniões associadas a esse chat, em nome do usuário conectado.|
 
 * **Permissões delegadas específicas do recurso para usuários**
 
     |**Name**|**Descrição**|
     |---|---|
     |`InAppPurchase.Allow.User`|Permite que o aplicativo mostrar as ofertas do marketplace do usuário e conclua as compras do usuário dentro do aplicativo, em nome do usuário conectado.|
-
-* **Permissões específicas de recursos para o compartilhamento ao vivo do Teams**
-
-   |Nome| Descrição |
-   | ----- | ----- |
-   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
-   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
-   |`MeetingStage.Write.Chat`|<!--- need info --->|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>Confira também
 

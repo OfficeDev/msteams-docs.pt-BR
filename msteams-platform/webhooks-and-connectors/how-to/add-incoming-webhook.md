@@ -5,12 +5,12 @@ description: Neste módulo, saiba como adicionar o Webhook de Entrada ao aplicat
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618235"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990942"
 ---
 # <a name="create-incoming-webhooks"></a>Criar Webhooks de entrada
 
@@ -20,9 +20,12 @@ Um Webhook de Entrada permite que aplicativos externos compartilhem conteúdos n
 * Extensões de mensagens
 * Conectores
 
+> [!IMPORTANT]
+> Você pode optar por criar um aplicativo do Teams do bot de notificação diferente dos webhooks de entrada. Eles têm um desempenho semelhante, mas o bot de notificação tem mais funcionalidades. Para obter mais informações, consulte [Criar um bot de notificação com JavaScript ou](../../sbs-gs-notificationbot.yml) um exemplo [de notificação de webhook de entrada](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Para começar, baixe o [Kit de Ferramentas do Teams](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) agora e explore. Para obter mais informações, consulte [documentos do Kit de Ferramentas do Teams](../../toolkit/teams-toolkit-fundamentals.md).
+
 Veja o vídeo a seguir para saber como criar um Webhooks de entrada:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Principais recursos de um Webhook de Entrada
 
@@ -32,7 +35,7 @@ A tabela a seguir fornece os recursos e a descrição de um Webhook de Entrada:
 | -------- | ----------- |
 |Envie cartões adaptáveis usando um Webhook de Entrada | Cartões Adaptáveis pode ser enviado por meio de Webhooks de Entrada. Para obter mais informações, consulte [Enviar Cartões Adaptáveis usando Webhooks de Entrada](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
 |Suporte a mensagens acionáveis|Os cartões de mensagem a ação são suportados em todos os grupos do Office 365, incluindo o Teams. Se você enviar mensagens por meio de cartões, deverá usar o formato de cartão de mensagem acionável. Para mais informações, consulte o [legado de referência de cartões de mensagens acionáveis](/outlook/actionable-messages/message-card-reference) e [playground de cartões de mensagens](https://messagecardplayground.azurewebsites.net).|
-|Suporte independente a mensagens HTTPS|Os cartões fornecem informações de forma clara e consistente. Qualquer ferramenta ou estrutura que possa enviar solicitações HTTPS POST pode enviar mensagens para o Teams por meio de um Webhook de Entrada.|
+|Suporte independente a mensagens HTTPS|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown compatível|Todos os campos de texto em cartões de mensagens acionáveis suportam Markdown básico. Não use a marcação HTML em seus cartões. O HTML será ignorado e tratado como texto sem formatação.|
 |Configuração com escopo|O Webhook de Entrada tem escopo e está configurado no nível do canal.|
 |Definições de recursos seguros|As mensagens são formatadas como cargas JSON. Essa estrutura declarativa de mensagens impede a inserção de código mal-intencionado.|
@@ -95,9 +98,9 @@ Para remover um Webhook de Entrada de um canal do Teams, siga as seguintes etapa
 
 ## <a name="code-sample"></a>Exemplo de código
 
-| Nome de exemplo           | Descrição | C#    | Node.js   |
+| Nome de exemplo           | Descrição | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|Webhook de entrada|Este código de exemplo demonstra como enviar o cartão usando um webhook de entrada. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|Webhook de entrada|Este código de exemplo demonstra como enviar o cartão usando um webhook de entrada. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>Confira também
 

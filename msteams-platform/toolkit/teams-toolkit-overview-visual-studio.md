@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 0f51d2c44eef3ec09d48581a797c63d501be8644
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
+ms.openlocfilehash: 3685d105f13024507b880c35040b9d798a6d845f
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302448"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990914"
 ---
 # <a name="teams-toolkit-overview-for-visual-studio"></a>Visão geral do Kit de Ferramentas do Teams para Visual Studio
 
@@ -45,7 +45,7 @@ Os principais marcos desta jornada são:
 
 ## <a name="install-teams-toolkit-for-visual-studio"></a>Instalar o Kit de ferramentas do Teams para Visual Studio
 
-Você pode baixar o instalador mais recente do Visual Studio na página [de download do Visual Studio](https://visualstudio.microsoft.com/vs/preview/).
+Você pode baixar o instalador mais recente do Visual Studio na página [de download do Visual Studio](https://visualstudio.microsoft.com).
 
 > [!NOTE]
 > Primeiro, você precisará instalar o instalador do Visual Studio antes de instalar o Visual Studio.

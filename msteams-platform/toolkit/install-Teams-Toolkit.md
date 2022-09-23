@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 9b6492efed353e2f3228a04da292141679401e66
+ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780677"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991653"
 ---
 # <a name="install-teams-toolkit"></a>Instalar o Kit de Ferramentas do Teams
 
@@ -94,7 +94,7 @@ O Kit de Ferramentas do Teams é atualizado para a versão mais recente por padr
 
 Antes de começar a instalação, você precisa instalar o Instalador do Visual Studio.
 
-Você pode baixar as informações mais Instalador do Visual Studio página de download do [Visual Studio](https://visualstudio.microsoft.com/vs/preview/).
+Você pode baixar as informações mais Instalador do Visual Studio página de download do [Visual Studio](https://visualstudio.microsoft.com).
 
 ## <a name="steps-to-install-teams-toolkit"></a>Etapas para instalar o Kit de Ferramentas do Teams
 
