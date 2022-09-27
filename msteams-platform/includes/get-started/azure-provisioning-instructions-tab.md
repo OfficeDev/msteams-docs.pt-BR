@@ -1,6 +1,6 @@
 ## <a name="deploy-your-app-to-azure"></a>Implantar seu aplicativo no Azure.
 
-A implantação consiste em duas etapas.  Primeiro, os recursos de nuvem necessários são criados (também conhecidos como provisionamento). Em seguida, o código do aplicativo é copiado para os recursos de nuvem criados. Para este tutorial, você implantará o aplicativo guia.
+A implantação consiste em duas etapas. Primeiro, os recursos de nuvem necessários são criados (também conhecidos como provisionamento). Em seguida, o código do aplicativo é copiado para os recursos de nuvem criados. Para este tutorial, você implantará o aplicativo guia.
 <br>
 <br>
 <details>
@@ -20,34 +20,38 @@ Selecione o ícone do Kit de Ferramentas do Teams:::image type="icon" source="~/
 
 1. Selecione qualquer pessoa da assinatura existente.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Selecionar Assinatura":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="Captura de tela mostrando a seleção da assinatura existente":::
 
 1. Selecione um grupo de recursos a ser usado para os recursos do Azure.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Captura de tela mostrando recursos para provisionamento":::
 
    > [!NOTE]
-   > Sempre há alguns recursos do Azure usados para hospedar seu aplicativo.
+   > Seu aplicativo é hospedado usando recursos do Azure.
+   >
+   >Para obter mais informações, consulte [Criar grupo de recursos](/azure/azure-resource-manager/management/manage-resource-groups-portal.)
 
     Uma caixa de diálogo avisa que os custos podem ser incorridos ao executar recursos no Azure.
 
 1. Selecione **Provisionar**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Selecionar Assinatura":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="A captura de tela mostrando o provisionamento da caixa de diálogo.":::
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Captura de tela mostrando a seleção da assinatura.":::
 
    O processo de provisionamento cria recursos na nuvem do Azure. Pode levar algum tempo. Você pode monitorar o progresso observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá o seguinte aviso:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="A captura de tela mostrando o recurso provisionado com êxito na nuvem.":::
 
     Se desejar, você poderá exibir os recursos provisionados. Para este tutorial, você não precisa exibir recursos.
 
     O recurso provisionado aparece na **seção Ambiente** .
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Captura de tela mostrando a caixa de diálogo de provisionamento concluída.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="A captura de tela mostrando o recurso provisionado.":::
 
 1. Selecione **Implantar na nuvem no** painel **Implantação** após a conclusão do provisionamento.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Captura de tela mostrando onde clicar para implantar na nuvem.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="A captura de tela mostrando a implantação na nuvem.":::
 
    Assim como acontece com o provisionamento, a implantação leva algum tempo. Você pode monitorar o processo observando as caixas de diálogo no canto inferior direito. Após alguns minutos, você verá um aviso de conclusão.
 
@@ -65,9 +69,6 @@ Na janela do terminal:
 
    Quando solicitado, selecione uma assinatura do Azure para usar os recursos do Azure.
 
-   > [!NOTE]
-   > Sempre há alguns recursos do Azure usados para hospedar seu aplicativo.
-
 1. Execute `teamsfx deploy`.
 
    ``` bash
@@ -75,6 +76,9 @@ Na janela do terminal:
    ```
 
 ---
+
+> [!NOTE]
+> Seu aplicativo é hospedado usando recursos do Azure.
 
 ## <a name="run-the-deployed-app"></a>Executar o aplicativo implantado
 
@@ -84,12 +88,12 @@ Depois que as etapas de provisionamento e implantação forem concluídas:
 1. Selecione **Iniciar Remoto (Borda)** na lista suspensa de configuração de inicialização.
 1. Selecione a **depuração Iniciar (F5)** para iniciar seu aplicativo no Azure.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Captura de tela mostrando o aplicativo de inicialização remotamente.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="A captura de tela mostrando como iniciar o aplicativo remotamente.":::
 
 1. Selecione **Adicionar** quando solicitado a realizar sideload do aplicativo no Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Captura de tela mostrando o aplicativo que está sendo instalado.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="A captura de tela mostrando um aplicativo sendo instalado.":::
 
     Parabéns, seu primeiro aplicativo guia está em execução em seu ambiente do Azure!
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Captura de tela que mostra a mensagem para experimentar o aplicativo agora ou mais tarde":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="A captura de tela mostrando a mensagem para experimentar o aplicativo agora ou mais tarde.":::

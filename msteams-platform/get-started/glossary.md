@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
+ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027323"
+ms.locfileid: "68027509"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -78,7 +78,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Conta de desenvolvedor E5](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Assinatura de desenvolvedor E5 para criar aplicativos para estender Microsoft 365. Você pode adicionar até 25 licenças de usuário, incluindo o administrador, para fins de desenvolvimento apenas.  <br>**Consulte também**: [Conta do Microsoft 365](#m) |
+| [Conta de desenvolvedor E5](../toolkit/tools-prerequisites.md) | Assinatura de desenvolvedor E5 para criar aplicativos para estender Microsoft 365. Você pode adicionar até 25 licenças de usuário, incluindo o administrador, para fins de desenvolvimento apenas.  <br>**Consulte também**: [Conta do Microsoft 365](#m) |
 | [Ponto de entrada](../concepts/app-fundamentals-overview.md) | Um ponto de acesso, como equipe, canal e chat, para um aplicativo do Teams em que os usuários podem usar seu aplicativo. |
 | [Ambiente](../toolkit/teamsfx-multi-env.md) | Um recurso no Kit de Ferramentas do Teams que permite criar e usar vários ambientes de desenvolvimento para seu projeto de aplicativo. Há dois ambientes de desenvolvimento que o Kit de Ferramentas do Teams cria por padrão, ambiente local e ambiente de desenvolvimento. <br>**Consulte também**: [Ambiente local](#l); [Ambiente de desenvolvimento](#d) |
 
