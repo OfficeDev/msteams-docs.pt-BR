@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 26e6982cf7b00d21fb8a15e0d8f194ac8d08ac7d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558321"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026994"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Projete sua guia para o Microsoft Teams
 
@@ -62,7 +62,7 @@ Há um breve processo de configuração para adicionar um aplicativo como um can
 |3|**iframe**: espaço responsivo para o conteúdo do seu aplicativo (por exemplo, configurações de guia ou autenticação).|
 |4|**Link Sobre**: abre uma caixa de diálogo mostrando mais informações sobre o aplicativo, como uma descrição completa, permissões exigidas pelo aplicativo e links para sua política de privacidade e termos de serviço.|
 |5|**Botão Fechar**: fecha a caixa de diálogo.|
-|6 |**opção Notificar membros da equipe**: a caixa de diálogo pergunta aos usuários se eles desejam criar uma postagem, permitindo que outras pessoas saibam que adicionaram uma guia.|
+|6|**opção Notificar membros da equipe**: a caixa de diálogo pergunta aos usuários se eles desejam criar uma postagem, permitindo que outras pessoas saibam que adicionaram uma guia.|
 |7 |**Botão Voltar**: vai para a etapa anterior com base no local onde a caixa de diálogo foi aberta.|
 |8 |**Botão Salvar**: conclui a configuração da guia.|
 
@@ -270,7 +270,7 @@ Remova as etapas desnecessárias para adicionar uma guia.
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Recomendamos: aproveitar os tokens de cor do Teams
 
-Cada tema do Teams tem seu próprio esquema de cores. Para manipular as alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cores (IU do Fluent)</a> em seu design.
+Cada tema do Teams tem seu próprio esquema de cores. Para manipular as alterações de tema automaticamente, use [tokens de cores (IU do Fluent)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) em seu design.
 
    :::column-end:::
    :::column span="":::

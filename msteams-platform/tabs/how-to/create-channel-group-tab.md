@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 8fb28eeed3b3de73fa5646ec51f23b4ae5421954
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605065"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027330"
 ---
 # <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
@@ -252,9 +252,9 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu de **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Exibir o código-fonte</b></summary>
@@ -475,9 +475,9 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu de **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente. Em um navegador, vá para as seguintes URLs:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Exibir o código-fonte</b></summary>

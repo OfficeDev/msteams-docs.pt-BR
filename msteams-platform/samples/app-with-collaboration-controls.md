@@ -5,12 +5,12 @@ description: Neste módulo, saiba como criar um aplicativo baseado em modelo com
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: b5300a66fa8a5948a2081e90e8ad138858d38f3f
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178805"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027337"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Criar um novo aplicativo controlado por modelo com controles de colaboração para o Teams
 
@@ -190,9 +190,9 @@ Use as instruções a seguir para recuperar a ID do Site do SharePoint e a ID da
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="A captura de tela é um exemplo que mostra o Explorador do Graph.":::
 
      1. Substitua o nome do host pelo nome do host e o caminho relativo para o caminho do site e faça uma chamada de grafo para `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. A seguir está um exemplo:
-         1. Se a URL do site = <https://myhostname.sharepoint.com/sites/MySiteName>
-         1. Nome do host = myhostname.sharepoint.com
-         1. Caminho relativo para o site = sites/MySiteName
+         1. Se a URL do site = `https://myhostname.sharepoint.com/sites/MySiteName`
+         1. Nome do host = `myhostname.sharepoint.com`
+         1. Caminho relativo para o site = `sites/MySiteName`
 
               :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="A captura de tela é um exemplo que mostra a chamada do Graph.":::
 

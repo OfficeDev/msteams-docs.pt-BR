@@ -20,6 +20,16 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+- id: What-new-features
+  title: Atualizações de recursos do Teams
+  prompt: Selecione o tipo de disponibilidade de recursos para explorar os recursos
+  pivots:
+  - id: ga-feature
+    title: Disponível para o público geral
+  - id: dev-preview
+    title: Visualização do Desenvolvedor
+  - id: dep-feature
+    title: Preterido
 - id: teams-app-platform
   title: Plataforma de aplicativos do Teams
   prompt: Antes de começar, selecione qualquer um dos aplicativos a seguir com base no ambiente no qual você deseja criar um aplicativo
@@ -29,9 +39,9 @@ groups:
   - id: visual-studio
     title: Visual Studio
 metadata:
-  ms.openlocfilehash: 5abc8210d4988c0dc42ad02f3e5dae0b7dfc61d2
-  ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+  ms.openlocfilehash: c015bc3eccf12cedf7fd4195c0ef5c24fe91b280
+  ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/16/2022
-  ms.locfileid: "67780839"
+  ms.lasthandoff: 09/27/2022
+  ms.locfileid: "68026945"

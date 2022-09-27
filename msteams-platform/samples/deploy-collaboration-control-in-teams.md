@@ -5,12 +5,12 @@ description: Neste módulo, saiba como implantar seu aplicativo com o controle c
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 0ea4f1c25a84ec1bcbefc379e5021815a5bea650
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178771"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027302"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>Implantar controles de colaboração no Microsoft Teams
 
@@ -21,7 +21,7 @@ Atualmente, os controles de colaboração funcionam melhor no Microsoft Teams. V
 
 ## <a name="configure-the-app-for-teams"></a>Configurar o aplicativo para o Teams
 
-O aplicativo que você criou [na criação de](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) um aplicativo controlado por modelo tem apenas um único painel esquerdo e não há comandos complexos. Portanto, antes de adicionar seu aplicativo ao Teams, você pode ocultar o painel esquerdo e tornar a exibição de cabeçalho mais compreensível.
+O aplicativo que você criou [na criação de](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) um aplicativo controlado por modelo tem apenas um único painel esquerdo e não há comandos complexos. Portanto, antes de adicionar seu aplicativo ao Teams, você pode ocultar o painel esquerdo e tornar a exibição de cabeçalho mais compreensível.
 
 > [!NOTE]
 > Não habilite as etapas a seguir se quiser exibir o painel esquerdo e o cabeçalho de alta densidade para seus usuários.

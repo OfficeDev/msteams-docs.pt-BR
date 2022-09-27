@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá o esquema de manifesto para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990928"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026966"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -634,7 +634,7 @@ Forneça a ID do aplicativo do Microsoft Azure AD e as informações do Microsof
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
 |`id`|string|36 caracteres|✔️|ID do aplicativo do Microsoft Azure AD do aplicativo. Essa ID deve ser um GUID.|
-|`resource`|string|2048 caracteres|✔️|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **NOTA:** Se você não estiver usando o SSO, insira um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, <https://notapplicable> para evitar uma resposta de erro. |
+|`resource`|string|2048 caracteres|✔️|URL de recurso do aplicativo para adquirir token de autenticação para SSO. </br> **NOTA:** Se você não estiver usando o SSO, insira um valor de cadeia de caracteres fictício nesse campo para o manifesto do aplicativo, por exemplo, `https://notapplicable` para evitar uma resposta de erro. |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -886,7 +886,7 @@ As permissões delegadas permitem que o aplicativo acesse dados em nome do usuá
     |`MeetingStage.Write.Chat`|Permite que o aplicativo mostre o conteúdo na janela de conteúdo compartilhado nas reuniões associadas a este chat, em nome do usuário conectado.|
     |`OnlineMeetingParticipant.Read.Chat`|Permite que o aplicativo leia as informações do participante, incluindo nome, função, ID, horários de ingresso e de saída, da reuniões associadas a este chat, em nome do usuário conectado.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Permite que o aplicativo alterne o áudio de entrada para participantes em reuniões associadas a este chat, em nome do usuário conectado.|
-    |`LiveShareSession.ReadWrite.Chat`|Permite que o aplicativo crie e sincronize sessões do Live Share para reuniões associadas a esse chat e acesse informações relacionadas sobre a lista de participantes da reunião, como a função de reunião do membro, em nome do usuário conectado.|   
+    |`LiveShareSession.ReadWrite.Chat`|Permite que o aplicativo crie e sincronize sessões do Live Share para reuniões associadas a esse chat e acesse informações relacionadas sobre a lista de participantes da reunião, como a função de reunião do membro, em nome do usuário conectado.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Permite que o aplicativo detecte alterações no status do áudio de entrada em reuniões associadas a esse chat, em nome do usuário conectado.|
 
 * **Permissões delegadas específicas do recurso para usuários**

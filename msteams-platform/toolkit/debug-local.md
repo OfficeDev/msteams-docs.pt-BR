@@ -7,15 +7,14 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 1c1052e2542354cd1b403d8a3df0be24cbd01bee
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806749"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026959"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
-
 
 O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo Microsoft Teams localmente. Durante o processo de depuração, o Kit de Ferramentas do Teams inicia automaticamente os serviços de aplicativos, inicia depuradores e carrega lateralmente o aplicativo Teams. Você pode visualizar o aplicativo Teams no cliente Web do Teams localmente após a depuração.
 

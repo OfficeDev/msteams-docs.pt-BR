@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: bb85c9c7d00fea47796e171cc1a0175367462942
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338897"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027078"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Como criar sua extensão de mensagens do Microsoft Teams
 
@@ -117,7 +117,7 @@ As situações a seguir mostram as principais formas de uso de extensões de men
 
 ### <a name="insert-content-into-a-message"></a>Inserir conteúdo em uma mensagem
 
-**1. Selecione uma extensão de mensagens**. Os usuários podem pesquisar na caixa de redação o conteúdo que desejam compartilhar.
+**1. Select a message extension**. Users can search for the content they want to share from the compose box.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
@@ -127,7 +127,7 @@ As situações a seguir mostram as principais formas de uso de extensões de men
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="O exemplo mostra um usuário pesquisando o conteúdo a ser inserido na caixa de redação.":::
 
-**2. Inserir conteúdo**. Após o conteúdo ter sido postado, outras pessoas podem responder ou selecioná-lo para ver mais informações no seu aplicativo.
+**2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
 #### <a name="mobile"></a>Dispositivo móvel
 
@@ -161,7 +161,7 @@ As extensões de mensagens também permitem que você insira em uma mensagem lin
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="O exemplo mostra um usuário colando um link na caixa de redação.":::
 
-**2. Inserir conteúdo**. Se reconhecer o URL na caixa de redação, seu aplicativo renderizará o link como um cartão que fornece uma visualização do conteúdo da web com conteúdo completo (confira as orientações de criação de [Cartões Adaptativos](../../task-modules-and-cards/cards/design-effective-cards.md) para obter mais informações).
+**2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
 #### <a name="mobile"></a>Dispositivo móvel
 
@@ -230,7 +230,7 @@ Use essas recomendações para criar uma experiência de aplicativo de qualidade
 
 #### <a name="do-integrate-with-single-sign-on"></a>Recomendamos: integrar com logon único
 
-O SSO facilita o processo de login e o torna mais rápido e seguro. Além disso, se já estiver logado em seu aplicativo pessoal o usuário não precisará entrar novamente para acessar a extensão de mensagens.
+SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ Se sua extensão de mensagens requerer comandos de ação, mantenha a simplicida
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Recomendamos: aproveitar os tokens de cor do Teams
 
-Cada tema do Teams tem seu próprio esquema de cores. Para manipular as alterações de tema automaticamente, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de cores (IU do Fluent)</a> em seu design.
+Cada tema do Teams tem seu próprio esquema de cores. Para manipular as alterações de tema automaticamente, use [tokens de cores (IU do Fluent)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) em seu design.
 
    :::column-end:::
    :::column span="":::

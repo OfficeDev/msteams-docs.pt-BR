@@ -5,12 +5,12 @@ description: Saiba mais sobre o modo de exibição de estágio, um componente de
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450447"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027288"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -24,7 +24,7 @@ O Modo de Exibição de Estágio é um componente de interface do usuário IU de
 
 ## <a name="advantage-of-stage-view"></a>Vantagem do Modo de Exibição de Estágio
 
-O Modo de Exibição de Estágio ajuda a fornecer uma experiência mais perfeita de exibição de conteúdo no Teams. Os usuários podem abrir e exibir o conteúdo fornecido pelo seu aplicativo sem sair do contexto, e podem fixar o conteúdo no chat ou canal para acesso rápido futuro, levando a um maior envolvimento do usuário com seu aplicativo.
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## <a name="stage-view-vs-task-module"></a>Modo de Exibição de Estágio versus Módulo de tarefa
 
@@ -84,13 +84,13 @@ O tipo de solicitação `invoke` deve ser `composeExtension/queryLink`.
 
 Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 
-* Quando o usuário seleciona **Exibir**, o bot recebe uma solicitação `invoke`. O tipo de solicitação é `composeExtension/queryLink`. 
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
 * `invoke` resposta do bot contém um Cartão Adaptável com o tipo `tab/tabInfoAction` nele.
 * O bot responde com um `200` código.
 
 > [!NOTE]
-
-> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da web padrão do dispositivo. O navegador abre a URL especificada no parâmetro`websiteUrl` do objeto `TabInfo`.
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
@@ -141,8 +141,8 @@ Codificado
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadeia de caracteres | 64 | Essa propriedade é um identificador exclusivo para a entidade que a guia exibe. Esse é um campo obrigatório.|
 | `name` | Cadeia de caracteres | 128 | Essa propriedade é o nome de exibição da guia na interface do canal. Esse campo é opcional.|
-| `contentUrl` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL que aponta para a entidade IU a ser exibida na tela do Teams. Este é um arquivo obrigatório.|
-| `websiteUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL a ser apontada, se um usuário seleciona exibir em um navegador. Este é um campo obrigatório.|
+| `contentUrl` | Cadeia de caracteres | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | Cadeia de caracteres | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
 | `removeUrl?` | Cadeia de caracteres | 2048 | Essa propriedade é a https:// URL que aponta para a IU a ser exibida quando o usuário exclui a guia. Este é um campo opcional.|
 
 ## <a name="code-sample"></a>Exemplo de código

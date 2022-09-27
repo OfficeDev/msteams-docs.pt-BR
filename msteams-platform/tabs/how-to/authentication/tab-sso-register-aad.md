@@ -4,12 +4,12 @@ description: Configure o SSO (logon único) com o Azure AD configurando o URI da
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 'guias de autenticação do Teams escopo de locação de SSO (logon único) de token de acesso do Microsoft Azure Active Directory (Azure AD) '
-ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 92b974840262fedb268aa7c160aa28fc0a33e2cb
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653193"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027092"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrar o aplicativo de guia no Azure AD
 
@@ -154,8 +154,8 @@ Para configurar o escopo e autorizar aplicativos cliente confiáveis, você prec
     >
     >   | Se o nome do recurso base usado for | A URL será... | Há suporte para o formato em... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | Todas as plataformas.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Somente área de trabalho, Web e iOS. Não há suporte para ele no Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | Todas as plataformas.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Somente área de trabalho, Web e iOS. Não há suporte para ele no Android. |
     >
     >    Use a opção minúscula *demoapplication* como o nome do recurso base.
 
