@@ -1,4 +1,4 @@
-## <a name="about-microsoft-teams-and-the-docs"></a>Sobre o Microsoft Teams e os documentos
+## <a name="about-microsoft-teams-and-its-documentation"></a>Sobre o Microsoft Teams e sua documentação
 
 O Microsoft Teams é uma plataforma de comunicação baseada em nuvem que combina diferentes serviços para colaboração, como chat, reuniões, chamadas e arquivos. O Teams é bem integrado ao Microsoft 365 e combina várias cargas de trabalho em um sistema unificado de comunicação e colaboração. Além disso, o Teams oferece recursos de integração para outras ferramentas e produtos de terceiros.
 
@@ -6,9 +6,9 @@ Obtenha documentação, código de exemplo, tutoriais e muito mais para ajudá-l
 
 ## <a name="how-to-contribute"></a>Como contribuir
 
-A documentação do Teams faz parte da documentação técnica de Microsoft Docs. O conteúdo é organizado em grupos chamados docsets, cada um representando um grupo de documentos relacionados gerenciados como uma única entidade. Você pode fazer perguntas, fornecer sugestões ou fornecer atualizações. Veja [como contribuir com a documentação do Teams](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).
+A documentação do Microsoft Teams faz parte da biblioteca de documentação técnica do Microsoft Learn. O conteúdo é organizado em grupos chamados docsets, cada um representando um grupo de documentos relacionados gerenciados como uma única entidade. Você pode fazer perguntas, fornecer sugestões ou fornecer atualizações. Veja [como contribuir com a documentação do Teams](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).
 
-Para contribuir com Microsoft Docs, confira a visão geral [do guia do colaborador](https://learn.microsoft.com/contribute/).
+Para contribuir com o Microsoft Learn, confira a visão geral [do guia do colaborador](https://learn.microsoft.com/contribute/).
 
 Para saber mais sobre os padrões e o guia de estilo da Microsoft, confira o [guia de estilo da Microsoft](https://learn.microsoft.com/style-guide/welcome/).
 

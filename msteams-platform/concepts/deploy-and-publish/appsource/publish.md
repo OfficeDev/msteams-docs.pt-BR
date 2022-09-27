@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
-ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
-ms.translationtype: HT
+ms.openlocfilehash: f8891edb11134570a79c5483eea722a44ad48b91
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2022
-ms.locfileid: "67158063"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044648"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
@@ -124,7 +124,7 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
 * **Postar envio de aplicativo**
 
-  * Depois de analisar o relatório de validação, responda ao thread de emails com quaisquer dúvidas relacionadas ao relatório de validação ou se precisar de suporte extra para resolver os problemas relatados.
+  * Depois de examinar o relatório de validação, responda ao thread de email com todas as consultas relacionadas ao relatório de validação ou se precisar de suporte adicional para resolver os problemas relatados.
 
   * Certifique-se de ter largura de banda adequada para o desenvolvedor para resolver quaisquer problemas relatados até que o aplicativo seja aprovado.
 

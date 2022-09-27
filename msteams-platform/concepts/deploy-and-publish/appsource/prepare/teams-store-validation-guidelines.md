@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
-ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417647"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044697"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Diretrizes de validação da loja do Microsoft Teams
 
@@ -21,7 +21,7 @@ Seguir essas diretrizes aumenta as chances de seu aplicativo ser aprovado no pro
 > * É possível que algumas diretrizes não sejam pertinentes ao seu aplicativo. Por exemplo, se seu aplicativo não incluir um bot, você poderá ignorar as diretrizes relacionadas ao bot.
 > * Cruzamos essas diretrizes com as políticas de certificação comercial da Microsoft e adicionamos o que fazer e o que não fazer com exemplos de cenários de aprovação ou reprovação encontrados em nosso processo de validação.
 > * Determinadas diretrizes são marcadas como *Correção Obrigatória*. Se o envio do aplicativo não atender a essas diretrizes obrigatórias, você receberá um relatório de falha conosco com etapas para atenuar. O envio do aplicativo passará na Validação da loja do Microsoft Teams somente depois que você corrigir os problemas.
-> * Outras diretrizes são marcadas como *Correção sugerida*. Para uma experiência de usuário ideal, sugerimos que você corrija os problemas, no entanto, seu envio de aplicativo não será impedido de publicar na loja do Teams, se você optar por não corrigir os problemas.
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -103,10 +103,10 @@ O nome de um aplicativo desempenha um papel fundamental na forma como os usuári
   * **Help**
 * Prefixo ou sufixo substantivos comuns com o nome do desenvolvedor. Por exemplo, **Tarefas da Contoso** em vez de **Tarefas**.
 * Não deve usar o **Teams** ou outros nomes de produtos da Microsoft, como o Excel, o PowerPoint, o Word, o OneDrive, o SharePoint, o OneNote, o Azure, o Surface, o Xbox e assim por diante, que possam indicar falsamente a co-branding ou a venda conjunta. Para obter mais informações sobre como fazer referência a produtos e serviços de software da Microsoft, confira [Marca Registrada e Diretrizes da Marca Microsoft](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
-* Se o seu aplicativo faz parte de uma parceria oficial com a Microsoft, o nome do seu aplicativo deve vir primeiro. Por exemplo, **Conector da Contoso para Microsoft Teams**.
+* If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 * Não é preciso copiar o nome de um aplicativo listado na loja ou em outra oferta no mercado comercial.
 * Não deve conter termos profanos ou depreciativos. O nome também não deve incluir linguagem racial ou culturalmente insensível.
-* Deve ser exclusivo. Se seu aplicativo (Contoso) estiver listado no repositório do Microsoft Teams e Microsoft AppSource e você quiser listar outro aplicativo específico para uma geografia, como Contoso México, seu envio deverá atender aos seguintes critérios:
+* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
   * Chame a funcionalidade específica da região do aplicativo no título, metadados, experiência do aplicativo de primeira resposta e seções de ajuda. Por exemplo, o título deve ser Contoso México. O título do aplicativo deve diferenciar claramente um aplicativo existente do mesmo desenvolvedor para evitar confusão para o usuário final.
   * Ao fazer o upload do pacote do aplicativo no Partner Center, selecione os **Mercados** certos onde o aplicativo estará disponível na seção **Disponibilidade**.
 
@@ -196,7 +196,7 @@ Os aplicativos em execução na versão para iOS ou Android do Teams devem segui
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * Se seu aplicativo exigir uma conta, os usuários poderão se inscrever para uma conta sem custo. É proibido o uso do termo **gratuito** ou **conta gratuita**.
-* Você pode determinar se uma conta está ativa indefinidamente ou por um tempo limitado. Quando a conta expirar, o aplicativo não deverá mostrar interface do usuário, texto ou links indicando a necessidade de pagamento.
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
 * A política de privacidade e os termos de uso do seu aplicativo devem estar livres de qualquer interface do usuário ou links relacionados ao comércio.
 
 </details>
@@ -225,7 +225,7 @@ Os bots sempre devem pedir permissão para fazer upload de um arquivo e exibir u
 <br></br>
 <details><summary>Expanda para saber mais</summary>
 
-Não inclua domínios fora do controle da sua organização (incluindo curingas) e serviços de túnel nas configurações de domínio do aplicativo. As seguintes exceções incluem:
+Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
 * Se seu aplicativo usar o OAuthCard do Serviço de Bot do Azure, você deverá incluir `token.botframework.com` como um domínio válido ou o botão **Entrar** não funcionará.
 * Se seu aplicativo depender do SharePoint, você poderá incluir o site raiz associado do SharePoint como um domínio válido usando a `{teamSiteDomain}` propriedade do contexto.
@@ -420,7 +420,7 @@ Lembre-se do seguinte:
 
 **O que fazer:**
 
-* Concentre-se nos recursos do seu aplicativo. Por exemplo, como as pessoas podem se comunicar com seu bot.
+* Focus on your app's capabilities. For example, how people can communicate with your bot.
 * Incluir conteúdo que represente com precisão seu aplicativo.
 * Usar texto de forma criteriosa.
 * Capturas de tela de quadro com uma cor que reflete sua marca e inclui conteúdo de marketing.
@@ -526,9 +526,9 @@ Se o seu aplicativo oferece suporte à localização, o pacote do aplicativo dev
 <details><summary>Usabilidade e funcionalidade</summary>
 
 * Após a compra bem-sucedida e atribuição de licenças, você deve fornecer o seguinte:
-* Acesso aos usuários para recursos do plano assinado.
-* Adição de valor e benefícios significativos do plano de assinatura aos usuários.
-* No aplicativo Teams, forneça um link para o aplicativo SaaS home page os assinantes gerenciem as licenças no futuro.
+  * Acesso aos usuários para recursos do plano assinado.
+  * Adição de valor e benefícios significativos do plano de assinatura aos usuários.
+  * No aplicativo Teams, forneça um link para o aplicativo SaaS home page os assinantes gerenciem as licenças no futuro.
 
 </details>
 </br>
@@ -566,7 +566,7 @@ Se seu aplicativo incluir uma guia, verifique se ele segue essas diretrizes.
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
-* A tela de configuração da guia não deve inserir um site inteiro. Mantenha sua experiência de configuração focada. Por exemplo, se você estiver criando um aplicativo de gerenciamento de projeto que permite que os usuários configurem um projeto em um canal, mantenha a tela de configuração da guia focada em permitir que o usuário selecione um projeto de seu aplicativo para configurar no canal. [*Correção obrigatória*]
+* Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
@@ -583,7 +583,7 @@ Se seu aplicativo incluir uma guia, verifique se ele segue essas diretrizes.
 
 <details><summary>Visualizações</summary>
 
-* A área de tela de entrada não deve usar logotipos grandes. [*Correção Obrigatória*]
+* The sign in screen area must not use large logos. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
@@ -591,7 +591,7 @@ Se seu aplicativo incluir uma guia, verifique se ele segue essas diretrizes.
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
-* As guias não devem ter um cabeçalho duplicado. Remova o logotipo duplicado do iframe, pois a estrutura de guias já exibe o ícone e o nome do aplicativo. [*Correção sugerida*]
+* Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
@@ -620,13 +620,13 @@ Projete seu aplicativo com componentes da interface do usuário do Fluent [bási
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
-* As páginas secundária e terceira em uma guia devem ser abertas em uma exibição de nível dois (L2) e nível três (L3) na área da guia principal, que é navegada por trilhas ou navegação à esquerda. Você também pode incluir os seguintes componentes para auxiliar na navegação por tabulação: [*Correção Obrigatória*]
+* The secondary and third pages in a tab must be opened in a level two (L2) and level three (L3) view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation: [*Mandatory Fix*]
   * Botões de voltar
   * Cabeçalhos da página
   * Menus de hambúrguer
-* A guia não deve ter uma rolagem horizontal. Aplicativos de quadro de comunicações e outros aplicativos que exigem uma tela maior para permitir que os usuários colaborem sem uma experiência de aplicativo desfeita, podem usar a rolagem horizontal dependendo de suas necessidades de negócios. [*Correção sugerida*]
+* Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
-* Links profundos em guias não devem ser vinculados a uma página da Web externa, mas ao Teams. Por exemplo, módulos de tarefa ou outras guias. [*Correção Obrigatória*]
+* Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -663,12 +663,12 @@ Projete seu aplicativo com componentes da interface do usuário do Fluent [bási
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
-* As guias devem usar componentes com estilo do Teams, como fontes do Teams, rampas de tipo, paletas de cores, sistema de grade, movimento, tom de voz e assim por diante, sempre que possível. Para obter mais informações, confira [diretrizes de design de guia](/microsoftteams/platform/tabs/design/tabs). [*Correção sugerida*]
+* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * Se a funcionalidade do aplicativo exigir alterações nas configurações, inclua uma guia **Configurações**. [*Correção Sugerida*]
-* As guias devem seguir o design de interação do Teams, como navegação na página, posição e uso de caixas de diálogo, hierarquias de informações e assim por diante. Para obter mais informações, confira [Kit de interface do usuário do Microsoft Teams Fluent](~/concepts/design/design-teams-app-basic-ui-components.md)
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * O conteúdo da guia no iframe não deve incluir recursos que imitam os principais recursos do Teams. Por exemplo, bots, extensões de mensagens, chamada, reunião, e assim por diante.
 
@@ -705,7 +705,7 @@ Se seu aplicativo incluir um bot, verifique se ele segue essas diretrizes.
 </br>
 <details><summary>Comandos do bot</summary>
 
-É difícil analisar a entrada do usuário e prever a intenção do usuário. Os comandos de bot fornecem aos usuários um conjunto de palavras ou frases para o bot entender.
+Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
 * A lista de comandos de bot com suporte nas configurações do aplicativo é altamente recomendada. Esses comandos são exibidos na caixa de composição quando um usuário tenta enviar uma mensagem ao bot.
 
