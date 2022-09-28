@@ -1,16 +1,16 @@
 ---
 title: Teste de visualização para aplicativos monetizados
 author: v-ypalikila
-description: Saiba como criar e testar ofertas de Visualização do SaaS no aplicativo Teams antes de enviar a oferta ao vivo. Você pode testar a experiência de compra de ponta a ponta nos seus aplicativos monetizados no Teams.
+description: Crie e teste ofertas de Visualização de SaaS para o aplicativo Teams antes de enviar a oferta ao vivo. Crie uma ID de oferta de visualização, configure seu aplicativo com a ID da oferta de visualização e sideload.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 98b9876a93fe6040cf66a16475fe7fdacf98a520
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558741"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100788"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Teste de visualização para aplicativos monetizados
 
@@ -33,13 +33,13 @@ Você pode gerar a ID da oferta de visualização a partir do link de **visualiz
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="ID da oferta de visualização" :::
 
     > [!NOTE]
-    > Ao contrário de uma ID de oferta pública, a ID da oferta de visualização pode ser reconhecida com o sufixo *-preview*. Por exemplo, **publisherId.offerId-preview**.
+    > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>Configurar seu aplicativo com a ID da oferta de visualização
 
 Antes de começar, entre no **Portal do Desenvolvedor** usando uma conta de desenvolvedor com **audiência de visualização** para que os usuários vejam seus planos de assinatura no repositório do Teams.
 
-Depois de gerar a ID da oferta de Visualização, vincule a ID da oferta ao aplicativo Teams. Para vincular a ID da oferta:
+After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
 1. Acesse o [Portal do Desenvolvedor](https://dev.teams.microsoft.com/) e entre usando suas credenciais de desenvolvedor.
 1. Selecione **Aplicativos** no painel esquerdo.

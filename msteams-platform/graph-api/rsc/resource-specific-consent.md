@@ -1,16 +1,16 @@
 ---
 title: Habilitar o consentimento específico do recurso no Teams
-description: Neste artigo, você aprenderá o consentimento específico de recursos no Microsoft Teams e como tirar proveito dele.
+description: Saiba mais sobre as permissões de RSC (consentimento específicos de recursos) granulares com suporte, que permitem que os proprietários da equipe e os proprietários de chat concedam consentimento para um aplicativo.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 558ddd3603c9545781a3ebe06b7878df48b1333c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586704"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100886"
 ---
 # <a name="resource-specific-consent"></a>Consentimento específico do recurso
 

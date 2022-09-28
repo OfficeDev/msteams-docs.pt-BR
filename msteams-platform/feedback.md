@@ -1,14 +1,14 @@
 ---
 title: Comentários e suporte da comunidade de desenvolvedores do Microsoft Teams
-description: Saiba que a equipe de produto do Microsoft Teams responde à comunidade de desenvolvedores em vários canais de suporte e comentários.
+description: Saiba mais sobre a comunidade de desenvolvedores e a ajuda necessária para gerar problemas, limitações e perguntas gerais. Faça perguntas relacionadas ao SDK e exemplos, comentários de documentação, solicitações de recursos.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
-ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
+ms.openlocfilehash: 15d0fb7ccb9ad738a053e1e5c53970ea6bc27f2e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636049"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100172"
 ---
 # <a name="support-and-feedback"></a>Suporte e comentários
 

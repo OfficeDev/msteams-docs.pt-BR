@@ -1,15 +1,15 @@
 ---
 title: Planejar monetizar seu aplicativo
-description: Neste módulo de aprendizagem, você aprenderá a monetizar seu aplicativo do Microsoft Teams e também a entender a melhor opção de monetização para visibilidade global.
+description: Planeje monetizar seu aplicativo Microsoft Teams e também entenda as melhores opções de monetização para visibilidade global.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: bb6f33d568b16d5f8f2aeb4d900b3d658d2bd6bb
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 0bc933282990437742f99a53da5ee386efd9020c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558132"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100340"
 ---
 # <a name="plan-to-monetize-your-app"></a>Planejar monetizar seu aplicativo
 

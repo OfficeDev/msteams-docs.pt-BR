@@ -1,16 +1,16 @@
 ---
 title: Motivos comuns para falhas na validação do aplicativo
-description: Saiba os motivos mais comuns para que seu aplicativo falhe na validação do aplicativo e aumente a probabilidade do seu aplicativo ser aprovado no processo de envio da loja do Teams.
+description: Saiba os motivos mais comuns para o aplicativo falhar na validação do aplicativo. Links desfeitos, erros na descrição, links de política inválidos, violação de diretrizes de domínio válidas, links de suporte inválidos e muito mais.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: b8d0b0eb44a3071a6831500cfae41952e520399e
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
-ms.translationtype: HT
+ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132723"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100907"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Motivos comuns para falhas na validação do aplicativo
 

@@ -1,21 +1,21 @@
 ---
 title: Monetizar sua visão geral do aplicativo
-description: Saiba como monetizar seu aplicativo do Microsoft Teams que inclui escolher um modelo de preços com a oferta de Saas.
+description: Monetize seu aplicativo. Os modelos de preços com suporte são avaliações gratuitas, compras no aplicativo e incluem uma oferta de SaaS com seu aplicativo.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9b684fccb108b733a63ae6b61e002bc24bde32ef
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485507"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100578"
 ---
 # <a name="monetize-your-app"></a>Monetize seu aplicativo
 
 A Loja de aplicativos do Microsoft Teams fornece recursos que permitem monetizar seus aplicativos e obter clientes envolvendo-se com seus usuários. Os tópicos nesta seção mostram como criar esses recursos em seu aplicativo.
-
+ 
 ## <a name="choose-a-pricing-model"></a>Escolher um modelo de preços
 
 :::row:::

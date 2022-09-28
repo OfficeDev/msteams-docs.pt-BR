@@ -1,14 +1,14 @@
 ---
 title: Permissões do dispositivo para o navegador
-description: Saiba como trazer permissões de dispositivo de volta com segurança, como acesso à câmera ou microfone para aplicativos no cliente Web.
+description: que exige permissões de dispositivo, como acesso à câmera ou microfone, agora exigem que os usuários concedam permissão manualmente em um nível de aplicativo no navegador da Web.
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: ac4695d119b04ee71334ccb2baa820c0e15bff88
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: a9df46a3bacd66b32efceaf2f2069e92c2cc64a3
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035076"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100571"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permissões do dispositivo para o navegador
 

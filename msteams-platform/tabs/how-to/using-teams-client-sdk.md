@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Neste módulo, Conheça o SDK do cliente JavaScript do Microsoft Teams, que pode ajudar você a criar experiências de aplicativo hospedadas em um <iframe> no Teams, no Office e no Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781063"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100151"
 ---
 # <a name="teams-javascript-client-sdk"></a>SDK do cliente JavaScript do Teams
 
@@ -38,10 +38,10 @@ A tabela a seguir lista as guias e os recursos de diálogos do Teams (módulos d
 
 |Recursos | Suporte do host | Observações |
 |-----------|--------------|-------|
-| aplicativo | Teams, Outlook, Office | Namespace que representa a inicialização e o ciclo de vida do aplicativo. |
+| aplicativo | Teams, Outlook, Office, aplicativo do Office para Android | Namespace que representa a inicialização e o ciclo de vida do aplicativo. |
 | appInitialization| | Depreciado. Substituído pelo namespace `app`. |
 | appInstallDialog | Teams||
-| autenticação | Teams, Outlook, Office | |
+| autenticação | Teams, Outlook, Office, aplicativo do Office para Android | |
 | calendar | Outlook ||
 | call | Teams||
 | chat |Teams||
@@ -49,7 +49,7 @@ A tabela a seguir lista as guias e os recursos de diálogos do Teams (módulos d
 | localização |Teams| Consulte as anotações em [Permissões do aplicativo](#app-permissions).|
 | email | Outlook (somente área de trabalho do Windows)||
 | mídia |Teams| Consulte as anotações em [Permissões do aplicativo](#app-permissions).|
-| páginas | Teams, Outlook, Office | Namespace que representa a navegação de página. Consulte as anotações em [Vinculação profunda](#deep-linking). |
+| páginas | Teams, Outlook, Office, aplicativo do Office para Android | Namespace que representa a navegação de página. Consulte as anotações em [Vinculação profunda](#deep-linking). |
 | people |Teams||
 | settings || Depreciado. Substituído por `pages.config`.|
 | compartilhamento | Teams||
@@ -143,7 +143,7 @@ Para obter mais informações, consulte [Estender aplicativos do Teams no Micros
 
 ### <a name="callbacks-converted-to-promises"></a>Retornos de chamada convertidos em promessas
 
-As APIs do Teams que anteriormente levavam um parâmetro de retorno de chamada foram atualizadas para retornar um objeto JavaScript [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Isso inclui as seguintes APIs:
+APIs do Teams que anteriormente levavam um parâmetro de retorno de chamada foram atualizadas para retornar um objeto JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Elas incluem as seguintes APIs:
 
 ```js
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
@@ -232,7 +232,7 @@ Você pode verificar o suporte de host de uma determinada funcionalidade em runt
 
 O nome do host no qual seu aplicativo está sendo executado é exposto como uma propriedade *hostName* na interface de contexto (`app.Context.app.host.name`), que pode ser consultada em runtime chamando `getContext`. Ele também está disponível como `{hostName}`[um valor de espaço reservado de URL](./access-teams-context.md#get-context-by-inserting-url-placeholder-values). A prática recomendada é usar o mecanismo *hostName* com moderação:
 
-* **Não** suponha que determinada funcionalidade esteja ou não esteja disponível em um host com base no valor da propriedade *hostName*. Em vez disso, verifique se a funcionalidade tem suporte (`isSupported`).
+* **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **Não** use *hostName* para enviar chamadas à API. Em vez disso, verifique se há suporte para funcionalidades (`isSupported`).
 * **Use** *hostName* para diferenciar o tema do seu aplicativo com base no host em que ele está sendo executado. Por exemplo, você pode usar Microsoft Teams púrpura como a cor de destaque principal ao executar em Teams e Outlook azul ao executar em Outlook.
 * **Use** *hostName* para diferenciar as mensagens mostradas para o usuário com base no host em que ele está sendo executado. Por exemplo, mostre *Gerenciar suas tarefas no Office* ao executar no Office na Web e *Gerenciar suas tarefas no Teams* ao executar no Teams.
@@ -446,7 +446,7 @@ Se você estiver atualizando um aplicativo do Teams para ser executado no Office
 # <a name="teams-toolkit"></a>[Kit de ferramentas do Teams](#tab/manifest-teams-toolkit)
 
 1. Abra a *paleta de comandos*: `Ctrl+Shift+P`
-1. Execute o comando **Teams: atualizar o manifesto do Teams para dar suporte a aplicativos do Outlook e do Office** e selecione o arquivo de manifesto do aplicativo. As alterações serão feitas no local.
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Office apps** command and select your app manifest file. Changes will be made in place.
 
 # <a name="manual-steps"></a>[Etapas manuais](#tab/manifest-manual)
 

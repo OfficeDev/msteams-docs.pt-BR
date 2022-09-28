@@ -1,16 +1,16 @@
 ---
 title: Manter e dar suporte ao seu aplicativo publicado
-description: Saiba como manter seu aplicativo Microsoft Teams publicado e o que pensar depois que sua loja estiver listada na loja do Teams e no AppSource.
+description: Saiba como manter seu aplicativo Microsoft Teams publicado e o que fazer depois que sua loja for listada na loja do Teams e no AppSource. Analise o uso do aplicativo, publique atualizações, promova seu aplicativo, conclua a Certificação do Microsoft 365.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484842"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100326"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -35,7 +35,7 @@ Verifique o seguinte ao publicar atualizações:
 
 * Não altere a ID do aplicativo.
 * Incremente o número de versão do aplicativo.
-* No Partner Center, não selecione **Adicionar um novo aplicativo** para fazer a atualização. Vá para a página do seu aplicativo.
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 ### <a name="app-updates-requiring-user-consent"></a>Atualizações de aplicativo que exigem consentimento do usuário
 
@@ -50,7 +50,7 @@ No entanto, se você fizer qualquer uma das seguintes alterações em seu aplica
 * Adicionar uma guia pessoal.
 * Adicionar um canal e guia do grupo.
 * Adicionar um conector.
-* Modifique as configurações relacionadas ao seu registro de aplicativo do Microsoft Azure Active Directory (Azure AD). Para mais informações, veja [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrigir problemas com seu aplicativo publicado
 

@@ -1,16 +1,16 @@
 ---
 title: Criar e enviar o módulo de tarefas
 author: surbhigupta
-description: Neste módulo, saiba como manipular a ação de invocação inicial e responder com um módulo de tarefa de um comando de extensão de mensagens de ação
+description: Saiba como criar e enviar módulos de tarefa. Manipule a ação de invocação inicial e responda com um módulo de tarefa de um comando de extensão de mensagem de ação.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035181"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100312"
 ---
 # <a name="create-and-send-task-module"></a>Criar e enviar o módulo de tarefas
 
@@ -22,12 +22,12 @@ Você pode criar o módulo de tarefa usando um Cartão Adaptável ou um modo de 
 
 ## <a name="the-initial-invoke-request"></a>A solicitação de invocação inicial
 
-No processo da solicitação de invocação inicial, seu serviço recebe um objeto `Activity` do tipo `composeExtension/fetchTask`e você deve responder com um objeto `task` contendo um Cartão Adaptável ou uma URL para a exibição da Web inserida. Juntamente com as propriedades de atividade de bot padrão, o conteúdo de invocação inicial contém os seguintes metadados de solicitação:
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke`. |
-|`name`| Tipo de comando emitido para o serviço. Ele deve ser `composeExtension/fetchTask`. |
+|`name`| Tipo de comando que é emitido para o serviço. Deve ser `composeExtension/fetchTask`. |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
@@ -36,7 +36,7 @@ No processo da solicitação de invocação inicial, seu serviço recebe um obje
 |`channelData.team.id`| ID da equipe (se a solicitação foi feita em um canal). |
 |`value.commandId` | Contém a ID do comando que foi invocado. |
 |`value.commandContext` | O contexto que disparou o evento. Deve ser `compose`. |
-|`value.context.theme` | O tema do cliente do usuário, útil para formatação de exibição da Web inserida. Ele deve ser `default`, `contrast` ou `dark`. |
+|`value.context.theme` | O tema do cliente do usuário, útil para a formatação do modo exibição da Web incorporado. Deve ser `default`, `contrast` ou `dark` |
 
 ### <a name="example"></a>Exemplo
 
@@ -77,7 +77,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke`. |
-|`name`| Tipo de comando emitido para o serviço. Ele deve ser `composeExtension/fetchTask`. |
+|`name`| Tipo de comando que é emitido para o serviço. Deve ser `composeExtension/fetchTask`. |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
@@ -86,7 +86,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |`ChannelData.legacy. replyToId`| Obtém ou define a ID da mensagem à qual esta mensagem é uma resposta. |
 |`value.commandId` | Contém a ID do comando que foi invocado. |
 |`value.commandContext` | O contexto que disparou o evento. Deve ser `compose`. |
-|`value.context.theme` | O tema do cliente do usuário, útil para formatação de exibição da Web inserida. Ele deve ser `default`, `contrast` ou `dark`. |
+|`value.context.theme` | O tema do cliente do usuário, útil para a formatação do modo exibição da Web incorporado. Deve ser `default`, `contrast` ou `dark` |
 
 ### <a name="example"></a>Exemplo
 
@@ -128,7 +128,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke`. |
-|`name`| Tipo de comando emitido para o serviço. Ele deve ser `composeExtension/fetchTask`. |
+|`name`| Tipo de comando que é emitido para o serviço. Deve ser `composeExtension/fetchTask`. |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
@@ -137,7 +137,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |`ChannelData.legacy. replyToId`| Obtém ou define a ID da mensagem à qual esta mensagem é uma resposta. |
 |`value.commandId` | Contém a ID do comando que foi invocado. |
 |`value.commandContext` | O contexto que disparou o evento. Deve ser `compose`. |
-|`value.context.theme` | O tema do cliente do usuário, útil para formatação de exibição da Web inserida. Ele deve ser `default`, `contrast` ou `dark`. |
+|`value.context.theme` | O tema do cliente do usuário, útil para a formatação do modo exibição da Web incorporado. Deve ser `default`, `contrast` ou `dark` |
 
 ### <a name="example"></a>Exemplo
 
@@ -227,7 +227,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke`. |
-|`name`| Tipo de comando emitido para o serviço. Ele deve ser `composeExtension/fetchTask`. |
+|`name`| Tipo de comando que é emitido para o serviço. Deve ser `composeExtension/fetchTask`. |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
@@ -238,7 +238,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |`ChannelData.legacy. replyToId`| Obtém ou define a ID da mensagem à qual esta mensagem é uma resposta. |
 |`value.commandId` | Contém a ID do comando que foi invocado. |
 |`value.commandContext` | O contexto que disparou o evento. Deve ser `compose`. |
-|`value.context.theme` | O tema do cliente do usuário, útil para formatação de exibição da Web inserida. Ele deve ser `default`, `contrast`ou `dark`. |
+|`value.context.theme` | O tema do cliente do usuário, útil para a formatação do modo exibição da Web incorporado. Deve ser `default`, `contrast` ou `dark` |
 
 ### <a name="example"></a>Exemplo
 
@@ -293,7 +293,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke`. |
-|`name`| Tipo de comando emitido para o serviço. Ele deve ser `composeExtension/fetchTask`. |
+|`name`| Tipo de comando que é emitido para o serviço. Deve ser `composeExtension/fetchTask`. |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
@@ -304,7 +304,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |`ChannelData.legacy. replyToId`| Obtém ou define a ID da mensagem à qual esta mensagem é uma resposta. |
 |`value.commandId` | Contém a ID do comando que foi invocado. |
 |`value.commandContext` | O contexto que disparou o evento. Deve ser `compose`. |
-|`value.context.theme` | O tema do cliente do usuário, útil para formatação de exibição da Web inserida. Ele deve ser `default`, `contrast` ou `dark`. |
+|`value.context.theme` | O tema do cliente do usuário, útil para a formatação do modo exibição da Web incorporado. Deve ser `default`, `contrast` ou `dark` |
 
 ### <a name="example"></a>Exemplo
 
@@ -402,7 +402,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |Nome da propriedade|Objetivo|
 |---|---|
 |`type`| Tipo de solicitação. Deve ser `invoke`. |
-|`name`| Tipo de comando emitido para o serviço. Ele deve ser `composeExtension/fetchTask`. |
+|`name`| Tipo de comando que é emitido para o serviço. Deve ser `composeExtension/fetchTask`. |
 |`from.id`| ID do usuário que enviou a solicitação. |
 |`from.name`| Nome do usuário que enviou a solicitação. |
 |`from.aadObjectId`| ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
@@ -410,7 +410,7 @@ As propriedades da atividade de conteúdo quando um módulo de tarefa é invocad
 |`channelData.source.name`| O nome de origem de onde o módulo de tarefa é invocado. |
 |`value.commandId` | Contém a ID do comando que foi invocado. |
 |`value.commandContext` | O contexto que disparou o evento. Deve ser `compose`. |
-|`value.context.theme` | O tema do cliente do usuário, útil para formatação de exibição da Web inserida. Ele deve ser `default`, `contrast`ou `dark`. |
+|`value.context.theme` | O tema do cliente do usuário, útil para a formatação do modo exibição da Web incorporado. Deve ser `default`, `contrast` ou `dark` |
 
 ### <a name="example"></a>Exemplo
 
@@ -985,7 +985,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Nome de exemplo           | Descrição | .NET    | Node.js   | Python |
 |:---------------------|:--------------|:---------|:--------|
-|Ação de extensão de mensagem do Teams| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+|Ação de extensão de mensagem do Teams| Descreve como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 |Pesquisa de extensão de mensagem do Teams   |  Descreve como definir comandos de pesquisa e responder a pesquisas.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search)|
 
 ## <a name="next-step"></a>Próxima etapa

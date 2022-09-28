@@ -1,16 +1,16 @@
 ---
 title: Atualizar e excluir mensagens enviadas do bot
 author: WashingtonKayaker
-description: Saiba como atualizar e excluir mensagens enviadas do bot do Microsoft Teams em ambientes diferentes e com APIs REST usando exemplos de código.
+description: Saiba como atualizar e excluir mensagens enviadas do bot do Microsoft Teams em ambientes diferentes e com APIs REST usando exemplos (.NET, Node.js, Python).
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bd52a3cfa27153c4349d50f4263dc29346fdfb45
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d85bb7086661eba58c6cf852cab599970fdc9c80
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503799"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100816"
 ---
 # <a name="update-and-delete-messages-sent-from-bot"></a>Atualizar e excluir mensagens enviadas do bot 
 
@@ -181,7 +181,7 @@ O exemplo de código a seguir demonstra noções básicas de conversas:
 
 | **Nome de exemplo** | **Descrição** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Noções básicas de conversa do Teams  | Demonstra noções básicas de conversas no Teams, incluindo atualização e exclusão de mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Noções básicas de conversa do Teams  | Demonstra noções básicas de conversas no Teams, incluindo atualização e exclusão de mensagens. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>Próxima etapa
 

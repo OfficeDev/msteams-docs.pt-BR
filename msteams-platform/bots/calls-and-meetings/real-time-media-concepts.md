@@ -1,14 +1,14 @@
 ---
 title: Chamadas de mídia em tempo real e reuniões online com o Microsoft Teams
-description: Conheça os principais conceitos na criação de bots que podem conduzir chamadas de áudio e vídeo em tempo real e reuniões online.
+description: Saiba como a Plataforma de Mídia em tempo real permite que os bots interajam com chamadas e reuniões do Microsoft Teams. Explore, sessões de mídia, quadros e taxa de quadros, formato de áudio e vídeo, alto-falantes ativos, assinatura de vídeo.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b1ff14a0229483312c0de6fdb33836ee205f1e14
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8eeb30d63c982ead3e990c0dea2a2bb04a820b97
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143785"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100914"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Chamadas de mídia em tempo real e reuniões com Microsoft Teams
 

@@ -1,20 +1,20 @@
 ---
 title: Estender um aplicativo de guia pessoal do Teams Microsoft 365
-description: Neste artigo, você aprenderá a estender um aplicativo de guia pessoal do Teams no Microsoft 365 atualizando a guia pessoal para execução no Outlook e no Office.
+description: Atualize seu aplicativo pessoal para ser executado no Outlook e no Office. Atualize o manifesto e o SDK do TeamsJS V2, altere a segurança de consentimento, atualize Azure AD registro de aplicativo para SSO.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781191"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100755"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
-As guias pessoais fornecem uma ótima maneira de aprimorar a experiência do Microsoft Teams. Usando guias pessoais, você pode fornecer a um usuário acesso ao aplicativo diretamente no Teams, sem que o usuário precise sair da experiência ou entrar novamente. Com essa versão prévia, as guias pessoais podem se acender em outros Microsoft 365 aplicativos. Este tutorial demonstra o processo de pegar uma guia pessoal existente do Teams e atualizá-la para ser executada em experiências da área de trabalho e da Web do Outlook e também do Office na Web (office.com).
+As guias pessoais fornecem uma ótima maneira de aprimorar a experiência do Microsoft Teams. Usando guias pessoais, você pode fornecer a um usuário acesso ao aplicativo diretamente no Teams, sem que o usuário precise sair da experiência ou entrar novamente. Com essa versão prévia, as guias pessoais podem se acender em outros Microsoft 365 aplicativos. Este tutorial demonstra o processo de pegar uma guia pessoal existente do Teams e atualizá-la para ser executada nas experiências da Web e da área de trabalho do Outlook e do Office, bem como no aplicativo do Office para Android.
 
 Atualizar seu aplicativo pessoal para execução no Outlook e no Office envolve estas etapas:
 
@@ -141,8 +141,12 @@ Se seu aplicativo usa cabeçalhos [CSP (Política](https://developer.mozilla.org
     |Web do Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office Web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office para a área de trabalho  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Área de trabalho do Outlook, móvel | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook Web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Alguns aplicativos cliente do Microsoft 365 compartilham IDs de cliente.
 
 ## <a name="sideload-your-app-in-teams"></a>Faça o sideload do seu aplicativo do Teams
 
@@ -164,7 +168,7 @@ A etapa final para executar seu aplicativo no Office e no Outlook é fazer sidel
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Opção 'Carregar um aplicativo personalizado' no Teams":::
 
-Depois de ser recarregada para o Teams, sua guia pessoal estará disponível no Outlook e no Office. Certifique-se de entrar com as mesmas credenciais usadas para entrar no Teams para realizar o sideload do aplicativo.
+Depois de ser recarregada para o Teams, sua guia pessoal estará disponível no Outlook e no Office. Você deve entrar com as mesmas credenciais usadas para realizar o sideload do aplicativo no Teams. Ao executar o aplicativo do Office para Android, você precisa reiniciar o aplicativo para usar seu aplicativo de guia pessoal do aplicativo do Office.
 
 Você pode fixar o aplicativo para acesso rápido ou encontrar seu aplicativo nas reticências (**...**) entre aplicativos recentes na barra lateral à esquerda. Fixar um aplicativo no Teams não o fixa como um aplicativo no Office ou no Outlook.
 
@@ -215,6 +219,19 @@ Para visualizar seu aplicativo em execução no Office na Web:
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Clique na opção 'Mais aplicativos' na barra lateral do office.com para ver as guias pessoais instaladas":::
 
+### <a name="office-app-for-android"></a>Aplicativo do Office para Android
+
+> [!NOTE]
+> Antes de instalar o aplicativo, execute [as etapas para instalar o build beta do aplicativo do Office](prerequisites.md#mobile) mais recente e fazer parte do programa beta.
+
+Para exibir seu aplicativo em execução no aplicativo do Office para Android:
+
+1. Inicie o aplicativo do Office e entre usando sua conta de locatário de desenvolvimento. Se o aplicativo do Office para Android já estava em execução antes do sideload do aplicativo no Teams, você precisará reiniciá-lo para vê-lo entre seus aplicativos instalados.
+1. Selecione o **ícone Aplicativos** . Seu aplicativo de sideload aparece entre os aplicativos instalados.
+1. Selecione o ícone do aplicativo para iniciar seu aplicativo no aplicativo do Office para Android.
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Toque na opção 'Aplicativos' na barra lateral do aplicativo do Office para ver suas guias pessoais instaladas":::
+
 ## <a name="troubleshooting"></a>Solução de problemas
 
 Atualmente, há suporte para um subconjunto de recursos e tipos de aplicativos do Teams nos clientes do Outlook e do Office. Esse suporte se expande ao longo do tempo.
@@ -239,6 +256,26 @@ Na primeira execução da depuração local no Office ou no Outlook, você será
 
 Forneça comentários e relate quaisquer problemas com a experiência de depuração do Kit de Ferramentas do Teams no [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
+#### <a name="mobile-debugging"></a>Depuração móvel
+
+A depuração do Kit de Ferramentas do Teams (`F5`) ainda não tem suporte com o aplicativo do Office para Android. Veja como depurar remotamente seu aplicativo em execução no aplicativo do Office para Android:
+
+1. Se você depurar usando um dispositivo Android físico, conecte-o ao computador de desenvolvimento e habilite a opção de [depuração USB](https://developer.android.com/studio/debug/dev-options). Isso é habilitado por padrão com o emulador do Android.
+1. Inicie o aplicativo do Office em seu dispositivo Android.
+1. Abra seu perfil **Me > Configurações > Permitir depuração** e alterne a opção para Habilitar **depuração remota**.
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Captura de tela mostrando Habilitar depuração remota":::
+
+1. **Configurações de Saída**.
+1. Saia da tela do perfil.
+1. Selecione **Aplicativos** e inicie seu aplicativo de sideload para ser executado no aplicativo do Office.
+1. Verifique se o dispositivo Android está conectado ao computador de desenvolvimento. No computador de desenvolvimento, abra o navegador na página de inspeção do DevTools. Por exemplo, vá para o `edge://inspect/#devices` Microsoft Edge para exibir uma lista de WebViews do Android habilitados para depuração.
+1. Localize a `Microsoft Teams Tab` URL com a guia e selecione **Inspecionar** para iniciar a depuração do aplicativo com o DevTools.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="captura de tela mostrando a lista de webviews no devtool":::
+
+1. Depure seu aplicativo guia no Android WebView. Da mesma forma que você [depura remotamente](/microsoft-edge/devtools-guide-chromium/remote-debugging) um site normal em um dispositivo Android.
+
 ## <a name="code-sample"></a>Exemplo de código
 
 | **Nome de exemplo** | **Descrição** | **Node.js** |
@@ -247,6 +284,7 @@ Forneça comentários e relate quaisquer problemas com a experiência de depura�
 | Lista De Tarefas Pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de Imagens (Microsoft 365) | Criar, editar, abrir e salvar imagens usando o Microsoft API do Graph. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Página de inicialização de exemplo (Microsoft 365) | Demonstra a autenticação de SSO e os recursos do SDK do TeamsJS como disponíveis em hosts diferentes. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Aplicativo Pedidos northwind | Demonstra como usar o Microsoft TeamsJS SDK V2 para estender o aplicativo teams para outros aplicativos host M365. Funciona no Teams, Outlook, Office. Otimizado para dispositivos móveis.| [Exibir](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Próxima etapa
 

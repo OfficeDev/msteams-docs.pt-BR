@@ -1,14 +1,14 @@
 ---
 title: Enviar o ID do locatário e o ID da conversa para os cabeçalhos de solicitação do bot
-description: Neste módulo, saiba como enviar a ID do locatário e a ID de conversa para os cabeçalhos de solicitação do bot no Teams.
+description: Saiba como rotear o tráfego do bot sem desempacotar toda a carga usando a ID do locatário e a ID de conversa presentes nos cabeçalhos de solicitação do bot no Teams.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b292db11ced764bbe235bee0f6f8f4829ba7b6c9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 3132d91d4b3d0b290ee8e1fb35ebeea076217fe8
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503771"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100144"
 ---
 # <a name="request-headers-of-the-bot"></a>Solicite cabeçalhos do bot
 

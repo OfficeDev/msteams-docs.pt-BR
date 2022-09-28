@@ -1,22 +1,22 @@
 ---
 title: Planejar a visão geral do seu aplicativo
 author: heath-hamilton
-description: Apresente os elementos de planejamento de um aplicativo, compreensão dos casos de uso, recursos do aplicativo e outros recursos do Microsoft Teams.
+description: Entenda o caso de uso e os recursos do aplicativo Microsoft Teams, mapeie casos de uso, planeje guias responsivas para dispositivos móveis. Conheça os recursos e a disponibilidade do Teams para GCC, GCC-High e DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058239"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100417"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
 Criar um aplicativo incrível do Teams tem tudo a ver com encontrar a combinação certa de recursos para atender às necessidades do usuário. O design, os recursos e funcionalidades de um aplicativo derivam dessa finalidade.
 
-No fundo, o Teams é uma plataforma de colaboração. Também é uma plataforma social, é nativamente multiplataforma, fica no centro do Office 365 e oferece uma tela pessoal para você criar aplicativos.
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
 Nesta seção, saiba como:
 
@@ -76,7 +76,7 @@ A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GC
 |-------------|---------|---|---|
 | Aplicativos de propriedade de Teams como em aplicativos desenvolvidos internamente | ✔️ O aplicativo está habilitado se tiverGCC | ✔️ O aplicativo está habilitado se tiver GCC-High | ✔️ O aplicativo está habilitado se tiver DOD |
 | Aplicativos da Microsoft | ✔️ Aplicativos da Microsoft compatíveis com o GCC | ✔️ Aplicativos da Microsoft compatíveis com a GCC-High. | ✔️ Aplicativos da Microsoft compatíveis com o DOD |
-| Aplicativos 3P ou de terceiros | ✔️ Aplicativos de terceiros estão disponíveis. Desabilitado por padrão e o administrador do locatário usa seu próprio critério para habilita-lo. | ❌ | ❌ |
+| Aplicativos 3P ou de terceiros | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Aplicativos de guia personalizados ou Lob |  ✔️ | ✔️ | ✔️ |
 | Sideload de aplicativos | ✔️ | ❌ | ❌ |

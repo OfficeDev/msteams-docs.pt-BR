@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de ação de extensão de mensagem
 author: surbhigupta
-description: Neste módulo, aprenda a definir comandos de ação de extensão de mensagens com o exemplo de manifesto do aplicativo no Microsoft Teams.
+description: Saiba como definir comandos de ação de extensão de mensagens com o exemplo de manifesto do aplicativo no Microsoft Teams. Exemplo (.NET, Node.js) como definir comandos de ação, criar módulo de tarefa e responder à ação de envio do módulo de tarefa.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604854"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100732"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -77,7 +77,7 @@ Se a extensão da mensagem for invocada da caixa de redação ou diretamente de 
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Adicionar o comando de ação ao manifesto do aplicativo
 
-Para adicionar o comando de ação ao manifesto do aplicativo, você deve adicionar um novo objeto `composeExtension` ao nível superior do JSON do manifesto do aplicativo. Você pode usar uma das seguintes maneiras de fazer isso:
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [Criar um comando de ação usando o Portal do Desenvolvedor](#create-an-action-command-using-developer-portal)
 * [Criar um comando de ação manualmente](#create-an-action-command-manually)
@@ -149,9 +149,9 @@ Se você estiver usando uma lista estática de parâmetros, também deverá adic
 
 | Nome da propriedade | Objetivo | É necessário? | Versão mínima do manifesto |
 |---|---|---|---|
-| `parameters` | Essa propriedade descreve a lista estática de parâmetros para o comando. Use somente quando `fetchTask` for `false`. | Não | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | Não | 1.0 |
 | `parameter.name` | Essa propriedade descreve o nome do parâmetro. Isso é enviado ao seu serviço na solicitação do usuário. | Sim | 1.0 |
-| `parameter.description` | Essa propriedade descreve as finalidades do parâmetro ou o exemplo do valor que deve ser fornecido. Esse valor aparece na interface do usuário. | Sim | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Sim | 1.0 |
 | `parameter.title` | Essa propriedade é um título ou rótulo curto de parâmetro amigável. | Sim | 1.0 |
 | `parameter.inputType` | Essa propriedade é definida como o tipo de entrada necessário. Os valores possíveis incluem `text`, `textarea`, `number`, `date`, `time`, `toggle`. O valor padrão é definido como `text`. | Não | 1.4 |
 

@@ -1,16 +1,16 @@
 ---
 title: Visão geral – Distribuir seu aplicativo
-description: Neste artigo, conheça as opções para publicar seu aplicativo Microsoft Teams, carregar e implantar seu aplicativo e GCC.
+description: Aprenda a distribuir, publicar seu aplicativo na Microsoft Teams Store ou em sua organização. Entenda como os pontos de extremidade do aplicativo devem estar em conformidade com os requisitos da sua organização do GCC (Government Community Cloud).
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: df17129ce1e51093351683ad01db3be9e65c5770
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044669"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100718"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribuir seu aplicativo Microsoft Teams
 

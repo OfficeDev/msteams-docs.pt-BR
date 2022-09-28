@@ -1,16 +1,16 @@
 ---
 title: Responder aos comandos de pesquisa
 author: surbhigupta
-description: Neste módulo, saiba como responder ao comando de pesquisa de uma extensão de mensagem em um aplicativo Microsoft Teams usando exemplos de código e exemplos
+description: Saiba como responder ao comando de pesquisa de uma extensão de mensagem em um aplicativo do Microsoft Teams. Entenda como responder à solicitação do usuário.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143701"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100557"
 ---
 # <a name="respond-to-search-command"></a>Responder aos comandos de pesquisa
 
@@ -21,7 +21,7 @@ Depois que o usuário envia o comando de pesquisa, seu serviço Web `composeExte
 * À medida que os caracteres são inseridos na caixa de pesquisa.
 * `initialRun` é definido como true no manifesto do aplicativo, você recebe a mensagem de invocação assim que o comando de pesquisa é invocado. Para obter mais informações, consulte [a consulta padrão](#default-query).
 
-Este documento orienta você sobre como responder a solicitações de usuário na forma de cartões e visualizações e as condições sob as quais Microsoft Teams emite uma consulta padrão.
+Este documento orienta você sobre como responder a solicitações de usuário na forma de cartões e visualizações e as condições sob as quais o Microsoft Teams emite uma consulta padrão.
 
 Os parâmetros de solicitação são encontrados no `value` objeto na solicitação, que inclui as seguintes propriedades:
 
@@ -94,7 +94,7 @@ Seu serviço deve responder com os resultados correspondentes à consulta do usu
 
 ### <a name="response-card-types-and-previews"></a>Tipos de cartão de resposta e visualizações
 
-Teams dá suporte aos seguintes tipos de cartão:
+O Teams dá suporte aos seguintes tipos de cartão:
 
 * [cartão de Miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [cartão Hero](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
@@ -107,7 +107,7 @@ Para saber como usar os tipos de cartão em miniatura e hero, consulte [adiciona
 
 Para obter informações adicionais sobre o cartão Office 365 Connector, consulte [Usando cartões Office 365 Connector](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-A lista de resultados é exibida na interface Microsoft Teams interface do usuário com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
+A lista de resultados é exibida na interface do usuário do Microsoft Teams com uma visualização de cada item. A visualização é gerada de uma das duas maneiras:
 
 * Usando a `preview` propriedade dentro do `attachment` objeto. O `preview` anexo só pode ser um cartão hero ou miniatura.
 * Extraindo das propriedades básicas `title``text`e `image` do `attachment` objeto. As propriedades básicas serão usadas somente se `preview` a propriedade não for especificada.
@@ -387,7 +387,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>Consulta padrão
 
-Se você definir `initialRun` como `true` no manifesto, Microsoft Teams emite uma consulta padrão quando  o usuário abre a extensão da mensagem pela primeira vez. Seu serviço pode responder a essa consulta com um conjunto de resultados preenchidos previamente. Isso é útil quando o comando de pesquisa requer autenticação ou configuração, exibindo itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
+Se você definir `initialRun` como `true` no manifesto, o Microsoft Teams emite  uma consulta padrão quando o usuário abre a extensão de mensagem pela primeira vez. Seu serviço pode responder a essa consulta com um conjunto de resultados preenchidos previamente. Isso é útil quando o comando de pesquisa requer autenticação ou configuração, exibindo itens exibidos recentemente, favoritos ou qualquer outra informação que não dependa da entrada do usuário.
 
 A consulta padrão tem a mesma estrutura que qualquer consulta de usuário regular, `name` `initialRun` `value` `true` com o campo definido como e definido como conforme mostrado no seguinte objeto:
 

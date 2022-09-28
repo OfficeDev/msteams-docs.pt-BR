@@ -1,15 +1,15 @@
 ---
 title: Notificações de chamadas recebidas
-description: Neste módulo, saiba mais sobre informações técnicas detalhadas sobre como lidar com notificações de chamadas de entrada, redirecionar e autenticar chamadas usando exemplos de código
+description: Saiba mais sobre o protocolo de notificação de entrada para converter a chamada do formato herdado para o formato do Graph, redirecionar para afinidade de região e autenticar o retorno de chamada.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2019
-ms.openlocfilehash: fd68b85a3c6f5f4682a728461d792093bcd8cac0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d5bdd20cb9cb7deef7419acb1da4ac96da2d89a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143827"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100655"
 ---
 # <a name="incoming-call-notifications"></a>Notificações de chamadas recebidas
 
@@ -17,7 +17,7 @@ Ao [registrar um bot de chamadas e reuniões para o Microsoft Teams](./registeri
 
 ## <a name="protocol-determination"></a>Determinação de protocolo
 
-A notificação de entrada é fornecida em um formato herdado para compatibilidade com o [protocolo Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)anterior. Para converter a chamada para o protocolo microsoft Graph, o bot deve determinar se a notificação está em um formato herdado e fornece a seguinte resposta:
+A notificação de entrada é fornecida em um formato herdado para compatibilidade com o [protocolo Skype](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)anterior. Para converter a chamada para o protocolo do Microsoft Graph, o bot deve determinar se a notificação está em um formato herdado e fornece a seguinte resposta:
 
 ```http
 HTTP/1.1 204 No Content

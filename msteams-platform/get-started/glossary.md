@@ -1,14 +1,14 @@
 ---
 title: Documentação do desenvolvedor do Microsoft Teams - Glossário
-description: Saiba mais sobre os termos usados na documentação do desenvolvedor do Microsoft Teams
+description: Saiba mais sobre os termos, significados e definições comuns usados na documentação do desenvolvedor do Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
-ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
+ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027509"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100858"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -78,7 +78,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Conta de desenvolvedor E5](../toolkit/tools-prerequisites.md) | Assinatura de desenvolvedor E5 para criar aplicativos para estender Microsoft 365. Você pode adicionar até 25 licenças de usuário, incluindo o administrador, para fins de desenvolvimento apenas.  <br>**Consulte também**: [Conta do Microsoft 365](#m) |
+| [Conta de desenvolvedor E5](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Assinatura de desenvolvedor E5 para criar aplicativos para estender Microsoft 365. Você pode adicionar até 25 licenças de usuário, incluindo o administrador, para fins de desenvolvimento apenas.  <br>**Consulte também**: [Conta do Microsoft 365](#m) |
 | [Ponto de entrada](../concepts/app-fundamentals-overview.md) | Um ponto de acesso, como equipe, canal e chat, para um aplicativo do Teams em que os usuários podem usar seu aplicativo. |
 | [Ambiente](../toolkit/teamsfx-multi-env.md) | Um recurso no Kit de Ferramentas do Teams que permite criar e usar vários ambientes de desenvolvimento para seu projeto de aplicativo. Há dois ambientes de desenvolvimento que o Kit de Ferramentas do Teams cria por padrão, ambiente local e ambiente de desenvolvimento. <br>**Consulte também**: [Ambiente local](#l); [Ambiente de desenvolvimento](#d) |
 

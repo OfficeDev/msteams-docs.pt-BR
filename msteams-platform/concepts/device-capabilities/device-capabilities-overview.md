@@ -1,22 +1,22 @@
 ---
 title: Funcionalidades do dispositivo – Visão geral
 author: Rajeshwari-v
-description: Saiba como integrar recursos nativos de dispositivo, como câmera, imagem, mídia, microfone, código QR e muito mais com Microsoft Teams aplicativo.
+description: Saiba como integrar recursos de dispositivo nativos, como localização e mídia (câmera, microfone, galeria, QR ou scanner de código de barras) com o aplicativo Microsoft Teams.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 26ca39aea4d759edbce62f43e9c832632d267cf6
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 04ae1a0b21c12ef7dda5d4bf8dfa799ac5726d15
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189452"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100564"
 ---
 # <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 A plataforma Microsoft Teams está aprimorando continuamente os recursos do desenvolvedor, alinhando-se com experiências internas. A plataforma aprimorada do Teams permite que os parceiros integrem recursos de dispositivo, como câmera, QR ou scanner de código de barras, galeria de fotos, microfone e localização com seus aplicativos Web. Essa integração reduz a barreira para o desenvolvimento de aplicativos, acelera o ciclo de desenvolvimento e cria novos cenários ou casos de uso para a comunidade de desenvolvedores.
 
-As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipulava como conceder permissões de acesso e agora essas permissões são tratadas Teams. Para obter mais informações, consulte [Permissões de navegador da Web do dispositivo](browser-device-permissions.md).
+As permissões do dispositivo são diferentes no navegador. Anteriormente, o navegador manipulava como conceder permissões de acesso e agora essas permissões são tratadas no Teams. Para obter mais informações, consulte [Permissões de navegador da Web do dispositivo](browser-device-permissions.md).
 
 ## <a name="native-device-capabilities"></a>Funcionalidades nativas do dispositivo
 
@@ -50,4 +50,4 @@ Além disso, você pode integrar o controle [seletor de pessoas](people-picker-c
 
 | Nome de exemplo           | Descrição | Node.js    |
 |:---------------------|:--------------|:---------|
-|Permissões de dispositivos | Descreve como demonstrar um aplicativo de exemplo Teams guia para permissões de dispositivo. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|Permissões de dispositivos | Descreve como demonstrar o aplicativo de exemplo de guia do Teams para permissões de dispositivo. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

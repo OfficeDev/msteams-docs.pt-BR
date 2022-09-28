@@ -1,16 +1,16 @@
 ---
 title: Resolver problemas com o envio da loja
-description: Neste artigo, saiba como solucionar problemas e corrigir problemas com o envio da loja do Microsoft Teams.
+description: Saiba como solucionar problemas e corrigir problemas com o envio da loja do Microsoft Teams. Obtenha ajuda diretamente da Microsoft, resolva problemas e reenvie seu aplicativo.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503869"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100277"
 ---
 # <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Resolver problemas se o envio da loja do Teams falhar
 

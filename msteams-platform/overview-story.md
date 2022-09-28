@@ -1,17 +1,17 @@
 ---
 title: Visão geral - História do usuário para a plataforma Microsoft Teams
 author: heath-hamilton
-description: Conheça a história do usuário de visão geral de como a ideia do aplicativo se adapta aos requisitos do usuário para a plataforma Microsoft Teams.
+description: Saiba como os aplicativos do Microsoft Teams ajudam seus usuários no ambiente do Teams. Entenda seu usuário, problema, requisitos de aplicativo, benefícios e solução centrada no usuário.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 905e357438e9913b64fd46c60a645d0d3d5d3cb0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557978"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100704"
 ---
 # <a name="from-ideas-to-teams-app"></a>A partir da ideias ao aplicativo Teams
 

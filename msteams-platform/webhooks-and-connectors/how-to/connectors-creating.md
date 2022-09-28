@@ -1,20 +1,20 @@
 ---
 title: Criar Conectores do Office 365
 author: laujan
-description: Neste módulo, saiba como começar a usar os conectores Office 365 e adicionar conector ao aplicativo Teams no Microsoft Teams
+description: Introdução aos Office 365 Conectores. Adicionar conector ao aplicativo Teams no Microsoft Teams. Exemplo (.NET, Node.js) Office 365 conector gerando notificações para o canal do Teams.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 977bcac5daa3185177fbc9a3b441c245541914df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363478"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100725"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
-Com os aplicativos do Microsoft Teams, você pode adicionar seu Conector do Office 365 existente ou criar um novo dentro do Teams. Para saber mais, confira [Criar seu próprio conector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 Confira o vídeo a seguir para saber como criar um Office 365 Conectores:
 <br>
@@ -62,7 +62,7 @@ Para integrar a experiência de configuração:
     > Você deve chamar `microsoftTeams.pages.config.setValidityState(true)` como uma resposta à seleção do usuário ou à atualização de campo.
 
 1. Registre `microsoftTeams.pages.config.registerOnSaveHandler()` manipulador de eventos, que é chamado quando o usuário seleciona **Salvar**.
-1. Chame `microsoftTeams.pages.config.setConfig()` para salvar as configurações do conector. As configurações salvas também são mostradas na caixa de diálogo de configuração se o usuário tentar atualizar uma configuração existente para o conector.
+1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. Chame `microsoftTeams.pages.getConfig()` para buscar propriedades de webhook, incluindo a URL.
 
     > [!NOTE]
@@ -147,9 +147,9 @@ A tabela a seguir fornece os parâmetros e os detalhes de `getConfig` propriedad
 | `entityId`       | A ID da entidade, conforme definido pelo código ao chamar `setConfig()`. |
 | `configName`  | O nome da configuração, conforme definido pelo código ao chamar `setConfig()`. |
 | `contentUrl` | A URL da página de configuração, conforme definido pelo código ao chamar `setConfig()`. |
-| `webhookUrl` | A URL do webhook criada para o conector. Use a URL do webhook para POSTAR JSON estruturado para enviar cartões para o canal. O `webhookUrl` é retornado somente quando o aplicativo retorna dados com êxito. |
+| `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | Os valores retornados podem ser `mail`, `groups`ou `teams` correspondentes ao Office 365 Mail, Office 365 Grupos ou Teams, respectivamente. |
-| `userObjectId` | A ID exclusiva correspondente ao usuário do Office 365 que iniciou a configuração do conector. Ele deve ser protegido. Esse valor pode ser usado para associar o usuário no Office 365, que configurou a configuração em seu serviço. |
+| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### <a name="handle-edits"></a>Manipular edições
 
@@ -219,7 +219,7 @@ O seguinte *arquivo manifest.json* contém os elementos necessários para testar
 
 ## <a name="test-your-connector"></a>Testar seu conector
 
-Para testar seu conector, carregue-o para uma equipe com qualquer outro aplicativo. Você pode criar um pacote .zip usando o arquivo de manifesto dos dois arquivos de ícone e conectores do Painel do Desenvolvedor, modificado conforme indicado em [Incluir o conector no seu manifesto](#include-the-connector-in-your-manifest).
+To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
 Depois de carregar o aplicativo, abra a lista de conectores de qualquer canal. Role até a parte inferior para ver o aplicativo na seção **Carregado**:
 

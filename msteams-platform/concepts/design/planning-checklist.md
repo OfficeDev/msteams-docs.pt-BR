@@ -1,16 +1,15 @@
 ---
 title: Perguntas para ajudar a planejar o desenvolvimento de aplicativos do Microsoft Teams
 author: heath-hamilton
-description: Saiba como planejar seu aplicativo usando a lista de verificação para garantir que seu plano abranja os detalhes importantes do desenvolvimento de aplicativos.
-ms.topic: conceptual
+description: Saiba como planejar seu aplicativo usando a lista de verificação para garantir que seu plano abranja os detalhes importantes do desenvolvimento de aplicativos. Planejar o ciclo de vida do aplicativo. Planeje hospedar seu aplicativo teams.
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 932e8ea564a6cc47bb2b8dbe4e01256d0688cefa
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338764"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100711"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de verificação de planejamento de aplicativos do Teams
 
@@ -106,9 +105,9 @@ Criar um aplicativo incrível do Teams tem tudo a ver com encontrar a combinaç�
 
 | # | Considere: |
 | --- | --- |
-| 1 | As informações apresentadas pelo aplicativo, seja na guia ou através de um bot, são relevantes e úteis para a maioria dos membros de uma Equipe? Por exemplo, o aplicativo Scrum. |
+| 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
 | 2 | O contexto do aplicativo pode mudar dependendo da equipe na qual ele é adicionado? Por exemplo, as tarefas do Planner são diferentes em equipes diferentes. |
-| 3 | É possível que todos os membros de uma persona que precisam colaborar façam parte de uma única equipe? Por exemplo, os agentes que trabalham em um ticket. |
+| 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
 <br>

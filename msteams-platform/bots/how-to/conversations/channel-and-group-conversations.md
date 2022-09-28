@@ -1,16 +1,16 @@
 ---
 title: Criar bots de conversa para chat em grupo ou canal
 author: surbhigupta
-description: Saiba como enviar, receber e manipular mensagens para um bot em um canal ou chat em grupo. Saiba mais sobre diretrizes de design e muito mais.
+description: Saiba como criar novos threads de conversa, trabalhar em menções e enviar mensagens na instalação. Explore o exemplo de upload de arquivo do Teams (.NET, JavaScript, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8db8858ff746ce466b8cfef1cfa210111662cbeb
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 18af255a8d0975878865b101b8787422d5cfa3d5
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780930"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100599"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>Canais e conversas de chat em grupo com um bot do Microsoft Teams
 

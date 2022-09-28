@@ -1,15 +1,15 @@
 ---
 title: O que há de novo e atualizado para desenvolvedores no Teams
-description: Quais são os novos recursos de desenvolvedor do Microsoft Teams introduzidos e as atualizações para os recursos existentes.
+description: Saiba mais sobre novos recursos de desenvolvedor do Microsoft Teams e atualizações para recursos existentes, anotações de substituição e alterações. Assine o RSS feed para obter as atualizações mais recentes.
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 2540738b2001363c6bc4466bcaa0b4754d4935cc
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: f10194e224aee438472a4487ede3db49792bf77c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027163"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100158"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 

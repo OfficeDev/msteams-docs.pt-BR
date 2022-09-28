@@ -1,14 +1,14 @@
 ---
 title: Pré-visualização pública do desenvolvedor para o Microsoft Teams
-description: Neste artigo, conheça os recursos que estão na Visualização Pública do Desenvolvedor do Microsoft Teams e do aplicativo de visualização do desenvolvedor.
+description: Uma Versão Prévia do Desenvolvedor (Beta) é um programa público para explorar e testar os recursos futuros para inclusão potencial em seu aplicativo Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: dd0583f453e93a0127bf4cbcc29a6a56dec6655a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312195"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100284"
 ---
 # <a name="public-developer-preview-for-teams"></a>Visualização do desenvolvedor público do Teams
 

@@ -1,16 +1,16 @@
 ---
 title: Responder à ação de envio do módulo de tarefas
 author: surbhigupta
-description: Neste módulo, saiba como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagens com mensagem proativa e muito mais
+description: Saiba como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagem com mensagem proativa. Defina comandos de pesquisa e responda a pesquisas.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144023"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100480"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
@@ -204,7 +204,7 @@ O método de resposta é o mesmo que [ responder ao evento `fetchTask` inicial](
 ## <a name="bot-response-with-adaptive-card"></a>Resposta do bot com Cartão Adaptável
 
 > [!NOTE]
-> O pré-requisito para obter a resposta do bot com um Cartão adaptável é que você deve adicionar o objeto `bot` ao manifesto do aplicativo e definir o escopo necessário para o bot. Use a mesma ID da extensão de mensagem para o bot.
+> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
 Você também pode responder ao `submitAction` inserindo uma mensagem com um Cartão Adaptável no canal com um bot. O usuário pode visualizar a mensagem antes de enviá-la. Isso é útil em cenários em que você coleta informações dos usuários antes de criar uma resposta de Cartão Adaptável ou quando atualiza o cartão depois que alguém interage com ele.
 
@@ -595,7 +595,7 @@ A seção a seguir é uma descrição das entidades na matriz `OnBehalfOf`:
 |`itemId`|Inteiro|Descreve a identificação do item. Seu valor deve ser `0`.|
 |`mentionType`|Cadeia de caracteres|Descreve a menção de uma "pessoa".|
 |`mri`|Cadeia de caracteres|Identificador de recurso de mensagem (MRI) da pessoa em cujo nome a mensagem é enviada. O nome do remetente da mensagem aparecerá como "\<user\> por meio de \<bot name\>".|
-|`displayName`|Cadeia de caracteres|Nome da pessoa. Usado como fallback caso a resolução de nomes não esteja disponível.|
+|`displayName`|Cadeia de caracteres|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## <a name="code-sample"></a>Exemplo de código
 

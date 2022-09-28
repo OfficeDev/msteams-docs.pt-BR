@@ -1,27 +1,27 @@
 ---
 title: Criar aplicativos para a plataforma Microsoft Teams
 author: heath-hamilton
-description: Aprenda a obter uma visão geral de como os desenvolvedores podem estender os recursos do Microsoft Teams com aplicativos personalizados.
+description: Saiba mais sobre o Microsoft Teams, por que você deve criar aplicativos na plataforma Teams e como o aplicativo Teams ajuda a atender às necessidades de negócios.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 143f316a6f5153185e78b2efa4ec1db3dc9c1fa6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558426"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100200"
 ---
 # <a name="teams-app-that-fits"></a>Aplicativo do Microsoft Teams que se ajusta
 
 O Microsoft Teams oferece uma coleção de aplicativos fornecidos pela Microsoft ou serviços externos. Os aplicativos do Teams podem ser guias, bots ou extensões de mensagens ou qualquer combinação dos três. Esses aplicativos expandem o valor de sua experiência colaborativa do Teams.
 
-Os aplicativos podem ser pessoais ou compartilhados. Um aplicativo pessoal habilita uma comunicação individual, e um aplicativo compartilhado permite que vários usuários compartilhem espaço do aplicativo para colaborar.
+Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 
 ## <a name="driving-organizational-goals"></a>Impulsionando as metas organizacionais
 
-A colaboração e a comunicação são fundamentais para uma organização. Comunicação concisa, integração com os serviços necessários e acessibilidade em qualquer lugar é por isso que as organizações estão escolhendo cada vez mais confiar em aplicativos.
+Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
 
 As organizações o usam para se conectar com seus clientes, fornecer serviços e compartilhar informações. Mas isso não é tudo! Os aplicativos são o local de reunião para que as pessoas trabalhem juntas. Um aplicativo bem colocado ajuda a criar um ambiente coeso para necessidades de negócios externas e internas.
 
@@ -47,7 +47,7 @@ Veja por que o Teams é mais adequado para suas necessidades de aplicativo:
 
 - **Comunicação e colaboração**
 
-    Os aplicativos do Teams mais bem-sucedidos envolvem obter informações de outro sistema, ter uma conversa sobre isso e permitir que os usuários tomem medidas. O Teams permite que você realizar todas essas tarefas diretamente no cliente Teams. É possível até enviar informações para um para um público-alvo com base em um evento ou ação em um sistema externo.
+    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 
 - **Interações sociais**
 
@@ -57,7 +57,7 @@ Veja por que o Teams é mais adequado para suas necessidades de aplicativo:
 
 - **Processos comerciais comuns**
 
-    Tarefas como criar e compartilhar um relatório de ligações de vendas, acompanhar a linha do tempo do projeto, reservar recursos comuns, enviar solicitações de suporte técnico são tarefas repetitivas. Elas podem servir de aplicativos do Teams eficazes.
+    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
 
     Além de automatizar fluxos de trabalho repetitivos, você pode usar aplicativos para ajudar com problemas de comunicação. Um bot de chat é uma substituição fácil para emails e chamadas telefônicas para departamentos de TI ou RH.
 

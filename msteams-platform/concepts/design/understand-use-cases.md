@@ -1,16 +1,16 @@
 ---
 title: Noções básicas sobre os casos de uso do seu aplicativo e os recursos do Teams
 author: heath-hamilton
-description: Neste artigo, você aprenderá sobre as funcionalidades do aplicativo do Microsoft Teams, planejará e entenderá os recursos e o aplicativo do Teams e também os problemas do usuário que o aplicativo do Teams resolveria.
+description: Saiba mais sobre as funcionalidades do aplicativo Microsoft Teaams– guias, bots, extensões de reunião, extensões de mensagem, conectores de webhook, experiência pessoal de aplicativo, experiência de aplicativo compartilhado.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558440"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100452"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -31,7 +31,7 @@ Se você vai atender aos requisitos do usuário com seu aplicativo, primeiro pre
 
 ## <a name="microsoft-teams-app-features"></a>Recursos do aplicativo Microsoft Teams
 
-Há várias maneiras de estender o Teams para que cada aplicativo seja exclusivo. Os recursos do aplicativo Teams oferecem:
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [Recursos do aplicativo](#app-capabilities)
 - [Escopo do aplicativo](#app-scope)

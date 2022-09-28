@@ -1,17 +1,17 @@
 ---
 title: Explorando o Teams como uma plataforma para a criação de aplicativos
 author: heath-hamilton
-description: Conheça a visão geral de como explorar os recursos da plataforma Microsoft Teams para seu aplicativo na área de trabalho e em dispositivos móveis.
+description: Recursos da plataforma Microsoft Teams para seu aplicativo na área de trabalho e em dispositivos móveis. Guias, bots, extensão de mensagens, webhook, conectores, Microsoft Graph ou Cartões Adaptáveis.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: b49c4013184b11f686e460cd23441acf1b4faff1
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558825"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100305"
 ---
 # <a name="explore-teams-platform-features"></a>Explore os recursos da plataforma Microsoft Teams
 
@@ -23,7 +23,7 @@ Com o Teams, você pode criar seu aplicativo em um ambiente rico em recursos. Us
 
 | Recurso | Descrição | Útil para |
 | --- | --- | --- |
-|Guias | As guias são páginas da Web com reconhecimento de Equipes inseridas no Microsoft Teams. Você pode adicioná-los como parte de um canal dentro de uma equipe, chat em grupo ou aplicativo pessoal para um usuário individual. | Guia pessoal, guia de canal ou grupo, exibição estendida e pré-visualização de links. |
+|Guias | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Guia pessoal, guia de canal ou grupo, exibição estendida e pré-visualização de links. |
 | Bots | Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas automatizadas simples e repetitivas feitas pelos usuários. Uma interação de bot pode ser perguntas e respostas rápidas ou pode ser uma conversa complexa que fornece acesso aos serviços. | Atendimento ao cliente, informações sobre o clima, fazem reservas de jantar ou fornecem informações de viagem. |
 | Extensão de mensagem | As extensões de mensagem permitem que os usuários interajam com seu cliente do Teams do serviço Web. Eles pesquisam ou iniciam ações em um sistema externo. Você pode enviar o resultado da interação para o cliente do Teams como um cartão com formatação avançada. | Reserve um recurso e permita que o canal saiba o intervalo de tempo reservado. Pesquise um item de trabalho e compartilhe-o com o grupo como um Cartão Adaptável. Crie um bug no seu sistema de acompanhamento com base em uma mensagem do Teams, atribua esse bug a um usuário e envie um cartão para o thread da conversa com os detalhes do bug. |
 |Extensões de reunião | Você pode criar aplicativos para tornar as reuniões mais produtivas. | Peça que as pessoas concluam uma pesquisa durante uma chamada ou enviem um lembrete rápido que não interrompa o fluxo da reunião. |
