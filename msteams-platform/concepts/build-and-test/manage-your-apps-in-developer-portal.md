@@ -4,12 +4,12 @@ description: Neste artigo, saiba como configurar, distribuir e gerenciar seus ap
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
+ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435073"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68098915"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Gerenciar seus aplicativos no Portal do Desenvolvedor
 
@@ -20,7 +20,7 @@ Depois de criar ou carregar seu aplicativo, você pode gerenciar seus aplicativo
 * [Avançado](#advanced)
 * [Publish](#publish)
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Na seção **Visão** geral, você pode ver os seguintes componentes para gerenciar seu aplicativo:
 
@@ -56,7 +56,7 @@ Na seção **Configurar** , você pode ver os seguintes componentes para gerenci
   * Extensão da reunião
   * Notificação do feed de atividades
 * **Permissões**: esta seção permite conceder permissões de dispositivo, permissões de equipe, permissões de chat ou reunião e permissões de usuário para seu aplicativo.
-* **Logon único**: você pode configurar seu aplicativo para autenticar usuários com SSO (logon único).
+* **Logon único**: o bot registrado no Azure AD dá suporte ao SSO (Sign-On único). Se um bot estiver registrado no Portal do Bot Framework (ou no Portal do Desenvolvedor em Gerenciamento de Bot), esses bots não darão suporte ao SSO e você precisará registrar seu bot no Azure AD para dar suporte ao SSO. Para um bot registrado no Azure AD, adicione o **URI da ID do Aplicativo**. Para obter o URI da ID do aplicativo Azure AD, [consulte Usar a autenticação de SSO para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Idiomas**: você pode configurar ou alterar o idioma do seu aplicativo.
 * **Domínio**: você pode adicionar os domínios para carregar seus aplicativos no cliente do Teams (por exemplo: *.example.com).
 
