@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
+ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450398"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158678"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -130,7 +130,8 @@ A seguir estão as etapas para criar uma guia pessoal:
     * **Deseja exigir o suporte ao logon único do Microsoft Azure Active Directory (Azure AD) para a guia?**
 
       Escolha **não** para incluir o suporte de logon único do Azure AD para a guia. O padrão é sim, insira **n**.
-
+    > [!NOTE]
+    > Em uma guia, a página inicial da guia é exibida somente quando o usuário seleciona o botão Voltar (ou sai da guia) e volta para a home page. A guia não mantém nem mantém o estado anterior por design.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Adicionar uma página de conteúdo à guia pessoal
