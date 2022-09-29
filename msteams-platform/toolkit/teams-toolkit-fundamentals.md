@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ca65a34796886ff8eb6a0c13aaa11af319739dc8
+ms.sourcegitcommit: 1db4429f34da213aa749e483a4ceb83c14b07de3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806770"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158260"
 ---
 # <a name="teams-toolkit-overview"></a>Visão geral do Kit de ferramentas do Microsoft Teams
 
@@ -59,7 +59,7 @@ A tabela a seguir ajuda você a obter a visão geral do Kit de Ferramentas do Te
 | Publicar seu aplicativo Teams | Ele contém: <br> - Publicar seu aplicativo <br> – Gerenciar a aprovação do administrador <br> - Publicar no repositório <br> – Integrar com o Portal do Desenvolvedor |
 
 ### <a name="entities-integrated-with-teams-toolkit"></a>Entidades integradas ao Kit de Ferramentas do Teams
-
+ 
 O Kit de Ferramentas do Teams é uma extensão Visual Studio Code. Ele é integrado às seguintes entidades no Kit de Ferramentas do Teams, como o Azure AD e o Microsoft 365, o Portal do Desenvolvedor e o Microsoft Graph. Todas as entidades são integradas ao Kit de Ferramentas do Teams e ajudam os usuários a criar um aplicativo.
 
 | Entidades | Descrição |
