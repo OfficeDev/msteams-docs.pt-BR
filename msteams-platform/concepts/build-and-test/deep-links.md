@@ -3,12 +3,12 @@ title: Criar links detalhados
 description: Neste artigo, você aprenderá a criar links profundos e navegar por eles em seus aplicativos do Microsoft Teams usando guias.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158832"
+ms.locfileid: "68160717"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -388,7 +388,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Criar link profundos para o aplicativo depois que ele for listado na Teams store. Para criar um link para iniciar o Teams, acrescente a ID do aplicativo à seguinte URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Uma caixa de diálogo é exibida para instalar ou abrir o aplicativo.
 
 > [!NOTE]
-> Se o aplicativo tiver sido aprovado para a plataforma móvel, você poderá vincular-se a um aplicativo móvel. O Apple App Store Connect Team ID é necessário além disso para que o link profundo funcione no Teams-iOS. Para obter mais informações, [confira como atualizar a ID da equipe do Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
+> Se o aplicativo tiver sido aprovado para a plataforma móvel, você poderá vincular-se a um aplicativo móvel. O Apple App Store Connect Team ID é necessário além disso para que o link profundo funcione no Teams-iOS. Para obter mais informações, [confira como atualizar a ID da equipe do Apple App Store Connect](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculação profunda para guias da Estrutura do SharePoint
 

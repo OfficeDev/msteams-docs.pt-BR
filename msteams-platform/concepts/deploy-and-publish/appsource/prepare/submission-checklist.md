@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 9d850b76bddf288e766bdcc039711ef1d3059df8
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100438"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160710"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar o envio do repositório do Teams
 
@@ -19,7 +19,7 @@ Você projetou, compilou e testou seu aplicativo do Microsoft Teams. Agora você
 Veja o vídeo a seguir para saber mais sobre a publicação de seu aplicativo na loja de aplicativos do Microsoft Teams:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Antes de enviar seu aplicativo para a [Central de Parceiros](/office/dev/store/use-partner-center-to-submit-to-appsource), certifique-se de ter feito o seguinte.
@@ -30,7 +30,10 @@ Embora seu aplicativo possa estar funcionando em um ambiente de teste, você dev
 
 A ferramenta de validação de aplicativos do Microsoft Teams ajuda você a identificar e corrigir problemas antes de enviar para o Partner Center. A ferramenta verifica automaticamente as configurações do aplicativo comparando-as aos mesmos casos de teste usados durante a validação do repositório.
 
-1. Vá para a [Ferramenta de validação de aplicativos do Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Observação: a ferramenta também está disponível no [Portal do Desenvolvedor do Teams](~/concepts/build-and-test/teams-developer-portal.md)
+1. Vá para a [Ferramenta de validação de aplicativos do Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html).
+
+   Você também pode validar seu aplicativo usando o [Portal do Desenvolvedor para Teams.](~/concepts/build-and-test/teams-developer-portal.md)
+
 1. Carregue o pacote do aplicativo para executar os testes automatizados.
 1. Vá para a **Lista de verificação preliminar** e analise os casos de teste que são difíceis de automatizar.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -185,18 +188,36 @@ Você pode adicionar um URL para o seu vídeo no YouTube ou no Vimeo.
 
 ### <a name="select-a-category-for-your-app"></a>Selecionar uma categoria para o seu aplicativo
 
-Durante o envio, você será solicitado a categorizar seu aplicativo. A tabela a seguir mapeia as categorias da Teams Store e as compara às categorias listadas no [Partner Center](https://aka.ms/PartnerCenterHomePage).
+Durante o envio, você será solicitado a categorizar seu aplicativo. Você pode categorizar seu aplicativo com base nas seguintes categorias:
 
-| Categorias do Teams       | Categorias do Partner Center  |
-|:---------------------|:---------------|
-| Visualização de dados e BI | Análise, Visualização de Dados e BI |
-| Ferramentas de desenvolvedor | Ferramentas para Desenvolvedores, Administrador de TI |
-| Educação | Educação |
-| Recursos humanos & recrutando| Recursos Humanos e Recrutamento |
-| Produtividade | Gerenciamento de Conteúdo, Arquivos e documentos, Produtividade, Treinamento e Tutoriais e Utilitários |
-| Gerenciamento de projeto | Comunicação, Gerenciamento de Projeto, Fluxo de Trabalho e Gerenciamento de Negócios |
-| Vendas e suporte | Gerenciamento de Clientes e Contatos, Atendimento ao Cliente, Gerenciamento Financeiro e Vendas e Marketing |
-| Social | Galerias de Imagens e Vídeos, Estilo de Vida, Notícias e Previsão do Tempo, Redes Sociais, Viagens e Navegação |
+|Categories  |
+|--------------|
+| Microsoft |
+| Education |
+| Produtividade |
+| Imagens & galerias de vídeo |
+| Gerenciamento de projeto |
+| Utilitários |
+| Social |
+| Comunicação |
+| Gerenciamento de conteúdo |
+| Arquivos & documentos |
+| Fluxo de & gerenciamento de negócios |
+| TI/Administração |
+| Recursos humanos & recrutando|
+| Ferramentas de desenvolvedor |
+| Agendamento & reuniões |
+| Visualização de dados & BI |
+| Tutorial & treinamento |
+| Notícias & tempo |
+| Suporte ao cliente |
+| Referência |
+| Vendas & marketing |
+| Olhe & sentir |
+| CRM (gerenciamento & contato do cliente) |
+| Gerenciamento financeiro |
+| Mapas & feeds |
+| Other |
 
 ### <a name="localize-your-store-listing"></a>Localizar sua listagem na loja
 

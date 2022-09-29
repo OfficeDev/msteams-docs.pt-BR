@@ -5,12 +5,12 @@ description: Saiba como usar o SDK do cliente JavaScript do Teams para habilitar
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 25d8fb9c52e0dee02d8057f1fe4714f7f3f1f613
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605786"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160633"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
@@ -20,15 +20,15 @@ Para uma integração eficaz, você deve ter uma boa compreensão dos [snippets]
 
 ## <a name="advantages"></a>Vantagens
 
-A principal vantagem da integração de recursos de dispositivo em seus aplicativos do Teams é que ele usa controles nativos do Teams para fornecer uma experiência avançada e imersiva aos usuários. Os cenários a seguir mostram as vantagens dos recursos de mídia:
+A vantagem de integrar recursos de dispositivo aos seus aplicativos do Teams é que ele usa controles nativos do Teams para fornecer uma experiência avançada e imersiva para seus usuários. Os cenários a seguir mostram as vantagens dos recursos de mídia:
 
-* Permita que o usuário capture as simulações aproximadas desenhadas em um quadro de comunicações físico por meio do telefone celular e use as imagens capturadas como opções de votação no chat em grupo do Teams.
+* Permitir que o usuário capture as simulações aproximadas desenhadas em um quadro de comunicações físico por meio de seu telefone celular e use as imagens capturadas como opções de votação no chat em grupo do Teams.
 
 * Permitir que o usuário grave uma mensagem de áudio e anexe-a a um tíquete de incidente.
 
 * Permitir que o usuário digitalize os documentos físicos do smartphone para fazer uma solicitação de seguro de carro.
 
-* Permitir que o usuário grave um vídeo em um local de trabalho e carregue para presença.
+* Permitir que o usuário grave um vídeo em um site de trabalho e carregue-o para participação.
 
 > [!NOTE]
 >
@@ -69,7 +69,7 @@ A tabela a seguir lista o conjunto de APIs para habilitar os recursos de mídia 
 | API      | Descrição   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Camera)**| Essa API permite que os usuários **capturem ou selecionem a mídia da câmera do dispositivo** e retorne-a ao aplicativo Web. Os usuários podem editar, cortar, girar, anotar ou desenhar imagens antes do envio. Em resposta a `selectMedia`, o aplicativo Web recebe as IDs de mídia das imagens selecionadas e uma miniatura da mídia selecionada. Essa API pode ser configurada ainda mais por meio da configuração [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops). |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Defina [o mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) como `4` (Áudio) na `selectMedia` API para acessar a funcionalidade do microfone. Essa API também permite que os usuários gravem áudio do microfone do dispositivo e retornem clipes gravados para o aplicativo Web. Os usuários podem pausar, gravar novamente e reproduzir a visualização da gravação antes do envio. Em resposta a **selectMedia**, o aplicativo Web recebe IDs de mídia da gravação de áudio selecionada. <br/> Use `maxDuration` se precisar configurar uma duração em minutos para gravar a conversa. A duração atual da gravação é de 10 minutos, após o qual a gravação é encerrada.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Defina [o mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) como `4` (Áudio) na `selectMedia` API para acessar a funcionalidade do microfone. Essa API também permite que os usuários gravem áudio do microfone do dispositivo e retornem clipes gravados para o aplicativo Web. Os usuários podem pausar, gravar novamente e reproduzir a visualização da gravação antes do envio. Em resposta a **selectMedia**, o aplicativo Web recebe IDs de mídia das gravações de áudio selecionadas. <br/> Use `maxDuration`, se você precisar configurar uma duração em minutos para gravar a conversa. A duração atual da gravação é de 10 minutos, após o qual a gravação é encerrada.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| Essa API recupera a mídia capturada pela API `selectMedia` em partes, independentemente do tamanho da mídia. Essas partes são montados e enviados de volta para o aplicativo Web como um arquivo ou blob. Dividir mídia em partes menores facilita a transferência de arquivos grandes. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| Essa API permite que o usuário exiba imagens no modo de tela inteira como uma lista rolável.|
 
@@ -80,7 +80,6 @@ A imagem a seguir ilustra a experiência do aplicativo Web da `selectMedia` API 
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="A ilustração mostra a funcionalidade de imagem para dispositivos móveis.":::
 
 > [!NOTE]
->
 > Em dispositivos com a versão do Android abaixo de 7, `selectMedia` a API inicia a experiência de câmera nativa do Android em vez da experiência de câmera nativa do Teams.
 
 A imagem a seguir ilustra a experiência do aplicativo Web da `selectMedia` API para o recurso de microfone:
@@ -169,7 +168,7 @@ Certifique-se de lidar com esses erros adequadamente em seu aplicativo teams. A 
 
        `fullscreen: false` abre a câmera no modo de gravação de vídeo e usa apenas a câmera frontal. Normalmente é `fullscreen: false` usado quando o usuário deseja gravar vídeo durante a leitura de conteúdo na tela do dispositivo.
 
-       Esse modo também dá suporte `isStopButtonVisible: true` ao que adiciona um botão parar na tela que permite que o usuário interrompa a gravação. Se `isStopButtonVisible: false`, a gravação pode ser interrompida chamando a API mediaController ou quando a duração da gravação tiver atingido `maxDuration` o tempo especificado.
+       Esse modo também dá suporte `isStopButtonVisible: true` a um botão parar na tela que permite que o usuário interrompa a gravação. Se `isStopButtonVisible: false`, a gravação pode ser interrompida chamando a API mediaController ou quando a duração da gravação tiver atingido `maxDuration` o tempo especificado.
 
        A seguir está um exemplo para interromper a gravação com `maxDuration` o tempo especificado:
 
@@ -383,6 +382,23 @@ Certifique-se de lidar com esses erros adequadamente em seu aplicativo teams. A 
         }
     });
     });
+    ```
+
+## <a name="file-download-on-teams-mobile"></a>Download de arquivo no teams mobile
+
+Você pode configurar um aplicativo para permitir que os usuários baixem arquivos do modo de exibição da Web para seus dispositivos móveis.
+
+>[!NOTE]
+> O download de arquivos só tem suporte no cliente móvel do Android Teams e somente arquivos não autenticados podem ser baixados.
+
+Para habilitar, siga as etapas:
+
+1. Atualize o arquivo [manifest.json do](../../resources/schema/manifest-schema.md#devicepermissions) aplicativo Teams adicionando a `devicePermissions` propriedade e especificando `media` conforme mostrado no manifesto [de atualização](#update-manifest).
+
+2. Use o seguinte formato e adicione o atributo de download HMTL à página da Web:
+
+    ```html
+    <a href="path_to_file" download="download">Download</a>
     ```
 
 ## <a name="see-also"></a>Confira também

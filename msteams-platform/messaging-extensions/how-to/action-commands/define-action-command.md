@@ -5,12 +5,12 @@ description: Saiba como definir comandos de ação de extensão de mensagens com
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100732"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160640"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de ação de extensão de mensagem
 
@@ -99,7 +99,7 @@ Para criar um comando de ação:
 
 1. Para usar um bot existente, selecione Selecionar um bot existente e escolha os **bots** existentes na lista suspensa ou insira uma **ID de bot** se você já tiver uma ID de bot criada.
 
-1. Selecione o escopo da extensão de mensagens e selecione **Salvar**.
+1. Selecione o escopo do bot e **Salve**.
 
 1. Selecione **Adicionar um comando** na seção **Comando** para incluir os comandos, que decidem o comportamento da extensão de mensagem.
 
@@ -167,17 +167,13 @@ Se você estiver usando um modo de exibição da Web inserido, opcionalmente, `t
 
 #### <a name="app-manifest-example"></a>Exemplo de manifesto do aplicativo
 
-A seção a seguir é um exemplo de um objeto `composeExtensions` definindo dois comandos de ação. Não é um exemplo do manifesto completo. Para obter o esquema completo do manifesto do aplicativo, consulte [aplicar esquema de manifesto](~/resources/schema/manifest-schema.md):
-
+Esta seção não é um exemplo do manifesto completo. Para obter o esquema completo do manifesto do aplicativo, consulte o [esquema de manifesto do aplicativo](~/resources/schema/manifest-schema.md). A seguir está um exemplo de um objeto `composeExtensions` que define dois comandos de ação:
+ 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",
