@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2b229b14db563a6b7a4dc587ac67c872d461ec72
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 6a6c6599ff036cf7b81dd30b00e5608db3dc4cc2
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806898"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243372"
 ---
 # <a name="faq-for-teams-toolkit"></a>Perguntas frequentes sobre o Kit de Ferramentas do Teams
 
@@ -25,7 +25,7 @@ Perguntas frequentes para [provisionar recursos de nuvem usando o Kit de Ferrame
 
 <summary><b>Como solucionar problemas?</b></summary>
 
-Se você receber mensagens de erro com o Kit de Ferramentas do Teams no Visual Studio Code, poderá selecionar **Obter Ajuda** na notificação de erro para navegar até o documento relacionado. Se você estiver usando a CLI do TeamsFx, haverá um hiperlink no final da mensagem de erro que aponta para o documento de ajuda. Também é possível visualizar o [documento de ajuda de provisionamento](https://aka.ms/teamsfx-arm-help) diretamente.
+Se você receber erros com o Kit de Ferramentas do Teams no Visual Studio Code, poderá selecionar Obter Ajuda  sobre a notificação de erro para ir para o documento relacionado. Se você estiver usando a CLI do TeamsFx, haverá um hiperlink no final da mensagem de erro que aponta para o documento de ajuda. Também é possível visualizar o [documento de ajuda de provisionamento](https://aka.ms/teamsfx-arm-help) diretamente.
 
 <br>
 

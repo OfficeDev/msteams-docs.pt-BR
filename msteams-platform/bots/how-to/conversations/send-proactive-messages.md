@@ -4,12 +4,12 @@ description: Saiba como enviar mensagens proativas com o bot do Teams, instalar 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 13db8624cfd9b8bc73adce0a418fe5283455bf5f
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990935"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243021"
 ---
 # <a name="proactive-messages"></a>Mensagens proativas
 
@@ -25,7 +25,7 @@ Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde 
 >
 > * Para enviar uma mensagem proativa, é recomendável começar a criar um [bot de notificação com JavaScript](../../../sbs-gs-notificationbot.yml) ou um exemplo de notificação [de webhook de entrada](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Para começar, baixe o [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore. Para obter mais informações, consulte [documentos do Kit de Ferramentas do Teams](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Atualmente, os bots estão disponíveis na Nuvem da Comunidade Governamental (GCC) e no GCC-High, mas não no Departamento de Defesa (DOD). Para mensagens proativas, os bots devem usar os seguintes pontos de extremidade para ambientes de nuvem governamentais: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * Atualmente, os bots estão disponíveis na Nuvem da Comunidade Governamental (GCC) e no GCC-High, mas não no Departamento de Defesa (DOD). Para mensagens proativas, os bots devem usar os seguintes pontos de extremidade para ambientes de nuvem governamentais: <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 Para enviar uma mensagem proativa para um usuário, um chat em grupo ou uma equipe, seu bot deve ter o acesso necessário para enviar a mensagem. O aplicativo que contém seu bot deve ser instalado primeiro onde houver um chat em grupo ou equipe.
 
@@ -195,9 +195,21 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values)
+        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
         {
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, BotCallback, default(CancellationToken));
+            var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
+            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
         // Let the caller know proactive messages have been sent

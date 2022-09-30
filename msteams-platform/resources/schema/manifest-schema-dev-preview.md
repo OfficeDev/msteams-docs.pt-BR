@@ -4,12 +4,12 @@ description: Saiba como habilitar a visualização do desenvolvedor. Exemplo de 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100291"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243168"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
@@ -535,7 +535,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **Opcional**, exceto **Obrigatório** onde indicado.
 
-Uma lista de domínios válidos dos quais o aplicativo espera carregar qualquer conteúdo. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com`, use `*.*.example.com`. Se a sua configuração de guias ou interface do usuário de conteúdo precisa navegar para qualquer outro domínio além do usado para a configuração de guias, esse domínio deve ser especificado aqui.
+Uma lista de domínios válidos dos quais o aplicativo espera carregar qualquer conteúdo. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com` use `*.*.example.com`. Se a configuração da guia ou a interface do usuário do conteúdo precisar ir para qualquer outro domínio além do que é usado para a configuração de tabulação, esse domínio deverá ser especificado aqui.
 
 Entretanto, **não** é necessário incluir os domínios dos provedores de identidade aos quais você deseja oferecer suporte em seu aplicativo. Por exemplo, para autenticar usando uma ID do Google, é necessário redirecionar para o accounts.google.com, mas você não deve incluir accounts.google.com em `validDomains[]`.
 

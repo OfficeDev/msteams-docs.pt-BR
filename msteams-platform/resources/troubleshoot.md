@@ -1,16 +1,16 @@
 ---
 title: Solucionar problemas do seu aplicativo
-description: Solucionar problemas ou erros ao criar aplicativos para Microsoft Teams
+description: Solucionar problemas ou erros ao criar aplicativos para o Microsoft Teams
 keywords: solução de problemas de desenvolvimento de aplicativos do Teams
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0b3f4f7b3a38b6e61b4fbc7e58c5ed5897ed427e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048959"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243469"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas em seu aplicativo Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "66048959"
 
 ### <a name="accessing-the-devtools"></a>Acessando o DevTools
 
-Você pode abrir [o DevTools no cliente Teams](~/tabs/how-to/developer-tools.md) para obter uma experiência semelhante a pressionar F12 (no Windows) ou Command-Option-I (no MacOS) em um navegador.
+Você pode abrir [o DevTools no cliente do Teams](~/tabs/how-to/developer-tools.md) para uma experiência semelhante à de pressionar F12 (no Windows) ou Command-Option-I (no MacOS) em um navegador.
 
 ### <a name="blank-tab-screen"></a>Tela de guia em branco
 
@@ -26,6 +26,9 @@ Se você não estiver vendo seu conteúdo no modo de exibição de guia, pode se
 
 * seu conteúdo não pode ser exibido em um `<iframe>`.
 * o domínio de conteúdo não está na [lista validDomains](~/resources/schema/manifest-schema.md#validdomains) no manifesto.
+
+> [!NOTE]
+> Uma guia em branco aparece quando a URL da guia fornecida redireciona para a tela de logon. As páginas de logon não são renderizadas em iFrames como uma proteção contra clickjacking. Sua lógica de autenticação deve usar um método diferente de redirecionamento.
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>O botão Salvar não está habilitado na caixa de diálogo de configurações
 
@@ -50,7 +53,7 @@ Ao adicionar uma guia, se você selecionar  Salvar, mas receber uma mensagem de 
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>Não é possível autenticar o usuário ou exibir seu provedor de autenticação em sua guia
 
-A menos que você esteja fazendo a autenticação silenciosa, você deve seguir o processo de autenticação fornecido pelo [SDK do Microsoft Teams cliente JavaScript](/javascript/api/overview/msteams-client).
+A menos que você esteja fazendo autenticação silenciosa, você deve seguir o processo de autenticação fornecido pelo [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > Exigimos que todo o fluxo de autenticação comece e termine em seu domínio, que deve ser listado no `validDomains` objeto em seu manifesto.
@@ -87,12 +90,12 @@ A maioria dos erros de manifesto fornecerá uma dica sobre qual campo específic
 
 Motivos comuns para erros de leitura de manifesto:
 
-* JSON inválido. Use um IDE como [Visual Studio Code](https://code.visualstudio.com) ou [Visual Studio](https://www.visualstudio.com/vs/) valida automaticamente a sintaxe JSON.
+* JSON inválido. Use um IDE, como [Visual Studio Code](https://code.visualstudio.com) ou [Visual Studio](https://www.visualstudio.com/vs/), que valida automaticamente a sintaxe JSON.
 * Problemas de codificação. Use UTF-8 para o *arquivo manifest.json* . Outras codificações, especificamente com a BOM, podem não ser legível.
-* Pacote de .zip malformado. O *arquivo manifest.json* deve estar no nível superior do .zip arquivo. Observe que a compactação de arquivo mac padrão pode colocar *o manifest.json* em um subdiretório, que não será carregado corretamente no Microsoft Teams.
+* Pacote de .zip malformado. O *arquivo manifest.json* deve estar no nível superior do .zip arquivo. Observe que a compactação de arquivo Mac padrão pode colocar *o manifest.json* em um subdiretório, que não será carregado corretamente no Microsoft Teams.
 
 ### <a name="another-extension-with-same-id-exists"></a>Existe outra extensão com a mesma ID
 
-Se você estiver tentando carregar um pacote atualizado com a mesma ID novamente, escolha o ícone Substituir  no final da linha da tabela da guia em vez do botão de **Upload.**
+Se você estiver tentando carregar um pacote atualizado com a mesma ID novamente, escolha o ícone Substituir  no final da linha da tabela da guia em vez do **botão** Carregar.
 
 Se você não estiver carregando novamente um pacote atualizado, verifique se a ID é exclusiva.

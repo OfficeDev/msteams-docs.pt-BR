@@ -3,12 +3,12 @@ title: Criar links detalhados
 description: Neste artigo, você aprenderá a criar links profundos e navegar por eles em seus aplicativos do Microsoft Teams usando guias.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 7a9af415a6fdc4f2cb1f9fd04ba79e8b197a40fc
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160717"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243217"
 ---
 # <a name="create-deep-links"></a>Criar links detalhados
 
@@ -101,7 +101,7 @@ Embora seja recomendado usar `shareDeepLink()` para gerar um link direto para su
 > [!NOTE]
 >
 > * As guias pessoais têm um escopo `personal`, enquanto as guias de canal e grupo usam escopos `team` ou `group`. Os dois tipos de guia têm uma sintaxe ligeiramente diferente, pois apenas a guia configurável possui uma propriedade `channel` associada ao seu objeto de contexto. Para obter mais informações sobre escopos de guias, consulte a referência do [manifesto](~/resources/schema/manifest-schema.md).
-> * Os links profundos só funcionarão corretamente se a guia tiver sido configurada usando a biblioteca v0.4 ou posterior e, por isso, tiver uma ID de entidade. Links profundos para guias sem IDs de entidade ainda navegam até a guia, mas não podem fornecer a ID da sub-entidade para a guia.
+> * Os links profundos só funcionarão corretamente se a guia tiver sido configurada usando a biblioteca v0.4 ou posterior e, por isso, tiver uma ID de entidade. Links profundos para guias sem IDs de entidade ainda vão para a guia, mas não podem fornecer a ID da sub entidade para a guia.
 
 Use o seguinte formato para um link profundo que você pode usar em um bot, conector ou cartão de extensão de mensagens:
 
@@ -322,7 +322,7 @@ Para usar esse link profundo com o bot, especifique-o como o destino da URL no b
 
 ### <a name="generate-deep-links-to-channel-conversation"></a>Gerar links profundos para a conversa do canal
 
-Use este formato de link profundo para navegar até uma conversa específica dentro da thread do canal:
+Use esse formato de link profundo para ir para uma conversa específica no thread do canal:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

@@ -4,12 +4,12 @@ description: Neste artigo, você aprenderá a desenvolver extensões de mensagem
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 789563d3a11a7e83d59b1653cc0cf45af2354dc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035223"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243028"
 ---
 # <a name="search-with-message-extensions"></a>Pesquisar com extensões de mensagem
 
@@ -88,7 +88,7 @@ Para a extensão de mensagem baseada em pesquisa, defina `type` o parâmetro com
 
 Você pode testar sua extensão de mensagem carregando seu aplicativo.
 
-Para abrir sua extensão de mensagem, navegue até qualquer um dos seus chats ou canais. Escolha o **botão Mais opções** (**&#8943;**) na caixa de redação e escolha sua extensão de mensagem.
+Para abrir sua extensão de mensagem, vá para qualquer um dos seus chats ou canais. Escolha o **botão Mais opções** (**&#8943;**) na caixa de redação e escolha sua extensão de mensagem.
 
 ## <a name="add-event-handlers"></a>Adicionar manipuladores de eventos
 

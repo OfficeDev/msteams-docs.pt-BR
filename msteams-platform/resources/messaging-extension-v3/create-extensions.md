@@ -3,12 +3,12 @@ title: 'Iniciar ações com extensões de mensagem '
 description: Neste módulo, saiba como criar extensões de mensagem baseadas em ação para permitir que os usuários disparem serviços externos
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337142"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243567"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Iniciar ações com extensões de mensagem 
 
@@ -231,7 +231,7 @@ Veja abaixo um exemplo do objeto `value` que contém os detalhes da mensagem que
 
 Você pode testar sua extensão de mensagem carregando seu aplicativo. Para obter mais informações, [consulte Carregando seu aplicativo em uma equipe](~/concepts/deploy-and-publish/apps-upload.md).
 
-Para abrir sua extensão de mensagem, navegue até qualquer um dos seus chats ou canais. Escolha o **botão Mais opções** (**&#8943;**) na caixa de redação e escolha sua extensão de mensagem.
+Para abrir sua extensão de mensagem, vá para qualquer um dos seus chats ou canais. Escolha o **botão Mais opções** (**&#8943;**) na caixa de redação e escolha sua extensão de mensagem.
 
 ## <a name="collecting-input-from-users"></a>Coletando entradas de usuários
 

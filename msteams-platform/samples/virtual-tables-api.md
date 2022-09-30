@@ -5,19 +5,19 @@ description: Neste módulo, saiba mais sobre a API Web de Tabelas Virtuais para 
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 31784cfabccdfa861044e74be533c00f134ea851
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: b15c7972dfc0152d458e4ad895ed6d4f7e45cd4c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178772"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243546"
 ---
 # <a name="virtual-tables-web-api"></a>API Web de tabelas virtuais
 
 Ao usar a API Web do Dataverse para recuperar vários registros de uma tabela virtual, parâmetros de consulta adicionais podem ser incluídos para dar suporte à classificação, filtragem e paginação. Esses recursos não têm suporte uniforme nas tabelas virtuais de controles de colaboração porque dependem do suporte fornecido pelo Microsoft API do Graph. Consulte a Referência de Entidade de Tabelas Virtuais para obter detalhes sobre o que cada tabela virtual dá suporte.
 
 > [!NOTE]
-> Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> Atualmente, os controles de colaboração estão disponíveis apenas na versão [prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="virtual-table-sorting"></a>Classificação de tabela virtual
 
@@ -38,7 +38,7 @@ Exemplos:
 
 ## <a name="virtual-table-filtering"></a>Filtragem de tabela virtual
 
-Com as tabelas virtuais, você pode usar o parâmetro de $filter OData para definir critérios para os quais as linhas serão retornadas. As tabelas virtuais são consultadas usando os mesmos operadores OData compatíveis com a API Web do Dataverse.
+Com as tabelas virtuais, você pode usar o parâmetro de $filter OData para definir critérios para os quais as linhas são retornadas. As tabelas virtuais são consultadas usando os mesmos operadores OData compatíveis com a API Web do Dataverse.
 
 * **Operadores de comparação**
 

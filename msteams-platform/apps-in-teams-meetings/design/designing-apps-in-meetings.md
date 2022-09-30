@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636172"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243126"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
@@ -126,7 +126,7 @@ Lembre-se do seguinte se você permitir a rolagem:
 
 ### <a name="navigation"></a>Navegação
 
-Para cenários com camadas de navegação ou conteúdo pesado, é recomendável permitir que os usuários naveguem para uma camada secundária. Os usuários devem poder voltar para a camada anterior.
+Para cenários com camadas de navegação ou conteúdo pesado, é recomendável permitir que os usuários acessem uma camada secundária. Os usuários devem poder voltar para a camada anterior.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="O exemplo mostra a navegação na reunião.":::
 
@@ -268,12 +268,12 @@ O estágio de reunião compartilhada tem tudo a ver com colaboração e particip
 
 Os aplicativos compartilhados com o estágio da reunião variam de acordo com o estado da reunião e como o usuário redimensiona a janela. Mantenha o preenchimento e o layout responsivo de navegação e controles da mesma forma que você faria em um navegador.
 
-* **Painel lateral**: um usuário pode ter o painel lateral aberto a qualquer momento durante uma reunião para conversar, exibir a lista de participantes ou usar um aplicativo (ou seja, a guia na reunião). O estágio é reorganizado dinamicamente quando o painel está aberto.
+* **Painel lateral**: um usuário pode ter o painel lateral aberto a qualquer momento durante uma reunião para conversar, exibir a lista de participantes ou usar um aplicativo (ou seja, na guia na reunião). O estágio é reorganizado dinamicamente quando o painel está aberto.
 * **Grade de áudio e vídeo**: a grade de áudio e vídeo está sempre visível para mostrar os participantes da reunião. Quando um usuário destaca ou fixa alguém na reunião, isso aumenta a altura ou a largura da grade do participante, dependendo da orientação.
 
 #### <a name="meeting-stage-without-side-panel"></a>Estágio de reunião (sem painel lateral)
 
-Quando o painel lateral não está aberto, o estágio de reunião é de 994 x 678 pixels por padrão e pode ter um mínimo de 792 x 382 pixels.
+Quando o painel lateral não está aberto, o estágio de reunião é de 994 x 678 pixels, por padrão, e pode ter um mínimo de 792 x 382 pixels.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Imagem mostrando a capacidade de resposta do estágio de reunião compartilhado com o painel lateral fechado.":::
 

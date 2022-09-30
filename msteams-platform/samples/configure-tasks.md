@@ -5,32 +5,32 @@ description: Neste módulo, saiba como configurar tarefas para clientes externos
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: bb98ab632b335717a61499600aef01e652fd0dee
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 7d458cc97429772695958606835edd4ef953b5db
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178747"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243161"
 ---
-# <a name="configure-tasks-for-external-clients"></a>Configurar tarefas para clientes externos
+# <a name="configure-tasks-for-external-clients"></a>Configurar as tarefas para os clientes externos
 
 Tarefas externas que podem ser atribuídas a usuários que não fazem parte da sua organização ou que não têm acesso ao seu aplicativo, como atribuir uma tarefa a um cliente.
 
 Para habilitar, você precisará de uma etapa extra para passar uma cadeia de caracteres XML para cada instância do controle PCF de Tarefas anexado ao componente de sub-grade no formulário MDA desejado. A cadeia de caracteres XML é uma consulta parametrizada que permite ao controle extrair os dados necessários de uma tabela que contém informações do cliente.
 
 > [!NOTE]
-> Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> Atualmente, os controles de colaboração estão disponíveis apenas na versão [prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
-A seguir estão as etapas para criar tarefas externas:
+Para criar tarefas externas, siga as etapas:
 
 1. Crie uma nova entidade personalizada, como Cliente, ou reutilize uma entidade de cliente existente, como Contatos.
 
-1. Crie novos campos que conterão as seguintes informações:
+1. Crie novos campos que contêm as seguintes informações:
     1. Nome
     1. Email
     1. Pai (Pesquisa na tabela pai, como Inspeções)
     > [!NOTE]
-    > A entidade do cliente criada acima será, onde o controle de tarefas extrai as informações do cliente ao atribuir uma tarefa externa. O campo Pai garante que a entidade do cliente esteja vinculada a um registro de inspeção.
+    > A entidade de cliente criada acima é onde o controle de tarefas extrai as informações do cliente ao atribuir uma tarefa externa. O campo Pai garante que a entidade do cliente esteja vinculada a um registro de inspeção.
 
 1. Gere um arquivo XML fetch para permitir que o controle PCF efetue pull das informações corretas do cliente.
 
@@ -40,7 +40,7 @@ A seguir estão as etapas para criar tarefas externas:
 
     * O resultado da consulta deve retornar as seguintes propriedades para cada objeto de usuário:
       * ID
-      * displayname
+      * Displayname
       * email, use o alias, se necessário.
     * A consulta deve conter o **@top** para permitir que o chamador limite o número de resultados.
     * A consulta deve ter **@rootEntityId** parâmetro para filtrar os resultados apenas por registros relacionados, se necessário.
@@ -81,19 +81,19 @@ A seguir estão as etapas para criar tarefas externas:
 
 1. Mova-se no designer de formulário clássico até encontrar a **guia** Tarefas. Clique duas vezes na subgrid para abrir a caixa de diálogo de propriedade.
 
-    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Caixa de diálogo da propriedade Tasks":::
+    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Captura de tela que mostra a caixa de diálogo de propriedades de tarefas.":::
 
 1. Na caixa de diálogo de propriedade, defina as propriedades conforme mostrado na imagem a seguir:
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Configurações da propriedade Tasks":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Captura de tela mostra como definir as propriedades nas configurações da propriedade Tarefas.":::
 
-1. Vá para a guia Controles e selecione :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="editar tarefas"::: na propriedade Tarefas Personalizadas para adicionar o XML de Busca gerado acima.
+1. Vá para a guia Controles e selecione :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Captura de tela que mostra como editar as tarefas."::: na propriedade Tarefas Personalizadas para adicionar o XML fetch gerado acima.
 
 1. Colar o XML fetch
 
-    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Buscar configurações de propriedade XML":::
+    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Captura de tela que mostra como colar Fetch XML.":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Buscar configurações de propriedade personalizada XML":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Captura de tela que mostra como definir configurações de propriedade personalizadas.":::
 
 1. Selecione **OK em** Configurar Propriedade "Tarefas Personalizadas" e Defina Janelas de Propriedades.
 

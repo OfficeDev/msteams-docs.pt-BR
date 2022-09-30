@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 83a4b4d40ebca418b62dcac5f94f77ac30ee85d7
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: c2276c720ca4d7014b3317365411a9c3d7fe6a73
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895500"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243175"
 ---
 # <a name="install-moodle-lms"></a>Instalar o Moodle LMS
 
@@ -64,7 +64,7 @@ Instale e baixe o seguinte antes de prosseguir com a instalação dos plug-ins d
 
 1. Após a detecção de novos plug-ins a serem instalados, o Moodle deverá redirecionar você para a página instalar novos plug-ins. Se isso não acontecer, na página Administração do **site**, selecione Notificações na  guia Geral, isso  deve disparar a instalação dos plug-ins.
 
-1. Depois que os plug-ins forem instalados, acesse a guia **Plug-ins** na página  Administrador do **site**, selecione o link da seção Autenticação e habilite **o OpenID Connect**. Não há problema em deixar a configuração do plug-in em branco– elas serão preenchidas posteriormente.
+1. Depois que os plug-ins forem instalados, acesse a guia **Plug-ins** na página  Administrador do **site**, selecione o link da seção Autenticação e habilite **o OpenID Connect**. Não há problema em deixar a configuração do plug-in em branco– elas serão preenchidas mais tarde.
 
 1. Na página **Administrador do site** , role para baixo até a seção **Plug-ins locais** e selecione o link **integração do Microsoft 365** .
 
@@ -115,7 +115,7 @@ Use o gerado e `AppID` na página `Key` de configuração de Plug-ins do Microso
     1. Clique com o botão direito **do mouse Windows PowerShell**.
     1. Selecione **Executar como Administrador**.
 
-1. Navegue até o diretório descompactado digitando `cd .../.../Moodle-AzureAD-Powershell` onde `.../...` está o caminho para o diretório.
+1. Vá para o diretório descompactado digitando `cd .../.../Moodle-AzureAD-Powershell` onde `.../...` está o caminho para o diretório.
 
 1. Execute o script do PowerShell:
 
@@ -243,9 +243,9 @@ Para implantar seu aplicativo:
    > [!NOTE]
    > Se você estiver conectado como um administrador global, deverá ter a opção de carregar o aplicativo no catálogo de aplicativos da sua organização; caso contrário, você só poderá carregar o aplicativo para uma equipe na qual você é membro.
 
-4. Selecione o `manifest.zip` pacote baixado anteriormente e selecione **Salvar**. Se você não tiver baixado o pacote de manifesto do aplicativo, poderá baixar na  guia Configurações da Equipe da página de configuração de plug-ins no Moodle.
+4. Selecione o `manifest.zip` pacote baixado anteriormente e selecione **Salvar**. Se você não tiver baixado o pacote de manifesto do aplicativo, poderá baixar na guia  Configurações da Equipe da página de configuração de plug-ins no Moodle.
 
-Agora que o aplicativo está instalado, você pode adicionar a guia a qualquer canal ao qual tenha acesso. Para fazer isso, navegue até o canal, selecione o símbolo de **adição** (➕) e selecione seu aplicativo na lista. Siga os prompts para concluir a adição da guia de curso do Moodle a um canal.
+Agora que o aplicativo está instalado, você pode adicionar a guia a qualquer canal ao qual tenha acesso. Para fazer isso, vá para o canal, selecione o símbolo de **adição** (➕) e selecione seu aplicativo na lista. Siga os prompts para concluir a adição da guia de curso do Moodle a um canal.
 
 ## <a name="5-allow-automatic-creation-of-moodle-tabs-in-microsoft-teams"></a>5. Permitir a criação automática de guias do Moodle no Microsoft Teams
 

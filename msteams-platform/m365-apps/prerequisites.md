@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100942"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243322"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar seu ambiente de desenvolvimento para estender os aplicativos do Teams pelo Microsoft 365:
 
@@ -79,12 +79,12 @@ Para instalar o Office 365 Canal beta aplicativos em seu ambiente de teste:
 1. Entre em seu ambiente de teste com suas credenciais de locatário de teste.
 1. Baixe a [Ferramenta de Implantação do Office](https://www.microsoft.com/download/details.aspx?id=49117) e extraia para uma pasta local.
 1. Vá para a pasta local e abra *configuration-Office365-x86.xml* (ou **x64.xml*, dependendo do seu ambiente) em um editor de texto e atualize o valor *Channel* para `BetaChannel`.
-1. Abra o Prompt de Comando e navegue até o caminho da pasta local.
+1. Abra o Prompt de Comando e vá para o caminho da pasta local.
 1. Execute `setup.exe /configure configuration-Office365-x86.xml` (ou use o arquivo **x64.xml*, dependendo da configuração).
 1. Abra o Outlook (cliente da área de trabalho) e configure a conta de email usando suas credenciais de locatário de teste.
 1. Abra **Arquivo** > **Conta do Office** > **Sobre o Outlook** para confirmar que você está executando uma compilação do Outlook de *Canal Beta* do Microsoft 365.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Vá para 'Sobre o Outlook' na sua conta do Office para verificar se você está executando uma compilação do Canal Beta.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Acesse &quot;Sobre o Outlook&quot; em sua conta do Office para verificar se você está executando um build do Canal Beta.":::
 
 1. Verifique se o *Microsoft Edge WebView2 Runtime* está instalado. Abra no Windows o **Iniciar** > **Aplicativos e recursos** e pesquise o **modo de exibição da Web**:
 
@@ -96,7 +96,7 @@ Para instalar o Office 365 Canal beta aplicativos em seu ambiente de teste:
 
 Você pode visualizar as guias pessoais do Teams em execução no aplicativo do Office para Android ingressando no programa beta.
 
-Para instalar o build beta do aplicativo do Office mais recente em seu dispositivo Android físico ou android emulador:
+Para instalar o aplicativo do Office beta mais recente, compile em seu dispositivo Android físico ou android emulador:
 
 1. Use um dispositivo Android compatível [com o Google](https://support.google.com/googleplay/answer/1727131) Play.
 1. Inicie a **Play Store** em seu dispositivo Android.

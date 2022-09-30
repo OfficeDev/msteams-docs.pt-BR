@@ -5,28 +5,28 @@ description: Neste módulo, saiba mais sobre limitações e problemas conhecidos
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 6961b5fc51cc8aa2a2ad0620c8a8ef5032005f40
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: fe403c566b47be6509ff0d11113c34a8fc667cc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178734"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243385"
 ---
 # <a name="limitations-and-known-issues"></a>Limitações e problemas conhecidos
 
 > [!NOTE]
-> Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> Atualmente, os controles de colaboração estão disponíveis apenas na versão [prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
 A seguir estão as limitações para controles de colaboração:
 
 * Os componentes não podem ser usados em aplicativos canvas.
 * Os componentes só dão suporte a exibições de tabulação completas.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="tarefas" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="A captura de tela mostra as tarefas." border="true":::
 
-* A exibição de subgrid selecionada não é respeitada. Todas as tarefas, reuniões ou anotações para o registro colaborativo serão exibidas.
+* A exibição de subgrid selecionada não é respeitada. Todas as tarefas, reuniões ou anotações para o registro colaborativo são exibidas.
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="exibição de subgrid" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="A captura de tela mostra a exibição de subgrid das tarefas." border= "true":::
 
 * As atividades adicionadas ao controle de linha do tempo não aparecem nos componentes, tarefas, reuniões e anotações criadas nos componentes não estão incluídas no controle de linha do tempo.
 * Novos registros devem ser salvos antes de acessar os componentes; caso contrário, você verá uma tela vazia.
@@ -36,23 +36,23 @@ A seguir estão as limitações para controles de colaboração:
 
 **Administração Center não é atualizado quando a instalação ou atualização é concluída**
 
-Ao seguir as etapas de instalação nos [controles de](~/samples/install-collaboration-control.md) colaboração de instalação, você será redirecionado para o centro de administração do Power Platform. Uma faixa é exibida quando a instalação é iniciada, mas não é atualizada quando a instalação é concluída. O status é listado durante a instalação e, quando a instalação é concluída, ele pode desaparecer da lista. Você pode exibir a lista de soluções para [https://make.powerapps.com/](https://make.preview.powerapps.com/) confirmar se a instalação foi concluída.
+Ao seguir as etapas de instalação nos [controles de](~/samples/install-collaboration-control.md) colaboração de instalação, você será redirecionado para o centro de administração do Power Platform. Uma faixa é exibida quando a instalação é iniciada, mas não é atualizada quando a instalação é concluída. O status é listado durante a instalação e, quando concluído, ele pode não estar disponível na lista. Você pode exibir a lista de soluções para [https://make.powerapps.com/](https://make.preview.powerapps.com/) confirmar se a instalação foi concluída.
 
-**Exibir durante a instalação: exibir** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="durante a instalação" border="true":::
+**Exibição durante a instalação:** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="a captura de tela mostra o processo durante a instalação." border="true":::
 
-**Exibir após a instalação: exibir** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="após a instalação" border="true":::
+**Exibição após a instalação:** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="a captura de tela mostra a conclusão da instalação." border="true":::
 
-Ao atualizar os controles para uma versão posterior, a mesma faixa de instalação iniciada é exibida, mas o status do controle permanece sendo instalado mesmo após a conclusão da atualização. Você pode confirmar que a atualização foi concluída verificando a lista de [https://make.powerapps.com/](https://make.preview.powerapps.com/)soluções em , que deve levar aproximadamente 15 minutos.
+Ao atualizar os controles para uma versão posterior, a mesma faixa de instalação iniciada é exibida, mas o status do controle permanece sendo instalado mesmo após a conclusão da atualização. Você pode confirmar que a atualização foi concluída verificando a lista de soluções em [https://make.powerapps.com/](https://make.preview.powerapps.com/), ele deve levar aproximadamente 15 minutos.
 
-Você também pode ver no histórico soluções específicas que a versão posterior foi instalada e, em seguida, a versão anterior foi removida: :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="Verificação de histórico" border="true":::
+Você também pode ver no histórico soluções específicas que a versão posterior foi instalada e, em seguida, a versão anterior foi removida: a captura de tela mostra o histórico de soluções específicas das versões instaladas e removidas :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="." border="true":::
 
 ## <a name="bookings-meetings"></a>Reuniões do Bookings
 
-O controle Reuniões dá suporte a uma em uma reunião ao usar o Bookings para interagir com usuários fora da sua organização. No momento, não há suporte para uma a muitas reuniões usando controles de colaboração.
+O controle Reuniões dá suporte a uma em uma reunião ao usar o Bookings para interagir com usuários fora da sua organização. No momento, não há suporte para uma ou várias reuniões usando controles de colaboração.
 
 **O status do participante da reunião está incorreto**
 
-Quando um participante RSVPs para uma reunião, seu status de resposta pode não ser exibido corretamente no modo de exibição de agenda e nos detalhes da reunião. Selecionar o botão recusar também pode retornar uma mensagem de erro na tela.
+Quando um participante RSVPs para uma reunião, seu status de resposta pode não ser exibido corretamente no modo de exibição de agenda e nos detalhes da reunião. Selecionar o botão recusar pode retornar uma mensagem de erro na tela.
 
 ## <a name="tasks"></a>Tarefas
 
@@ -62,7 +62,7 @@ O texto no botão "limpar" exibido no filtro Tarefas não é traduzido.
 
 **Tarefas: o menu de contexto de grade aparece cortado**
 
-Quando a grade Tarefas é preenchida por um número baixo de Tarefas, o menu de contexto de grade pode aparecer cortado e exigir o uso de barras de rolagem.
+Quando a grade Tarefas é preenchida por um número baixo de Tarefas, o menu de contexto da grade pode aparecer cortado e exigir o uso de barras de rolagem.
 
 **Tarefas: o filtro de pesquisa de palavra-chave usa o operador "BeginsWith" para tarefas "Convidado"**
 
@@ -70,7 +70,7 @@ Ao pesquisar Tarefas usando o filtro de texto de palavra-chave, as tarefas "Conv
 
 ## <a name="files"></a>Arquivos
 
-Ao navegar até a pasta Arquivo Morto após o arquivamento de arquivos, os usuários podem experimentar pastas de arquivo morto duplicadas.  Navegar das pastas de arquivos para a exibição principal de arquivos resolverá o problema e os arquivos arquivados não serão removidos.
+Ao navegar até a pasta Arquivo Morto após o arquivamento de arquivos, os usuários podem experimentar pastas de arquivo morto duplicadas.  Navegar das pastas de arquivos para a exibição principal de arquivos resolve o problema e os arquivos arquivados não serão removidos.
 
 ## <a name="controls"></a>Controles
 
@@ -78,9 +78,9 @@ Ao navegar até a pasta Arquivo Morto após o arquivamento de arquivos, os usuá
 
 Se um controle não conseguir salvar uma tarefa ou reunião, a causa provável será a ID do Grupo ou a ID do Canal configurada incorretamente.  
 
-Solução 1: confirme se as IDs estão corretas e se as configurações foram aplicadas de acordo com o exercício de configurações.  
+Solução 1: confirme se as IDs estão corretas e se as configurações são aplicadas de acordo com o exercício de configurações.  
 
-Solução 2: tente garantir que o ambiente do Power Apps e o ambiente do Teams estejam no mesmo locatário.  
+Solução 2: verifique se o ambiente do Power Apps e o ambiente do Teams estão no mesmo locatário.  
 
 **Os controles não são carregados ou mostram um erro**
 
@@ -88,11 +88,11 @@ Se os controles não carregarem ou mostrarem um erro, pode ser um problema trans
 
 Exemplo:
 
-:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="falha na sincronização de controle":::
+:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="Captura de tela que mostra a falha na sincronização de controle.":::
 
 Isso seria renderizado no log do console como:
 
-:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="falha no controle" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="Captura de tela é um exemplo de falha de controle do log consol." border="true":::
 
 Solução: atualize o navegador ou, se estiver no aplicativo Teams, recarregue a guia.
 
@@ -146,7 +146,7 @@ Com esses novos controles, você, como criador, pode arrastar e soltar controles
 
 <summary><b>Qual é o benefício dos controles de colaboração (versão prévia) para os usuários?</b></summary>
 
-Os usuários podem experimentar ganhos de produtividade e permanecer no fluxo colaborando em aprovações, arquivos, reuniões, anotações e tarefas sem sair do contexto do seu aplicativo.
+Os usuários podem experimentar ganhos de produtividade e permanecer em seu fluxo colaborando em aprovações, arquivos, reuniões, anotações e tarefas sem sair do contexto do seu aplicativo.
 
 <br>
 
@@ -170,7 +170,7 @@ Solicite que o administrador do Power Platform instale os controles do AppSource
 
 <summary><b>Como fazer adicionar os controles a um aplicativo controlado por modelo?</b></summary>
 
-Navegue até o Designer de Formulários e arraste os controles do painel Componente para um formulário.
+Vá para o Designer de Formulários e arraste os controles do painel Componente para um formulário.
 
 <br>
 

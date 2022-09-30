@@ -5,12 +5,12 @@ description: Neste módulo, saiba mais sobre tabelas virtuais para tarefas, reun
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
-ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
+ms.openlocfilehash: 2571787d5fba47c4ada3765dd13dd36ef1f8f63a
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67314592"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243042"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Tabelas virtuais para tarefas, reuniões, arquivos
 
@@ -19,7 +19,7 @@ Uma nova funcionalidade com esta versão é um conjunto de tabelas virtuais. Ele
 A solução principal de controles de colaboração inclui um conjunto de tabelas [virtuais, que](/power-apps/developer/data-platform/virtual-entities/get-started-ve) pode ser usado para acesso programático aos dados criados pelos controles de Colaboração.
 
 > [!NOTE]
-> Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> Atualmente, os controles de colaboração estão disponíveis apenas na versão [prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!TIP]
 > [](/power-apps/developer/data-platform/virtual-entities/get-started-ve) As tabelas virtuais também conhecidas como entidades virtuais permitem a integração de dados que residem em sistemas externos, representando perfeitamente esses dados como tabelas no Microsoft Dataverse, sem replicação de dados e, muitas vezes, sem codificação personalizada.
@@ -45,7 +45,7 @@ Para acompanhar este artigo, você precisará de:
 
 1. Um ambiente do Dataverse em que os controles de Colaboração foram instalados.
 1. Uma conta de usuário no ambiente do Dataverse, que tem a função De usuário de **controles** de colaboração atribuída a ela.
-1. Uma ferramenta de terceiros, por exemplo: Post man ou algum código C# personalizado que permite que você se autentique em instâncias do Microsoft Dataverse e para compor e enviar solicitações de API Web e exibir respostas.  
+1. Uma ferramenta de terceiros, por exemplo, Post man ou algum código C# personalizado que permite que você se autentique em instâncias do Microsoft Dataverse e para compor e enviar solicitações de API Web e exibir respostas.  
 
 > [!TIP]
 > A Microsoft fornece informações sobre como configurar um ambiente do Postman que se conecta à instância do Dataverse e usar o Postman para executar operações com a API Web. Consulte [Usar o Postman com a API Web do Microsoft Dataverse](/power-apps/developer/data-platform/webapi/use-postman-web-api).
@@ -56,7 +56,7 @@ O cenário descrito neste guia usa as tabelas virtuais Plano do Planner e Tarefa
 
 O diagrama de sequência a seguir explica a interação entre o cliente, que pode ser o controle de colaboração Tarefas, a [API](/rest/api/industry/collaboration-controls/) de Colaboração e as tabelas virtuais Plano planejador e tarefa.
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Diagrama de sequência para tabelas virtuais":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="A ilustração mostra o diagrama de sequência para tabelas virtuais.":::
 
 ## <a name="virtual-tables-basic-operations"></a>Operações básicas de tabelas virtuais
 
@@ -73,7 +73,7 @@ Recupere a ID do Grupo usada [nas configurações da Colaboração](~/samples/ap
 
 Uma sessão de colaboração é um registro na tabela raiz de colaboração, que permite associar várias colaborações, por exemplo, tarefas, eventos, compromissos com um registro comercial.
 
-Uma sessão de colaboração permite executar operações como a lista de eventos de calendário associados a um registro comercial, por exemplo, um aplicativo de inspeções.
+Uma sessão de colaboração permite executar operações como lista de eventos de calendário associados a um registro comercial, por exemplo, um aplicativo de inspeções.
 
 # <a name="request"></a>[Solicitação](#tab/request)
 
@@ -108,7 +108,7 @@ Uma sessão de colaboração permite executar operações como a lista de evento
 
 ---
 
-Mantenha o controle do `collaborationRootId` que será necessário em solicitações subsequentes.
+Mantenha o controle do `collaborationRootId` que é necessário em solicitações subsequentes.
 
 **Tarefa 3: Criar um plano do Planner**
 
@@ -132,7 +132,7 @@ Crie um Plano do Planner e associá-lo à sessão de colaboração criada acima 
 
 * `collaborationRootId`: identifica a sessão de colaboração à qual desejamos associar esse plano, use o valor da tarefa 2
 
-* `groupId`: identifica o grupo que será o proprietário desse plano, use o valor da etapa 1
+* `groupId`: identifica o grupo que possui esse plano, use o valor da etapa 1
 
 * `planTitle`: título do plano
 
@@ -161,7 +161,7 @@ Crie um Plano do Planner e associá-lo à sessão de colaboração criada acima 
 
 ---
 
-Mantenha o controle do`m365_id` que será necessário em solicitações subsequentes.
+Mantenha o controle do`m365_id` que é necessário em solicitações subsequentes.
 
 **Tarefa 4: Criar uma tarefa do Planner**
 
@@ -184,7 +184,7 @@ Criar uma tarefa do Planner com `PlanId` e `collaborationRootId`. você pode cri
 
 ```
 
-* `collaborationRootId`: identifica a sessão de colaboração à qual desejamos associar esse plano, o valor da tarefa 2
+* `collaborationRootId`: identifica a sessão de colaboração à qual desejamos associar esse plano, use o valor da tarefa 2
 * `planId`: identifica o plano ao qual essa tarefa será atribuída, use o valor da etapa anterior
 * `taskTitle`: título da tarefa
 
@@ -230,7 +230,7 @@ Criar uma tarefa do Planner com `PlanId` e `collaborationRootId`. você pode cri
 
 ---
 
-Mantenha o controle do `m365_graphplannertaskid` que será necessário em solicitações subsequentes.
+Mantenha o controle do `m365_graphplannertaskid` que é necessário em solicitações subsequentes.
 
 > [!NOTE]
 > A `m365_graphplannertaskid` chave primária do registro na tabela virtual da Tarefa do Planner. Todas as solicitações subsequentes à tabela virtual para interagir com esse registro devem usar essa chave primária. Isso será conhecido como as etapas `plannerTaskId` subsequentes neste documento.

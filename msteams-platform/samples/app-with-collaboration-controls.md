@@ -5,12 +5,12 @@ description: Neste módulo, saiba como criar um aplicativo baseado em modelo com
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027337"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243056"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Criar um novo aplicativo controlado por modelo com controles de colaboração para o Teams
 
@@ -227,7 +227,7 @@ Você precisaria adicionar as IDs de Configurações que você salvou anteriorme
 
      :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="A captura de tela é um exemplo que mostra a janela de controle.":::
 
-1. Selecione **Configurar** e navegue até a guia Geral para adicionar a ID do Grupo.
+1. Selecione **Configurar** e vá para a guia Geral para adicionar a ID do Grupo.
 
      :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="A captura de tela descreve como adicionar a ID do Grupo na guia Geral.":::
 
@@ -284,7 +284,7 @@ Para agendar uma reunião externa com o cliente, selecione a lista suspensa ao l
 
 Os usuários podem ver reuniões internas e Reservas de Clientes em sua lista de reuniões. Depois que a reunião for iniciada, os usuários poderão participar selecionando o **botão** Ingressar, que abre a reunião diretamente no Microsoft Teams.
 
-Como as reuniões são apoiadas pelo Outlook, os usuários podem navegar até o Bookings ou Calendário do Outlook para ver todas as reuniões listadas em um único calendário. As reuniões internas são listadas no calendário compartilhado.
+Como as reuniões são apoiadas pelo Outlook, os usuários podem acessar o Bookings ou Calendário do Outlook para ver todas as reuniões listadas em um único calendário. As reuniões internas são listadas no calendário compartilhado.
 
 A seguir estão as etapas para adicionar um calendário compartilhado ao Outlook (opcional):
 

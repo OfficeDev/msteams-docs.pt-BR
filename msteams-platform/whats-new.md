@@ -4,12 +4,12 @@ description: Saiba mais sobre novos recursos de desenvolvedor do Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 8c618862056d6cc8b7a76cfd504be32f341d11ca
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160724"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243420"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -22,7 +22,7 @@ Descubra os recursos da plataforma Microsoft Teams que estão em GA (disponibili
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Atualizações para recursos geralmente disponíveis":::
+:::image type="icon" source="~/assets/images/general-availabe.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -31,6 +31,7 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 **Setembro de 2022**
 
+* ***30 de setembro de 2022***: Gerenciar [licenças SaaS para aplicativos de terceiros no Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***29 de setembro de 2022***: o aplicativo [móvel do Teams agora dá suporte a downloads de arquivos para dispositivos locais.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***29 de setembro de 2022***: Gerar um link profundo para compartilhar [conteúdo para preparar as reuniões.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***16 de setembro de 2022***: Cartões Adaptáveis em extensões de mensagem baseadas em pesquisa agora dão [suporte a Ações Universais.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
@@ -265,6 +266,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 </details>
 </details>
 </details>
+
 ::: zone-end
 
 ::: zone pivot="dev-preview"
@@ -276,7 +278,7 @@ Descubra os recursos da plataforma Microsoft Teams que estão na versão prévia
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Atualizações para recursos disponíveis na versão prévia do desenvolvedor":::
+:::image type="icon" source="~/assets/images/developer-preview.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -316,7 +318,7 @@ Descubra os recursos da plataforma Microsoft Teams que foram preteridos. Agora v
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/deprecated.png" alt-text="Recursos preteridos":::
+:::image type="icon" source="~/assets/images/deprecated.png":::
 
 :::column-end:::
 :::column span="2":::

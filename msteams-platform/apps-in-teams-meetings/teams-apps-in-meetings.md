@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990886"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243203"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicativos para reuniões e chamadas do Teams
 
@@ -46,6 +46,10 @@ A ilustração a seguir fornece a você uma ideia dos recursos de extensibilidad
 ![Extensibilidade do aplicativo de reunião](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 Este artigo fornece uma visão geral da extensibilidade do aplicativo de reuniões, referências de API, habilitar e configurar aplicativos para reuniões e cenas personalizadas do Modo Conferência no Teams.
+
+> [!Note]
+>
+> Há suporte para aplicativos de reunião (painel lateral, estágio de reunião) no cliente da área de trabalho do Teams. Como no cliente Web do Teams, ele só tem suporte quando a visualização do desenvolvedor está habilitada.
 
 * **Estender o aplicativo de reunião**: aprimora sua experiência de reunião usando o recurso de extensibilidade de reunião. Esse recurso permite que você integre seus aplicativos nas reuniões. Ele também inclui diferentes estágios do ciclo de vida de uma reunião, em que você pode integrar guias, bots e extensões de mensagens. Você pode identificar várias funções de participantes e tipos de usuário, obter eventos de reunião e gerar diálogos de reunião.
 * **Configurar aplicativos para reuniões**: para personalizar o Teams com aplicativos para reuniões, habilite seus aplicativos para reuniões do Teams atualizando o manifesto do aplicativo e também configure os aplicativos para cenários de reunião.
