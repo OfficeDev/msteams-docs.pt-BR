@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158817"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295974"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -177,7 +177,7 @@ Você também pode adicionar a imagem de exibição do Teams e o cartão de visi
 
 O estágio de reunião compartilhada permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real. Você pode compartilhar seus aplicativos no estágio de reunião colaborativa das seguintes maneiras:
 
-* [Compartilhe todo o aplicativo para preparar](#share-entire-app-to-stage) usando o botão compartilhar para preparar no painel lateral da reunião do cliente do Teams ou [por meio de deeplinks](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+* [Compartilhe todo o aplicativo para preparar](#share-entire-app-to-stage) usando o botão compartilhar para preparar o cliente do Teams.
 * [Compartilhe partes específicas do aplicativo para preparar](#share-specific-parts-of-the-app-to-stage) usando APIs no SDK do cliente do Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Compartilhar aplicativo inteiro no estágio
