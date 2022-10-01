@@ -4,12 +4,12 @@ description: Neste artigo, saiba como usar o SDK do cliente JavaScript Teams par
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 5a45f2c3a7d098bfe95b55620fb5909fb33e3472
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 0b70dcc6aaa95b1a21b8b11081aa39b235cab296
+ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842000"
+ms.lasthandoff: 10/01/2022
+ms.locfileid: "68319941"
 ---
 # <a name="integrate-people-picker"></a>Integrar o Seletor de Pessoas
 
@@ -121,3 +121,4 @@ A tabela a seguir lista os códigos de erro e suas descrições:
 * [Integrar recursos de mídia](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrar a funcionalidade do código QR ou o verificador de código de barras no Teams](qr-barcode-scanner-capability.md)
 * [Integrar funcionalidades de localização no Teams](location-capability.md)
+* [Pessoas seletor no Kit de Ferramentas do Microsoft Graph](/graph/toolkit/components/people-picker)
