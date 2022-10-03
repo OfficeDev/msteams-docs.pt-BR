@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027330"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329081"
 ---
 # <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Carregar seu aplicativo no Teams
 
 1. Vá para o Teams e selecione **Aplicativos**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Loja do Teams":::.
-1. Selecione **Gerenciar seus aplicativos** e **Fazer upload de um aplicativo personalizado**.
+1. Selecione **Gerenciar seus aplicativos** > **Carregar um aplicativo** > **Carregar um aplicativo personalizado**.
 1. Vá para o diretório do projeto, navegue até a pasta **./package**, selecione a pasta zip do pacote de aplicativo e escolha **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Guia de canal carregada":::
@@ -428,7 +428,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Em **urls de aplicativo**, atualize a política de privacidade para `https://<yourngrokurl>/privacy` e Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-1. No **Aplicativo**, selecione Grupo e aplicativo de canal. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
+1. Em **Recursos do aplicativo**, selecione **Grupo e aplicativo de canal**. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
 
 1. Selecione **Salvar**.
 
@@ -649,7 +649,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Em **urls de aplicativo**, atualize a política de privacidade para `https://<yourngrokurl>/privacy` e Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-1. No **Aplicativo**, selecione Grupo e aplicativo de canal. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
+1. Em **Recursos do aplicativo**, selecione **Grupo e aplicativo de canal**. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
 
 1. Selecione **Salvar**.
 

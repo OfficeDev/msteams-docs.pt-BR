@@ -1,15 +1,15 @@
 ---
 title: Mensagens em conversas de bot
-description: Saiba como enviar uma mensagem, ações sugeridas, notificação, anexos, imagens, Cartões Adaptáveis, respostas de código de erro de status para Limitação.
+description: Saiba como enviar uma mensagem, ações sugeridas, notificação, anexos, imagens, Cartão Adaptável e respostas de código de erro de status.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 152515f16ff27467feac6e17aeb1310abc548c54
+ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586984"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68327591"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -248,8 +248,8 @@ Um objeto `channelData` típico em uma atividade enviada ao bot contém as segui
 * `channel`: passado somente em contextos de canal, quando o bot é mencionado ou para eventos em canais em equipes, em que o bot foi adicionado.
   * `id`: GUID para o canal.
   * `name`: nome do canal passado somente em casos de eventos [de modificação de canal](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`: preterido. Essa propriedade só está incluída para compatibilidade com versões anteriores.
-* `channelData.teamsChannelId`: preterido. Essa propriedade só está incluída para compatibilidade com versões anteriores.
+* `channelData.teamsTeamId`:Preterido. Essa propriedade só está incluída para compatibilidade com versões anteriores.
+* `channelData.teamsChannelId`:Preterido. Essa propriedade só está incluída para compatibilidade com versões anteriores.
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>Exemplo de objeto channelData (evento channelCreated)
 
@@ -444,27 +444,46 @@ A mensagem de conclusão do formulário aparece nos Cartões Adaptáveis ao envi
 
 Para obter mais informações sobre cartões e cartões em bots, consulte a [documentação dos cartões](~/task-modules-and-cards/what-are-cards.md).
 
-## <a name="status-code-responses"></a>Respostas de código de status
+## <a name="status-codes-from-bot-conversational-apis"></a>Códigos de status de APIs de conversa do bot
 
-A seguir estão os códigos de status e seu código de erro e valores de mensagem:
+Certifique-se de lidar com esses erros adequadamente em seu aplicativo teams. A tabela a seguir lista os códigos de erro e as descrições sob as quais os erros são gerados:
 
-| Código de status | Código de erro e valores de mensagem | Descrição |
-|----------------|-----------------|-----------------|
-| 403 | **Código**: `ConversationBlockedByUser` <br/> **Mensagem**: o usuário bloqueou a conversa com o bot. | O usuário bloqueou o bot no chat 1:1 ou em um canal por meio de configurações de moderação. |
-| 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensagem**: o bot não faz parte da lista de participantes da conversa. | O bot não faz parte da conversa. |
-| 403 | **Código**: `BotDisabledByAdmin` <br/> **Mensagem**: o administrador do locatário desabilitou esse bot. | O locatário bloqueou o bot. |
-| 401 | **Código**: `BotNotRegistered` <br/> **Mensagem**: nenhum registro encontrado para este bot. | O registro desse bot não foi encontrado. |
-| 412 | **Código**: `PreconditionFailed` <br/> **Mensagem**: Falha na pré-condição, tente novamente. | Uma pré-condição falhou em uma de nossas dependências devido a várias operações simultâneas na mesma conversa. |
-| 404 | **Código**: `ConversationNotFound` <br/> **Mensagem**: Conversa não encontrada. | A conversa não foi encontrada. |
-| 413 | **Código**: `MessageSizeTooBig` <br/> **Mensagem**: tamanho da mensagem muito grande. | O tamanho na solicitação de entrada era muito grande. |
-| 429 | **Código**: `Throttled` <br/> **Mensagem**: muitas solicitações. Também retorna quando tentar novamente depois. | Muitas solicitações foram enviadas pelo bot. Para obter mais informações, consulte o [limite de taxa](~/bots/how-to/rate-limit.md). |
+| Código de status | Código de erro e valores de mensagem | Descrição | Solicitação de repetição | Ação do desenvolvedor |
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **Código**: `Bad Argument` <br/> **Mensagem**: *cenário específico | Conteúdo de solicitação inválido fornecido pelo bot. Consulte a mensagem de erro para obter detalhes específicos. | Não | Avalie novamente o conteúdo da solicitação para erros. Verifique a mensagem de erro retornada para obter detalhes. |
+| 401 | **Código**: `BotNotRegistered` <br/> **Mensagem**: nenhum registro encontrado para este bot. | O registro desse bot não foi encontrado. | Não | Verifique a ID e a senha do bot. Verifique se a ID do bot (ID do AAD) está registrada no Portal do Desenvolvedor do Teams ou por meio do registro do canal de bot do Azure no Azure com o canal "Teams" habilitado.|
+| 403 | **Código**: `BotDisabledByAdmin` <br/> **Mensagem**: o administrador do locatário desabilitou esse bot | O administrador de locatários bloqueou as interações entre o usuário e o aplicativo de bot. O administrador de locatários precisa permitir o aplicativo para o usuário dentro das políticas de aplicativo. Para obter mais informações, consulte [políticas de aplicativo](/microsoftteams/app-policies). | Não | Pare a postagem na conversa até que a interação com o bot seja iniciada explicitamente por um usuário na conversa, indicando que o bot não está mais bloqueado. |
+| 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensagem**: o bot não faz parte da lista de participantes da conversa. | O bot não faz parte da conversa. O aplicativo precisa ser reinstalado na conversa. | Não | Antes de tentar enviar solicitações de conversa adicionais, [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) aguarde um evento, o que indica que o bot foi adicionado novamente.|
+| 403 | **Código**: `ConversationBlockedByUser` <br/> **Mensagem**: o usuário bloqueou a conversa com o bot. | O usuário bloqueou o bot no chat pessoal ou em um canal por meio de configurações de moderação. | Não | Exclua a conversa do cache. Pare de tentar postar em conversas até que a interação com o bot seja iniciada explicitamente por um usuário na conversa, indicando que o bot não está mais bloqueado. |
+| 403 | **Código**: `NotEnoughPermissions` <br/> **Mensagem**: *cenário específico | O bot não tem permissões necessárias para executar a ação solicitada. | Não | Determine a ação necessária na mensagem de erro. |
+| 404 | **Código**: `ActivityNotFoundInConversation` <br/> **Mensagem**: Conversa não encontrada. | A ID da mensagem fornecida não pôde ser encontrada na conversa. A mensagem não existe ou foi excluída. | Não | Verifique se a ID da mensagem enviada é um valor esperado. Remova a ID se ela tiver sido armazenada em cache. |
+| 404 | **Código**: `ConversationNotFound` <br/> **Mensagem**: Conversa não encontrada. | A conversa não foi encontrada porque ela não existe ou foi excluída. | Não | Verifique se a ID da conversa enviada é um valor esperado. Remova a ID se ela tiver sido armazenada em cache. |
+| 412 | **Código**: `PreconditionFailed` <br/> **Mensagem**: Falha na pré-condição, tente novamente. | Uma pré-condição falhou em uma de nossas dependências devido a várias operações simultâneas na mesma conversa. | Sim | Tente novamente com retirada exponencial. |
+| 413 | **Código**: `MessageSizeTooBig` <br/> **Mensagem**: tamanho da mensagem muito grande. | O tamanho da solicitação de entrada era muito grande. Para obter mais informações, consulte [formatar suas mensagens de bot](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | Não | Reduza o tamanho da carga. |
+| 429 | **Código**: `Throttled` <br/> **Mensagem**: muitas solicitações. Também retorna quando tentar novamente depois. | Muitas solicitações foram enviadas pelo bot. Para obter mais informações, consulte o [limite de taxa](/microsoftteams/platform/bots/how-to/rate-limit). | Sim | Tente novamente usando `Retry-After` o cabeçalho para determinar o tempo de retirada. |
+| 500 | **Código**: `ServiceError` <br/> **Mensagem**: *vários | Erro de servidor interno. | Não | Relate o problema na comunidade [de desenvolvedores](~/feedback.md#developer-community-help). |
+| 502 | **Código**: `ServiceError` <br/> **Mensagem**: *vários | Problema de dependência de serviço. | Sim | Tente novamente com retirada exponencial. Se o problema persistir, relate o problema na comunidade [de desenvolvedores](~/feedback.md#developer-community-help). |
+| 503 | | O serviço não está disponível. | Sim | Tente novamente com retirada exponencial. Se o problema persistir, relate o problema na comunidade [de desenvolvedores](~/feedback.md#developer-community-help). |
+| 504 | | Tempo limite do gateway. | Sim | Tente novamente com retirada exponencial. Se o problema persistir, relate o problema na comunidade [de desenvolvedores](~/feedback.md#developer-community-help). |
+
+### <a name="status-codes-retry-guidance"></a>Diretrizes de repetição de códigos de status
+
+As diretrizes gerais de repetição para cada código de status são listadas na tabela a seguir. O bot deve evitar tentar novamente em códigos de status que não estão especificados na tabela a seguir:
+
+|Código de status | Estratégia de repetição |
+|----------------|-----------------|
+| 412 | Tente novamente usando retirada exponencial. |
+| 429 | Tente novamente usando o `Retry-After` cabeçalho para determinar o tempo de espera em segundos e entre solicitações, se disponível. Caso contrário, tente novamente usando a retirada exponencial com a ID do thread, se possível. |
+| 502 | Tente novamente usando retirada exponencial. |
+| 503 | Tente novamente usando retirada exponencial. |
+| 504 | Tente novamente usando retirada exponencial. |
 
 ## <a name="code-sample"></a>Exemplo de código
 
 | Nome do exemplo | Descrição | Node.js | .NETCore | Python | .NET |
 |----------------|-----------------|--------------|----------------|-----------|-----|
-| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
-| Localização de aplicativos do Teams | Localização de aplicativos do Teams usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
+| Localização de aplicativos do Teams | Localização de aplicativos do Teams usando bot e guia. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Próxima etapa
 
