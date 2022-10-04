@@ -5,12 +5,12 @@ description: Neste módulo, saiba mais sobre o Power Automate no aplicativo de c
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: deda9f0178c51410e2208e81263b315de4ca1da4
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 975d5fdd923d96ae1daa649795259a05904b6921
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178743"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373049"
 ---
 # <a name="power-automate"></a>Power Automate
 
@@ -19,7 +19,7 @@ O Power Automate pode ser usado para automatizar fluxos de trabalho em seu Colla
 O conector de controle de colaboração permite que os desenvolvedores acessem APIs de controle de colaboração por gatilhos ou ações em fluxos de trabalho automatizados no Microsoft Power Automate, no Microsoft Power Apps e nos Aplicativos Lógicos do Azure.
 
 > [!NOTE]
-> Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> Atualmente, os controles de colaboração estão disponíveis apenas na versão [prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
 Nesta versão, o conector permite que os criadores configurem gatilhos:
 
@@ -34,33 +34,33 @@ No [portal do Azure para](https://ms.portal.azure.com/#home) gerenciamento do Az
 
 1. Na home page do portal do Azure, selecione **Azure Active Directory**. No Azure Active Directory, selecione a lista suspensa para **Adicionar** e selecione **Registro de aplicativo**.
 
-   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="A captura de tela é um exemplo que mostra como adicionar um novo Registro de Aplicativo":::
+   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Captura de tela é um exemplo que mostra como adicionar um novo Registro de Aplicativo.":::
 
-   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="A captura de tela é um exemplo que mostra como adicionar um novo registro de aplicativo":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Captura de tela é um exemplo que mostra como adicionar novo registro de aplicativo.":::
 
 1. No registro do aplicativo, defina o nome do aplicativo e adicione o URI de redirecionamento da Web a `https://global.consent.azure-apim.net/redirect`.
 
-   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="A captura de tela é um exemplo que mostra como registrar um aplicativo":::
+   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="Captura de tela é um exemplo que mostra como registrar um aplicativo.":::
 
 1. Na seção Concessão Implícita e fluxos híbridos, selecione tokens de acesso e tokens de ID.
 
-   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="A captura de tela é um exemplo que mostra os tokens e os tokens de ID":::
+   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="Captura de tela é um exemplo que mostra os tokens e os tokens de ID.":::
 
 1. Selecione a Permissão de API no painel esquerdo, **selecione Adicionar uma permissão** e, em seguida, pesquise a **permissão do Dynamic CRM** .
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="A captura de tela é um exemplo que mostra como adicionar uma permissão":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="Captura de tela é um exemplo que mostra como adicionar uma permissão.":::
 
 1. Certifique-se de **selecionar user_impersonation** permissões depois de selecionar o Dynamics CRM.
 
-   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="A captura de tela é um exemplo que mostra como habilitar a caixa de seleção user_impersonation":::
+   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="Captura de tela é um exemplo que mostra como habilitar a caixa de seleção user_impersonation.":::
 
 1. Na página Certificados & Segredos, adicione um novo segredo do cliente e salve o valor para uso posterior **durante a** configuração da segurança do conector.
 
-   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="A captura de tela é um exemplo que mostra como copiar um novo valor secreto":::
+   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="Captura de tela é um exemplo que mostra como copiar um novo valor secreto.":::
 
 1. Na página Visão geral do aplicativo, copie a **ID** do aplicativo (cliente) e salve-a para uso posterior durante a configuração da segurança do conector.
 
-   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="A captura de tela é um exemplo que mostra como salvar a ID do cliente":::
+   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Captura de tela é um exemplo que mostra como salvar a ID do cliente":::
 
 Agora seu aplicativo do Azure está pronto e você precisa adicioná-lo como um aplicativo de usuário em seu ambiente.
 
@@ -68,43 +68,42 @@ Agora seu aplicativo do Azure está pronto e você precisa adicioná-lo como um 
 
 1. Abra o portal do Power Apps, no canto superior direito, selecione **as configurações** e abra **Administração central**.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="A captura de tela é um exemplo que mostra a interface do Power Apps":::
+   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="Captura de tela é um exemplo que mostra a interface do Power Apps.":::
 
 1. No centro de administração, selecione **Ambiente** no painel esquerdo e selecione seu ambiente na lista que você deseja adicionar ao aplicativo do conector.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="A captura de tela é um exemplo que mostra como adicionar o aplicativo conector":::
+   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="Captura de tela é um exemplo que mostra como adicionar o aplicativo conector.":::
 
 1. Na página de detalhes do ambiente, selecione **Configurações**.
 
-   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="A captura de tela é um exemplo que mostra como selecionar configurações":::
+   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="Captura de tela é um exemplo que mostra como selecionar configurações.":::
 
 1. Na página de detalhes das configurações, selecione **a seção Usuários + permissões** e selecione **Usuários do aplicativo**.
 
-   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="A captura de tela é um exemplo que mostra o link do usuário do aplicativo":::
+   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Captura de tela é um exemplo que mostra o link do usuário do aplicativo.":::
 
 1. Na página Usuários do aplicativo, selecione **o + Novo usuário do aplicativo**. **A janela Criar um usuário do** aplicativo é exibida.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="A captura de tela é um exemplo que mostra o novo usuário do aplicativo":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="Captura de tela é um exemplo que mostra o novo usuário do aplicativo.":::
 
 1. Selecione **+ Adicionar um aplicativo**.
 
-   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="A captura de tela é um exemplo que mostra como criar um novo usuário de aplicativo":::
+   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="Captura de tela é um exemplo que mostra como criar um novo usuário de aplicativo.":::
 
 1. Selecione seu aplicativo na caixa de pesquisa e selecione Adicionar novamente.
 
-   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="A captura de tela é um exemplo que mostra como adicionar aplicativo do Azure Active Directory":::
+   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="Captura de tela é um exemplo que mostra como adicionar aplicativo do Azure Active Directory.":::
 
-Depois que o aplicativo for adicionado, defina a **unidade de negócios e** as funções **de** segurança para seu aplicativo conector. Selecione **Criar** e seu aplicativo estará na lista. Com o usuário do aplicativo definido no ambiente, podemos prosseguir para a configuração personalizada do conector.
+Depois que o aplicativo for adicionado, defina a **unidade de negócios e** as funções **de** segurança para seu aplicativo conector. Selecione **Criar** e seu aplicativo está na lista. Com o usuário do aplicativo definido no ambiente, podemos prosseguir para a configuração personalizada do conector.
 
 ## <a name="custom-connector-configuration"></a>Configuração personalizada do conector
 
 1. Abra o PowerApps ou o Power Automate e selecione o menu **Conectores Personalizados** . Selecione **editar para** o conector de Colaboração.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="menu do conector personalizado":::
-
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="A captura de tela mostra como selecionar editar para o menu do conector personalizado.":::
 1. Na guia Informações Gerais, insira o host com o endereço do domínio de instância do Dynamic 365 (sem o https://).
 
-   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="A captura de tela é um exemplo que mostra as informações gerais":::
+   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="Captura de tela é um exemplo que mostra as informações gerais.":::
 
 1. Na guia Segurança, insira as seguintes entradas:
 
@@ -113,17 +112,17 @@ Depois que o aplicativo for adicionado, defina a **unidade de negócios e** as f
    * URL do recurso: a URL da sua instância do Dynamic 365 (`https://org.crm.dynamics.com/`).
    * Escopo: igual ao mostrado acima. Sufixo padrão (`https://org.crm.dynamics.com/.default`).
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="A captura de tela é um exemplo que mostra a instância do Dynamic 365.":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Captura de tela é um exemplo que mostra a instância do Dynamic 365.":::
 
 1. Selecione **Atualizar conector para** salvar as alterações e permitir que seu fluxo estabeleça conexões.
 
-   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="captura de tela é um exemplo que mostra o conector personalizado.":::
+   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="Captura de tela é um exemplo que mostra o conector personalizado.":::
 
 ## <a name="how-to-invoke-the-connector"></a>Como invocar o conector  
 
 Gatilhos e ações são predefinido com entrada e saída configuráveis como uma etapa de fluxo de trabalho. Adicionar a etapa de fluxo de trabalho à posição correta do fluxo de trabalho com a configuração correta de entrada e saída para definir quando o gatilho ou a ação deve ser invocado.
 
-  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="A captura de tela é um exemplo que mostra como invocar o conector.":::
+  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="Captura de tela é um exemplo que mostra como invocar o conector.":::
 
 ### <a name="triggers-and-actions-supported-with-connector"></a>Gatilhos e ações compatíveis com o conector
 
@@ -133,28 +132,28 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Quando uma sessão de colaboração é criada.
 
-      :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Sessão de colaboração criada":::
+      :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Captura de tela que mostra a sessão de colaboração criada.":::
 
-      **Âmbito:** Um escopo a ser limitado, quais linhas podem disparar o fluxo.
+      **Escopo:** Um escopo a ser limitado, quais linhas podem disparar o fluxo.
 
       **Execute como:** O usuário em execução para etapas em que as conexões de invocador são usadas.
 
   1. Quando uma tarefa é criada ou modificada
 
-      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="A captura de tela é um exemplo que mostra que a tarefa foi criada ou modificada":::
+      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Captura de tela é um exemplo que mostra que a tarefa foi criada ou modificada.":::
 
-      Por padrão, a tarefa do Planejador de gatilhos será desabilitada e não será disparada. Para habilita-lo, as seguintes etapas devem ser concluídas pelo administrador do locatário:
+      Por padrão, a tarefa do Planejador de gatilho está desabilitada e não será disparada. Para habilita-lo, o administrador do locatário deve seguir as etapas:
 
-      * Crie um tíquete de suporte no caminho Power Apps/Controles/Configurações de colaboração.
-      * Solicite que seu ambiente esteja habilitado para o conector de Colaboração e forneça a URL do Ambiente (preferencial) ou a ID da Organização.  
-      * Você pode adicionar o seguinte texto de exemplo à solicitação de suporte: "Habilitar a URL do Ambiente: `url` para o Conector de Colaboração".
-      * Para abrir um tíquete de suporte, consulte [Obter Ajuda + Suporte](/power-platform/admin/get-help-support)
+      1. Crie um tíquete de suporte no caminho Power Apps/Controles/Configurações de colaboração.
+      1. Solicite que seu ambiente esteja habilitado para o conector de Colaboração e forneça a URL do Ambiente (preferencial) ou a ID da Organização.  
+      1. Você pode adicionar o seguinte texto de exemplo à solicitação de suporte: "Habilitar a URL do Ambiente: `url` para o Conector de Colaboração".
+      1. Para abrir um tíquete de suporte, consulte [Obter Ajuda + Suporte](/power-platform/admin/get-help-support)
 
 * **Ações**
 
   1. Iniciar sessão de colaboração
 
-      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="A captura de tela é um exemplo que mostra como iniciar a sessão de colaboração":::
+      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="Captura de tela é um exemplo que mostra como iniciar a sessão de colaboração.":::
 
      Esta ação de etapa cria uma nova sessão de colaboração para sua entidade de negócios do dataverse:
 
@@ -172,7 +171,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Recuperar sessão de colaboração
 
-      ::image type="content" source=".. /assets/images/collaboration-control/retrieve-collab-session.png" alt-text="A captura de tela é um exemplo que mostra como recuperar a sessão de colaboração.":::
+      ::image type="content" source=".. /assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Captura de tela é um exemplo que mostra como recuperar a sessão de colaboração.":::
 
      Esta ação de etapa retorna a sessão de colaboração que corresponde às entradas fornecidas:
 
@@ -182,7 +181,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Atualizar sessão de Colaboração
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="A captura de tela é um exemplo que mostra como atualizar a sessão de colaboração.":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="Captura de tela é um exemplo que mostra como atualizar a sessão de colaboração.":::
 
      Esta ação de etapa atualiza uma sessão de colaboração existente:
 
@@ -211,7 +210,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Associar Mapa de Colaboração (externo)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="A captura de tela é um exemplo que mostra como associar o mapa de colaboração.":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="Captura de tela é um exemplo que mostra como associar o mapa de colaboração.":::
 
      Esta ação de etapa cria um mapeamento de uma entidade de colaboração externa (fora do dataverso) com sua sessão de colaboração:
 
@@ -228,7 +227,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Associar Mapa de Colaboração (interno)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="A captura de tela é um exemplo que mostra como associar o mapa de colaboração interno.":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Captura de tela é um exemplo que mostra como associar o mapa de colaboração interno.":::
 
      Esta ação de etapa cria um mapeamento de uma entidade de colaboração (tabela de dataverso) com sua sessão de colaboração. Internas destinam-se a criar mapeamentos apenas entre entidades/tabelas internas do Dataverse.
 
@@ -246,7 +245,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Atualizar Mapa de Colaboração
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="A captura de tela é um exemplo que mostra como atualizar o mapa de colaboração.":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="Captura de tela é um exemplo que mostra como atualizar o mapa de colaboração.":::
 
      Esta ação de etapa atualiza um mapa de colaboração existente:
 
@@ -276,7 +275,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Obter metadados de colaboração
 
-      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="A captura de tela é um exemplo que mostra como obter metadados de colaboração.":::
+      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="Captura de tela é um exemplo que mostra como obter metadados de colaboração.":::
 
      Esta ação de etapa lista todos os metadados correspondentes ao filtro especificado.
 
@@ -286,7 +285,7 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Criar tarefa do Planner
 
-      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="A captura de tela é um exemplo que mostra como criar uma tarefa do planejador.":::
+      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="Captura de tela é um exemplo que mostra como criar uma tarefa do Planejador.":::
 
      Esta ação de etapa cria uma Tarefa do Planejador de Grafo usando a tabela virtual da tarefa Planner dos controles de colaboração:
 
@@ -311,11 +310,11 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
      * **Porcentagem Concluída:** Porcentagem de conclusão da tarefa (0-100)
      * **Tipo de visualização:** Isso define o tipo de visualização que aparece na tarefa. Os valores possíveis são: automatic, noPreview, checklist, description, reference.
      * **Contagem de referências:** Número de referências externas que existem na tarefa.
-     * **Data e hora de início:** Data e hora em que a tarefa é iniciada. O tipo Timestamp representa informações de data e hora usando o formato ISO 8601 e está sempre no horário UTC. Por exemplo, meia-noite UTC em 1º de janeiro de 2014 é 01-01-01T00:00:00Z.
+     * **Data e hora de início:** Data e hora em que a tarefa é iniciada. O tipo Timestamp representa informações de data e hora usando o formato ISO 8601 e está sempre no horário UTC. Por exemplo, meia-noite UTC em 01 de janeiro de 2014 é 01-01-01T00:00:00Z.
 
   1. Obter tarefa do Planner
 
-      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="A captura de tela é um exemplo que mostra a tarefa obter planejador.":::
+      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="Captura de tela é um exemplo que mostra a tarefa obter planejador.":::
 
      Esta ação de etapa retorna dados da Tarefa do Planner usando a tabela virtual da tarefa Planner dos controles de colaboração:
 
@@ -323,18 +322,18 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
   1. Atualizar Tarefa do Planejador
 
-      :::image type="content" source="../assets/images/collaboration-control/update-planner-task-preview.png" alt-text="Atualizar tarefa do planejador":::
+      :::image type="content" source="../assets/images/collaboration-control/update-planner-task-preview.png" alt-text="Captura de tela que mostra a tarefa Atualizar planejador.":::
 
-     Esta ação de etapa atualiza um registro de tarefa do planejador usando a tabela virtual da tarefa Planner dos controles de colaboração
+     Esta ação de etapa atualiza um registro de tarefa do planejador usando a tabela virtual da tarefa Planner de controles de colaboração.
 
      * **ID da tarefa (obrigatório):** Identificador exclusivo da tarefa.
-     * **Atribuições:** Um objeto formatado em json que representa todas as atribuições de uma tarefa. Ver. Tipo de recurso plannerAssignments – Microsoft Graph v1.0 | Microsoft Docs  
+     * **Atribuições:** Um objeto formatado em json que representa todas as atribuições de uma tarefa. Consulte o tipo de recurso plannerAssignments – Microsoft Graph v1.0 | Microsoft Docs.  
      * **ID do bucket:** ID do bucket ao local em que a tarefa pertence.  
      * **Detalhes da tarefa do Planner:** Representa as informações adicionais sobre uma tarefa.
-     * **Data de Conclusão:** Data e hora em que a tarefa deve ser concluída. O tipo Timestamp representa informações de data e hora usando o formato ISO 8601 e está sempre no horário UTC. Por exemplo, meia-noite UTC em 1º de janeiro de 2014 é 01-01-01T00:00:00Z.
+     * **Data de Conclusão:** Data e hora em que a tarefa deve ser concluída. O tipo Timestamp representa informações de data e hora usando o formato ISO 8601 e está sempre no horário UTC. Por exemplo, meia-noite UTC em 01 de janeiro de 2014 é 2014-01-01T00:00:00Z.
      * **Prioridade:** Prioridade da tarefa. 0 e 10 (inclusive) aumentando o valor sendo prioridade mais baixa.  
-     * **Porcentagem Concluída:** Porcentagem de conclusão da tarefa (0-100)
-     * **Título:** Título da tarefa
+     * **Porcentagem Concluída:** Porcentagem de conclusão da tarefa (0-100).
+     * **Título:** Título da tarefa.
 
      ***Opções avançadas:***
 
@@ -347,15 +346,15 @@ Os seguintes gatilhos e ações têm suporte em um fluxo:
 
 **Cenário de fluxo de exemplo**
 
-A seguir estão alguns exemplos de fluxos:
+A seguir estão exemplos de fluxos:
 
 1. Obtendo uma resposta dos formulários da Microsoft, criando uma sessão de Colaboração e uma tarefa associada.
 
-   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="A captura de tela é um exemplo que mostra como enviar uma nova resposta.":::
+   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="Captura de tela é um exemplo que mostra como enviar uma nova resposta.":::
 
 1. Sempre que uma sessão de colaboração for criada, capture os detalhes e envie uma notificação por email.
 
-   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="A captura de tela é um exemplo que mostra a sessão de Colaboração criada":::
+   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Captura de tela é um exemplo que mostra a sessão de Colaboração criada.":::
 
 > [!NOTE]
 > Vários fluxos podem ser disparados dessa maneira para executar ações diferentes, usando dados da resposta da criação da sessão de Colaboração.

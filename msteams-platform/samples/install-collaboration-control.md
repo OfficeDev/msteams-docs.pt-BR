@@ -5,17 +5,17 @@ description: Neste módulo, saiba como instalar controles de colaboração com a
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
-ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
+ms.openlocfilehash: 5a253c9e7373a2df9e1161e6d3fc9d9b1c8ccdaa
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617975"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373028"
 ---
 # <a name="install-collaboration-controls"></a>Instalar os Controles de colaboração
 
 > [!NOTE]
-> Atualmente, os controles de colaboração estão disponíveis apenas na [versão prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> Atualmente, os controles de colaboração estão disponíveis apenas na versão [prévia do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
 
 Neste artigo, você aprenderá a instalar controles de colaboração. O seguinte é necessário para criar e implantar aplicativos Collaboration Manager usando os controles de colaboração:
 
@@ -32,7 +32,6 @@ Para obter mais informações sobre privilégios de função, consulte [Configur
 ## <a name="install-the-collaboration-controls-solutions"></a>Instalar as soluções de controles de colaboração
 
 Você instalará os controles de colaboração em seu ambiente do dataverse por meio [do Microsoft AppSource.](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)
-
 
 Você poderá configurar e usar os componentes em seu próprio aplicativo controlado por modelo somente depois de navegar até o [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  e instalar controles de Colaboração em seu ambiente de dataverse.
 
@@ -62,20 +61,20 @@ Para instalar as soluções, navegue [até o Microsoft AppSource](https://appsou
 
 1. Selecione **o botão Obter** agora.
 
-   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Formulário de visualização "border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="Captura de tela do botão Obter agora para mostrar o controle colaboração."border="true":::
 
 1. Entre com sua conta, preencha o formulário e selecione **Continuar**.
 
-   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="visão geral do controle de colaboração" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="Captura de tela do controle de colaboração de visão geral." border="true":::
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Visualização do controle de colaboração" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Captura de tela da visualização do controle de colaboração de instalação." border="true":::
 
 1. Você será direcionado para o Power Platform Administração Center. Selecione um ambiente no menu suspenso e concorde com os termos e as instruções de política.
 
    > [!TIP]
    > Se você vir um erro de permissões ao selecionar o ambiente, tente selecionar fora do menu suspenso do ambiente para ver se isso resolve o problema.
 
-   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="Instalar o ambiente de controle de colaboração" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="Captura de tela é um exemplo de instalação do ambiente de controle de colaboração." border="true":::
 
 1. Selecione **Instalar**, a instalação pode levar aproximadamente 15 minutos para ser concluída.
 
@@ -85,7 +84,7 @@ Para instalar as soluções, navegue [até o Microsoft AppSource](https://appsou
 
 1. Selecione a **guia** Soluções para exibir todas as soluções que você instalou no ambiente certo.
 
-   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="controle de colaboração de soluções" border= "true":::
+   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="Captura de tela que mostra a guia Soluções para exibir o controle de colaboração de todas as soluções." border= "true":::
 
 > [!NOTE]
 > Os controles de colaboração são versão prévia e os elementos podem mudar ao longo do tempo com potencial para alterações interruptivas. Os controles de colaboração não têm suporte em ambientes de produção.
