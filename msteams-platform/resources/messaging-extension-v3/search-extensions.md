@@ -4,12 +4,12 @@ description: Neste artigo, você aprenderá a desenvolver extensões de mensagem
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 789563d3a11a7e83d59b1653cc0cf45af2354dc9
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: e648245e3ccc1c2fa8da8f504fca05574a7fb6fd
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243028"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376617"
 ---
 # <a name="search-with-message-extensions"></a>Pesquisar com extensões de mensagem
 
@@ -35,7 +35,6 @@ Para a extensão de mensagem baseada em pesquisa, defina `type` o parâmetro com
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.bing",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://bingbotservice.azurewebsites.net/",

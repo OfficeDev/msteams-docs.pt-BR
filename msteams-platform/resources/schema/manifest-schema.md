@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá a versão mais recente do esquema de manifesto público para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100165"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376568"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -29,7 +29,6 @@ A amostra do esquema a seguir mostra todas as opções de extensibilidade:
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -404,12 +403,6 @@ Certifique-se de que a sua descrição detalhe a sua experiência e ajude os cli
 |---|---|---|---|
 |`short`|80 caracteres|✔️|Uma descrição curta da experiência do seu aplicativo, usada quando o espaço é limitado.|
 |`full`|4000 caracteres|✔️|A descrição completa do seu aplicativo.|
-
-## <a name="packagename"></a>packageName
-
-Cadeia de caracteres—**opcional**
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -910,7 +903,7 @@ Para criar um arquivo de manifesto do aplicativo Teams:
 <br>
 
 > [!NOTE]
-> O conteúdo de exemplo de manifesto mostrado aqui é apenas para um aplicativo de guia. Ele usa valores de exemplo para a URI do domínio terciário e o nome do pacote. Para obter mais informações, confira [amostra do esquema de manifesto](#sample-full-manifest).
+> O conteúdo de exemplo de manifesto mostrado aqui é apenas para um aplicativo de guia. Ele usa valores de exemplo para o URI de subdomínio. Para obter mais informações, confira [amostra do esquema de manifesto](#sample-full-manifest).
 
   ```json
 { 
@@ -918,7 +911,6 @@ Para criar um arquivo de manifesto do aplicativo Teams:
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 

@@ -4,12 +4,12 @@ description: Saiba como habilitar a visualização do desenvolvedor. Exemplo de 
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 2278b2f500ce89f239cae59ffab7f432a8d170f5
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243168"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376596"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Esquema de manifesto de visualização do desenvolvedor público para o Teams
 
@@ -28,7 +28,6 @@ O manifesto do Microsoft Teams descreve como o aplicativo se integra à platafor
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -301,12 +300,6 @@ Esta cadeia de caracteres da versão deve seguir o padrão [semver](http://semve
 **Obrigatório** &ndash; ID do aplicativo da Microsoft
 
 O identificador exclusivo gerado pela Microsoft para esse aplicativo. Se você registrou um bot por meio do Microsoft Bot Framework ou o aplicativo Web da guia já entra com a Microsoft, você já deve ter uma ID e deve inseri-la aqui. Caso contrário, você deve gerar uma nova ID no Portal de Registro de Aplicativos da [Microsoft (Meus](https://apps.dev.microsoft.com) Aplicativos), inseri-la aqui e reutilizá-la quando [adicionar um bot](~/bots/how-to/create-a-bot-for-teams.md).
-
-## <a name="packagename"></a>packageName
-
-**Obrigatório** &ndash; Cadeia de caracteres
-
-Um identificador exclusivo para esse aplicativo em notação de domínio reverso, por exemplo, com.example.myapp.
 
 ## <a name="developer"></a>developer
 
