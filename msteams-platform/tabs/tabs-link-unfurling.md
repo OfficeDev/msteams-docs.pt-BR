@@ -5,12 +5,12 @@ description: Saiba mais sobre o modo de exibição de estágio, um componente de
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
+ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027288"
+ms.lasthandoff: 10/06/2022
+ms.locfileid: "68484917"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
@@ -90,7 +90,7 @@ Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da loja do [Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no parâmetro `websiteUrl` do objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
