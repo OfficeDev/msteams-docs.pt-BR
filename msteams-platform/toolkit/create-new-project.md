@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 8ed7d882ba7d58862539e77bfc8b6ea5277a3729
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781126"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499241"
 ---
 # <a name="create-a-new-teams-project"></a>Criar um novo projeto do Teams
 
@@ -135,7 +135,7 @@ A implementação de notificação principal na **pasta do bot** e ela contém:
 
 | Nome do arquivo | Conteúdos |
 | --- | --- |
-| `src/adaptiveCards/` | Modelos para cartão adaptável  |
+| `src/adaptiveCards/` | Modelos para Cartão Adaptável  |
 | `src/internal/` | Código de inicialização gerado para a funcionalidade de notificação |
 | `src/index.*s` | O ponto de entrada para manipular mensagens de bot e enviar notificações |
 | `.gitignore` | Arquivo para excluir arquivos locais do projeto de bot |
@@ -260,7 +260,7 @@ Você pode ver os modelos de aplicativo do Teams já preenchidos no Kit de Ferra
 |Bot de notificação     |O aplicativo bot de notificação pode enviar notificação ao cliente do Teams. Há várias maneiras de disparar a notificação. Por exemplo, dispare a notificação por solicitação HTTP ou por tempo. Você também pode selecionar a notificação disparada com base em seu cenário de negócios.         |
 |Bot de comando     |Os usuários podem digitar um comando para interagir com o bot usando o aplicativo Bot de Comando.         |
 |Tab     |O aplicativo Tab mostra uma página da Web dentro do Teams e permite o logon único usando a conta do Teams.         |
-|Extensão de Mensagem     |O aplicativo extensão de mensagem implementa recursos simples, como criar cartão adaptável, pesquisar pacotes DoCker, desfralização de links para o domínio "dev.botframework.com".         |
+|Extensão de Mensagem     |O aplicativo extensão de mensagem implementa recursos simples, como criar Cartão Adaptável, pesquisar pacotes Pepita, desfraldar links para o domínio "dev.botframework.com".         |
 
 > [!NOTE]
 > Depois que o projeto é criado, o Kit de Ferramentas do Teams abre automaticamente **a janela Introdução** . Agora você pode ver as **instruções na janela** Introdução e conferir os diferentes recursos no Kit de Ferramentas do Teams.

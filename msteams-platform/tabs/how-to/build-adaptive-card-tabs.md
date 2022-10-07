@@ -5,12 +5,12 @@ description: Saiba como criar guias usando Cartões Adaptáveis em que o front-e
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376624"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499283"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
@@ -25,7 +25,7 @@ Ao desenvolver uma guia usando o método tradicional, você pode ter estes probl
 * Restrições de iFrame
 * Manutenção e custos do servidor
 
-As guias do Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de incorporar conteúdo da Web em um IFrame, você pode renderizar Cartões Adaptáveis em uma guia. Enquanto o front-end é renderizado com Adaptive Cards, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
+As guias do Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de inserir conteúdo da Web em um iFrame, você pode renderizar Cartões Adaptáveis em uma guia. Embora o front-end seja renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
 
 Você pode criar suas guias com blocos de construção prontos para interface do usuário (UI) nativos na área de trabalho, na Web e em dispositivos móveis. Este artigo ajuda você a entender as alterações necessárias para serem feitas no manifesto do aplicativo. O artigo também identifica como a atividade de invocação solicita e envia informações na guia com Cartões Adaptáveis e seu efeito no fluxo de trabalho do módulo de tarefa.
 

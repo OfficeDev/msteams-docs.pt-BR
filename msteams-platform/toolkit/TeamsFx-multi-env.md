@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 20bdb351eeff9a11d9460cf8206cfdc7dcbea0ff
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780993"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499290"
 ---
 # <a name="manage-multiple-environments"></a>Gerenciar vários ambientes
 
@@ -156,7 +156,7 @@ Etapas para personalização:
 4. Abra o arquivo de configuração `.fx/configs/config.staging.json`.
 5. Adicione a mesma propriedade a `my app description for staging`.
 6. Abra o modelo de manifesto do aplicativo Teams `templates/appPackage/manifest.template.json`.
-7. Atualize a propriedade para **`description`** > **`short`** usar a **variável definida** em arquivos de configuração com sintaxe de bigode **`{{config.manifest.description.short}}`**.
+7. Atualize a propriedade **`description`** > **`short`** para usar a **variável** definida em arquivos de configuração com sintaxe de chaves **`{{config.manifest.description.short}}`**.
   
   As atualizações a serem `manifest.template.json` :
 

@@ -3,12 +3,12 @@ title: Criar um Assistente Virtual
 description: Saiba como criar um bot do Assistente Virtual para o Teams usando exemplos de código e snippets com recursos como cartões adaptáveis, manipulação de interrupções e muito mais.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 12339ed10f1c6a6e30ebb74320fbf69018a6d3f9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 4f35edee79dba5b6a8faa9720906915bec27d6d5
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178601"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499276"
 ---
 # <a name="create-virtual-assistant"></a>Criar um Assistente Virtual
 
@@ -564,7 +564,7 @@ Para obter mais informações, consulte [esta](/microsoftteams/platform/samples/
     }
 ```
 
-Você também pode aproveitar as habilidades existentes do [repositório do Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou criar uma nova habilidade completamente do zero. Para criar uma nova habilidade, consulte [tutoriais para criar uma nova habilidade](https://microsoft.github.io/botframework-solutions/overview/skills/). Para documentação de arquitetura de habilidades e Assistente Virtual, consulte[arquitetura de habilidades e Assistente Virtual](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+Você também pode aproveitar as habilidades existentes do [repositório do Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) ou criar uma nova habilidade completamente do zero. Para criar uma nova habilidade, consulte [tutoriais para criar uma nova habilidade](https://microsoft.github.io/botframework-solutions/overview/skills/). Para obter a documentação do Assistente Virtual e da arquitetura de habilidades, [consulte o Assistente Virtual e a arquitetura de habilidades](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitações de Assistente Virtual
 

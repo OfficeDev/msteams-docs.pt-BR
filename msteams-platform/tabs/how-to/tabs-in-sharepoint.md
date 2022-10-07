@@ -5,12 +5,12 @@ description: Saiba como implantar sua guia do Teams existente no SharePoint como
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 076cf027e2696848319fc0beb7ae69c3633b8dc4
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189471"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499192"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Adicionar uma guia do Teams ao SharePoint
 
@@ -67,7 +67,7 @@ Com a Estrutura do SharePoint v.1.7, você pode hospedar suas guias do Teams no 
 
 ### <a name="sharepoint-framework-in-teams"></a>Estrutura do SharePoint no Teams
 
-Você também pode implementar suas Teams usando Estrutura do SharePoint. As Web Parts da Estrutura do SharePoint são hospedadas dentro do SharePoint sem qualquer necessidade de serviços externos, como o Azure. Para desenvolvedores do SharePoint, isso simplifica significativamente o processo de desenvolvimento das guias do Teams. Para obter mais informações sobre a Estrutura do SharePoint no Teams, consulte [como usar a Estrutura do SharePoint no Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+Você também pode implementar suas guias do Teams usando Estrutura do SharePoint. As Web Parts da Estrutura do SharePoint são hospedadas dentro do SharePoint sem qualquer necessidade de serviços externos, como o Azure. Para desenvolvedores do SharePoint, isso simplifica significativamente o processo de desenvolvimento das guias do Teams. Para obter mais informações sobre a Estrutura do SharePoint no Teams, consulte [como usar a Estrutura do SharePoint no Teams.](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>Introdução
 
@@ -124,7 +124,7 @@ A imagem a seguir exibe a tela correspondente:
 1. Selecione o botão **Publicar** depois de concluir a  edição.
 
 1. Selecione **Adicionar página à navegação** para ter uma referência rápida para sua página na barra de navegação à esquerda.
-A imagem a seguir exibe a guia no Sharepoint:
+A imagem a seguir exibe a guia no SharePoint:
 
    ![Guia na imagem do Sharepoint](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 

@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 0df9cc75b6a9775f9369b6a3bf8b95c35941207b
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616650"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499318"
 ---
 # <a name="edit-azure-ad-manifest"></a>Editar Azure AD manifesto
 
@@ -278,7 +278,7 @@ Você precisa interagir com o aplicativo Azure AD durante vários estágios do c
 
     * Inicialmente ignora algumas propriedades no arquivo de manifesto que exigem mais contexto (como a propriedade replyUrls que requer um ponto de extremidade de depuração local) durante a criação de um novo aplicativo Azure AD com o arquivo de manifesto.
 
-    * Após a inicialização do ambiente de desenvolvimento local com êxito, os identifierUris do aplicativo Azure AD, replyUrls e outras propriedades que não estão disponíveis durante o estágio de criação são atualizados adequadamente.
+    * Depois que o ambiente de desenvolvimento local é iniciado com êxito, os identifierUris do aplicativo Azure AD, replyUrls e outras propriedades que não estão disponíveis durante o estágio de criação são atualizados adequadamente.
 
     * As alterações feitas em seu aplicativo Azure AD serão carregadas durante a próxima sessão de depuração local. Você pode ver as [Azure AD do aplicativo para](https://github.com/OfficeDev/TeamsFx/wiki/) aplicar as alterações manualmente Azure AD do aplicativo.
 

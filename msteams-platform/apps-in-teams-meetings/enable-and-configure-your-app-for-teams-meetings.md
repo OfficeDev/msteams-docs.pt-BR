@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295974"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499199"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -42,6 +42,7 @@ As funcionalidades do aplicativo de reuniões são declaradas no manifesto do ap
 > * Os aplicativos em reuniões exigem `groupchat` ou definem o `team` escopo. O `team` escopo funciona para guias em canais ou reuniões de canal.
 > * Para dar suporte à adição de guias em reuniões de canal agendadas **, especifique** o escopo da equipe na **seção de escopos** no manifesto do aplicativo. Sem **o escopo** da equipe, o aplicativo não aparecerá no submenu para reuniões de canal.
 > * Os aplicativos em reuniões podem utilizar os seguintes contextos: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` e `meetingStage`
+> * As permissões de RSC delegadas `MeetingStage.Write.Chat` e `ChannelMeetingStage.Write.Group` são necessárias no manifesto para habilitar o compartilhamento de estágios de reunião.
 
 O trecho do código a seguir é um exemplo de guia configurável utilizada em um aplicativo para reuniões do Teams:
 

@@ -5,12 +5,12 @@ description: Saiba como habilitar a reconfiguração da guia após a instalaçã
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450405"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499291"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -24,15 +24,15 @@ Seu `manifest.json` define os recursos e funcionalidades da guia. A propriedade 
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. O Padrão é `true`. |
+|`canUpdateConfiguration`|Booliano|||Um valor que indica se uma instância da configuração da guia pode ser atualizada pelo usuário após a criação. O padrão é `true`. |
 
 Quando sua guia é carregada para um canal ou chat em grupo, o Teams adiciona um menu suspenso com o botão direito do mouse para sua guia. As opções disponíveis são determinadas pela configuração `canUpdateConfiguration`. A tabela a seguir fornece os detalhes da configuração:
 
 | `canUpdateConfiguration`| verdadeiro   | falso | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Configurações            |   √    |       |A página `configurationUrl` é recarregada em um IFrame, permitindo que o usuário reconfigure a guia. |
+|     Configurações            |   √    |       |A `configurationUrl` página é recarregada em um iFrame, permitindo que o usuário reconfigure a guia. |
 |     Renomear              |   √    |   √   | O usuário pode alterar o nome da guia conforme ele aparece na barra de guias.          |
-|     Remover              |   √    |   √   |  Se a propriedade `removeURL` e o valor forem incluídos na **página de configuração**, a **página de remoção** será carregada em um IFrame e apresentada ao usuário. Se uma página de remoção não estiver incluída, o usuário receberá uma caixa de diálogo de confirmação.          |
+|     Remover              |   √    |   √   |  Se a `removeURL` propriedade e o valor forem incluídos na página **de** configuração, a página de remoção será carregada em um iFrame e apresentada ao usuário. Se uma página de remoção não estiver incluída, o usuário receberá uma caixa de diálogo de confirmação.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Criar uma página de remoção de guia para seu aplicativo
 
@@ -111,7 +111,7 @@ A seguir está um bloco de código de remoção de guia de exemplo:
 
 ***
 
-Quando um usuário seleciona **Remover** no menu suspenso da guia, o Teams carrega a página opcional `removeUrl` atribuída na **página de configuração**, em um IFrame. Aparece para o usuário um botão carregado com a função `onClick()` que chama `pages.config.setValidityState(true)` e habilita o botão **Remover** mostrado na parte inferior do IFrame da página de remoção.
+Quando um usuário seleciona **Remover** no menu suspenso da guia, o Teams `removeUrl` carrega a página opcional atribuída na página de configuração **em um** iFrame. O usuário é mostrado um botão carregado `onClick()` `pages.config.setValidityState(true)` com a função que chama e habilita o  botão Remover mostrado na parte inferior da página de remoção iFrame.
 
 Depois que o manipulador de remoção é executado, `removeEvent.notifySuccess()` ou `removeEvent.notifyFailure()` notifica o Teams sobre o resultado da remoção de conteúdo.
 

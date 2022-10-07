@@ -3,12 +3,12 @@ title: Referência de esquema de manifesto
 description: Neste artigo, você terá a versão mais recente do esquema de manifesto público para referência, esquema e manifesto completo de exemplo do Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 2638c668bf1363a0f997786bcb958689626c70c6
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376568"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499171"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema de manifesto do aplicativo do Teams
 
@@ -499,7 +499,7 @@ O item é uma matriz (máximo de apenas um elemento &mdash;, atualmente apenas u
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-Uma lista de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de dois elementos) com todos os elementos do tipo `object`; você deve definir uma lista de comandos separada para cada escopo que o seu bot oferece suporte. Para obter mais informações, confira [Menus de bot](~/bots/how-to/create-a-bot-commands-menu.md).
+Uma lista de comandos que seu bot pode recomendar aos usuários. O objeto é uma matriz (máximo de dois elementos) com todos os elementos do tipo `object`; você deve definir uma lista de comandos separada para cada escopo que o seu bot oferece suporte. Para obter mais informações, confira [Menus de Bot](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Nome| Tipo| Tamanho máximo | Obrigatório | Descrição|
 |---|---|---|---|---|
@@ -643,9 +643,9 @@ Especifique a configuração do conector de gráfico do aplicativo. Se isso esti
 
 **Opcional**—booliano
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
+Indica se deve ou não mostrar o indicador de carregamento quando um aplicativo ou guia está carregando. O padrão é **false**.
 >[!NOTE]
->Se você selecionar `showLoadingIndicator` como true no manifesto do aplicativo, para carregar a página corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefa conforme descrito em [Mostrar um documento de indicador de carregamento nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+>Se você selecionar `showLoadingIndicator` como true no manifesto do aplicativo, para carregar [a](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) página corretamente, modifique as páginas de conteúdo de suas guias e módulos de tarefa, conforme descrito em Mostrar um documento indicador de carregamento nativo.
 
 ## <a name="isfullscreen"></a>isFullScreen
 

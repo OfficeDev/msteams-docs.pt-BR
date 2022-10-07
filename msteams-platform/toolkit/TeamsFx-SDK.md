@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: e28e726a1915cdbc8fddf501b0352d160673516c
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327584"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499164"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -179,6 +179,7 @@ Se você criou uma função do Azure ou um projeto de bot usando o Visual Studio
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
+
 * sqlServerEndpoint (SQL_ENDPOINT) // usado somente quando há uma instância sql
 * sqlUsername (SQL_USER_NAME) // usado somente quando há uma instância sql
 * sqlPassword (SQL_PASSWORD) // usado somente quando há uma instância sql
@@ -254,9 +255,9 @@ Esta seção fornece vários snippets de código para cenários comuns relaciona
     <details>
     <summary><b>Integração com o Kit de Ferramentas do Microsoft Graph</b></summary>
 
-    A [biblioteca do Kit de Ferramentas do Microsoft Graph (mgt)](https://aka.ms/mgt) é uma coleção de vários provedores de autenticação e componentes de interface do usuário da plataforma Microsoft Graph.
+    A [biblioteca do Kit de Ferramentas do Microsoft Graph](https://aka.ms/mgt) é uma coleção de vários provedores de autenticação e componentes de interface do usuário da plataforma Microsoft Graph.
 
-    O `@microsoft/mgt-teamsfx-provider` pacote expõe a classe `TeamsFxProvider` que usa a classe `TeamsFx` para conectar usuários e adquirir tokens para usar com o Graph.
+    O `@microsoft/mgt-teamsfx-provider` pacote expõe a classe `TeamsFxProvider` que usa a classe `TeamsFx` para conectar usuários e adquirir tokens para usar com o Microsoft Graph.
 
     1. Você pode instalar os seguintes pacotes necessários:
 
