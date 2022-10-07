@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: Leia mais sobre a autenticação de SSO para guias.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 73589b755b355cf29998286847b32f689076abac
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: bbc05d485cf0205a41d82aa110a7d8c3c5187e44
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243595"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68491358"
 items:
 - durationInMinutes: 1
   content: "O logon único do Azure Active Directory (Azure AD SSO) ajuda a autenticar usuários no Teams. \n\n**Principais aspectos do guia passo a passo do Azure AD SSO para guias e extensões de mensagem**:\n\n * Após a primeira entrada, o Azure AD SSO permite que o usuário entre automaticamente.\n * Permite que o usuário entre em outros dispositivos sem inserir credenciais de entrada novamente.\n * Obtém o token para o usuário conectado.   \n\nEste guia passo a passo ajuda você a criar guias e extensões de mensagem que habilitam a Azure AD SSO. Você verá a seguinte saída:\n\n  ![Imagem de congratulação](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   \n"
 - title: Pré-requisitos
   durationInMinutes: 1
-  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [SDK do .NET Core](https://dotnet.microsoft.com/download) versão 3.1\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [versão mais recente do ngrok](https://ngrok.com/download) (somente para teste de devbox) ou qualquer solução de túnel equivalente\n* [Conta de desenvolvedor do Microsoft 365](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) ou acesso à conta do Teams com as permissões apropriadas para instalar um aplicativo\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
+  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n| &nbsp; | Instalar | Para usar... |\n | --- | --- | --- |\n | **Required** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams para colaborar com todas as pessoas com quem você trabalha por meio de aplicativos para chat, reuniões, chamadas e tudo em um só lugar.|\n | &nbsp; | [Conta de desenvolvedor do Microsoft 365](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Acesso à conta do Teams com as permissões apropriadas para instalar um aplicativo. |\n | &nbsp; | [SDK do .NET Core versão 3.1](https://dotnet.microsoft.com/en-us/download) | Associações personalizadas para depuração local e implantações Azure Functions aplicativo. Se você não tiver instalado o SDK do .NET 3.1 (ou posterior) globalmente, a versão portátil poderá ser instalada. |\n | &nbsp; | [Visual Studio 2022 versão 17.3](https://visualstudio.microsoft.com)<br> Instale uma das duas cargas de trabalho a seguir:<br> • **ASP.NET desenvolvimento para a Web** <br> • **Desenvolvimento multiplataforma do .NET Core** | Você pode instalar a versão corporativa no Visual Studio 2022 e instalar as cargas de trabalho. |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Os recursos do aplicativo Teams (bots de conversa, extensões de mensagem e webhooks de entrada) exigem conexões de entrada. Um túnel conecta seu sistema de desenvolvimento ao Teams. Ele não é necessário para aplicativos que incluem apenas guias. Esse pacote é instalado no diretório do projeto (usando npm `devDependencies`). |\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
 - title: Configurar o ambiente local
   durationInMinutes: 1
   content: "Clone `Microsoft-Teams-Samples` o repositório para o GitHub local:  \n\n 1. Abra [exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n 1. Selecione **Código**.\n 1. No menu suspenso, selecione **Abrir com o GitHub Desktop**.\n\n    ![Clonar repositório](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)\n\n 1. Selecione **Clonar**. \n"

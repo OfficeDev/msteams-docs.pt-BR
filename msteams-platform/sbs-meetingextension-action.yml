@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: Leia mais para habilitar comandos de ação de extensão de mensagem
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8b0b4ea1780d1157db9f496933619fccecd20552
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 5cc3b94a0980b3761ac3f8255874bff6c9d0fa9c
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243308"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490238"
 items:
 - durationInMinutes: 1
   content: "As extensões de mensagem permitem que os usuários interajam com os serviços Web no cliente do Microsoft Teams. Eles ajudam a iniciar ações em um sistema externo da área de mensagem de composição, da caixa de comando ou diretamente de uma mensagem.\n\n**Principais recursos da extensão de mensagem baseada em ação**\n\n* Apresenta ao usuário um pop-up modal para coletar ou exibir informações.\n* Dispara os comandos de ação da área de composição da mensagem, da caixa de comando ou de uma mensagem. \n\nEste guia passo a passo ajuda você a criar uma extensão de mensagem baseada em ação do Teams para iniciar ações da área de mensagem e mensagem de composição. Você verá a seguinte saída:\n   \n  ![Saída](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)\n"
 - title: Pré-requisitos
   durationInMinutes: 1
-  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [SDK do .NET Core](https://dotnet.microsoft.com/download) versão 3.1\n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [versão mais recente do ngrok](https://ngrok.com/download) (somente para teste de devbox) ou qualquer solução de túnel equivalente\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
+  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n | &nbsp; | Instalar | Para usar... |\n | --- | --- | --- |\n | **Required** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams para colaborar com todas as pessoas com quem você trabalha por meio de aplicativos para chat, reuniões, chamadas e tudo em um só lugar.|\n | &nbsp; | [Visual Studio 2022 versão 17.3](https://visualstudio.microsoft.com)<br> Instale uma das duas cargas de trabalho a seguir:<br> • **ASP.NET desenvolvimento para a Web** <br> • **Desenvolvimento multiplataforma do .NET Core** | Você pode instalar a versão corporativa no Visual Studio 2022 e instalar as cargas de trabalho. |\n | &nbsp; | [SDK do .NET Core versão 3.1](https://dotnet.microsoft.com/en-us/download) | Associações personalizadas para depuração local e implantações Azure Functions aplicativo. Se você não tiver instalado o SDK do .NET 3.1 (ou posterior) globalmente, a versão portátil poderá ser instalada. |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Os recursos do aplicativo Teams (bots de conversa, extensões de mensagem e webhooks de entrada) exigem conexões de entrada. Um túnel conecta seu sistema de desenvolvimento ao Teams. Ele não é necessário para aplicativos que incluem apenas guias. Esse pacote é instalado no diretório do projeto (usando npm `devDependencies`). |\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
 - title: Configurar o ambiente local
   durationInMinutes: 1
   content: "Clone `BotBuilder-Samples` o repositório para o GitHub local:  \n\n 1. Abra [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples).\n 1. Selecione **Código**.\n 1. No menu suspenso, selecione **Abrir com o GitHub Desktop**.\n\n    ![Clonar repositório](~/assets/images/sbs-messagingextension-action/botbuilder-sample.png)\n\n 1. Selecione **Clonar**. \n"

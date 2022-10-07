@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Leia mais para habilitar e configurar aplicativos para reuniões
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 83aa754e4ba59188177edc64af5848cc1ae74f70
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 71f2cbd7b60b7288213cfb5211889aa93cc18772
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243476"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490245"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,7 +38,7 @@ items:
        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Seu token":::
 - title: Pré-requisitos
   durationInMinutes: 1
-  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n* [Microsoft Teams](https://teams.microsoft.com/) com conta válida\n* [Versão mais recente do SDK do Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)\n* [Versão mais recente of.NET SDK do Core](https://dotnet.microsoft.com/download) \n* [Versão mais recente do Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [Versão mais recente do nodejs](https://nodejs.org/en/download/)\n* [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) para atualizar a agenda em tempo real\n* [Versão mais recente do ngrok](https://ngrok.com/download) somente para teste de devbox ou qualquer solução de túnel equivalente\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
+  content: "Instale as seguintes ferramentas e configure seu ambiente de desenvolvimento:  \n\n | &nbsp; | Instalar | Para usar... |\n | --- | --- | --- |\n | **Required** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams para colaborar com todas as pessoas com quem você trabalha por meio de aplicativos para chat, reuniões, chamadas e tudo em um só lugar.|\n | &nbsp; | [Visual Studio 2022 versão 17.3](https://visualstudio.microsoft.com)<br> Instale uma das duas cargas de trabalho a seguir:<br> • **ASP.NET desenvolvimento para a Web** <br> • **Desenvolvimento multiplataforma do .NET Core** | Você pode instalar a versão corporativa no Visual Studio 2022 e instalar as cargas de trabalho. |\n | &nbsp; | [SDK do .NET Core versão 3.1](https://dotnet.microsoft.com/en-us/download) | Associações personalizadas para depuração local e implantações Azure Functions aplicativo. Se você não tiver instalado o SDK do .NET 3.1 (ou posterior) globalmente, a versão portátil poderá ser instalada. |\n | &nbsp; | [Node.js e NPM](https://nodejs.org/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do v16 LTS.|\n | &nbsp; | [Versão mais recente do SDK do Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | Você pode instalar o pacote usando npm ou yarn. |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Os recursos do aplicativo Teams (bots de conversa, extensões de mensagem e webhooks de entrada) exigem conexões de entrada. Um túnel conecta seu sistema de desenvolvimento ao Teams. Ele não é necessário para aplicativos que incluem apenas guias. Esse pacote é instalado no diretório do projeto (usando npm `devDependencies`). |\n | &nbsp; | [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) | Instale para atualizar a agenda em tempo real. |\n\n  > [!NOTE]\n  > Depois de baixar o ngrok, inscreva-se e instale [o authtoken](https://ngrok.com/download).\n"
 - title: Configurar o ambiente local
   durationInMinutes: 1
   content: "\n1. Abra [exemplos do Microsoft Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples).\n1. Selecione **Código**.\n1. No menu suspenso, selecione **Abrir com o GitHub Desktop**.\n\n  :::image type=\"content\" source=\"~/assets/images/meetings-side-panel/clonerepository1.png\" alt-text=\"Clonar repositório\":::\n\n1. Selecione **Clonar**. \n        \n   > [!NOTE]\n   > Se você encontrar o erro \"Nome do arquivo muito longo\", aplique o comando git 'git config --system core.longpaths true' no terminal de administrador de sua escolha.\n"
