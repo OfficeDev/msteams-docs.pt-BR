@@ -409,10 +409,13 @@
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
         - name: Principais recursos
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
-          displayName: Ephemeral data structures
+          displayName: Live Share data structures
         - name: Sincronização de mídia
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-          displayName: Audio ducking
+          displayName: 'Media synchronization, audio ducking'
+        - name: Cursores & escrita à tinta
+          href: apps-in-teams-meetings/teams-live-share-canvas.md
+          displayName: 'Inking, cursors, live canvas'
         - name: Guias de instruções
           items:
             - name: Tutorial de Pôquer ágil

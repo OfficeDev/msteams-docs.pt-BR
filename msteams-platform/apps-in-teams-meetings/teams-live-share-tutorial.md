@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780811"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552571"
 ---
 # <a name="dice-roller-code-tutorial"></a>Tutorial de código do Dice Roller
 
@@ -28,7 +28,7 @@ No aplicativo de exemplo Dice Roller, os usuários são mostrados como um dado c
 
 ## <a name="set-up-the-application"></a>Configurar o aplicativo.
 
-Comece importando os módulos necessários. O exemplo usa o [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) do Fluid Framework e o [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) do SDK do Live Share. O exemplo dá suporte à Extensibilidade de Reunião do Teams, portanto, precisamos incluir o [SDK do Cliente do Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Por fim, o exemplo foi projetado para ser executado localmente e em uma reunião do Teams, portanto, precisamos incluir algumas partes adicionais do Fluid Framework necessárias para [testar o exemplo localmente](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+Comece importando os módulos necessários. O exemplo usa [o DDS SharedMap](https://fluidframework.com/docs/data-structures/map/) do Fluid Framework e da [classe LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) . O exemplo dá suporte à Extensibilidade de Reunião do Teams, portanto, precisamos incluir o [SDK do Cliente do Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Por fim, o exemplo foi projetado para ser executado localmente e em uma reunião do Teams, portanto, precisamos incluir algumas partes adicionais do Fluid Framework necessárias para [testar o exemplo localmente](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
 Os aplicativos criam contêineres do Fluid usando um esquema que define um conjunto de _objetos iniciais_ que estarão disponíveis para o contêiner. O exemplo usa um SharedMap para armazenar o valor de dado mais recente que foi rolado. Para obter mais informações, consulte [Modelagem de dados](https://fluidframework.com/docs/build/data-modeling/).
 
@@ -38,9 +38,8 @@ Além do parâmetro de consulta `inTeams=true`, podemos usar um parâmetro de co
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { TeamsFluidClient } from "@microsoft/live-share";
 import { app, pages } from "@microsoft/teams-js";
-import { LOCAL_MODE_TENANT_ID } from "@fluidframework/azure-client";
+import { LiveShareClient, testLiveShare } from "@microsoft/live-share";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -100,36 +99,26 @@ start().catch((error) => console.error(error));
 
 Nem todos os modos de exibição de seus aplicativos precisarão ser colaborativos. O modo de exibição `stage` _sempre_ precisa de recursos colaborativos, o modo de exibição `content` _pode_ precisar de recursos colaborativos e o modo de exibição `config` _nunca_ deve precisar de recursos colaborativos. Para os modos de exibição que precisam de recursos colaborativos, você precisará ingressar em um contêiner do Fluid associado à reunião atual.
 
-Ingressar no contêiner da reunião é tão simples quanto criar um novo [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) e, em seguida, chamá-lo de método [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer). Ao executar localmente, você precisará passar uma configuração de conexão personalizada com um `LOCAL_MODE_TENANT_ID` especial, mas, caso contrário, ingressar em um contêiner local é o mesmo que ingressar em um contêiner no Teams.
+Ingressar no contêiner para a reunião é tão simples quanto inicializar o [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) e chamar seu [método joinContainer](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) ().
+
+Ao executar localmente, você pode importar [testLiveShare e](/javascript/api/@microsoft/live-share/testliveshare) chamar seu [método initialize](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-initialize) (). Em seguida, use [o método joinContainer()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-joincontainer) para se conectar a uma sessão.
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
-  let client;
   if (!!searchParams.get("inTeams")) {
     // Create client
-    client = new TeamsFluidClient();
-  } else {
-    // Create client and configure for testing
-    client = new TeamsFluidClient({
-      connection: {
-        type: "local",
-        tokenProvider: new InsecureTokenProvider("", {
-          id: "123",
-          name: "Test User",
-        }),
-        endpoint: "http://localhost:7070",
-      },
-    });
+    const liveShare = new LiveShareClient();
+    // Join container
+    return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
   }
-
-  // Join container
-  return await client.joinContainer(containerSchema, onContainerFirstCreated);
+  // Create client and configure for testing
+  testLiveShare.initialize();
+  return await testLiveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-> [!NOTE]
-> Ao testar localmente, o TeamsFluidClient atualiza a URL do navegador para conter a ID do contêiner de teste que foi criado. Copiar esse link para outras guias do navegador faz com que o TeamsFluidClient ingresse no contêiner de teste que foi criado. Se a modificação da URL de aplicativos interferir na operação do aplicativo, a estratégia usada para armazenar a ID de contêineres de teste poderá ser personalizada usando as opções [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) e [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) passadas para o TeamsFluidClient.
+Ao testar localmente, `testLiveShare` atualiza a URL do navegador para conter a ID do contêiner de teste que foi criado. Copiar esse link para outras guias do navegador faz com que ele `testLiveShare` ingresse no contêiner de teste que foi criado. Se a modificação da URL de aplicativos interferir na operação do aplicativo, a estratégia usada para armazenar a ID de contêineres de teste poderá ser personalizada usando as opções [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) e [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) `LiveShareClient`passadas para .
 
 ## <a name="write-the-stage-view"></a>Gravar o modo de exibição de estágio
 
@@ -200,7 +189,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>Gravar o modo de exibição do painel lateral
 
-O modo de exibição do painel lateral, carregado por meio da guia `contentUrl` com o contexto de quadro `sidePanel`, é exibido para o usuário em um painel lateral quando ele abre seu aplicativo em uma reunião. O objetivo desse modo de exibição é permitir que um usuário selecione o conteúdo do aplicativo antes de compartilhá-lo no estágio de reunião. Para os aplicativos de SDK do Live Share, o modo de exibição do painel lateral também pode ser usado como uma experiência complementar para o aplicativo. Chamar [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) do modo de exibição do painel lateral conecta ao mesmo contêiner do Fluid ao qual o modo de exibição de estágio está conectado. Esse contêiner pode ser usado para se comunicar com o modo de exibição de estágio. Verifique se você está se comunicando com o modo de exibição de estágio _e o modo de exibição do painel lateral_ de todos.
+O modo de exibição do painel lateral, carregado por meio da guia `contentUrl` com o contexto de quadro `sidePanel`, é exibido para o usuário em um painel lateral quando ele abre seu aplicativo em uma reunião. O objetivo desse modo de exibição é permitir que um usuário selecione o conteúdo do aplicativo antes de compartilhá-lo no estágio de reunião. Para os aplicativos de SDK do Live Share, o modo de exibição do painel lateral também pode ser usado como uma experiência complementar para o aplicativo. Chamar [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) do modo de exibição do painel lateral conecta ao mesmo contêiner do Fluid ao qual o modo de exibição de estágio está conectado. Esse contêiner pode ser usado para se comunicar com o modo de exibição de estágio. Verifique se você está se comunicando com o modo de exibição de estágio _e o modo de exibição do painel lateral_ de todos.
 
 O modo de exibição do painel lateral do exemplo solicita que o usuário selecione o botão Compartilhar na janela de conteúdo compartilhado.
 
@@ -228,8 +217,8 @@ function renderSidePanel(elem) {
 
 O modo de exibição de configurações, carregado por meio de `configurationUrl` no manifesto do aplicativo, é mostrado a um usuário quando ele adiciona seu aplicativo pela primeira vez a uma Reunião do Teams. Esse modo de exibição permite que o desenvolvedor configure o `contentUrl` para a guia fixada à reunião com base na entrada do usuário. Esta página é necessária no momento, mesmo que nenhuma entrada do usuário seja necessária para definir o `contentUrl`.
 
-> [!IMPORTANT]
-> O [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) do SDK do Live Share não tem suporte no contexto da guia `settings`.
+> [!NOTE]
+> Não há suporte para [joinContainer() do Live](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) Share no contexto da `settings` guia.
 
 O modo de exibição de configurações do exemplo solicita que o usuário selecione o botão Salvar.
 
