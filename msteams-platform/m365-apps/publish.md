@@ -1,16 +1,16 @@
 ---
 title: Publicar aplicativos do Teams para o Microsoft 365
-description: Saiba como tornar seus aplicativos do Teams habilitados para Microsoft 365 detectáveis para os usuários no Teams, no Outlook e no Office. Saiba mais sobre a distribuição multilocatário único.
-ms.date: 05/24/2022
+description: Saiba como tornar seus aplicativos do Teams habilitados para Microsoft 365 detectáveis para usuários no Teams, Outlook e Office por meio de distribuição multilocatário e multilocatário.
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b225624970a380679b2b1a508bf3b4d2882de72e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100935"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537518"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publicar aplicativos do Teams para o Microsoft 365
 
@@ -42,7 +42,7 @@ Como administrador global, você pode carregar e pré-instalar o pacote do aplic
 
 ## <a name="multitenant-distribution"></a>Distribuição multilocatário
 
-O [processo de envio do Microsoft AppSource](https://appsource.microsoft.com/) (marketplace comercial da Microsoft) para aplicativos do Teams habilitados para Outlook e Office é o mesmo que os aplicativos tradicionais do Teams. A única diferença é que você precisará usar o manifesto do aplicativo Teams versão [1.13](../tabs/how-to/using-teams-client-sdk.md) no pacote do aplicativo, que apresenta suporte para aplicativos do Teams executados no Microsoft 365.
+O [processo de envio do Microsoft](https://appsource.microsoft.com/) AppSource (Marketplace comercial da Microsoft) para aplicativos do Teams habilitados para Outlook e Office é o mesmo que os aplicativos tradicionais do Teams. A única diferença é que você precisará usar o manifesto do aplicativo Teams versão [1.13](../tabs/how-to/using-teams-client-sdk.md) no pacote do aplicativo, que apresenta suporte para aplicativos do Teams executados no Microsoft 365.
 
 > [!TIP]
 > Use o Portal do Desenvolvedor do Teams para [validar](https://dev.teams.microsoft.com/validation) o pacote do aplicativo para resolver erros ou avisos antes de enviar para o repositório do Teams (por meio [do Microsoft Partner Network](https://partner.microsoft.com/)).

@@ -4,12 +4,12 @@ description: Saiba mais sobre novos recursos de desenvolvedor do Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295967"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537574"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -284,15 +284,16 @@ Descubra os recursos da plataforma Microsoft Teams que estão na versão prévia
 
 A versão prévia do desenvolvedor é um programa público que fornece acesso antecipado a recursos de plataforma do Teams não lançadas.
 
-**Setembro de 2022**
+**Outubro de 2022**
 
-***23 de setembro de 2022: Introdução*** ao suporte ao aplicativo de [reunião para Reuniões de Canal Agendadas.](apps-in-teams-meetings/meeting-app-extensibility.md)
+***11 de outubro de 2022***: Gere um link profundo para compartilhar [conteúdo para preparar as reuniões.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
+| 09/23/2022 | Introdução ao suporte do aplicativo de reunião para Reuniões de Canal Agendadas. | Criar aplicativos para reuniões e chamadas do Teams > [de reuniões unificadas](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/23/2022 | Compartilhar aplicativos no estágio de reunião do Teams em dispositivos móveis | Criar aplicativos para reuniões e chamadas do Teams > [habilitar e configurar aplicativos para reuniões](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Aplicativos para reuniões de canal público agendadas | Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Ativar e desativar mudo de APIs para aplicativos na janela de conteúdo compartilhado do Teams | Compilar aplicativos para reuniões e chamadas do Teams > [Referências da API de aplicativos de reunião](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |

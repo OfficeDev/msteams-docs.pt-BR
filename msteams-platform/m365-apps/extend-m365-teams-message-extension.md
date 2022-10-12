@@ -1,16 +1,16 @@
 ---
 title: Estender uma extensão de mensagem do Teams Microsoft 365
-description: Saiba como atualizar a extensão de mensagem do Teams baseada em pesquisa para execução no Outlook atualizando o manifesto do aplicativo, adicionando um canal do Outlook e carregando o aplicativo atualizado.
-ms.date: 05/24/2022
+description: Saiba como atualizar sua extensão de mensagem baseada em pesquisa para ser executada no Outlook, além do Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: a0de61f0d1b6414d4ab35b54e4ec708f3b868948
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243511"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537504"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Estender uma extensão de mensagem do Teams Microsoft 365
 
@@ -36,7 +36,11 @@ Para concluir este tutorial, você precisará de:
 * (Opcional) Código do Microsoft Visual Studio com a extensão Kit de Ferramentas do Teams.
 
 > [!div class="nextstepaction"]
-> [Publicar aplicativos do Teams estendidos para Microsoft 365](publish.md)
+> [Instalar pré-requisitos](prerequisites.md)
+
+## <a name="link-unfurling"></a>Desenrolamento de link
+
+Se a extensão de mensagem baseada em pesquisa [](../messaging-extensions/how-to/link-unfurling.md) der suporte ao desfralhamento de link no Teams, a conclusão das etapas deste tutorial também permitirá a desassocie de link em ambientes de Outlook na Web e da área de trabalho do Windows. A [seção De exemplos de](#code-sample) código abaixo fornece um aplicativo de desfralamento de link simples para teste.
 
 ## <a name="prepare-your-message-extension-for-the-upgrade"></a>Preparar sua extensão de mensagem para a atualização
 
@@ -115,7 +119,7 @@ Para que os usuários interajam com sua extensão de mensagem do Outlook, você 
 > [!NOTE]
 > Você pode ignorar a etapa se estiver usando o [aplicativo de exemplo](#quickstart) fornecido neste tutorial, pois o cenário não envolve autenticação de logon único do Azure Active Directory (AAD).
 
-Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+O SSO (logon único) do Azure Active Directory (AD) para extensões de mensagem funciona da mesma maneira que no [Outlook no Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). No entanto, você precisa adicionar vários identificadores de aplicativo cliente ao registro Azure AD aplicativo do bot *no portal de* Registros de aplicativo locatário.
 
 1. Entre no [portal do Azure](https://portal.azure.com) com sua conta de locatário da área restrita.
 1. Abra **Registros de aplicativo**.
@@ -186,7 +190,7 @@ Sua extensão de mensagem está listada. Ela abre um painel adjacente para exibi
  Embora sua extensão de mensagem atualizada continue a ser executada no Teams com um [suporte de recurso para extensões de mensagem](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), há limitações nesta visualização inicial da experiência habilitada para Outlook para estar ciente de:
 
 * As extensões de mensagem no Outlook são limitadas ao contexto de [*composição* de email](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Mesmo que sua extensão de mensagem do Teams inclua `commandBox` como um *contexto* em seu manifesto, a visualização atual é limitada à opção de composição de email (`compose`). Não há suporte para invocar uma extensão de mensagem da caixa global de *Pesquisa* do Outlook.
-* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) command aren't supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook but the action menu won't be available.
+* [A extensão de mensagem baseada em ação](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) comandos não têm suporte no Outlook. Se o aplicativo tiver comandos baseados em pesquisa e ação, ele será exibido no Outlook, mas o menu de ação não estará disponível.
 * Não há suporte para a inserção de mais de cinco [Cartões Adaptáveis](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) em um email; Cartões Adaptáveis v1.4 e posterior não têm suporte.
 * [As ações de cartão](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) do tipo `messageBack`, `imBack`, `invoke` e `signin` não têm suporte para cartões inseridos. O suporte é limitado a `openURL`: ao clicar, o usuário será redirecionado para a URL especificada em uma nova guia.
 
@@ -200,7 +204,8 @@ Ao testar sua extensão de mensagem, você pode identificar a origem (originada 
 
 | **Nome de exemplo** | **Descrição** | **Node.js** |
 |---------------|--------------|--------|
-| Conector de Pesquisa do NPM | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Conector de Pesquisa do NPM | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Desfralização do Link do Teams | Aplicativo Simples do Teams para demonstrar o desfralamento de link. Funciona no Teams, Outlook. | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## <a name="next-step"></a>Próxima etapa
 
