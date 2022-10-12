@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: b551513d61e7bb9ab2b9c118f756b3ce5232dde4
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499199"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537581"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar e configurar aplicativos para reuniões
 
@@ -178,7 +178,7 @@ Você também pode adicionar a imagem de exibição do Teams e o cartão de visi
 
 O estágio de reunião compartilhada permite que os participantes da reunião interajam e colaborem no conteúdo do aplicativo em tempo real. Você pode compartilhar seus aplicativos no estágio de reunião colaborativa das seguintes maneiras:
 
-* [Compartilhe todo o aplicativo para preparar](#share-entire-app-to-stage) usando o botão compartilhar para preparar o cliente do Teams.
+* [Compartilhe todo o aplicativo para preparar](#share-entire-app-to-stage) usando o botão compartilhar para preparar no painel do lado da reunião do cliente do Teams ou por meio de [[links profundos](#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 * [Compartilhe partes específicas do aplicativo para preparar](#share-specific-parts-of-the-app-to-stage) usando APIs no SDK do cliente do Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Compartilhar aplicativo inteiro no estágio
@@ -223,6 +223,82 @@ Para compartilhar partes específicas do aplicativo para preparar, você deve in
 ### <a name="after-a-meeting"></a>Após uma reunião
 
 As configurações de depois e [antes das reuniões](#before-a-meeting) são as mesmas.
+
+## <a name="generate-a-deep-link-to-share-content-to-stage-in-meetings"></a>Gerar um link profundo para compartilhar conteúdo para preparar em reuniões
+
+Você também pode gerar um link profundo para [compartilhar o aplicativo](#share-entire-app-to-stage) para preparar e iniciar ou ingressar em uma reunião.
+
+> [!NOTE]
+>
+> * Atualmente, o link profundo para compartilhar conteúdo para estágios em reuniões está passando por melhorias na experiência do usuário e está disponível somente na versão prévia [do desenvolvedor público](~/resources/dev-preview/developer-preview-intro.md).
+> * O link profundo para compartilhar conteúdo para preparar a reunião tem suporte apenas no cliente da área de trabalho do Teams.
+
+Quando um link profundo é selecionado em um aplicativo por um usuário que faz parte de uma reunião em andamento, o aplicativo é compartilhado com o estágio e uma janela pop-up de permissão é exibida. Os usuários podem conceder acesso aos participantes para colaborar com um aplicativo.
+
+:::image type="content" source="../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="A captura de tela é um exemplo que mostra uma janela pop-up de permissão.":::
+
+Quando um usuário não está em uma reunião, o usuário é redirecionado para o calendário do Teams, no qual ele pode ingressar em uma reunião ou iniciar uma reunião instantânea (reunir agora).
+
+:::image type="content" source="../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="A captura de tela é um exemplo que mostra uma janela pop-up quando não há nenhuma reunião em andamento.":::
+
+Depois que o usuário iniciar uma reunião instantânea (reunir agora), ele poderá adicionar participantes e interagir com o aplicativo.
+
+:::image type="content" source="../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="A captura de tela é um exemplo que mostra uma opção para adicionar participantes e como interagir com o aplicativo.":::
+
+Para adicionar um link profundo para compartilhar conteúdo no palco, você precisa ter um contexto de aplicativo. O contexto do aplicativo permite que o cliente do Teams busque o manifesto do aplicativo e verifique se o compartilhamento no estágio é possível. A seguir está um exemplo de contexto de aplicativo.
+
+`{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+
+Os parâmetros de consulta para o contexto do aplicativo são:
+
+* `appID`: essa é a ID que pode ser obtida do manifesto do aplicativo.
+* `appSharingUrl`: a URL que precisa ser compartilhada no estágio deve ser um domínio válido definido no manifesto do aplicativo. Se a URL não for um domínio válido, uma caixa de diálogo de erro será exibida para fornecer ao usuário uma descrição do erro.
+* `useMeetNow`: isso inclui um parâmetro booliano que pode ser verdadeiro ou falso.
+  * **True**: quando o `UseMeetNow` valor for true e se não houver nenhuma reunião em andamento, uma nova reunião reunir agora será iniciada. Quando houver uma reunião em andamento, esse valor será ignorado.
+
+  * **False**: o valor `UseMeetNow` padrão é false, o que significa que quando um link profundo é compartilhado com o estágio e não há nenhuma reunião em andamento, um pop-up de calendário será exibido. No entanto, você pode compartilhar diretamente durante uma reunião.
+
+Verifique se todos os parâmetros de consulta estão codificados corretamente no URI e se o contexto do aplicativo deve ser codificado duas vezes na URL final. A seguir está um exemplo.
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+Um link profundo pode ser iniciado na Web do Teams ou no cliente da área de trabalho do Teams.
+
+* **Teams Web**: use o seguinte formato para iniciar um link profundo da Web do Teams para compartilhar conteúdo no palco.
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    Exemplo: `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Link profundo|Formatar|Exemplo|
+    |---------|---------|---------|
+    |Para compartilhar o aplicativo e abrir o calendário do Teams, quando UseMeeetNow for **false**, padrão.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |Para compartilhar o aplicativo e iniciar uma reunião instantânea, quando UseMeeetNow for **true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **Cliente da área de** trabalho da equipe: use o seguinte formato para iniciar um link profundo do cliente da área de trabalho do Teams para compartilhar conteúdo no palco.
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    Exemplo: `msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Link profundo|Formatar|Exemplo|
+    |---------|---------|---------|
+    |Para compartilhar o aplicativo e abrir o calendário do Teams, quando UseMeeetNow for **false**, padrão.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |Para compartilhar o aplicativo e iniciar uma reunião instantânea, quando UseMeeetNow for **true**.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+Os parâmetros de consulta são:
+
+* `deepLinkId`: qualquer identificador usado para correlação de telemetria.
+* `fqdn`: `fqdn` é um parâmetro opcional, que pode ser usado para alternar para um ambiente apropriado de uma reunião para compartilhar um aplicativo no palco. Ele dá suporte a cenários em que um compartilhamento de aplicativo específico ocorre em um ambiente específico. O valor padrão é `fqdn` a URL da empresa e os valores possíveis são `Teams.live.com` para o Teams for Life `teams.microsoft.com`ou `teams.microsoft.us`.
+
+Para compartilhar todo o aplicativo para preparar, no manifesto do aplicativo, você deve configurar `meetingStage` `meetingSidePanel` e, como contextos de quadro, ver o [manifesto do aplicativo](../resources/schema/manifest-schema.md). Caso contrário, os participantes da reunião podem não conseguir ver o conteúdo no palco.
+
+> [!NOTE]
+> Para que seu aplicativo passe na validação, ao criar um link profundo do seu site, aplicativo Web ou Cartão Adaptável **, use Compartilhar** na reunião como a cadeia de caracteres ou cópia.
 
 ## <a name="code-sample"></a>Exemplo de código
 

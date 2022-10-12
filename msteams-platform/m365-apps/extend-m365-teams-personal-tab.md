@@ -1,16 +1,16 @@
 ---
 title: Estender um aplicativo de guia pessoal do Teams Microsoft 365
-description: Atualize seu aplicativo pessoal para ser executado no Outlook e no Office. Atualize o manifesto e o SDK do TeamsJS V2, altere a segurança de consentimento, atualize Azure AD registro de aplicativo para SSO.
-ms.date: 05/24/2022
+description: Saiba como atualizar seu aplicativo de guia pessoal para ser executado no Outlook e no Office, além do Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243504"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537588"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Estender uma guia pessoal do Teams Microsoft 365
 
@@ -35,6 +35,7 @@ Para concluir este tutorial, você precisará de:
 * Um locatário Microsoft 365 área restrita do Programa para Desenvolvedores
 * Seu locatário de área restrita registrado em *Versões direcionadas do Office 365*
 * Um computador com aplicativos do Office instalados do *Canal beta* do Microsoft 365 Apps
+* (Opcional) Um dispositivo Android ou emulador com o aplicativo do Office para Android instalado e registrado no *programa beta*
 * (Opcional) [Kit de ferramentas do Teams](https://aka.ms/teams-toolkit) para o Microsoft Visual Studio Code para ajudar a atualizar seu código
 
 > [!div class="nextstepaction"]
@@ -46,7 +47,7 @@ Se você tiver um aplicativo de guia pessoal existente, faça uma cópia ou uma 
 
 Se você quiser usar o código de exemplo para concluir este tutorial, siga as etapas de configuração no [](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) Exemplo de Lista de Tarefas para criar um aplicativo de guia pessoal usando a extensão kit de ferramentas do Teams para Visual Studio Code e, em seguida, retorne a este artigo para atualizá-lo para o Microsoft 365.
 
-Como alternativa, você pode usar um aplicativo Hello *World* de logon único básico já habilitado para o Microsoft 365 na seção de início rápido a seguir e, em seguida, pular para [Sideload do aplicativo no Teams](#sideload-your-app-in-teams) .
+Como alternativa, você pode usar um aplicativo Hello *World* de logon único básico já habilitado para o Microsoft 365 na seção início [](#quickstart) rápido a seguir e, em seguida, pular para [Sideload do aplicativo no Teams](#sideload-your-app-in-teams).
 
 ### <a name="quickstart"></a>Início rápido
 
@@ -93,7 +94,7 @@ Se você usou o kit de ferramentas do Teams para criar seu aplicativo pessoal, t
 
 Para ser executado no Outlook e no Office, seu aplicativo precisará fazer referência ao pacote npm `@microsoft/teams-js@2.0.0` (ou superior). Embora o código com versões de nível inferior seja compatível com o Outlook e o Office, os avisos de substituição são registrados e o suporte para versões de nível inferior do TeamsJS no Outlook e no Office acabará por parar.
 
-Você pode usar o Kit de Ferramentas do Teams para ajudar a identificar e automatizar as alterações de código necessárias para atualizar das versões do TeamsJS 1.x para o TeamsJS versão 2.0.0. Como alternativa, você pode executar as mesmas etapas manualmente; consulte o [SDK do cliente JavaScript do Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para obter detalhes.
+Você pode usar o Kit de Ferramentas do Teams para ajudar a identificar e automatizar as alterações de código necessárias para atualizar das versões do TeamsJS 1.x para o TeamsJS versão 2.x.x. Como alternativa, você pode executar as mesmas etapas manualmente; consulte o [SDK do cliente JavaScript do Microsoft Teams](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para obter detalhes.
 
 1. Abra a *paleta comando*: `Ctrl+Shift+P`.
 1. Execute o comando `Teams: Upgrade Teams JS SDK and code references`.
@@ -102,8 +103,8 @@ Após a conclusão, *o arquivo package.json* fará referência `@microsoft/teams
 
 > [!div class="checklist"]
 >
-> * Instruções de importação para teams-js@2.0.0
-> * [Chamadas de função, enumeração e interface](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para teams-js@2.0.0
+> * Instruções de importação para teams-js@2.x.x
+> * [Chamadas de função, enumeração e interface](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) para teams-js@2.x.x
 > * `TODO` lembretes de comentário sinalizando áreas que podem ser afetadas por alterações [de interface de](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) contexto
 > * `TODO` lembretes de comentário para [converter funções de retorno de chamada em promessas](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
@@ -280,11 +281,11 @@ A depuração do Kit de Ferramentas do Teams (`F5`) ainda não tem suporte com o
 
 | **Nome de exemplo** | **Descrição** | **Node.js** |
 |---------------|--------------|--------|
-| Lista de Tarefas Pendentes | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona somente no Teams (use este aplicativo de exemplo para experimentar o processo de atualização descrito neste tutorial). | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
-| Lista De Tarefas Pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| Lista de Tarefas Pendentes | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona somente no Teams (use este aplicativo de exemplo para experimentar o processo de atualização descrito neste tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| Lista De Tarefas Pendentes (Microsoft 365) | Lista de tarefas pendentes editáveis com SSO criado com React e Azure Functions. Funciona no Teams, Outlook, Office. | [Exibir](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Editor de Imagens (Microsoft 365) | Criar, editar, abrir e salvar imagens usando o Microsoft API do Graph. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Página de inicialização de exemplo (Microsoft 365) | Demonstra a autenticação de SSO e os recursos do SDK do TeamsJS como disponíveis em hosts diferentes. Funciona no Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
-| Aplicativo Pedidos northwind | Demonstra como usar o Microsoft TeamsJS SDK V2 para estender o aplicativo teams para outros aplicativos host M365. Funciona no Teams, Outlook, Office. Otimizado para dispositivos móveis.| [Exibir](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| Aplicativo Pedidos northwind | Demonstra como usar o Microsoft TeamsJS SDK V2 para estender o aplicativo teams para outros aplicativos host M365. Funciona no Teams, Outlook, Office. Otimizado para dispositivos móveis.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Próxima etapa
 

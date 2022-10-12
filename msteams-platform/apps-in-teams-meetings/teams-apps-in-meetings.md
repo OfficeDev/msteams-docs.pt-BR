@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243203"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537525"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicativos para reuniões e chamadas do Teams
 
 As reuniões permitem colaboração, parceria, comunicação informada e comentários compartilhados. O aplicativo de reunião pode fornecer uma experiência do usuário em cada estágio do ciclo de vida da reunião. O ciclo de vida da reunião inclui a experiência de aplicativo de pré-reunião, em reunião e pós-reunião, dependendo do status do participante.
 
-> [!Note]
+> [!NOTE]
 >
 > No momento, os aplicativos para reuniões instantâneas, reuniões de canal público agendadas, um para um e chamadas de grupo estão disponíveis apenas na versão prévia [do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md).
 
@@ -35,7 +35,7 @@ Os usuários podem adicionar aplicativos à reunião usando a **+** opção na j
 
 Visite a [loja do Teams e](https://go.microsoft.com/fwlink/p/?LinkID=2183121) explore os aplicativos projetados especificamente para reuniões.
 
-> [!Note]
+> [!NOTE]
 >
 > * Atualmente, quando uma terceira pessoa é adicionada a uma chamada um-a-um, a chamada é elevada a uma chamada de grupo que significa que uma nova sessão é iniciada. Os aplicativos adicionados à chamada um-a-um não estão disponíveis na chamada de grupo. No entanto, eles podem ser adicionados novamente.
 >
@@ -47,7 +47,7 @@ A ilustração a seguir fornece a você uma ideia dos recursos de extensibilidad
 
 Este artigo fornece uma visão geral da extensibilidade do aplicativo de reuniões, referências de API, habilitar e configurar aplicativos para reuniões e cenas personalizadas do Modo Conferência no Teams.
 
-> [!Note]
+> [!NOTE]
 >
 > Há suporte para aplicativos de reunião (painel lateral, estágio de reunião) no cliente da área de trabalho do Teams. Como no cliente Web do Teams, ele só tem suporte quando a visualização do desenvolvedor está habilitada.
 
@@ -56,6 +56,7 @@ Este artigo fornece uma visão geral da extensibilidade do aplicativo de reuniõ
 * **Personalizar com cenas do Modo Juntos**: o novo recurso personalizado cenas modo juntos permite que os usuários colaborem em uma reunião com sua equipe em um só lugar.
 * **Personalizar a permissão do aplicativo no canal compartilhado**: se seu aplicativo compartilhar informações importantes no canal compartilhado, você poderá personalizar a permissão do aplicativo para membros externos. As permissões de aplicativo em [canais compartilhados](../concepts/build-and-test/Shared-channels.md) seguem a lista de aplicativos da equipe host e a política de aplicativo do locatário do host.
 * **Recuperar transcrições de** reunião: você pode acessar e recuperar transcrições de reunião em um cenário pós-reunião. Configure seu aplicativo para obter transcrições automaticamente para uma reunião agendada e use-as para insights, análise inteligente e muito mais.
+* **Gere um link profundo para** compartilhar conteúdo para preparar as reuniões: você pode gerar um link profundo para compartilhar o aplicativo para preparar e iniciar ou ingressar em uma reunião.
 
 ## <a name="next-step"></a>Próxima etapa
 
