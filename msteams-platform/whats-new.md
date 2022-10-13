@@ -4,12 +4,12 @@ description: Saiba mais sobre novos recursos de desenvolvedor do Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537574"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560747"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -29,12 +29,10 @@ Descubra os recursos da plataforma Microsoft Teams que estão em GA (disponibili
 
 Recursos da plataforma Microsoft Teams que estão disponíveis para todos os desenvolvedores de aplicativos.
 
-**Setembro de 2022**
+**Outubro de 2022**
 
-* ***30 de setembro de 2022***: Gerenciar [licenças SaaS para aplicativos de terceiros no Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
-* ***29 de setembro de 2022***: o aplicativo [móvel do Teams agora dá suporte a downloads de arquivos para dispositivos locais.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
-* ***16 de setembro de 2022***: Cartões Adaptáveis em extensões de mensagem baseadas em pesquisa agora dão [suporte a Ações Universais.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
-* ***06 de setembro de 2022***: introduziu snippets de código para capturar vídeos usando [a câmera por meio da `selectMedia` API.](concepts/device-capabilities/media-capabilities.md#code-snippets)
+* ***12 de outubro de 2022***: há suporte para aplicativos em reuniões instantâneas [, um para um e chamadas em grupo.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***12 de outubro de 2022***: tela [do Live Share](apps-in-teams-meetings/teams-live-share-canvas.md)
 
 :::column-end:::
 :::row-end:::
@@ -45,6 +43,10 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ----------------|
+| 09/30/2022|Gerenciar licenças de SaaS para aplicativos de terceiros no Teams|Monetizar seu aplicativo > incluir uma oferta de SaaS com seu aplicativo teams > gerenciar licença para aplicativos [de terceiros no Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 09/29/2022|O aplicativo móvel do Teams agora dá suporte a downloads de arquivos para dispositivos locais.|Integrar recursos de dispositivo > recursos de mídia > [download de arquivos no Teams Mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
+| 09/16/2022|Os Cartões Adaptáveis em extensões de mensagem baseadas em pesquisa agora dão suporte a Ações Universais.|Criar extensões de mensagem > de Pesquisa > [Ações Universais para extensões de mensagem baseadas em pesquisa](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
+| 09/06/2022|Introduzidos snippets de código para capturar vídeos usando a câmera por meio da `selectMedia` API.| Integrar recursos de dispositivo > recursos de mídia > [snippets de código](concepts/device-capabilities/media-capabilities.md#code-snippets)|
 | 08/09/2022 | Introduzido o Kit de ferramentas do Teams para Visual Studio 2022 | Ferramentas e SDK > Kit de ferramentas do Teams para Visual Studio > [Visão geral do Kit de ferramentas do Teams para Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 03/08/2022 | Compartilhar com o Teams a partir do aplicativo ou guia pessoal | Integrar com o Teams > Compartilhar com o Teams > [Compartilhar com o Teams a partir de aplicativo pessoal ou guia](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 03/08/2022 | Adicionado recurso para recuperar transcrições de reunião no cenário pós-reunião. | Compilar aplicativos para reuniões e chamadas do Teams > Obter transcrições de reunião usando APIs do Graph > [Visão geral](graph-api/meeting-transcripts/overview-transcripts.md) |
@@ -208,7 +210,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 
 | **Date** | **Atualizar** | **Encontre aqui** |
 | -------- | --------- | ------------------ |
-| 26/12/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
+| 26/12/2019 | O `replyToId` parâmetro em cargas enviadas a um bot não é mais criptografado, permitindo que você use esse valor para construir links profundos para essas mensagens. As cargas de mensagem incluem os valores criptografados no parâmetro `legacy.replyToId`.  |
 | 05/11/2019 | Logon único usando o SDK JavaScript do Teams. | [Logon único](tabs/how-to/authentication/tab-sso-overview.md) |
 | 31/10/2019 | Documentação de bots de conversação e extensão de mensagens atualizado para refletir o SDK do Bot Framework 4.6. A documentação do SDK v3 está disponível na seção Recursos. | Toda a documentação do bot e da extensão de mensagem |
 | 31/10/2019 | Nova estrutura de documentação e refatoração de artigo principal. Relate links inativos ou 404s criando um Problema do GitHub. | Todos eles! |
@@ -298,7 +300,6 @@ A versão prévia do desenvolvedor é um programa público que fornece acesso an
 | 08/10/2022 | Aplicativos para reuniões de canal público agendadas | Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Ativar e desativar mudo de APIs para aplicativos na janela de conteúdo compartilhado do Teams | Compilar aplicativos para reuniões e chamadas do Teams > [Referências da API de aplicativos de reunião](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Controles de colaboração para o Teams| Integrar com o Teams > [Controles de colaboração](samples/collaboration-control.md) |
-| 30/06/2022 | Aplicativos para reuniões instantâneas, reuniões individuais e chamadas em grupo| Criar aplicativos para reuniões e chamadas do Teams > [Visão geral](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |24/05/2022| Colaboração aprimorada com o SDK do Live Share | Criar aplicativos para reuniões do Teams > Colaboração aprimorada com o Live Share > [Visão geral](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 03/02/2022 | Apresentado o manifesto do aplicativo versão 1.13 | Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto](resources/schema/manifest-schema-dev-preview.md) |
 | 17/01/2022 | Seletor de Pessoas em cartões adaptáveis para dispositivos móveis | Criar cartões e módulos de tarefa > Criar cartões > [Seletor de Pessoas em Cartões Adaptáveis](task-modules-and-cards/cards/people-picker.md)|

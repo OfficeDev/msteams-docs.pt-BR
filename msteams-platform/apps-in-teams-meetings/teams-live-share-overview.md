@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 38157dea1c2d24b82cf1f48829639fd1d92392c1
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: c242faa57809bb967a29b7ab224e6cc0e859247b
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552522"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560551"
 ---
 ---
 
@@ -49,7 +49,7 @@ Você pode encontrar mais informações sobre esse pacote na página [de recurso
 
 ### <a name="live-share-media"></a>Mídia do Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Experiência de compartilhamento de vídeo do Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="A captura de tela mostra um exemplo da experiência de compartilhamento de vídeo do Live Share.":::
 
 Vídeo e áudio são partes fundamentais do local de trabalho e do mundo modernos. A mídia do Live Share permite **a sincronização de mídia** para qualquer player de mídia com apenas algumas linhas de código. Ao sincronizar a mídia na camada de controles de transporte e estado do player, você pode atribuir exibições individualmente, fornecendo a melhor qualidade possível disponível por meio de seu aplicativo. Como a Microsoft não está readicastando seu conteúdo de mídia, seus requisitos de licenciamento e acesso são mantidos intactos.
 
@@ -67,7 +67,7 @@ Você pode encontrar mais informações sobre esse pacote na página [de mídia 
 
 ### <a name="live-share-canvas"></a>Tela do Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Capturas de tela mostram um exemplo de vários usuários desenhando em uma tela durante uma reunião.":::
 
 Ao colaborar em reuniões, é essencial que os usuários possam apontar e enfatizar o conteúdo na tela. A tela Live Share facilita a adição de escrita à tinta, apontadores laser e cursores ao seu aplicativo para uma colaboração perfeita.
 
@@ -173,7 +173,7 @@ Para obter mais informações, consulte o guia de instruções personalizado do 
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Durante uma revisão de marketing, um usuário deseja coletar comentários sobre sua edição de vídeo mais recente. | O usuário compartilha o vídeo para o estágio de reunião e inicia o vídeo. Conforme necessário, o usuário pausa o vídeo para discutir a cena e os participantes desenham partes da tela para enfatizar os pontos-chave. |
 | Um gerente de projeto joga Agile Poker com sua equipe durante o planejamento.                    | O gerente compartilha um aplicativo Agile Poker para o estágio de reunião que permite jogar o jogo de planejamento até que a equipe tenha consenso.                                                                        |
-| Um consultor financeiro revisa documentos PDF com clientes antes de assinar.                  | O consultor financeiro compartilha o contrato pdf para o estágio da reunião. Todos os participantes podem ver cursores e texto realçado no PDF, após o qual ambas as partes assinarão o contrato.        |
+| Um consultor financeiro revisa documentos PDF com clientes antes de assinar.                  | O consultor financeiro compartilha o contrato pdf para o estágio da reunião. Todos os participantes podem ver os cursores uns dos outros e o texto realçado no PDF, após o qual ambas as partes assinarão o contrato.        |
 
 > [!IMPORTANT]
 > O Live Share é licenciado sob a Licença do [SDK do Microsoft Live Share](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE). Para usar esses recursos em seu aplicativo, primeiro você deve ler e concordar com esses termos.

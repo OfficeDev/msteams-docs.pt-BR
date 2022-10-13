@@ -5,12 +5,12 @@ description: Crie uma página de configuração para coletar informações do us
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450377"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560656"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -24,7 +24,7 @@ Uma página de configuração é um tipo especial de [página de conteúdo](cont
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar um canal ou guia de chat em grupo
 
-O aplicativo deve fazer referência ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) e chamar `app.initialize()`. Os URLs usados ​​devem ser pontos de extremidade HTTPS seguros e disponíveis na nuvem.
+O aplicativo deve fazer referência ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) e chamar `app.initialize()`. As URLs usadas devem ser pontos de extremidade HTTPS protegidos e estão disponíveis na nuvem.
 
 ### <a name="example"></a>Exemplo
 
@@ -38,17 +38,19 @@ O código a seguir é um exemplo de código correspondente para a página de con
 
 ```html
 <head>
-    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+        await microsoftTeams.app.initialize();
         let saveGray = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
@@ -62,7 +64,7 @@ O código a seguir é um exemplo de código correspondente para a página de con
         }
 
         let saveRed = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
@@ -81,14 +83,14 @@ O código a seguir é um exemplo de código correspondente para a página de con
         const colorClickGray = () => {
             gr.display = "block";
             rd.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveGray()
         }
 
         const colorClickRed = () => {
             rd.display = "block";
             gr.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveRed();
         }
     </script>
@@ -170,7 +172,7 @@ Escolher o botão apropriado aciona `saveGray()` ou `saveRed()` e invoca o segui
 * O manipulador de eventos `pages.config.registerOnSaveHandler()` é acionado.
 * **Salvar** na página de configuração do aplicativo, está habilitado.
 
-O código da página de configuração informa ao Teams que os requisitos de configuração foram atendidos e a instalação pode prosseguir. Quando o usuário seleciona **Salvar**, os parâmetros de `pages.config.setConfig()` são definidos, conforme definido pela interface `Config`. Para obter mais informações, consulte [a interface de configuração](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
+O código da página de configuração informa ao Teams que os requisitos de configuração foram atendidos e que a instalação pode continuar. Quando o usuário seleciona **Salvar**, os parâmetros de `pages.config.setConfig()` são definidos, conforme definido pela interface `Config`. Para obter mais informações, consulte [a interface de configuração](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
 
 >[!NOTE]
 >
@@ -215,7 +217,7 @@ Depois que a página é carregada, o Teams atualiza os espaços reservados da ca
 
 ```html
 <script>
-   await app.initialize();
+   await microsoftTeams.app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');

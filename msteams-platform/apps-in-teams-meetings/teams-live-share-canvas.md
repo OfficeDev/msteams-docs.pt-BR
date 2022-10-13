@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 3845d890de365eca8029a3f28d770586a6929743
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552597"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560607"
 ---
 # <a name="live-share-canvas-overview"></a>Visão geral da tela do Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Sincronização de mídia do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="A captura de tela mostra um exemplo de uma tela em sincronia com outros participantes da reunião em uma reunião do Teams.":::
 
 Em salas de conferência e salas de aula em todo o mundo, os quadros de comunicações são uma parte fundamental da colaboração. No entanto, nos tempos modernos, o quadro de comunicações não é mais suficiente. Com várias ferramentas digitais, como o PowerPoint sendo o ponto focal de colaboração na era moderna, é essencial habilitar o mesmo potencial criativo.
 
@@ -103,7 +103,7 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools--cursors"></a>Ferramentas de tela & cursores
+## <a name="canvas-tools-and-cursors"></a>Ferramentas de tela e cursores
 
 Agora que a tela do Live Share está configurada e sincronizada, você pode configurar a tela para interação do usuário, como botões para selecionar uma ferramenta de caneta. Nesta seção, discutiremos quais ferramentas estão disponíveis e como usá-las.
 
@@ -113,7 +113,7 @@ Cada ferramenta de escrita à tinta na tela do Live Share renderiza traços à m
 
 #### <a name="pen-tool"></a>Ferramenta Caneta
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Ferramenta de caneta de tela do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="O GIF mostra um exemplo de traços de desenho na tela usando a ferramenta caneta.":::
 
 A ferramenta caneta desenha traços sólidos que são armazenados na tela. A forma de ponta padrão é um círculo.
 
@@ -151,7 +151,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>Ferramenta de realce
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Ferramenta de realce de tela do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF mostra um exemplo de desenho de traços translúcidos na tela usando a ferramenta de realce.":::
 
 A ferramenta de realce desenha traços translúcidos armazenados na tela. A forma de ponta padrão é um quadrado.
 
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>Ferramenta borracha
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Ferramenta de borracha de tela do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF mostra um exemplo de apagamento de traços na tela usando a ferramenta de borracha.":::
 
 A ferramenta de borracha apaga traços inteiros que cruzam seu caminho.
 
@@ -219,7 +219,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### <a name="point-eraser-tool"></a>Ferramenta de borracha de ponto
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Ferramenta de borracha de ponto de tela do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF mostra um exemplo de como remover pontos individuais em traços na tela usando a ferramenta de borracha de ponto.":::
 
 A ferramenta de borracha de ponto apaga pontos individuais dentro de traços que cruzam seu caminho dividindo os traços existentes pela metade. Essa ferramenta é computacionalmente cara e pode resultar em taxas de quadros mais lentas para seus usuários.
 
@@ -247,7 +247,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>Apontador laser
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Ferramenta de apontador laser da tela do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF mostra um exemplo de traços de desenho na tela usando a ferramenta de apontador laser.":::
 
 O apontador laser é exclusivo, pois a ponta do laser tem um efeito à direita à medida que você move o mouse. Quando você desenha traços, o efeito à direita é renderizado por um curto período antes de desaparecer completamente. Essa ferramenta é perfeita para apontar informações na tela durante uma reunião, pois o apresentador não precisa alternar entre ferramentas para apagar traços.
 
@@ -285,7 +285,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>Ferramentas de linha e seta
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Ferramenta de linha de tela do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF mostra um exemplo de desenho de linhas retas em uma tela usando a ferramenta de linha e seta.":::
 
 A ferramenta de linha permite que os usuários desenhe linhas retas de um ponto para outro, com uma seta opcional que pode ser aplicada ao final.
 
@@ -333,7 +333,7 @@ Você pode limpar todos os traços na tela chamando `inkingManager.clear()`. Iss
 
 ### <a name="cursors"></a>Cursores
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Compartilhamento de cursor do Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF mostra um exemplo de usuários compartilhando um cursor em uma tela.":::
 
 Você pode habilitar cursores dinâmicos em seu aplicativo para que os usuários acompanhem as posições do cursor uns dos outros na tela. Ao contrário das ferramentas de escrita à tinta, os cursores operam inteiramente por meio da `LiveCanvas` classe. Opcionalmente, você pode fornecer um nome e uma imagem para identificar cada usuário. Você pode habilitar cursores separadamente ou com as ferramentas de escrita à tinta.
 
@@ -357,7 +357,7 @@ Por padrão, a tela do Live Share funciona muito como um aplicativo de quadro de
 
 Aqui está um diagrama simples para ajudar a visualizar esse conceito:
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Visualização do visor de tela do Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="A captura de tela mostra o layout da tela inteira para usuários da área de trabalho e móveis juntos.":::
 
 Você pode personalizar esse comportamento das seguintes maneiras:
 
@@ -435,7 +435,7 @@ document.getElementById("change-reference").onclick = () => {
 
 ## <a name="ideal-scenarios"></a>Cenários ideais
 
-Com as páginas da Web em todas as formas e tamanhos, não é possível criar telas do Live Share para dar suporte a todos os cenários. O pacote é ideal para cenários em que todos os usuários estão olhando para o mesmo conteúdo ao mesmo tempo. Embora nem todo o conteúdo precise estar visível na tela, ele deve ser o conteúdo que é dimensionado entre dispositivos linearmente.
+Com as páginas da Web em todas as formas e tamanhos, não é possível criar telas do Live Share para dar suporte a todos os cenários. O pacote é ideal para cenários em que todos os usuários estão olhando para o mesmo conteúdo ao mesmo tempo. Embora nem todo o conteúdo precise estar visível na tela, ele deve ser o conteúdo que é dimensionado linearmente entre dispositivos.
 
 Aqui estão alguns exemplos de cenários em que a tela do Live Share é uma ótima opção para seu aplicativo:
 

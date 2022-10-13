@@ -1,16 +1,16 @@
 ---
 title: Preparar o envio para a Microsoft Store
-description: Aprenda as etapas finais antes de enviar seu aplicativo do Microsoft Teams para ser listado na loja. Saiba como validar o pacote do aplicativo. Saiba como atualizar o Apple App Store Connect Team ID no Partner Center.
+description: Etapas finais antes de enviar o aplicativo Microsoft Teams para serem listados na loja. Valide o pacote do aplicativo e conclua a verificação e o atestado do editor.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c78cfb103b9e6bd57218b6ca31edeae54c4ecca1
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: bec6c900a0f478b2243685215f094b9a051c44f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376603"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560677"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar o envio do repositório do Teams
 

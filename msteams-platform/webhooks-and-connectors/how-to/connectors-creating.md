@@ -5,12 +5,12 @@ description: Introdução aos Office 365 Conectores. Adicionar conector ao aplic
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 82fa425b3a2edb4db72c327655bdc8513d6b51f3
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 8e9b1d831858bcf9aefeedbafcb098744470e1d7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376575"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560740"
 ---
 # <a name="create-office-365-connectors"></a>Criar Conectores do Office 365
 
@@ -19,7 +19,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 Confira o vídeo a seguir para saber como criar um Office 365 Conectores:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -70,7 +70,7 @@ Para integrar a experiência de configuração:
 
 1. Registre `microsoftTeams.pages.config.registerOnRemoveHandler()` manipulador de eventos, que é chamado quando o usuário remove o conector.
 
-Esse evento oferece ao seu serviço a oportunidade de executar qualquer ação de limpeza.
+Esse evento oferece ao seu serviço a oportunidade de executar todas as ações de limpeza.
 
 O código a seguir fornece um HTML de exemplo para criar uma página de configuração de conector sem o atendimento ao cliente e suporte:
 
@@ -87,17 +87,15 @@ O código a seguir fornece um HTML de exemplo para criar uma página de configur
     </section>
 </div>
 
-<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        
+<script>
         function onClick() {
             pages.config.setValidityState(true);
         }
 
-        await app.initialize();
+        await microsoftTeams.app.initialize();
         pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
@@ -149,7 +147,7 @@ A tabela a seguir fornece os parâmetros e os detalhes de `getConfig` propriedad
 | `contentUrl` | A URL da página de configuração, conforme definido pelo código ao chamar `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | Os valores retornados podem ser `mail`, `groups`ou `teams` correspondentes ao Office 365 Mail, Office 365 Grupos ou Teams, respectivamente. |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `userObjectId` | A ID exclusiva correspondente ao Office 365 usuário que iniciou a configuração do conector. Ele deve ser protegido. Esse valor pode ser usado para associar o usuário Office 365, que configurou a configuração em seu serviço. |
 
 #### <a name="handle-edits"></a>Manipular edições
 

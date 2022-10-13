@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329081"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560488"
 ---
 # <a name="create-a-channel-tab"></a>Criar uma guia de canal
 
-Canal ou guias de grupo forneça conteúdo para canais e chats em grupo e é uma ótima maneira de criar espaços colaborativos em torno de conteúdo dedicado baseado na web.
+As guias de canal ou grupo fornecem conteúdo para canais e chats em grupo, o que ajuda a criar espaços colaborativos em torno de conteúdo dedicado baseado na Web.
 
 Verifique se você tem todos os [pré-requisitos para](~/tabs/how-to/tab-requirements.md) criar a guia canal ou grupo.
 
@@ -55,7 +55,7 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
     yo teams
     ```
 
-1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o arquivo `manifest.json`:
+1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o `manifest.json` arquivo:
 
     ![captura de tela de abertura do gerador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
     * **O nome da sua (empresa)? (máximo de 32 caracteres)**
 
-        O nome da empresa será usado no manifesto do aplicativo. Insira um nome para a empresa ou selecione **Enter** para aceitar o nome padrão.
+        O nome da empresa pode ser usado no manifesto do aplicativo. Insira um nome para a empresa ou selecione **Enter** para aceitar o nome padrão.
 
     * **Qual versão do manifesto você gostaria de usar?**
 
@@ -94,9 +94,9 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
         Selecione **( &ast; ) uma guia**.
 
-    * **Em qual URL você hospedará essa solução?**
+    * **A URL para hospedar essa solução?**
 
-        Por padrão, o gerador sugere uma URL de Sites do Azure. Você só está testando seu aplicativo localmente, portanto, uma URL válida não é necessária.
+        Por padrão, o gerador sugere uma URL do site do Azure. Você só está testando seu aplicativo localmente, portanto, uma URL válida não é necessária.
 
     * **Você gostaria de mostrar um indicador de carregamento quando seu aplicativo/guia carregar?**
 
@@ -169,7 +169,7 @@ gulp build
 
 #### <a name="run-your-application"></a>Executar seu aplicativo
 
-1. No prompt de comando, digite o seguinte comando para iniciar um servidor Web local:
+1. No prompt de comando, insira o seguinte comando para iniciar um servidor Web local:
 
     ```bash
     gulp serve
@@ -179,7 +179,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Guia padrão":::
 
-1. Para exibir a página de configuração da guia, vá para `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. O seguinte é mostrado:
+1. Para exibir a página de configuração da guia, vá para `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuração da guia":::
 
@@ -338,7 +338,10 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -346,9 +349,9 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Insira uma chamada para `microsoftTeams.app.initialize();` na marca `script`.
 
-1. No Gerenciador de Soluções do Visual Studio vá para a pasta **Páginas** e abra **Tab.cshtml**
+1. No Visual Studio Gerenciador de Soluções, vá para a pasta **Páginas** e abra **Tab.cshtml**
 
-    Em **Tab.cshtml** , o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+    Em **Tab.cshtml**, o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 
@@ -537,15 +540,15 @@ Na janela do Gerenciador de Soluções do Visual Studio, clique com o botão dir
 
 #### <a name="models"></a>Modelos
 
-**ChannelGroup.cs** apresenta um objeto Message e métodos que serão chamados dos controladores durante a configuração.
+**ChannelGroup.cs** apresenta um objeto de mensagem e métodos que podem ser chamados dos controladores durante a configuração.
 
 #### <a name="views"></a>Visualizações
 
 Estas são as diferentes exibições no ASP.NET Core MVC:
 
-* ASP.NET Core trata arquivos chamados **Índice** como o padrão ou página inicial para o site. Quando a URL do navegador aponta para a raiz do site,**index.cshtml** é exibido como o página inicial para seu aplicativo.
+* ASP.NET Core trata arquivos chamados **Índice** como o padrão ou página inicial para o site. Quando a URL do navegador aponta para a raiz do site, **Index.cshtml** pode ser exibida como a home page do aplicativo.
 
-* Compartilhado: a marcação de exibição parcial **_Layout.cshtml** contém a estrutura de página geral do aplicativo e os elementos visuais compartilhados. Ele também fará referência à Biblioteca do Teams.
+* Compartilhado: a marcação de exibição parcial **_Layout.cshtml** contém a estrutura geral da página do aplicativo e os elementos visuais compartilhados que também fazem referência à Biblioteca do Teams.
 
 #### <a name="controllers"></a>Controladores
 
@@ -569,7 +572,10 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -577,9 +583,9 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Insira uma chamada para `microsoftTeams.app.initialize();` na marca `script`.
 
-1. No Gerenciador de Soluções do Visual Studio vá para a pasta **Guia** e abra **Tab.cshtml**
+1. No Visual Studio Gerenciador de Soluções, vá para a pasta **Tab** e abra **Tab.cshtml**
 
-    Em **Tab.cshtml** , o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+    Em **Tab.cshtml**, o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 

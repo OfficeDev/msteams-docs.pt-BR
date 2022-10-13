@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 66ff0cfed7fcd34d741a35ff4aa30e507adf8717
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552571"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560537"
 ---
 # <a name="dice-roller-code-tutorial"></a>Tutorial de código do Dice Roller
 
-No aplicativo de exemplo Dice Roller, os usuários são mostrados como um dado com um botão para rolá-lo. Quando o dado é rolado, o SDK do Live Share usa o Fluid Framework para sincronizar os dados entre clientes, para que todos vejam o mesmo resultado. Para sincronizar dados, execute as seguintes etapas no arquivo [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js):
+No aplicativo de exemplo Dice Roller, os usuários são mostrados um dado com um botão para rolá-lo. Quando os dados são rolados, o SDK do Live Share usa o Fluid Framework para sincronizar os dados entre clientes, para que todos vejam o mesmo resultado. Para sincronizar dados, execute as seguintes etapas no arquivo [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js):
 
 1. [Configurar o aplicativo](#set-up-the-application)
 2. [Ingressar em um contêiner do Fluid](#join-a-fluid-container)
@@ -28,13 +28,16 @@ No aplicativo de exemplo Dice Roller, os usuários são mostrados como um dado c
 
 ## <a name="set-up-the-application"></a>Configurar o aplicativo.
 
-Comece importando os módulos necessários. O exemplo usa [o DDS SharedMap](https://fluidframework.com/docs/data-structures/map/) do Fluid Framework e da [classe LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) . O exemplo dá suporte à Extensibilidade de Reunião do Teams, portanto, precisamos incluir o [SDK do Cliente do Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Por fim, o exemplo foi projetado para ser executado localmente e em uma reunião do Teams, portanto, precisamos incluir algumas partes adicionais do Fluid Framework necessárias para [testar o exemplo localmente](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+Você pode começar importando os módulos necessários. O exemplo usa [o DDS SharedMap](https://fluidframework.com/docs/data-structures/map/) do Fluid Framework e [o TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) do SDK do Live Share. O exemplo dá suporte à Extensibilidade de Reunião do Teams, portanto, você deve incluir o [SDK do Cliente do Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Por fim, o exemplo foi projetado para ser executado localmente e em uma reunião do Teams, portanto, você precisa incluir mais partes do Fluid Framework para [testar o exemplo localmente](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
-Os aplicativos criam contêineres do Fluid usando um esquema que define um conjunto de _objetos iniciais_ que estarão disponíveis para o contêiner. O exemplo usa um SharedMap para armazenar o valor de dado mais recente que foi rolado. Para obter mais informações, consulte [Modelagem de dados](https://fluidframework.com/docs/build/data-modeling/).
+Os aplicativos criam contêineres Fluid usando um esquema que define um conjunto de objetos _iniciais_ que estão disponíveis para o contêiner. O exemplo usa um SharedMap para armazenar o valor de dados atual que foi rolado. Para obter mais informações, consulte [Modelagem de dados](https://fluidframework.com/docs/build/data-modeling/).
 
-Os aplicativos de reunião do Teams exigem vários modos de exibição (conteúdo, configuração e estágio). Criaremos uma função `start()` para ajudar a identificar o modo de exibição a ser renderizado e executar qualquer inicialização necessária. Queremos que nosso aplicativo seja compatível com a execução local em um navegador da Web e de dentro de uma Reunião do Teams para que a função `start()` procure um parâmetro de consulta `inTeams=true` para determinar se ele está em execução no Teams. Ao executar no Teams, seu aplicativo precisa chamar `app.initialize()` antes de chamar qualquer outro método teams-js.
+Os aplicativos de reunião do Teams exigem várias exibições, como conteúdo, configuração e estágio. Você pode criar uma função `start()` para ajudar a identificar a exibição. Isso ajuda a renderizar e executar qualquer inicialização necessária. O aplicativo dá suporte à execução local em um navegador da Web e de dentro de uma reunião do Teams. A `start()` função procura um parâmetro `inTeams=true` de consulta para determinar se ela está em execução no Teams.
 
-Além do parâmetro de consulta `inTeams=true`, podemos usar um parâmetro de consulta `view=content|config|stage` para determinar o modo de exibição que precisa ser renderizado.
+> [!NOTE]
+> Ao executar no Teams, seu aplicativo precisa chamar `app.initialize()` antes de chamar qualquer outro método teams-js.
+
+Além do parâmetro de `inTeams=true` consulta, você pode usar um parâmetro de consulta para determinar a `view=content|config|stage` exibição que precisa ser renderizada.
 
 ```js
 import { SharedMap } from "fluid-framework";
@@ -97,7 +100,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Ingressar em um contêiner do Fluid
 
-Nem todos os modos de exibição de seus aplicativos precisarão ser colaborativos. O modo de exibição `stage` _sempre_ precisa de recursos colaborativos, o modo de exibição `content` _pode_ precisar de recursos colaborativos e o modo de exibição `config` _nunca_ deve precisar de recursos colaborativos. Para os modos de exibição que precisam de recursos colaborativos, você precisará ingressar em um contêiner do Fluid associado à reunião atual.
+Nem todas as exibições do seu aplicativo precisam ser colaborativas. O modo de exibição `stage` _sempre_ precisa de recursos colaborativos, o modo de exibição `content` _pode_ precisar de recursos colaborativos e o modo de exibição `config` _nunca_ deve precisar de recursos colaborativos. Para os modos de exibição que precisam de recursos colaborativos, você precisará ingressar em um contêiner do Fluid associado à reunião atual.
 
 Ingressar no contêiner para a reunião é tão simples quanto inicializar o [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) e chamar seu [método joinContainer](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) ().
 
@@ -128,7 +131,7 @@ Muitos aplicativos de Extensibilidade de Reunião do Teams foram projetados para
 
 É fácil criar o modo de exibição usando dados locais sem nenhuma funcionalidade do Fluid e, em seguida, adicionar o Fluid alterando algumas partes principais do aplicativo.
 
-A função `renderStage` acrescenta o `stageTemplate` ao elemento HTML passado e cria um rolador de dados funcional com um valor de dado aleatório sempre que o botão **Rolar** é selecionado. O `diceMap` será usado nas próximas etapas.
+A `renderStage` função acrescenta o `stageTemplate` elemento HTML passado e cria um rolo de dados de trabalho com um valor de dado aleatório sempre que o **botão Rolar** é selecionado. O `diceMap` será usado nas próximas etapas.
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -158,7 +161,7 @@ function renderStage(diceMap, elem) {
 
 ### <a name="modify-fluid-data"></a>Modificar dados do Fluid
 
-Para começar a usar o Fluid no aplicativo, a primeira coisa a ser alterada é o que acontece quando o usuário seleciona o `rollButton`. Em vez de atualizar o estado local diretamente, o botão atualiza o número armazenado na chave `value` do passado em `diceMap`. Como `diceMap` é um `SharedMap` do Fluid, as alterações são distribuídas para todos os clientes. Qualquer alteração no `diceMap` fará com que um evento `valueChanged` seja emitido e um manipulador de eventos pode disparar uma atualização do modo de exibição.
+Para começar a usar o Fluid no aplicativo, a primeira coisa a ser alterada é o que acontece quando o usuário seleciona o `rollButton`. Em vez de atualizar o estado local diretamente, o botão atualiza o número armazenado na chave `value` do passado em `diceMap`. Como `diceMap` é um `SharedMap` do Fluid, as alterações são distribuídas para todos os clientes. Qualquer alteração no evento `diceMap` pode fazer com que `valueChanged` um evento seja emitido e um manipulador de eventos pode disparar uma atualização da exibição.
 
 Esse padrão é comum no Fluid porque permite que o modo de exibição se comporte da mesma maneira para alterações locais e remotas.
 
@@ -169,7 +172,7 @@ rollButton.onclick = () =>
 
 ### <a name="rely-on-fluid-data"></a>Depender dos dados do Fluid
 
-A próxima alteração que precisa ser feita é alterar a função `updateDice` para que ela não aceite mais um valor arbitrário. Isso significa que o aplicativo não pode mais modificar diretamente o valor do dado local. Em vez disso, o valor é recuperado de `SharedMap` cada vez que `updateDice` é chamado.
+A próxima alteração que precisa ser feita é alterar `updateDice` a função, pois ela não aceita mais um valor arbitrário. Isso significa que o aplicativo não pode mais modificar diretamente o valor do dado local. Em vez disso, o valor é recuperado de `SharedMap` cada vez que `updateDice` é chamado.
 
 ```js
 const updateDice = () => {
@@ -189,7 +192,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>Gravar o modo de exibição do painel lateral
 
-O modo de exibição do painel lateral, carregado por meio da guia `contentUrl` com o contexto de quadro `sidePanel`, é exibido para o usuário em um painel lateral quando ele abre seu aplicativo em uma reunião. O objetivo desse modo de exibição é permitir que um usuário selecione o conteúdo do aplicativo antes de compartilhá-lo no estágio de reunião. Para os aplicativos de SDK do Live Share, o modo de exibição do painel lateral também pode ser usado como uma experiência complementar para o aplicativo. Chamar [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) do modo de exibição do painel lateral conecta ao mesmo contêiner do Fluid ao qual o modo de exibição de estágio está conectado. Esse contêiner pode ser usado para se comunicar com o modo de exibição de estágio. Verifique se você está se comunicando com o modo de exibição de estágio _e o modo de exibição do painel lateral_ de todos.
+O modo de exibição do painel lateral, carregado por meio da guia `contentUrl` com o contexto de quadro `sidePanel`, é exibido para o usuário em um painel lateral quando ele abre seu aplicativo em uma reunião. O objetivo da exibição do painel lateral é permitir que um usuário selecione o conteúdo do aplicativo antes de compartilhar o aplicativo no estágio da reunião. Para os aplicativos de SDK do Live Share, o modo de exibição do painel lateral também pode ser usado como uma experiência complementar para o aplicativo. Chamar [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) do modo de exibição do painel lateral conecta ao mesmo contêiner do Fluid ao qual o modo de exibição de estágio está conectado. Esse contêiner pode ser usado para se comunicar com o modo de exibição de estágio. Verifique se você está se comunicando com o modo de exibição de estágio _e o modo de exibição do painel lateral_ de todos.
 
 O modo de exibição do painel lateral do exemplo solicita que o usuário selecione o botão Compartilhar na janela de conteúdo compartilhado.
 
@@ -215,7 +218,7 @@ function renderSidePanel(elem) {
 
 ## <a name="write-the-settings-view"></a>Gravar o modo de exibição de configurações
 
-O modo de exibição de configurações, carregado por meio de `configurationUrl` no manifesto do aplicativo, é mostrado a um usuário quando ele adiciona seu aplicativo pela primeira vez a uma Reunião do Teams. Esse modo de exibição permite que o desenvolvedor configure o `contentUrl` para a guia fixada à reunião com base na entrada do usuário. Esta página é necessária no momento, mesmo que nenhuma entrada do usuário seja necessária para definir o `contentUrl`.
+A exibição de configurações, `configurationUrl` carregada no manifesto do aplicativo, é mostrada a um usuário quando ele adiciona seu aplicativo pela primeira vez a uma reunião do Teams. Esse modo de exibição permite que o desenvolvedor configure o `contentUrl` para a guia fixada à reunião com base na entrada do usuário. Esta página é necessária no momento, mesmo que nenhuma entrada do usuário seja necessária para definir o `contentUrl`.
 
 > [!NOTE]
 > Não há suporte para [joinContainer() do Live](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) Share no contexto da `settings` guia.

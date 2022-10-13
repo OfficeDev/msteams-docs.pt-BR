@@ -1,16 +1,16 @@
 ---
 title: Manter e dar suporte ao seu aplicativo publicado
-description: Saiba como manter seu aplicativo Microsoft Teams publicado e o que fazer depois que sua loja for listada na loja do Teams e no AppSource. Analise o uso do aplicativo, publique atualizações, promova seu aplicativo, conclua a Certificação do Microsoft 365.
+description: Mantenha seu aplicativo Microsoft Teams publicado. Analise o uso do aplicativo, publique atualizações, promova seu aplicativo, conclua a Certificação do Microsoft 365.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100326"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560467"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 

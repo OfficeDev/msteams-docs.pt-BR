@@ -5,12 +5,12 @@ description: Saiba como habilitar a reconfiguração da guia após a instalaçã
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499291"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560446"
 ---
 # <a name="create-a-removal-page"></a>Criar uma página de remoção
 
@@ -40,7 +40,7 @@ A página de remoção opcional é uma página HTML que você hospeda e é exibi
 
 ### <a name="register-a-remove-handler"></a>Registrar um manipulador de remoção
 
-Opcionalmente, na lógica da página de remoção, `registerOnRemoveHandler((RemoveEvent) => {}` você pode invocar o manipulador de eventos quando o usuário remove uma configuração de guia existente. O método usa a interface [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) e executa o código no manipulador quando um usuário tenta remover o conteúdo. O método é usado para executar operações de limpeza, como remover o recurso subjacente que a energia do conteúdo da guia. Por vez, apenas um manipulador de remoção pode ser registrado.
+Opcionalmente, na lógica da página de remoção, `registerOnRemoveHandler((RemoveEvent) => {}` você pode invocar o manipulador de eventos quando o usuário remove uma configuração de guia existente. O método usa a interface [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) e executa o código no manipulador quando um usuário tenta remover o conteúdo. O método é usado para executar operações de limpeza, como a remoção do recurso subjacente que está utilizando o conteúdo da guia. Por vez, somente um, o manipulador de remoção pode ser registrado.
 
 A interface `RemoveEvent` descreve um objeto com dois métodos:
 
@@ -67,9 +67,8 @@ A seguir está um bloco de código de remoção de guia de exemplo:
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

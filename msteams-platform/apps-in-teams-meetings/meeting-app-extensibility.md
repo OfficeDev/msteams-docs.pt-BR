@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: none
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 4807b85ed1b520b84701bcd727fda88cf77808eb
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: db90b3e3f026eced56c626a082f5ec6be04cb893
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833661"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560642"
 ---
 # <a name="unified-meetings-apps"></a>Aplicativos de reuniões unificadas
 
@@ -29,7 +29,7 @@ Um ciclo de vida de reunião consiste em experiência de aplicativos de pré-reu
 
 > [!NOTE]
 >
-> * No momento, os aplicativos para reuniões instantâneas, reuniões de canal público agendadas, um para um e chamadas de grupo estão disponíveis apenas na versão prévia [do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md).
+> * No momento, os aplicativos para reuniões de canal público agendadas estão disponíveis apenas na [versão prévia do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Há suporte para extensões de reunião, como bots, cartões, extensões de mensagem e ações de mensagem no cliente Web. No entanto, as experiências hospedadas, como guias, bolhas de conteúdo e compartilhamento em estágios, não têm suporte total no momento.
 

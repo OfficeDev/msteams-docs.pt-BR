@@ -1,16 +1,16 @@
 ---
 title: Atualizar a ID da equipe do Apple Store Connect no Partner Center
-description: Saiba como atualizar sua ID de equipe do Apple App Store Connect no Microsoft Partner Center para permitir que os usuários finais instalem seu aplicativo na plataforma do Teams para iOS.
+description: Atualize sua ID da equipe do Apple App Store Connect no Microsoft Partner Center para permitir que os usuários finais pesquisem e adquiram seu aplicativo na plataforma do Teams para iOS.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: v-ypalikila
-ms.openlocfilehash: faccd01e8dde76f61c007ffe772d79995d3a7ffd
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: a936e2c8f135f0d30617739bd5808601be02fec7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160732"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560719"
 ---
 # <a name="update-apple-app-store-connect-team-id-on-partner-center"></a>Atualizar a ID da Equipe no App Store Connect da Apple na Central de Parceiros
 

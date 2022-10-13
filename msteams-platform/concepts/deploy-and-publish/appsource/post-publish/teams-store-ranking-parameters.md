@@ -1,16 +1,16 @@
 ---
 title: Parâmetros de classificação da loja do Microsoft Teams
-description: Entenda os parâmetros de classificação da loja do Microsoft Teams. Os principais parâmetros usados para determinar os posicionamentos do aplicativo são dados de uso históricos, dados de envolvimento do usuário, qualidade e valores do aplicativo, relevância de udiência, atualização de aplicativo.
+description: Entenda os parâmetros de classificação da loja do Microsoft Teams, como dados históricos de uso e envolvimento do usuário, qualidade e valores do aplicativo, relevância do público-alvo, atualização de aplicativo.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 558ac86814ddb61660ca2409418754fd33730c7b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: e285f2a69703b6870a4392d35a377bf7a585b360
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100333"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560481"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Parâmetros de classificação da loja do Microsoft Teams
 

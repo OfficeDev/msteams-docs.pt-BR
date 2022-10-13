@@ -5,12 +5,12 @@ description: Saiba mais sobre a página da Web no cliente do Teams e faz parte d
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450370"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560460"
 ---
 # <a name="create-a-content-page"></a>Criar uma página de conteúdo
 
@@ -46,13 +46,16 @@ O código a seguir fornece um exemplo de como sua página e o cliente do Teams s
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -68,7 +71,6 @@ O código a seguir fornece um exemplo de como sua página e o cliente do Teams s
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -86,7 +88,7 @@ Você pode acessar conteúdo adicional usando o SDK para interagir com o Teams, 
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Usar o SDK para interagir com o Teams
 
-A [SDK JavaScript do cliente do Teams](~/tabs/how-to/using-teams-client-sdk.md) fornece muitas funções adicionais que você pode achar úteis ao desenvolver sua página de conteúdo.
+O [SDK javaScript do cliente do Teams](~/tabs/how-to/using-teams-client-sdk.md) fornece muito mais funções que você pode achar úteis ao desenvolver sua página de conteúdo.
 
 ### <a name="deep-links"></a>Links profundos
 
@@ -94,7 +96,7 @@ Você pode criar links profundos para entidades no Teams. Eles são usados para 
 
 ### <a name="task-modules"></a>Módulos de tarefas
 
-Um módulo de tarefa é uma experiência pop-up modal que você pode disparar na guia. Em uma página de conteúdo, use módulos de tarefa para apresentar formulários para coletar informações adicionais, exibir os detalhes de um item em uma lista ou apresentar ao usuário informações adicionais. Os próprios módulos de tarefa podem ser páginas de conteúdo adicionais ou criados completamente usando Cartões adaptáveis. Para obter mais informações, consulte [usando módulos de tarefas em bots do Microsoft Teams](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Um módulo de tarefa é uma experiência pop-up modal que você pode disparar na guia. Em uma página de conteúdo, use módulos de tarefa para apresentar formulários para coletar informações adicionais, exibir os detalhes de um item em uma lista ou apresentar ao usuário informações adicionais. Os próprios módulos de tarefa podem ser páginas de conteúdo adicionais ou criados completamente usando Cartões Adaptáveis. Para obter mais informações, consulte [usando módulos de tarefas em bots do Microsoft Teams](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Domínios válidos
 

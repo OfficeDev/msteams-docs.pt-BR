@@ -1,16 +1,16 @@
 ---
 title: Visão geral – Publicar seu aplicativo na loja do Microsoft Teams
-description: Entenda o processo para publicar seu aplicativo na Microsoft Teams Store, o que esperar depois de enviar, dicas para aprovação rápida para publicar seu aplicativo e aplicativo vinculado a uma oferta de SaaS.
+description: Publique seu aplicativo na loja do Microsoft Teams ou no AppSource. O que esperar depois de enviar, dicas para aprovação rápida e publicação de aplicativos vinculados a uma oferta de SaaS.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d64a5eda5f728a87991b361d5ec17b95c6ac49cd
-ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
+ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68350451"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560726"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 

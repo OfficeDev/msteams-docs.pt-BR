@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499207"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560733"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -56,7 +56,7 @@ A seguir estão as etapas para criar uma guia pessoal:
     yo teams
     ```
 
-1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o arquivo `manifest.json`.
+1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o `manifest.json` arquivo.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Gerador do Teams":::
 
@@ -97,7 +97,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
     * **Em qual URL você hospedará essa solução?**
 
-      Por padrão, o gerador sugere uma URL de Sites do Azure. Você só está testando seu aplicativo localmente, portanto, uma URL válida não é necessária.
+      Por padrão, o gerador sugere uma URL do site do Azure. Você só está testando seu aplicativo localmente, portanto, uma URL válida não é necessária.
 
     * **Você gostaria de mostrar um indicador de carregamento quando seu aplicativo/guia carregar?**
 
@@ -223,7 +223,7 @@ gulp build
 
 #### <a name="run-your-application"></a>Executar seu aplicativo
 
-1. No prompt de comando, digite o seguinte comando para iniciar um servidor Web local:
+1. No prompt de comando, insira o seguinte comando para iniciar um servidor Web local:
 
     ```cmd
     gulp serve
@@ -371,7 +371,9 @@ No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mo
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. No Gerenciador de Soluções do Visual Studio, abra **PersonalTab.cshtml** da pasta **Páginas** e adicione `app.initialize()` nas marcas `<script>` e salve.
+1. No Visual Studio Gerenciador de Soluções, abra **PersonalTab.cshtml** na pasta **Páginas** e adicione `microsoftTeams.app.initialize()` as `<script>` marcas.
+
+1. Selecione **Salvar**.
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente.
 
@@ -389,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Abra **Aplicativos** e selecione **Importar aplicativo**.
 
-1. O nome do arquivo do pacote do aplicativo é `tab.zip` e está disponível no caminho `/bin/Debug/netcoreapp3.1/tab.zip`.
+1. O nome do arquivo do pacote `tab.zip` do aplicativo é e está disponível no `/bin/Debug/netcoreapp3.1/tab.zip` caminho.
 
 1. Selecione `tab.zip` e abra-o no Portal do Desenvolvedor.
 
@@ -401,7 +403,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Em **URLs do Aplicativo**, atualize a política de privacidade e `https://<yourngrokurl>/privacy` os Termos de uso para `https://<yourngrokurl>/tou` e selecione **Salvar**.
 
-1. Em **Recursos do aplicativo**, selecione **Aplicativo pessoal** > **Criar sua primeira guia de aplicativo pessoal** e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
+1. Em **Recursos do aplicativo**, selecione **Aplicativo Pessoal** > **Criar sua primeira guia de aplicativo pessoal** , insira o nome e atualize a **URL de** Conteúdo com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
 
 1. Selecione **Salvar**.
 
@@ -536,7 +538,9 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. No Gerenciador de Soluções do Visual Studio, abra **PersonalTab.cshtml** da pasta **Visualizações** > **PersonalTab** e adicione `app.initialize()` nas marcas `<script>` e salve.
+1. No Visual Studio Gerenciador de Soluções, abra **PersonalTab.cshtml** na pasta **Views** > **PersonalTab** e adicione `microsoftTeams.app.initialize()` dentro das `<script>` marcas.
+
+1. Selecione **Salvar**.
 
 1. No Visual Studio, selecione **F5** ou escolha **Iniciar Depuração** no menu **Depuração** do aplicativo para verificar se o aplicativo foi carregado corretamente.
 
@@ -570,7 +574,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Em **URLs do Aplicativo**, atualize a política de privacidade e `https://<yourngrokurl>/privacy` os Termos de uso para `https://<yourngrokurl>/tou` e selecione **Salvar**.
 
-1. Em **Recursos do aplicativo**, selecione **Aplicativo pessoal** > **Criar sua primeira guia de aplicativo pessoal** e insira o Nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
+1. Em **Recursos do aplicativo**, selecione **Aplicativo Pessoal** > **Criar sua primeira guia de aplicativo pessoal** , insira o nome e atualize a **URL de** Conteúdo com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
 
 1. Selecione **Salvar**.
 
@@ -592,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Reordenar guias pessoais estáticas
 
-A partir da versão 1.7 do manifesto, os desenvolvedores podem reorganizar todas as guias em seu aplicativo pessoal. Em particular, um desenvolvedor pode mover a guia **chat do bot**, que sempre usa como padrão a primeira posição, em qualquer lugar no cabeçalho da guia do aplicativo pessoal. Duas palavras-chave da guia reservada `entityId` são reservadas, **conversas** e **sobre**.
+A partir da versão 1.7 do manifesto, os desenvolvedores podem reorganizar todas as guias em seu aplicativo pessoal. Você pode mover a **guia de chat do bot** , que sempre assume como padrão a primeira posição, em qualquer lugar no cabeçalho da guia do aplicativo pessoal. Duas palavras-chave da guia reservada `entityId` são reservadas, **conversas** e **sobre**.
 
 Se você criar um bot com um escopo **pessoal**, ele aparecerá na primeira posição da guia em um aplicativo pessoal por padrão. Se você quiser movê-lo para outra posição, deverá adicionar um objeto de guia estático ao manifesto com a palavra-chave reservada, **conversas**. A guia **conversa** aparece na Web ou na área de trabalho, dependendo de onde você adiciona a guia **conversa** na matriz `staticTabs`.
 
