@@ -6,22 +6,16 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 7420a7fb92d6abd684d931896221bf86eb9acf9a
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560530"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575758"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicativos para reuniões e chamadas do Teams
 
 As reuniões permitem colaboração, parceria, comunicação informada e comentários compartilhados. O aplicativo de reunião pode fornecer uma experiência do usuário em cada estágio do ciclo de vida da reunião. O ciclo de vida da reunião inclui a experiência de aplicativo de pré-reunião, em reunião e pós-reunião, dependendo do status do participante.
-
-> [!NOTE]
->
-> * No momento, os aplicativos para reuniões de canal público agendadas estão disponíveis apenas na [versão prévia do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md).
->
-> * Não há suporte para aplicativos na [PSTN (](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options) Rede Telefônica Pública Comuada) e em chamadas do Teams criptografadas de ponta a [ponta](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90).
 
 O Teams dá suporte ao acesso a aplicativos durante a reunião para os seguintes tipos de reunião:
 
@@ -31,6 +25,16 @@ O Teams dá suporte ao acesso a aplicativos durante a reunião para os seguintes
 * [**Chamadas em grupo**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): chamadas iniciadas no chat em grupo.
 * [**Reuniões instantâneas**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): reuniões iniciadas **por meio do botão Reunir agora** no calendário do Teams.
 
+> [!NOTE]
+>
+> * No momento, os aplicativos para reuniões de canal público agendadas estão disponíveis apenas na [versão prévia do desenvolvedor público](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Os aplicativos não são compatíveis com o seguinte:
+>   * [Chamadas PSTN (Rede Telefônica Pública Comunada)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+>   * [Chamadas do Teams criptografadas de ponta a ponta](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+>   * [Reuniões instantâneas de canal](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+>   * Reuniões no [canal compartilhado](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
+
 Os usuários podem adicionar aplicativos à reunião usando a **+** opção na janela de reunião do Teams.
 
 :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Adicionar um aplicativo na reunião" border="true":::
@@ -39,9 +43,7 @@ Visite a [loja do Teams e](https://go.microsoft.com/fwlink/p/?LinkID=2183121) ex
 
 > [!NOTE]
 >
-> * Atualmente, quando uma terceira pessoa é adicionada a uma chamada um-a-um, a chamada é elevada a uma chamada de grupo que significa que uma nova sessão é iniciada. Os aplicativos adicionados à chamada um-a-um não estão disponíveis na chamada de grupo. No entanto, eles podem ser adicionados novamente.
->
-> * Atualmente, não há suporte para experiências de aplicativo em reuniões de canal instantâneo do Teams.
+> Atualmente, quando uma terceira pessoa é adicionada a uma chamada um-a-um, a chamada é elevada a uma chamada de grupo que significa que uma nova sessão é iniciada. Os aplicativos adicionados à chamada um-a-um não estão disponíveis na chamada de grupo. No entanto, eles podem ser adicionados novamente.
 
 A ilustração a seguir fornece a você uma ideia dos recursos de extensibilidade do aplicativo de reuniões:
 
