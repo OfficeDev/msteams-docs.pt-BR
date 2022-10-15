@@ -3,12 +3,12 @@ title: Guias em dispositivos móveis
 description: Saiba como a guia funciona em clientes Android e iOS do Microsoft Teams (móvel), sua autenticação, conexão de baixa largura de banda, teste ou distribuição.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 604d1ed8cabd745359e4714bc1b5fe82e67c7662
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450475"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575765"
 ---
 # <a name="tabs-on-mobile"></a>Guias em dispositivos móveis
 
@@ -63,6 +63,11 @@ A tabela a seguir descreve a disponibilidade e o comportamento da guia quando o 
 |----------|-----------|------------|
 |Guia Canal e grupo|Sim|A guia é aberta no navegador padrão do dispositivo em vez do cliente móvel do Teams `websiteUrl` usando a configuração do aplicativo, que também deve ser incluída na função do [código-fonte](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)`setSettings()`. No entanto, os usuários podem exibir a guia no cliente móvel do  Teams selecionando Mais ao lado do aplicativo e escolhendo **Abrir**, o que dispara a configuração do aplicativo`contentUrl`.|
 |Aplicativo pessoal|Não|Não aplicável|
+
+> [!NOTE]
+> As mensagens do bot serão mostradas na seção de chat se um aplicativo móvel tiver os recursos de bot e guia.
+>
+> Ao selecionar **o Chat** do aplicativo de bot e selecionar **Mais (...),** você não poderá ver a funcionalidade de guia desse aplicativo na lista. No entanto, se você selecionar **Mais (...)** no canto inferior direito da seção **Chat** , poderá exibir o aplicativo de guia com um link para a funcionalidade do aplicativo de bot desse aplicativo.
 
 ### <a name="apps-not-on-teams-store"></a>Aplicativos que não estão na loja do Teams
 
