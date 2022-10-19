@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 4646d47c5aa325291f060ea192dcc1705b414ac7
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338820"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575781"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Projetando seu aplicativo pessoal para o Microsoft Teams
 
-Um aplicativo pessoal pode ser um bot, um espaço de trabalho privado ou ambos. Às vezes, ele funciona como um local para criar ou exibir conteúdo, outras vezes oferece ao usuário uma visão geral de tudo o que é seu quando o aplicativo foi configurado como uma guia em vários canais.
+Um aplicativo pessoal pode ser um bot, um espaço de trabalho privado ou ambos. Às vezes, ele funciona como um local para criar ou exibir conteúdo. Outras vezes, ele oferece ao usuário uma visão geral de tudo o que é deles quando o aplicativo é configurado como uma guia em vários canais.
 
 Para orientar o design do seu aplicativo, as informações a seguir descrevem e ilustram como as pessoas podem adicionar, usar e gerenciar aplicativos pessoais no Teams.
 
@@ -47,8 +47,39 @@ Com um espaço de trabalho privado, os usuários podem exibir o conteúdo do apl
 |----------|-----------|
 |A|**Atribuição do aplicativo**: o nome do seu aplicativo.|
 |B|**Guias**: fornece navegação para seu aplicativo pessoal.|
-|C|**Menu Mais**: inclui opções e informações adicionais do aplicativo.|
+|C|**Menu Mais**: inclui outras opções e informações do aplicativo.|
 |D|**Navegação principal**: fornece navegação para outros recursos principais do Teams em seu aplicativo.|
+
+#### <a name="configure-and-add-multiple-actions-in-navbar"></a>**Configurar e adicionar várias ações no NavBar**
+
+Você pode adicionar várias ações ao NavBar superior direito e criar um menu de estouro para ações extras em um aplicativo.
+
+>[!NOTE]
+> Um máximo de cinco ações pode ser adicionado no NavBar, incluindo o menu de estouro.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="A captura de tela é um exemplo que descreve o menu NavBar e Estouro.":::
+
+Para **configurar e adicionar várias ações no NavBar**, chame [a API setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) . e adicione a `displayMode enum` propriedade a `MenuItem`. Define `displayMode enum` como um menu é exibido no NavBar. O valor padrão de `displayMode enum` é definido como `ifRoom`.
+
+Com base nos requisitos e no espaço disponível no NavBar, defina `displayMode enum` considerando um dos seguintes itens.
+
+* Se houver espaço, defina para `ifRoom = 0` colocar um item no NavBar.
+* Se não houver espaço, `overflowOnly = 1`defina, para que esse item sempre seja colocado no menu de estouro do NavBar, mas não no NavBar.
+
+A seguir está um exemplo de configuração do NavBar com um menu de estouro para várias ações:
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> A `setNavBarMenu` API não controla o **botão Atualizar** . Ele é exibido por padrão.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="A captura de tela é um exemplo que mostra a barra de navegação e várias ações em um menu de estouro.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="O exemplo mostra a anatomia estrutural da guia pessoal.":::
 
@@ -66,7 +97,7 @@ Com um espaço de trabalho privado, os usuários podem exibir o conteúdo do apl
 |A|**Atribuição do aplicativo**: o logotipo e o nome do seu aplicativo.|
 |B|**Guias**: fornece navegação para seu aplicativo pessoal.|
 |C|**Exibição de pop-up**: envia o conteúdo do seu aplicativo de uma janela principal para uma janela secundária independente.|
-|D|**Menu Mais**: inclui opções e informações adicionais do aplicativo. (Você também pode transformar **Configurações** em uma guia.)|
+|D|**Menu Mais**: inclui outras opções e informações do aplicativo. (Você também pode transformar **Configurações** em uma guia.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Este exemplo mostra a anatomia estrutural da guia pessoal.":::
 
@@ -88,7 +119,7 @@ Use um dos seguintes modelos e componentes do Teams para ajudar a criar sua guia
 
 ## <a name="use-a-personal-app-bot"></a>Usar um aplicativo pessoal (bot)
 
-Os aplicativos pessoais podem incluir um bot para conversas individuais e notificações privadas (por exemplo, quando um colega publica um comentário na artboard). Os usuários interagem com o bot em uma guia que você especifica.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on artboard). Users interact with the bot in a tab you specify.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomia: aplicativo pessoal (bot)
 
@@ -102,6 +133,30 @@ Os aplicativos pessoais podem incluir um bot para conversas individuais e notifi
 |B|**Botão Voltar**: leva os usuários de volta ao espaço de trabalho privado.|
 |C|**Mensagem de bot**: os bots geralmente enviam mensagens e notificações na forma de um cartão (como um Cartão Adaptável).|
 |D|**Caixa de composição**: campo de entrada para enviar mensagens ao bot.|
+
+#### <a name="configure-back-button"></a>Botão Configurar Voltar
+
+Ao selecionar o botão Voltar em um aplicativo do Teams, você retornará à plataforma teams sem navegar dentro do aplicativo.
+
+Para navegar dentro do aplicativo, configure o botão Voltar para que, ao selecionar o botão Voltar, você possa voltar para as etapas anteriores e navegar dentro do aplicativo.
+
+Para **configurar o botão Voltar**, chame a API [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) , que manipula a funcionalidade do botão Voltar, dependendo de uma das seguintes condições:
+
+* Quando `registerBackButtonHandler` definido como , o `false`SDK `navigateBack` do JavaScript chama a API e a plataforma teams manipula o botão Voltar.
+* Quando `registerBackButtonHandler` definido como `true`, o aplicativo lida com a funcionalidade do botão Voltar (você pode voltar para as etapas anteriores e navegar dentro do aplicativo), e a plataforma teams não executa nenhuma ação adicional.
+
+A seguir está um exemplo de configuração do botão Voltar:
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### <a name="desktop"></a>Área de trabalho
 
@@ -204,4 +259,6 @@ A menos que tenha criado seu aplicativo especificamente para o Teams, você prov
 Essas outras diretrizes de design podem ajudar dependendo do escopo do seu aplicativo pessoal:
 
 * [Criando sua guia](../../tabs/design/tabs.md)
-* [Projetar seu bot](../../bots/design/bots.md)
+* [Criar um bot](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [Enumeração DisplayMode](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)

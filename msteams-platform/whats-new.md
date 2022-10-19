@@ -4,12 +4,12 @@ description: Saiba mais sobre novos recursos de desenvolvedor do Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 069c908c18377b440d21e44c0a95594d2904722b
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560747"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575772"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -31,6 +31,8 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 
 **Outubro de 2022**
 
+* ***13 de outubro de 2022***: Configurar [NavBar e criar um menu de estouro para várias ações](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
+* ***13 de outubro de 2022***: configurar [o botão Voltar de um aplicativo](concepts/design/personal-apps.md#configure-back-button).
 * ***12 de outubro de 2022***: há suporte para aplicativos em reuniões instantâneas [, um para um e chamadas em grupo.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***12 de outubro de 2022***: tela [do Live Share](apps-in-teams-meetings/teams-live-share-canvas.md)
 
