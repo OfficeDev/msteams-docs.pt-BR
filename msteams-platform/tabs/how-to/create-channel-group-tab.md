@@ -1,19 +1,19 @@
 ---
-title: Criar uma guia de canal
+title: Criar uma guia de canal ou guia de grupo
 author: laujan
 description: Criar canal personalizado, guia agrupar com Node.js, ASP.NET Core, ASP.NET Core MVC. Gerar aplicativo, criar pacote, compilar e executar aplicativo, túnel secreto, carregar no Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560488"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615237"
 ---
-# <a name="create-a-channel-tab"></a>Criar uma guia de canal
+# <a name="create-a-channel-tab-or-group-tab"></a>Criar uma guia de canal ou guia de grupo
 
 As guias de canal ou grupo fornecem conteúdo para canais e chats em grupo, o que ajuda a criar espaços colaborativos em torno de conteúdo dedicado baseado na Web.
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: cbb97bd1fcd3422af968e7928436f4da1ae4038d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560467"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615286"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantenha seu aplicativo Microsoft Teams publicado
 
@@ -23,11 +23,6 @@ Você pode acompanhar o uso do aplicativo no [Relatório de uso do Teams](/offic
 Os dados de aplicativos recém-publicados demoram cerca de uma semana para aparecer no relatório.
 
 ## <a name="publish-updates-to-your-app"></a>Publicar atualizações em seu aplicativo
-
-> [!NOTE]
-> A loja do Teams evoluiu:
->
-> Anteriormente, os links eram copiados selecionando reticências no bloco do aplicativo. Com a experiência atualizada da loja do Teams, você acessará o mesmo na guia de detalhes dos aplicativos. Esta atualização estará disponível para o público geral (GA) até 1º de março de 2022.
 
 Você pode enviar alterações ao seu aplicativo (como novos recursos ou até mesmo metadados) no Partner Center. Essas alterações exigem um novo processo de revisão.
 

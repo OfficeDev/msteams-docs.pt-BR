@@ -5,12 +5,12 @@ description: Entenda o caso de uso e os recursos do aplicativo Microsoft Teams, 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: fcc360410d4af501d4097c6269b3e1157a6e742b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100417"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615174"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planeje seu aplicativo com os recursos do Microsoft Teams
 
@@ -88,7 +88,7 @@ A tabela a seguir inclui os recursos e a disponibilidade do Teams para a GCC, GC
 
 A lista a seguir ajuda a identificar a disponibilidade da GCC, GCC High e do DOD para os recursos:
 
-* Para aplicativos de terceiros, consulte [aplicativos Web](../samples/integrating-web-apps.md) e [extensibilidade de aplicativos de reunião](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* Para aplicativos de terceiros, consulte [aplicativos Web](../samples/integrating-web-apps.md) e [extensibilidade de aplicativos de reunião](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * Para bots, consulte [criar seu primeiro bot de conversação para o Teams](../get-started/first-app-bot.md), [criação do seu bot do Teams](../bots/design/bots.md), [adicionar bots aos aplicativos do Microsoft Teams](../resources/bot-v3/bots-overview.md) e [bots no Teams](../bots/what-are-bots.md).
 * Para aplicativos de sideload, consulte [permitir que seu aplicativo Microsoft Teams seja personalizado](../concepts/design/enable-app-customization.md), [distribuir seu aplicativo Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md) e [Carregar seu aplicativo no Teams ](../concepts/deploy-and-publish/apps-upload.md).
 * Para conectores personalizados, consulte [criar conectores do Office 365 para Microsoft Teams](../webhooks-and-connectors/how-to/connectors-creating.md).

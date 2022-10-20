@@ -3,12 +3,12 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos, significados e definições comuns usados na documentação do desenvolvedor do Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100858"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615230"
 ---
 # <a name="glossary"></a>Glossário
 
@@ -20,7 +20,6 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | --- | --- |
 | [Comando de ação](../messaging-extensions/how-to/action-commands/define-action-command.md) | Um tipo de aplicativo de extensão de mensagem que utiliza um pop-up para coletar ou exibir informações. <br>**Consulte também**: [Extensão de mensagem](#m); [Comandos de pesquisa](#s) |
 | [Cartões Adaptáveis](../task-modules-and-cards/what-are-cards.md) | Um trecho de conteúdo acionável adicionado a uma conversa por um bot ou extensão de mensagem. Use texto, elementos gráficos e botões com essas placas para comunicação avançada. |
-| [Usuário anônimo](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**Consulte também**: [Usuário federado](#f) |
 | [Catálogo de Aplicativos](../toolkit/publish.md) | Um site que armazena aplicativos do SharePoint e do Office para uso interno de uma organização. <br>**Consulte também**: [SPFx](#s) |
 | [Manifesto do aplicativo](../resources/schema/manifest-schema.md) | O manifesto do Teams descreve como o aplicativo se integra ao produto Microsoft Teams. Seu manifesto deve estar de acordo com o [esquema de manifesto](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [Pacote do aplicativo](../concepts/build-and-test/apps-package.md) | Um pacote de aplicativos do Teams é um arquivo zip que contém o arquivo de manifesto do aplicativo, o ícone de cor e o ícone de estrutura de tópicos. |
@@ -86,7 +85,6 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Usuário federado](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Um tipo de usuário em uma reunião de aplicativo do Teams que é externo e é convidado para a reunião. Este usuário tem credenciais válidas que são federadas por parceiros autorizados do Teams. Eles também são chamados de Usuários externos. <br>**Consulte também**: [Usuário anônimo](#a) |
 | [Experiência de primeira execução](../concepts/design/design-teams-app-ui-templates.md)|Uma FRE (Experiência de Primeira Execução) é a introdução de um usuário ao seu produto. A FRE ajuda os usuários a começar a usar as funções, os recursos e os benefícios do produto e influencia os usuários a voltar e continuar usando seu produto.|
 
 ## <a name="g"></a>G
@@ -104,7 +102,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | --- | --- |
 | [Provedor de identidade](../concepts/authentication/authentication.md) | Uma entidade que armazena e fornece credenciais para o usuário. Ele também permite que os usuários se registrem.  <br>**Consulte também**: [Autenticação](#a) |
 | [Webhook de entrada](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Ele permite que um aplicativo externo compartilhe conteúdo em canais do Teams. Esses webhooks são usados como ferramentas de acompanhamento e notificação. <br>**Consulte também**: [Webhook](#w); [Webhook de saída](#o) |
-| [Experiência de aplicativo na reunião](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**Consulte também**: [Ciclo de vida de reunião](#m) |
+| [Experiência de aplicativo na reunião](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**Consulte também**: [Ciclo de vida de reunião](#m) |
 
 ## <a name="l"></a>L
 
@@ -122,7 +120,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | --- | --- |
 | [Funcionalidade de mídia](../concepts/device-capabilities/media-capabilities.md) | Funcionalidades nativas do dispositivo, como câmera e microfone, que você pode integrar ao seu aplicativo Teams. <br>**Consulte também**: [Funcionalidade](#c); [Funcionalidade do dispositivo](#d) |
 | [Bot de reunião](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots que interagem com chamadas e reuniões do Teams usando voz, vídeo e compartilhamento de tela em tempo real. <br>**Consulte também**: [Bot de chamada](#c); [Bot de chat](#c) |
-| [Ciclo de vida da reunião](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Abrange desde a experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião. <br>**Consulte também**: [Experiências em reunião](#i) |
+| [Ciclo de vida da reunião](../apps-in-teams-meetings/teams-apps-in-meetings.md) | Abrange desde a experiência de aplicativos de pré-reunião, em reunião e pós-reunião. Você pode integrar guias, bots e extensões de mensagens em cada estágio do ciclo de vida da reunião. <br>**Consulte também**: [Experiências em reunião](#i) |
 | [Estágio da reunião](../sbs-meetings-stage-view.yml) | Um recurso do aplicativo de extensão de reunião. É um espaço compartilhado acessível a todos os participantes durante a reunião. Ele ajuda os participantes a interagir e colaborar com o conteúdo do aplicativo em tempo real. <br>**Consulte também**: [Exibição do estágio](#s) |
 | [Extensão de mensagem](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**Consulte também**: [Comandos de pesquisa](#s); [Comandos de ação](#a) |
 | [Extensão da reunião](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Um aplicativo projetado para ser usado durante o ciclo de vida da reunião para torná-lo mais produtivo, como quadro de comunicações, painel e muito mais. |

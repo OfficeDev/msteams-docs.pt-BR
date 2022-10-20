@@ -4,12 +4,12 @@ description: Neste artigo, saiba mais sobre o Portal do Desenvolvedor e como cri
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417497"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615132"
 ---
 # <a name="developer-portal-for-teams"></a>Portal do Desenvolvedor do Teams
 
@@ -19,9 +19,8 @@ O <a href="https://dev.teams.microsoft.com" target="_blank">Portal do Desenvolve
 
 > [!NOTE]
 >
-> * Atualmente, Portal do Desenvolvedor está disponível para locatários Nuvem da Comunidade Governamental (GCC), GCC-High ou DOD (Departamento de Defesa).
+> * Atualmente, o Portal do Desenvolvedor não está disponível para locatários do GCC (Government Community Cloud) –High ou do DoD (Departamento de Defesa).
 > * No entanto, você pode usar um locatário regular para criar um aplicativo no Portal do Desenvolvedor, baixar o aplicativo e carregar o aplicativo usando [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) para uma nuvem nacional. Para obter mais informações, consulte [Implantações de nuvem nacional](/graph/deployments).
-> * Atualmente, em alguns cenários, o Portal do Desenvolvedor não será carregado no navegador quando o AdBlocker estiver habilitado. Para continuar com o Portal do Desenvolvedor no navegador, desabilite o AdBlocker.
 
 ## <a name="register-an-app"></a>Registrar um aplicativo
 
