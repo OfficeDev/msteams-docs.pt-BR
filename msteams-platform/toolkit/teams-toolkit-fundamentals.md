@@ -7,16 +7,14 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 84a18c736c59c992bb4e3e51962ed631483f7f2b
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68296016"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615335"
 ---
 # <a name="teams-toolkit-overview"></a>Visão geral do Kit de ferramentas do Microsoft Teams
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Percurso do usuário do Kit de Ferramentas do Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 O Kit de Ferramentas do Teams simplifica a introdução ao desenvolvimento de aplicativos para o Microsoft Teams usando o Visual Studio e o Visual Studio Code.
 
@@ -26,6 +24,8 @@ O Kit de Ferramentas do Teams simplifica a introdução ao desenvolvimento de ap
 * Padrões inteligentes para hospedagem no Azure usando infraestrutura como código e Bicep
 * Criar configurações exclusivas, como desenvolvimento, teste e produção usando o recurso Ambientes
 * Traga seu aplicativo para sua organização ou o teams App Store usando ferramentas de publicação internas
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Percurso do usuário do Kit de Ferramentas do Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## <a name="available-for-visual-studio-and-visual-studio-code"></a>Disponível para Visual Studio e Visual Studio Code
 

@@ -5,12 +5,12 @@ description: Saiba como usar o SDK do cliente JavaScript do Teams para habilitar
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: bfa63b42383e507f004b0225c64f381e47e547f0
+ms.sourcegitcommit: 1ea035bc20303070268db38472839584ad4280b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160633"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653368"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar recursos de mídia
 
@@ -51,7 +51,7 @@ Atualize seu aplicativo do Teams do arquivo [ manifest.json do](../../resources/
 As APIs [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia) e [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) permitem que você use recursos de mídia nativa da seguinte forma:
 
 * Use o **microfone** para permitir que os usuários **gravem áudio** (grave 10 minutos de conversa) do dispositivo.
-* Use o **controle de** câmera nativo para permitir  que os usuários capturem e anexem imagens e capturem **vídeos (** gravem até 5 minutos de vídeo) em qualquer lugar.
+* Use o **controle de câmera** nativo para permitir  que os usuários capturem e anexem imagens e capturem **vídeos (** gravem até cinco minutos de vídeo) em qualquer lugar.
 * Use o **suporte da galeria** nativo para permitir que os usuários **selecionem imagens do dispositivo** como anexos.
 * Use o **controle do visualizador de imagens** nativo para **visualizar várias imagens** ao mesmo tempo.
 * Suporta **transferência de imagens grandes** (de 1 MB a 50 MB) por meio da ponte SDK.
@@ -61,8 +61,9 @@ As APIs [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams
 > [!IMPORTANT]
 >
 > * As APIs `selectMedia`, `getMedia` e `viewImages` podem ser invocadas de várias superfícies do Teams, como módulos de tarefas, guias e aplicativos pessoais. Para obter mais informações, consulte [Pontos de entrada para aplicativos do Teams](../extensibility-points.md).</br>
-> * `selectMedia` A API dá suporte a funcionalidades de câmera e microfone por meio de configurações de entrada diferentes.
+> * A `selectMedia` API dá suporte a funcionalidades de câmera e microfone por meio de configurações de entrada diferentes.
 > * A `selectMedia` API para acessar a funcionalidade de microfone dá suporte apenas a clientes móveis.
+> * A contagem máxima de imagens carregadas é determinada pelo [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) tamanho total da matriz retornada pela `selectMedia` API. Verifique se o tamanho da matriz não excede 4 MB, se o tamanho da matriz exceder 4 MB, a API gerará um código de erro 10000 que é SIZE_EXCEEDED erro.
 
 A tabela a seguir lista o conjunto de APIs para habilitar os recursos de mídia do dispositivo:
 
