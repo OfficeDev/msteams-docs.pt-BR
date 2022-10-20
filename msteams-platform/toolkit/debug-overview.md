@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499157"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653669"
 ---
 # <a name="debug-your-teams-app"></a>Depurar seu aplicativo Teams
 
@@ -88,71 +88,82 @@ Verifique se você pode alternar pontos de interrupção nos códigos-fonte de g
 
 ## <a name="customize-debug-settings"></a>Personalizar configurações de depuração
 
-O Kit de Ferramentas do Teams desmarca alguns pré-requisitos e permite personalizar as configurações de depuração para criar sua guia ou bot:
+O Kit de Ferramentas do Teams permite que você personalize as configurações de depuração para criar sua guia ou bot. Para obter mais informações sobre a lista completa de opções personalizáveis, consulte o documento [de configurações de depuração](https://aka.ms/teamsfx-debug-tasks).
+
+### <a name="customize-scenarios"></a>Personalizar cenários
 
 <br>
 
 <details>
-<summary><b>Usar o ponto de extremidade do bot</b></summary>
 
-1. Em Visual Studio Code configurações, você precisa desmarcar Se o **Ngrok está instalado e iniciado (ngrok)**.
+<summary><b>Ignorar verificações de pré-requisitos</b></summary>
 
-1. Você pode definir a `siteEndpoint` configuração `.fx/configs/config.local.json` em seu ponto de extremidade.
+Em `.fx/configs/tasks.json` , `"Validate & install prerequisites"` >  > `"args"``"prerequisites"`atualize as verificações de pré-requisito que você deseja ignorar.
 
-```json
-{
-    "bot": {
-        "siteEndpoint": "https://your-bot-tunneling-url"
-    }
-}
-
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Personalizar o ponto de extremidade do bot":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="ignorar as verificações de pré-requisitos":::
 
 </details>
 
 <details>
 <summary><b>Usar seu certificado de desenvolvimento</b></summary>
 
-1. Em Visual Studio Code configurações, você precisa desmarcar Verificar se o certificado de **desenvolvimento é confiável (devCert)**.
-
-1. Você pode definir e `sslCertFile` configurar `sslKeyFile` o caminho `.fx/configs/config.local.json` do arquivo de certificado e o caminho do arquivo de chave.
-
-```json
-{
-    "frontend": {
-        "sslCertFile": "",
-        "sslKeyFile": ""
-    }
-}
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Personalizar certificado":::
+1. Em`.fx/configs/tasks.json`, desmarque `"devCert"` em`"prerequisites"``"Validate & install prerequisites"``"args"` >  >  .
+1. Defina "SSL_CRT_FILE" e "SSL_KEY_FILE" no `.env.teamsfx.local` caminho do arquivo de certificado e no caminho do arquivo de chave.
 
 </details>
 
 <details>
-<summary><b>Use seus scripts de início para iniciar os serviços de aplicativo</b></summary>
+<summary><b>Personalizar argumentos de instalação do npm</b></summary>
 
-1. Para a guia, você precisa atualizar `dev:teamsfx` o script em `tabs/package.json`.
-
-1. Para o bot ou a extensão de mensagem, você precisa atualizar o `dev:teamsfx` script em `bot/package.json`.
-
-1. Por Azure Functions, você precisa atualizar `dev:teamsfx` o script em `api/package.json` e para o script de atualização do `watch:teamsfx` TypeScript.
-
-   > [!NOTE]
-   > Atualmente, a guia, o bot, os aplicativos de extensão de mensagem e as portas do Azure Functions não suportam a personalização.
+Em `.fx/configs/tasks.json`, defina npmInstallArgs em `"Install npm packages"`.
+  
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Instalar o pacote npm":::
 
 </details>
 
 <details>
+<summary><b>Modificar portas</b></summary>
+
+* Bot
+  1. Pesquise `"3978"` por todo o projeto e procure por aparências `tasks.json`em e `ngrok.yml` `index.js`.
+  1. Substitua-o pela porta.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Substituir sua porta para o bot":::
+* Tab
+  1. Em `.fx/configs/tasks.json`, pesquise `"53000"`por .
+  1. Substitua-o pela porta.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Substituir a porta da guia":::
+
+</details>
+
+<details>
+<summary><b>Usar seu próprio pacote de aplicativos</b></summary>
+
+Em `.fx/configs/tasks.json`, defina `"appPackagePath"` no `"Build & upload Teams manifest"` caminho do pacote do aplicativo.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="usar seu próprio caminho de pacote do aplicativo":::
+
+</details>
+
+<details>
+<summary><b>Usar seu próprio túnel</b></summary>
+
+1. Em `.fx/configs/tasks.json` em , `"Start Teams App Locally"`você pode atualizar `"Start Local tunnel"`.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Usar seu próprio túnel":::
+1. Inicie seu próprio serviço de túnel e atualize `"botMessagingEndpoint"` para seu próprio ponto de extremidade de mensagem em `.fx/configs/tasks.json` .`"Set up bot"`
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="atualizar ponto de extremidade de mensagens":::
+
+</details>
+
+<details>
+
 <summary><b>Adicionar variáveis de ambiente</b></summary>
 
 Você pode adicionar variáveis de ambiente ao arquivo `.env.teamsfx.local` para guias, bots, extensão de mensagem e para o Azure Functions. O Kit de Ferramentas do Teams carrega as variáveis de ambiente adicionadas para iniciar serviços durante a depuração local.
 
  > [!NOTE]
- > Certifique-se de iniciar uma nova depuração local depois de adicionar novas variáveis de ambiente, pois as variáveis de ambiente não suportam a recarga dinâmica.
+ > Inicie uma nova depuração local depois de adicionar novas variáveis de ambiente, pois as variáveis de ambiente não dão suporte à recarga dinâmica.
 
 </details>
 
@@ -161,7 +172,7 @@ Você pode adicionar variáveis de ambiente ao arquivo `.env.teamsfx.local` para
 
 O Kit de Ferramentas do Teams utiliza a depuração de vários destinos do Visual Studio Code para depurar a guia, o bot, a extensão de mensagem e o Azure Functions ao mesmo tempo. Você pode atualizar `.vscode/launch.json` e `.vscode/tasks.json` para depurar componente parcial. Se você quiser depurar a guia somente em uma guia mais bot com o projeto do Azure Functions, use as seguintes etapas:
 
-1. Comentário **`Attach to Bot`** e de **`Attach to Backend`** depuração composta em `.vscode/launch.json`.
+1. Atualizar `"Attach to Bot"` e `"Attach to Backend"` depurar composto em `.vscode/launch.json`.
 
    ```json
    {
@@ -181,7 +192,7 @@ O Kit de Ferramentas do Teams utiliza a depuração de vários destinos do Visua
    }
    ```
 
-2. Comente **`Start Backend`** e inicie o bot da tarefa Iniciar Tudo em .vscode/tasks.json.
+2. Atualize `"Start Backend"` e `"Start Bot"` da tarefa Iniciar Tudo em .vscode/tasks.json.
 
    ```json
    {

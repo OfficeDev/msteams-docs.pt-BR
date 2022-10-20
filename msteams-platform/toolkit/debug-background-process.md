@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: b8f85f092f9a99e9931a5ff0ea5e763c0b4fb0fe
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 4d654d5da598b9bf2b9bacfc189c97df08f9a359
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616783"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653641"
 ---
 # <a name="debug-background-process"></a>Depurar processo em segundo plano
 
@@ -21,13 +21,13 @@ O fluxo de trabalho do processo de depuração é o seguinte:
 
 1. `launch.json` file configures the debugger in Visual Studio Code.
 
-2. Visual Studio Code executa o **pré-inicialização composto**, a verificação **de pré-depuração & iniciar tudo** no `.vscode/tasks.json` arquivo.
+2. Visual Studio Code executa o **pré-inicialização compostoTask**, **inicie o aplicativo Teams localmente** no `.vscode/tasks.json` arquivo.
 
 3. Visual Studio Code, em seguida, inicia os depuradores especificados nas configurações compostas, como **Anexar ao Bot**, **Anexar ao back-end**, **Anexar ao front-end** e **Iniciar bot**.
 
 4. O Microsoft Edge ou o Google Chrome inicia uma nova instância do navegador e abre uma página da Web para carregar o cliente do Teams.
 
-## <a name="teams-toolkit-verification-of-prerequisites"></a>Verificação de pré-requisitos do Kit de Ferramentas do Teams
+## <a name="verification-of-prerequisites"></a>Verificação de pré-requisitos
 
 O Kit de Ferramentas do Teams verifica os seguintes pré-requisitos durante o processo de depuração:
 
@@ -42,9 +42,6 @@ O Kit de Ferramentas do Teams verifica os seguintes pré-requisitos durante o pr
 
 * O Kit de Ferramentas do Teams solicitará que você entre na conta do Microsoft 365, caso ainda não tenha entrado com suas credenciais válidas.
 * O carregamento ou sideload de aplicativo personalizado para seu locatário do desenvolvedor está ativado para evitar o encerramento de depuração local.
-* O Kit de Ferramentas do Teams instala o pacote NPM `ngrok@4.2.2` `~/.fx/bin/ngrok`do Ngrok, se o Ngrok não estiver instalado ou se a versão não corresponder ao requisito. O pacote NPM `/.fx/bin/ngrok/node modules/ngrok/bin` do Ngrok gerencia o binário Ngrok versão 2.3 aplicável ao bot e à extensão de mensagem.
-* O Kit de Ferramentas do Teams instala o pacote NPM do Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** e **macOs**`~/.fx/bin/func`, se o Azure Functions Core Tools versão 3 não estiver instalado ou a versão não corresponder ao requisito. O Azure Functions Core Tools pacote NPM no `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` gerencia Azure Functions Core Tools binário. Para Linux, a depuração local é encerrada.
-* O Kit de Ferramentas do Teams instala o SDK do .NET Core para **Windows** e **MacOS**`~/.fx/bin/dotnet`, se a versão do SDK do .NET Core aplicável ao Azure Functions não estiver instalada ou se a versão não corresponder ao requisito. Para Linux, a depuração local é encerrada.
 * O Kit de Ferramentas do Teams instala o pacote NPM `ngrok@4.2.2` `~/.fx/bin/ngrok`do Ngrok, se o Ngrok não estiver instalado ou se a versão não corresponder ao requisito. A versão binária Ngrok 2.3 é aplicável ao bot e à extensão de mensagem. O binário Ngrok é gerenciado pelo pacote Ngrok NPM em `/.fx/bin/ngrok/node modules/ngrok/bin`.
 * O Azure Functions Kit de Ferramentas do Teams instala um pacote NPM do Teams Core Tools, azure-functions-core-tools@3 para **Windows** e **MacOs**`~/.fx/bin/func`, se o Azure Functions Core Tools versão 4 não estiver instalado ou se a versão não corresponder ao requisito. O pacote NPM do Azure Functions Core Tools em `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` gerencia o binário do Azure Functions Core Tools. Para Linux, a depuração local é encerrada.
 * O Kit de Ferramentas do Teams instala o SDK do .NET Core para **Windows** e **MacOS** `~/.fx/bin/dotnet`na versão do SDK do .NET Core aplicável ao Azure Functions, se o SDK do .NET Core não estiver instalado ou a versão não corresponder ao requisito. Para Linux, a depuração local é encerrada.
@@ -103,7 +100,7 @@ Use the following .NET Core versions:
 
 Quando você seleciona **Iniciar Depuração (F5)**, o canal de saída do Kit de Ferramentas do Teams exibe o progresso e o resultado depois de verificar os pré-requisitos.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Resumo da verificação de pré-requisitos" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="Resumo da verificação de pré-requisitos" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
 ## <a name="register-and-configure-teams-app"></a>Registrar e configurar o aplicativo do Teams
 

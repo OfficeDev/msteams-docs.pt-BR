@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026959"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653655"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar seu aplicativo Teams localmente
 
@@ -23,6 +23,10 @@ O Kit de Ferramentas do Teams ajuda você a depurar e visualizar seu aplicativo 
 ## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Depurar seu aplicativo Microsoft Teams localmente para Visual Studio Code
 
 O Kit de Ferramentas do Teams Visual Studio Code oferece os recursos para automatizar a depuração do aplicativo Teams localmente. O Visual Studio permite depurar a guia, o bot e a extensão de mensagem. Você precisa configurar o Kit de Ferramentas do Teams antes de depurar seu aplicativo.
+
+> [!NOTE]
+>
+> Você pode atualizar seu projeto antigo do Kit de Ferramentas do Teams para usar novas tarefas. Para obter mais informações, consulte o documento de [configurações de depuração](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Configurar o Kit de Ferramentas do Teams para depuração
 
@@ -110,7 +114,7 @@ Executa tarefas conforme definido em `.vscode/tasks.json`.
 
 A imagem a seguir exibe os nomes das tarefas nas guias **OUTPUT** e **TERMINAL** do Visual Studio Code ao executar a guia, o bot ou a extensão de mensagem e Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Iniciar serviços de aplicativo":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Iniciar serviços de aplicativo" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### <a name="launches-debug-configurations"></a>Inicia configurações de depuração
 
