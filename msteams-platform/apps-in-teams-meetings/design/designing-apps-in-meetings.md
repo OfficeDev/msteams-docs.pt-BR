@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: b91b4a4306560c4a148b16ef1da9858ad50eca7b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243126"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615265"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Projetando sua extensão de reunião do Microsoft Teams
 
@@ -527,4 +527,4 @@ A navegação flutuante e os controles fora da tela e a necessidade de uma rolag
 ## <a name="next-step"></a>Próxima etapa
 
 > [!div class="nextstepaction"]
-> [Configurar seu aplicativo para reuniões](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+> [Configurar seu aplicativo para reuniões](~/apps-in-teams-meetings/build-tabs-for-meeting.md)

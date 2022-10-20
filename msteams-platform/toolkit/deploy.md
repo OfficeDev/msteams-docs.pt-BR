@@ -7,16 +7,16 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 4f5afe23e9d8deefdf2b1b182fa51cfe034e5c4d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781080"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615139"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Implantar o aplicativo Teams na nuvem
 
-O Kit de Ferramentas do Teams o ajuda a implantar ou carregar o código de front-end e back-end no seu aplicativo para seus recursos na nuvem provisionados no Azure.
+O Kit de Ferramentas do Teams ajuda você a implantar ou carregar o código de front-end e back-end em seu aplicativo para seus recursos de nuvem provisionados no Azure.
 
 ::: zone pivot="visual-studio-code"
 
@@ -24,9 +24,9 @@ O Kit de Ferramentas do Teams o ajuda a implantar ou carregar o código de front
 
 Você pode implantar o seguinte na nuvem:
 
-* A guia, como os aplicativos de front-end, é implantada no armazenamento do Azure e configurada para hospedagem na Web estática ou um site do SharePoint.
-* As APIs de back-end são implantadas nas funções do Azure.
-* O bot ou a extensão de mensagem são implantados no serviço de aplicativo do Azure.
+* A guia, como aplicativos front-end, é implantada no Armazenamento do Azure e configurada para hospedagem na Web estática ou um site do SharePoint.
+* As APIs de back-end são implantadas em Azure Functions.
+* O bot ou a extensão de mensagem é implantado Serviço de Aplicativo do Azure.
 
   > [!NOTE]
   > Antes de implantar o código do aplicativo na nuvem do Azure, você precisa concluir com [êxito o provisionamento de recursos de nuvem](provision.md).
@@ -42,13 +42,13 @@ Os guias de introdução ajudam você a implantar usando o Kit de Ferramentas do
 
 | Carga de trabalho do aplicativo do Teams | Código-fonte | Artefato do Build| Recurso de destino |
 |-------------|----------|---------------|---------------|
-|Guias com Reagir </br> A carga de trabalho de front-end| `yourProjectFolder/tabs`| `tabs/build` |Armazenamento do Azure |
+|Guias com Reagir </br> A carga de trabalho de front-end| `yourProjectFolder/tabs`| `tabs/build` |Armazenamento do Microsoft Azure |
 |Guias com o SharePoint </br> A carga de trabalho de front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |Catálogo de aplicativos do SharePoint |
-|APIs nas funções do Azure </br> A carga de trabalho de back-end | `yourProjectFolder/api`| Não aplicável |Funções do Azure |
+|APIs em Azure Functions </br> A carga de trabalho de back-end | `yourProjectFolder/api`| Não aplicável |Azure Functions |
 |Bots e extensões de mensagem </br> A carga de trabalho de back-end | `yourProjectFolder/bot` | Não aplicável | Serviço do Aplicativo do Azure |
 
 > [!NOTE]
-> Ao incluir o recurso de gerenciamento de API do Azure em seu projeto e disparar a implantação, você pode publicar suas APIs nas funções do Azure no serviço de gerenciamento de API do Azure.
+> Ao incluir o recurso de gerenciamento de API do Azure em seu projeto e disparar a implantação, você pode publicar suas APIs em Azure Functions serviço de gerenciamento de API do Azure.
 
 ::: zone-end
 
@@ -58,9 +58,9 @@ Os guias de introdução ajudam você a implantar usando o Kit de Ferramentas do
 
 Os seguintes aplicativos podem ser implantados no Visual Studio:
 
-* O aplicativo guia, como aplicativos de front-end, é implantado no armazenamento do Azure, configurado para hospedagem na Web estática.
-* O aplicativo de bot de notificação com gatilhos de função do Azure pode ser implantado no Azure Functions.
-* O aplicativo de bot ou a extensão de mensagem pode ser implantado nos serviços de aplicativo do Azure.
+* O aplicativo guia, como aplicativos de front-end, é implantado no Armazenamento do Azure, configurado para hospedagem na Web estática.
+* O aplicativo de bot de notificação com Azure Functions gatilhos pode ser implantado em Azure Functions.
+* O aplicativo de bot ou a extensão de mensagem pode ser implantado Azure App Serviços.
 
 Após a implantação, você pode visualizar o aplicativo no cliente do Teams ou no navegador da Web antes de começar a usar.
 

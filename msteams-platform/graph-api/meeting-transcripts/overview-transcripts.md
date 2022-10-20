@@ -3,12 +3,12 @@ title: Usar o Microsoft Graph para buscar transcrições para uma reunião do Te
 description: Descreve o processo, os cenários e as APIs para buscar transcrições no cenário pós-reunião.
 ms.localizationpriority: high
 ms.topic: concept
-ms.openlocfilehash: 0f16fff6675f6cb0f0bd7f4dc7550885a6177174
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
-ms.translationtype: HT
+ms.openlocfilehash: 48d94bcfb41caf7bff171e4ae25146578c5d5fd8
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232361"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615299"
 ---
 # <a name="get-meeting-transcripts-using-graph-apis"></a>Obter transcrições de reunião usando APIs do Graph
 
@@ -60,4 +60,4 @@ Para obter mais informações sobre como seu aplicativo pode saber quando as reu
 
 ## <a name="see-also"></a>Confira também
 
-- [Referências à API de aplicativos de reunião](../../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)
+- [APIs de reunião avançadas](../../apps-in-teams-meetings/meeting-apps-apis.md)

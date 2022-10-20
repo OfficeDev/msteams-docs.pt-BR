@@ -1,16 +1,16 @@
 ---
 title: Projetando o seu aplicativo personalizado
 author: heath-hamilton
-description: Saiba como projetar aplicativos Microsoft Teams e recursos incluem o kit de Microsoft Teams de interface do usuário, melhores práticas, exemplos e muito mais.
+description: Saiba como projetar aplicativos e recursos do Microsoft Teams, incluindo o Kit de Interface do Usuário do Microsoft Teams, melhores práticas, exemplos e muito mais.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 341c64b2afda7574b6d230257290220e2c97d325
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142875"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615307"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Projetando seu aplicativo Microsoft Teams
 
@@ -185,7 +185,7 @@ Crie Cartões Adaptáveis em nossa ferramenta baseada na Web.
 
 ## <a name="see-also"></a>Confira também
 
-* [Ative e configure seus aplicativos para reuniões do Teams](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Habilitar e configurar seus aplicativos para o estágio de reunião](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Criar um bot do Microsoft Teams](~/bots/design/bots.md)
 * [Criar um Assistente Virtual](~/samples/virtual-assistant.md)
 * [Criando módulos de tarefa para o seu aplicativo do Microsoft Teams](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
