@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: ea5d7b57b9ee6344d34fcc6ed560936ac6109304
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699133"
+ms.locfileid: "68701031"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>Criar aplicativos para o estágio de reunião do Teams
 
@@ -277,7 +277,7 @@ Você pode usar um aplicativo de assinatura na reunião para:
 
 Os participantes podem examinar e assinar documentos, como contratos de compra e pedidos de compra.
 
-![aplicativo de assinatura de documentos na reunião](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Aplicativo de assinatura de documento em reunião":::
 
 As seguintes funções participantes podem estar envolvidas durante a reunião:
 
@@ -289,9 +289,9 @@ As seguintes funções participantes podem estar envolvidas durante a reunião:
 
 |Nome do exemplo | Descrição | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-|Exemplo de estágio de reunião | Aplicativo de exemplo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-| Notificação na reunião | Demonstra como implementar a notificação em reunião usando o bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| Assinatura de documento em reunião | Demonstra como implementar um aplicativo de assinatura de documentos do Teams. Inclui o compartilhamento de conteúdo de aplicativo específico para o estágio, o SSO do Teams e a exibição de estágio específica do usuário. | [Exibir](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
+|Exemplo de estágio de reunião | Aplicativo de exemplo para mostrar uma guia no estágio de reunião para colaboração | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+| Notificação na reunião | Demonstra como implementar a notificação em reunião usando o bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+| Assinatura de documento em reunião | Demonstra como implementar um aplicativo de assinatura de documentos do Teams. Inclui o compartilhamento de conteúdo de aplicativo específico para o estágio, o SSO do Teams e a exibição de estágio específica do usuário. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
 ## <a name="step-by-step-guide"></a>Guias passo a passo
 
@@ -307,4 +307,3 @@ Siga o [guia passo a passo](../sbs-inmeeting-document-signing.yml) para criar um
 * [APIs de reunião avançadas](meeting-apps-apis.md)
 * [Cenas personalizadas do Modo Conferência](~/apps-in-teams-meetings/teams-together-mode.md)
 * [SDK do Live Share](teams-live-share-overview.md)
-* [Guia passo a passo para criar um aplicativo de assinatura de documentos em reunião](../sbs-inmeeting-document-signing.yml)
