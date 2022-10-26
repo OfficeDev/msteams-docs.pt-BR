@@ -113,20 +113,20 @@
           href: toolkit/install-Teams-Toolkit.md
         - name: Explorar o Kit de Ferramentas do Teams
           href: toolkit/explore-Teams-Toolkit.md
-        - name: Preparar-se para criar aplicativos usando o Kit de Ferramentas do Teams
+        - name: Preparar para criar aplicativos usando o Teams Toolkit
           href: toolkit/build-environments.md
-        - name: Usar o Kit de Ferramentas do Teams para criar seu aplicativo
+        - name: Usar o Teams Toolkit para criar seu aplicativo
           items:
-            - name: Pré-requisitos para criar seu aplicativo teams
+            - name: Pré-requisitos para criar seu aplicativo do Teams
               href: toolkit/tools-prerequisites.md
               displayName: Accounts to build your Teams app
             - name: Criar um novo projeto de aplicativo do Teams
               href: toolkit/create-new-project.md
-            - name: Desenvolver seu aplicativo Teams
+            - name: Desenvolver seu aplicativo teams
               items:
-                - name: Adicionar e gerenciar o ambiente
+                - name: Adicionar e gerenciar ambiente
                   href: toolkit/TeamsFx-multi-env.md
-                - name: Criar um aplicativo de vários recursos
+                - name: Criar um aplicativo de várias funcionalidades
                   href: toolkit/add-capability.md
                   displayName: Multiple capabilities app
                 - name: Criar recursos de nuvem baseados em funcionalidade
@@ -135,9 +135,9 @@
                   href: toolkit/add-API-connection.md
                 - name: Adicionar o logon único ao aplicativo do Teams
                   href: toolkit/add-single-sign-on.md
-            - name: Personalizar manifesto
+            - name: Personalizar Manifesto
               items:
-                - name: Personalizar o manifesto do aplicativo Teams
+                - name: Personalizar manifesto do aplicativo teams
                   href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
                 - name: Editar Azure AD manifesto
                   href: toolkit/AAD-manifest-customization.md
@@ -157,13 +157,13 @@
                   href: toolkit/provision.md
                 - name: Implantar o aplicativo Teams na nuvem
                   href: toolkit/deploy.md
-            - name: Testar seu aplicativo Teams
+            - name: Testar seu aplicativo teams
               items:
                 - name: Integrar e colaborar
                   href: toolkit/TeamsFx-collaboration.md
                 - name: Configurar pipelines de CI/CD
                   href: toolkit/use-CICD-template.md
-                - name: Fazer sideload e testar o aplicativo no ambiente do Teams
+                - name: Aplicativo de sideload e teste no ambiente do Teams
                   href: toolkit/sideload-and-test-app.md
                 - name: Testar o comportamento do aplicativo em um ambiente diferente
                   href: toolkit/test-app-behavior.md
@@ -171,7 +171,7 @@
           items:
             - name: Publicar aplicativos do Teams usando o Kit de Ferramentas do Teams
               href: toolkit/publish.md
-            - name: Integrar com o Portal do Desenvolvedor
+            - name: Integrar ao Portal do Desenvolvedor
               href: toolkit/Integrate-with-developer-portal.md
         - name: Perguntas frequentes
           href: toolkit/faq.md
@@ -370,7 +370,7 @@
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: Responder aos comandos de pesquisa
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: Ações universais para extensões de mensagem baseadas em pesquisa
+        - name: Ações universais para extensões de mensagens baseadas em pesquisa
           href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
           displayName: 'Handle tap actions, Just-in-time install, JIT'
     - name: Adicionar desenrolamento de link
@@ -386,7 +386,7 @@
           href: apps-in-teams-meetings/build-tabs-for-meeting.md
         - name: Criar aplicativos para o estágio de reunião
           href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-        - name: Criar notificação na reunião para reunião
+        - name: Criar notificação em reunião para reunião
           href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
         - name: Criar conversas extensíveis para chat de reunião
           href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
@@ -427,7 +427,7 @@
           items:
             - name: Tutorial de Pôquer ágil
               href: sbs-teams-live-share.yml
-            - name: Serviço personalizado do Azure Fluid Relay
+            - name: Serviço personalizado de Retransmissão de Fluidos do Azure
               href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
         - name: Perguntas frequentes do Live Share
           href: apps-in-teams-meetings/teams-live-share-faq.md
@@ -659,7 +659,7 @@
         - name: Preparar o envio da loja do Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration'
-        - name: 'Atualizar o Apple App Store Connect Team ID no Partner Center, aquisição de aplicativos em dispositivos móveis'
+        - name: 'Atualizar a ID da Equipe do Apple App Store Connect no Partner Center, aquisição de aplicativo no celular'
           href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
           displayName: Enable users to install your app on Teams iOS platform.
         - name: Enviar seu aplicativo

@@ -2,13 +2,13 @@
 title: Usar APIs do Graph para buscar a transcrição
 description: Descreve as APIs para buscar transcrições de reunião
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: c3882134a9954cff3f2cd4aa038902540a6af250
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
-ms.translationtype: HT
+ms.topic: conceptual
+ms.openlocfilehash: 2142bc1346a032f27d8612f6081156d2c4927e8f
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232368"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699175"
 ---
 # <a name="use-graph-apis-to-fetch-transcript"></a>Usar APIs do Graph para buscar a transcrição
 
@@ -46,7 +46,7 @@ Este método oferece suporte aos parâmetros de consulta `$skipToken` e `$top` [
 
 | Cabeçalho       | Valor |
 |:---------------|:--------|
-| Autorização  | {token} de portador. Obrigatório.  |
+| Autorização  | Bearer {token}. Required.  |
 
 **Corpo da solicitação**
 
@@ -116,7 +116,7 @@ GET users('{userId}')/onlineMeetings('{meetingId}')/transcripts('{transcriptId}'
 
 | Cabeçalho       | Valor |
 |:---------------|:--------|
-| Autorização  | {token} de portador. Obrigatório.  |
+| Autorização  | Bearer {token}. Required.  |
 
 **Corpo da solicitação**
 
@@ -178,7 +178,7 @@ Os tipos de formato com suporte são `text/vtt` para vtt OU `application/vnd.ope
 
 | Cabeçalho       | Valor |
 |:---------------|:--------|
-| Autorização  | {token} de portador. Obrigatório.  |
+| Autorização  | Bearer {token}. Required.  |
 | Aceitar  | text/vtt OU application/vnd.openxmlformats-officedocument.wordprocessingml.document. Opcional.  |
 
 **Corpo da solicitação**

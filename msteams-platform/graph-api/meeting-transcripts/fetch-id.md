@@ -2,13 +2,13 @@
 title: Obter ID de reunião e ID de organizador para buscar transcrições de reunião
 description: Descreve o processo para obtenção de ID de reunião e ID de organizador para buscar transcrições de reunião
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: 8be611f72a1ddac84bbe596a1bfc00621cb7c038
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.topic: conceptual
+ms.openlocfilehash: 0f9502b9e4f399725b115ece7c6ab5b705a1bf3f
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027309"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699168"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>Obter ID de reunião e ID de organizador
 
@@ -510,7 +510,7 @@ O conteúdo da resposta contém:
 Neste exemplo:
 
 - A ID de reunião está incluída como o valor para `msGraphResourceId`: *MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM 1ltVXpAdGhyZWFkLnYy*.
-- A ID do organizador `aadObjectId` `organizer`está contida como o valor para:  *6702afb6-109b-4c32-a141-6e65469502b9*.
+- A ID do organizador está contida como o valor para `aadObjectId` `organizer`:  *6702afb6-109b-4c32-a141-6e65469502b9*.
 
 </details>
 
