@@ -1,16 +1,16 @@
 ---
 title: Visão geral – Publicar seu aplicativo na loja do Microsoft Teams
-description: Publique seu aplicativo na loja do Microsoft Teams ou no AppSource. O que esperar depois de enviar, dicas para aprovação rápida e publicação de aplicativos vinculados a uma oferta de SaaS.
+description: Publique seu aplicativo na loja do Microsoft Teams ou no AppSource. O que esperar depois de enviar, dicas para aprovação rápida e publicação de aplicativos vinculados a uma oferta saaS.
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: f3981ccc9437c28b288a86912dd2b878e729c101
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560726"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773503"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publicar seu aplicativo na loja do Microsoft Teams
 
@@ -124,7 +124,7 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
 * **Postar envio de aplicativo**
 
-  * Depois de examinar o relatório de validação, responda ao thread de email com todas as consultas relacionadas ao relatório de validação ou se precisar de suporte adicional para resolver os problemas relatados.
+  * Depois de examinar o relatório de validação, responda ao thread de email com quaisquer consultas relacionadas ao relatório de validação ou se precisar de algum suporte extra para resolver os problemas relatados.
 
   * Certifique-se de ter largura de banda adequada para o desenvolvedor para resolver quaisquer problemas relatados até que o aplicativo seja aprovado.
 
@@ -172,6 +172,7 @@ Se seu aplicativo estiver pronto para produção, você poderá começar o proce
 
 ## <a name="see-also"></a>Confira também
 
+* [Publicar aplicativos do Teams na loja do Microsoft Teams](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Publicando nas lojas de aplicativos do Microsoft 365](/office/dev/store/)
 * [Carregue seu aplicativo Teams](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publicar seu aplicativo Teams em sua organização](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)

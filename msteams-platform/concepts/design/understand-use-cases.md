@@ -1,16 +1,16 @@
 ---
 title: Noções básicas sobre os casos de uso do seu aplicativo e os recursos do Teams
 author: heath-hamilton
-description: Saiba mais sobre as funcionalidades do aplicativo Microsoft Teaams– guias, bots, extensões de reunião, extensões de mensagem, conectores de webhook, experiência pessoal de aplicativo, experiência de aplicativo compartilhado.
+description: Saiba mais sobre os recursos de aplicativo do Microsoft Teams, como, guias, bots, extensões de reunião, extensões de mensagens, conectores webhook, experiência de aplicativo pessoal e experiência de aplicativo compartilhado.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 296f6d2e8fe5088c480490cc0dbcc035f9f659ec
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100452"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773510"
 ---
 # <a name="understand-your-use-cases"></a>Compreender os casos de uso
 
@@ -20,21 +20,22 @@ O usuário do aplicativo e os requisitos do aplicativo são as diretrizes básic
 
 Se você vai atender aos requisitos do usuário com seu aplicativo, primeiro precisa entender.
 
-- **Entenda o usuário**:
-  - Reconheça problemas do usuário e identifique as soluções para alguns problemas comuns que os usuários enfrentam.
-  - Crie seu aplicativo Teams encontrando a combinação certa de recursos do Teams para atender às necessidades do usuário.
-  - Entenda os casos de uso para saber como um usuário final interage com seu aplicativo.
+* **Entenda o usuário**:
+  * Reconheça problemas do usuário e identifique as soluções para alguns problemas comuns que os usuários enfrentam.
+  * Crie seu aplicativo Teams encontrando a combinação certa de recursos do Teams para atender às necessidades do usuário.
+  * Entenda os casos de uso para saber como um usuário final interage com seu aplicativo.
+  * É recomendável examinar o módulo enxuto [como publicar seu aplicativo na loja de aplicativos do Teams](/training/modules/microsoft-teams-publish-app-to-store/) para ajudar com seu aplicativo a passar pelo processo de envio da loja do Microsoft Teams.
 
-- **Entenda o problema**: Resolva o problema principal que seu aplicativo deve resolver.
+* **Entenda o problema**: Resolva o problema principal que seu aplicativo deve resolver.
 
-- **Considere integração**: Identifique os aplicativos e serviços que seu aplicativo requer, como autenticação, Microsoft Graph ou aplicativos Web.
+* **Considere integração**: Identifique os aplicativos e serviços que seu aplicativo requer, como autenticação, Microsoft Graph ou aplicativos Web.
 
 ## <a name="microsoft-teams-app-features"></a>Recursos do aplicativo Microsoft Teams
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [Recursos do aplicativo](#app-capabilities)
-- [Escopo do aplicativo](#app-scope)
+* [Recursos do aplicativo](#app-capabilities)
+* [Escopo do aplicativo](#app-scope)
 
 ### <a name="app-capabilities"></a>Recursos do aplicativo
 
@@ -150,7 +151,7 @@ Há algumas opções para [incorporar seu aplicativo na experiência de chamada 
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para o Teams
 
-A [API do Microsoft Graph para o Teams](/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que ajudam você a criar ou aprimorar recursos para seu aplicativo.
+O [Microsoft API do Graph for Teams](/graph/teams-concept-overview) fornece acesso a informações sobre equipes, canais, usuários e mensagens que ajudam você a criar ou aprimorar recursos para seu aplicativo.
 
    :::column-end:::
 
@@ -170,13 +171,13 @@ A [API do Microsoft Graph para o Teams](/graph/teams-concept-overview) fornece a
 
 Seu aplicativo pode ter um dos seguintes escopos:
 
-- **Experiência de aplicativo pessoal**: Um aplicativo pessoal é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
-- **Experiência de aplicativo compartilhado**: equipe, canal e chat são espaços de colaboração. Os aplicativos nesses contextos estão disponíveis para todos nesse espaço. Os espaços de colaboração normalmente se concentram em fluxos de trabalho para as interações do seu aplicativo ou para desbloquear novas interações sociais.
+* **Experiência de aplicativo pessoal**: Um aplicativo pessoal é um espaço dedicado ou bot para ajudar os usuários a se concentrarem em suas próprias tarefas ou exibir atividades importantes para eles.
+* **Experiência de aplicativo compartilhado**: equipe, canal e chat são espaços de colaboração. Os aplicativos nesses contextos estão disponíveis para todos nesse espaço. Os espaços de colaboração normalmente se concentram em fluxos de trabalho para as interações do seu aplicativo ou para desbloquear novas interações sociais.
 
 Um aplicativo pode existir em escopos diferentes. Por exemplo:
 
-- Seu aplicativo pode exibir dados em um local compartilhado central, ou seja, uma guia.
-- Ele também pode apresentar essas mesmas informações por meio de uma interface de conversa pessoal, ou seja, um bot.
+* Seu aplicativo pode exibir dados em um local compartilhado central, ou seja, uma guia.
+* Ele também pode apresentar essas mesmas informações por meio de uma interface de conversa pessoal, ou seja, um bot.
 
 Um usuário pode interagir com um aplicativo em uma guia de tela para fazer uma atividade ou pode optar por fazer o mesmo usando um bot de conversa.
 
