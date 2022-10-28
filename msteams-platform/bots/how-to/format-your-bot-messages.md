@@ -1,23 +1,23 @@
 ---
 title: Formatar suas mensagens de bot
 author: surbhigupta
-description: Saiba como formatar e estilizar suas mensagens de bot, como tachado, lista ordenada e não ordenada, hiperlink ou link de imagem. Entenda o suporte multiplataforma.
+description: Saiba como formatar e estilizar suas mensagens de bot, como strikethrough, ordered e unordered list, hyperlink ou image link. Entenda o suporte entre plataformas.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b0db9f9d9e55dc3f11474dac4b8c6563caf5fd1b
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100179"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772297"
 ---
 # <a name="format-your-bot-messages"></a>Formatar suas mensagens de bot
 
-A formatação de mensagens permite que você destaque o melhor nas mensagens de bot. Você pode formatar suas mensagens de bot para incluir cartões avançados como anexos que contêm elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante.
+A formatação de mensagens permite que você destaque o melhor nas mensagens de bot. Você pode formatar suas mensagens de bot para incluir cartões avançados como anexos que contêm elementos interativos, como botões, texto, imagens e assim por diante.
 
 > [!NOTE]
-> O limite de tamanho da mensagem do bot é de 40 KB. Se o limite de tamanho da mensagem do bot exceder 40 KB, o bot `413` receberá um código de status (`RequestEntityTooLarge`), que contém o código de erro `MessageSizeTooBig`. O limite de tamanho de mensagem do bot inclui todo o conteúdo da mensagem codificado como UTF-16 e não inclui imagens codificadas em Base64.
+> O limite de tamanho da mensagem do bot é de 40 KB. Se o limite de tamanho da mensagem do bot exceder 40 KB, o bot receberá um `413` código de status (`RequestEntityTooLarge`), que contém o código de `MessageSizeTooBig`erro . O limite de tamanho da mensagem do bot inclui toda a carga de mensagem codificada como UTF-16 e não inclui imagens codificadas do Base64.
 
 ## <a name="format-text-content"></a>Formatar o conteúdo de texto
 
@@ -35,11 +35,11 @@ O Teams dá suporte a um subconjunto de rótulos de formatação de markdown XML
 
 Atualmente, as seguintes limitações se aplicam à formatação:
 
-* As mensagens somente texto não dão suporte à formatação de tabela.
+* Mensagens somente texto não dão suporte à formatação de tabela.
 * Os cartões avançados dão suporte à formatação somente na propriedade de texto, não nas propriedades de título ou subtítulo.
-* Os cartões avançados não dão suporte a markdown ou formatação de tabela.
+* Cartões ricos não dão suporte a markdown ou formatação de tabela.
 
-Depois de formatar o conteúdo do texto, verifique se a formatação funciona em todas as plataformas compatíveis com o Teams.
+Depois de formatar o conteúdo de texto, verifique se a formatação funciona em todas as plataformas com suporte do Teams.
 
 ## <a name="cross-platform-support"></a>Suporte à plataforma cruzada.
 

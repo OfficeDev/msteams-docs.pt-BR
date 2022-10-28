@@ -1,34 +1,39 @@
 ---
 title: Responder à ação de envio do módulo de tarefas
 author: surbhigupta
-description: Saiba como responder à ação de envio do módulo de tarefa de um comando de ação de extensão de mensagem com mensagem proativa. Defina comandos de pesquisa e responda a pesquisas.
+description: Saiba como responder ao módulo de tarefa enviar ação de um comando de ação de extensão de mensagem com mensagem Proativa. Defina comandos de pesquisa e responda às pesquisas.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100480"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772304"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder à ação de envio do módulo de tarefas
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 Este documento orienta você sobre como seu aplicativo responde aos comandos de ação, como a ação de envio do módulo de tarefa do usuário.
-Depois que um usuário envia o módulo de tarefa, seu serviço Web recebe uma mensagem de invocação `composeExtension/submitAction` com a ID de comando e os valores de parâmetro. Seu aplicativo tem cinco segundos para responder à invocação, caso contrário, o usuário recebe uma mensagem de erro **Não é possível acessar o aplicativo** e qualquer resposta a ser invocada é ignorada pelo cliente do Teams.
+Depois que um usuário envia o módulo de tarefa, seu serviço Web recebe uma mensagem de invocação `composeExtension/submitAction` com a ID de comando e os valores de parâmetro. Seu aplicativo tem cinco segundos para responder à invocação.  
 
 Você tem as seguintes opções para responder:
 
-* Sem resposta: use a ação de envio para disparar um processo em um sistema externo e não fornecer comentários ao usuário. É útil para processos de execução longa e fornecer comentários como alternativa. Por exemplo, você pode enviar comentários com um [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
+* Sem resposta: use a ação de envio para disparar um processo em um sistema externo e não fornecer comentários ao usuário. É útil para processos de longa execução e para fornecer comentários alternadamente. Por exemplo, você pode enviar comentários com um [mensagem proativa](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Outro módulo de tarefa](#respond-with-another-task-module): você pode responder com um módulo de tarefa adicional como parte de uma interação de várias etapas.
 * [Resposta do cartão](#respond-with-a-card-inserted-into-the-compose-message-area): você pode responder com um cartão com o qual o usuário pode interagir ou inserir em uma mensagem.
 * [Cartão Adaptável do bot](#bot-response-with-adaptive-card): insira um Cartão Adaptável diretamente na conversa.
 * [Solicite o usuário para autenticar](~/messaging-extensions/how-to/add-authentication.md).
 * [Solicite ao usuário fornecer configuração adicional](~/get-started/first-message-extension.md).
 
-Para autenticação ou configuração, depois que o usuário concluir o processo, a invocação original será reenviada para seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis, com base no local `commandContext` de invocação da extensão de mensagem:
+Se o aplicativo não responder dentro de cinco segundos, o cliente do Teams repetirá a solicitação duas vezes antes de enviar uma mensagem **de erro Não é possível acessar o aplicativo**. Se o bot responder após o tempo limite, a resposta será ignorada.
+
+> [!NOTE]
+> O aplicativo deve adiar qualquer ação de execução longa depois que o bot responder à solicitação de invocação. Os resultados da ação de longa duração podem ser entregues como uma mensagem.
+
+Para autenticação ou configuração, depois que o usuário concluir o processo, a invocação original será reenviada para seu serviço Web. A tabela a seguir mostra quais tipos de respostas estão disponíveis, com base no local de invocação `commandContext` da extensão da mensagem:
 
 |Tipo de Resposta | Escrever | Barra de comando | Mensagem |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -42,7 +47,7 @@ Para autenticação ou configuração, depois que o usuário concluir o processo
 > * Quando você seleciona **Action.Submit** por meio de cartões ME, ele envia a atividade de invocação com o nome **composeExtension**, em que o valor é igual à carga normal.
 > * Quando você seleciona **Action.Submit** por meio de conversa, você recebe uma atividade de mensagem com o nome **onCardButtonClicked**, em que o valor é igual ao conteúdo normal.
 
-Se o aplicativo contiver um bot de conversação, instale o bot na conversa e carregue o módulo de tarefa. O bot é útil para obter contexto adicional para o módulo de tarefa. Para instalar o bot de conversação, consulte [Solicitação para instalar o bot de conversa](create-task-module.md#request-to-install-your-conversational-bot).
+Se o aplicativo contiver um bot de conversa, instale o bot na conversa e carregue o módulo de tarefa. O bot é útil para obter contexto adicional para o módulo de tarefa. Para instalar o bot de conversação, consulte [Solicitação para instalar o bot de conversa](create-task-module.md#request-to-install-your-conversational-bot).
 
 ## <a name="the-submitaction-invoke-event"></a>O evento de invocação submitAction
 
@@ -215,14 +220,14 @@ Para configurar a votação:
 1. O usuário seleciona a extensão de mensagem para invocar o módulo de tarefa.
 1. O usuário configura a votação com o módulo de tarefa.
 1. Depois de enviar o módulo de tarefa, o aplicativo usa as informações fornecidas para criar a votação como um Cartão Adaptável e a envia como uma resposta `botMessagePreview` ao cliente.
-1. Em seguida, o usuário pode visualizar a mensagem cartão adaptável antes que o bot a insira no canal. Se o aplicativo não for membro do canal, selecione adicioná-lo `Send` .
+1. Em seguida, o usuário pode visualizar a mensagem cartão adaptável antes que o bot a insira no canal. Se o aplicativo não for um membro do canal, selecione `Send` para adicioná-lo.
 
     > [!NOTE]
     >
     > * Os usuários também podem selecionar `Edit` a mensagem, que os retorna para o módulo de tarefa original.
     > * A interação com o Cartão Adaptável altera a mensagem antes de enviá-la.
     >
-1. Depois que o usuário selecionar `Send`, o bot postará a mensagem no canal.
+1. Depois que o usuário seleciona `Send`, o bot posta a mensagem no canal.
 
 ## <a name="respond-to-initial-submit-action"></a>Responder à ação de envio inicial
 
