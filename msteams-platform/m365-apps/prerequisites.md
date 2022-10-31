@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99050d8b8db4fac38e9d36c42a6c3efe7f1bf28d
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243322"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789909"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configurar seu ambiente de desenvolvimento para estender os aplicativos do Teams pelo Microsoft 365:
 
@@ -30,21 +30,21 @@ Para configurar seu ambiente de desenvolvimento:
 
 Você precisa de uma área restrita de assinatura de desenvolvedor do Microsoft 365para configurar seu ambiente de desenvolvimento. Se você ainda não tiver uma, crie um [locatário de área restrita](/office/developer-program/microsoft-365-developer-program-get-started) ou obtenha um locatário de teste por meio de sua organização.
 
-Você também precisará habilitar o sideload para o seu locatário:
+Você também precisa habilitar o sideload para seu locatário:
 
- 1. Entre no Centro [de administração do Teams com](https://admin.teams.microsoft.com/dashboard) suas credenciais de locatário de teste.
+ 1. Entre no [centro de administração do Teams](https://admin.teams.microsoft.com/dashboard) com suas credenciais de locatário de teste.
 
- 1. Vá para **aplicativos do Teams Gerenciar** > **aplicativos**.
+ 1. Acesse aplicativos  > **do Teams****Gerenciar aplicativos**.
 
- 1. No canto superior direito, selecione **configurações de aplicativo em toda a organização**.
+ 1. Na parte superior direita, selecione **Configurações de aplicativo em toda a organização**.
 
- 1. Em Aplicativos personalizados, ative a **interação com o botão de alternância de aplicativo** personalizado e salve.
+ 1. Em Aplicativos personalizados, ative a **Interação com** alternância de aplicativo personalizado e **Salvar**.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="A captura de tela é um exemplo que habilita o sideload para aplicativos personalizados do Teams Administração Center":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="A captura de tela é um exemplo que permite sideload para aplicativos personalizados do Teams Administração Center":::
 
- 1. Além das configurações de aplicativo em toda a organização, as configurações personalizadas de política de aplicativo também permitem que os usuários carreguem aplicativos personalizados no Teams. Para obter mais informações, consulte [gerenciar configurações e políticas de aplicativo personalizadas](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+ 1. Além das configurações de aplicativo em toda a organização, as configurações de política de aplicativo personalizadas também permitem que os usuários carreguem aplicativos personalizados no Teams. Para obter mais informações, consulte [gerenciar políticas e configurações de aplicativo personalizados](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
- 1. No centro de administração do Teams, acesse as políticas de Instalação de aplicativos do **Teams** > **e, em** seguida, selecione **a política Global (padrão em toda a organização**).
+ 1. No centro de administração do Teams, acesse **políticas de instalação** de **aplicativos** >  do Teams e selecione **Política global (padrão em toda a organização).**
 
  1. Ative **Carregar aplicativos personalizados** e selecione **Salvar**.
 
@@ -62,17 +62,17 @@ Para registrar seu locatário de teste para versões direcionadas do Office 365:
     1. **Versão de destino para todos**
     1. **Versão de destino para usuários selecionados**
 
-    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Menu “Preferências de versão” do Centro de administração do Microsoft 365 menu com a opção Versão de destino selecionada":::
+    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="A captura de tela é um exemplo que mostra o menu &quot;Preferências de lançamento&quot; Centro de administração do Microsoft 365 com a opção de versão direcionada selecionada.":::
 
 1. Selecione **Salvar**.
 
-Para obter mais informações sobre as opções de versão do Office 365, consulte [Configurar as opções de versão padrão ou de destino](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) na *ajuda do centro de administração do Microsoft 365*.
+Para obter mais informações sobre Office 365 opções de versão, consulte [configurar as opções de versão Standard ou Targeted](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) em *Centro de administração do Microsoft 365 ajuda*.
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Instalar aplicativos do Office em seu ambiente de teste
 
 ### <a name="desktop"></a>Desktop
 
-Você pode visualizar aplicativos do Teams em execução no Outlook na área de trabalho do Windows usando um *build de Canal beta* recente. Verifique se você precisa alterar o [canal de atualização do Microsoft 365 Apps](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) para o seu locatário de teste para instalar um build do Office 365 Canal beta.
+Você pode visualizar aplicativos do Teams em execução no Outlook na área de trabalho do Windows usando um *build de Canal beta* recente. Verifique se você precisa [alterar o canal de atualização Microsoft 365 Apps](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) para que seu locatário de teste instale um Office 365 build do Canal Beta.
 
 Para instalar o Office 365 Canal beta aplicativos em seu ambiente de teste:
 
@@ -84,11 +84,11 @@ Para instalar o Office 365 Canal beta aplicativos em seu ambiente de teste:
 1. Abra o Outlook (cliente da área de trabalho) e configure a conta de email usando suas credenciais de locatário de teste.
 1. Abra **Arquivo** > **Conta do Office** > **Sobre o Outlook** para confirmar que você está executando uma compilação do Outlook de *Canal Beta* do Microsoft 365.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Acesse &quot;Sobre o Outlook&quot; em sua conta do Office para verificar se você está executando um build do Canal Beta.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="A captura de tela é um exemplo que mostra sobre o Outlook para verificar se você está executando um build do Canal Beta.":::
 
 1. Verifique se o *Microsoft Edge WebView2 Runtime* está instalado. Abra no Windows o **Iniciar** > **Aplicativos e recursos** e pesquise o **modo de exibição da Web**:
 
-    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Pesquise 'modo de exibição da Web' em 'Aplicativos e recursos' em suas Configurações do Windows":::
+    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="A captura de tela é um exemplo que mostra o campo de pesquisa em suas configurações do Windows.":::
 
     Se não estiver listado, instale o [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) em seu ambiente de teste.
 
@@ -96,22 +96,22 @@ Para instalar o Office 365 Canal beta aplicativos em seu ambiente de teste:
 
 Você pode visualizar as guias pessoais do Teams em execução no aplicativo do Office para Android ingressando no programa beta.
 
-Para instalar o aplicativo do Office beta mais recente, compile em seu dispositivo Android físico ou android emulador:
+Para instalar a versão beta mais recente do aplicativo do Office, crie para seu dispositivo Android físico ou emulador android:
 
-1. Use um dispositivo Android compatível [com o Google](https://support.google.com/googleplay/answer/1727131) Play.
+1. Verifique se você usa um [dispositivo Android compatível com](https://support.google.com/googleplay/answer/1727131) o Google Play.
 1. Inicie a **Play Store** em seu dispositivo Android.
-1. Pesquise o Office e **selecione Microsoft Office: Editar & Compartilhamento**.
-1. Selecione o **botão** Instalar.
+1. Pesquise o office e selecione **Microsoft Office: Editar & Compartilhar**.
+1. Selecione o botão **Instalar** .
 
-    :::image type="content" source="images/office-android-install.png" alt-text="captura de tela do Microsoft Office: Editar & compartilhar aplicativo na Google Play Store":::
+    :::image type="content" source="images/office-android-install.png" alt-text="A captura de tela é um exemplo que mostra o botão de instalação do Microsoft Office: Editar & aplicativo Compartilhar na Google Play Store.":::
 
-1. Selecione **Ingressar** em **Ingressar na seção beta** após a conclusão da instalação.
+1. Selecione **Ingressar** **na seção Ingressar na versão beta** após a conclusão da instalação.
 
-    :::image type="content" source="images/office-android-join-beta.png" alt-text="captura de tela de Ingressar na tela beta":::
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="A captura de tela é um exemplo que mostra a tela Ingressar na tela beta.":::
 
 1. Inicie o aplicativo do Office e entre com suas credenciais de locatário de teste.
-1. Abra seu perfil **(Eu) > Configurações** e role até a parte inferior do menu.
-2. Use o aplicativo do Office versão 16.0.15726.20000 ou superior para Android.
+1. Abra o perfil **(eu) > Configurações** e role até a parte inferior do menu.
+2. Verifique se você usa o aplicativo do Office versão 16.0.15726.20000 ou superior para Android.
 
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>Alternar para a versão de Pré-visualização do desenvolvedor do Teams
 
@@ -121,7 +121,7 @@ Certifique-se de alternar para a [Pré-visualização pública de desenvolvedor]
 1. No menu de reticências (**...**) ao lado do seu perfil de usuário, selecione **Sobre** > **Pré-visualização do Desenvolvedor**. Uma caixa de diálogo é exibida, selecione **Alternar para pré-visualização do desenvolvedor**.
 1. Depois que o aplicativo do Teams for reiniciado, vá para o menu de reticências (**...**) ao lado do seu perfil de usuário e verifique se **Pré-visualização de desenvolvedor** está selecionado.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Pré-visualização pública do desenvolvedor":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="A captura de tela é um exemplo que mostra a opção de visualização do desenvolvedor público no Teams.":::
 
 ## <a name="install-visual-studio-code-and-teams-toolkit-extension"></a>Instalar a Visual Studio Code e a extensão do Kit de Ferramentas do Teams
 

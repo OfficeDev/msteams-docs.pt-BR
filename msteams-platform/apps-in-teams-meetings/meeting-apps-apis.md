@@ -1,17 +1,17 @@
 ---
 title: APIs de aplicativos de reunião
 author: v-sdhakshina
-description: Neste artigo, aprenda as referências de API de aplicativos de reunião que estão disponíveis para o cliente do Teams e os SDK do Bot Framework com exemplos, exemplos de código e códigos de resposta.
+description: Neste artigo, aprenda referências de API de aplicativos de reunião disponíveis para clientes do Teams e SDKs do Bot Framework com exemplos, exemplos de código e códigos de resposta.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 79b5f58f5089ac40a12f608616dc52b90ed6ef08
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: f3d44317dbc8ea317e8fe3c5bdeb19404df75265
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615388"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789860"
 ---
 # <a name="meeting-apps-apis"></a>APIs de aplicativos de reunião
 
@@ -36,7 +36,7 @@ A tabela a seguir fornece uma lista de APIs disponíveis na biblioteca JavaScrip
 |[**Compartilhar Conteúdo do Aplicativo na Janela de Conteúdo Compartilhado**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Compartilhe partes específicas do aplicativo para o estágio de reunião no painel lateral do aplicativo em uma reunião. | [SDK da biblioteca JavaScript do Microsoft Teams](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Obtenha eventos de reunião do Teams em tempo real**](#get-real-time-teams-meeting-events-api)|Busque eventos de reunião em tempo real, como a hora real de início e término.| [SDK do Microsoft Bot Framework](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Obter estado de áudio de entrada**](#get-incoming-audio-state) | Permite que um aplicativo obtenha a configuração de estado de áudio de entrada para o usuário da reunião.| [SDK da biblioteca JavaScript do Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Alternar áudio de entrada**](#toggle-incoming-audio) | Permite que um aplicativo alterne a configuração de estado de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa.| [SDK da biblioteca JavaScript do Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Alternar áudio de entrada**](#toggle-incoming-audio) | Permite que um aplicativo alterne a configuração de estado de áudio de entrada para o usuário da reunião de mudo para unmute ou vice-versa.| [SDK da biblioteca JavaScript do Microsoft Teams](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>Obter API de contexto do usuário
 
@@ -138,18 +138,18 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Nome da propriedade | Descrição |
 |---|---|
 | **user.id** | ID do usuário. |
-| **user.aadObjectId** | ID de objeto do Azure Active Directory do usuário. |
+| **user.aadObjectId** | ID do objeto do Azure Active Directory do usuário. |
 | **user.name** | Nome do usuário. |
-| **user.givenName** | Nome do usuário.|
-| **user.surname** | Sobrenome do usuário. |
+| **user.givenName** | Primeiro nome do usuário.|
+| **user.sobrenome** | Sobrenome do usuário. |
 | **user.email** | ID de email do usuário. |
 | **user.userPrincipalName** | UPN do usuário. |
 | **user.tenantId** | Locatário do Azure Active Directory. |
-| **user.userRole** | Função do usuário. Por exemplo, 'admin' ou 'user'. |
-| **meeting.role** | A função do participante na reunião. Por exemplo, 'Organizador' ou 'Apresentador' ou 'Participante'. |
+| **user.userRole** | Função do usuário. Por exemplo, 'administrador' ou 'user'. |
+| **meeting.role** | A função do participante na reunião. Por exemplo, "Organizador" ou "Apresentador" ou "Participante". |
 | **meeting.inMeeting** | O valor que indica se o participante está na reunião. |
-| **conversation.id** | A ID de chat da reunião. |
-| **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
+| **conversation.id** | A ID do chat da reunião. |
+| **conversation.isGroup** | Booliano indicando se a conversa tem mais de dois participantes. |
 
 ### <a name="response-codes"></a>Códigos de resposta
 
@@ -239,13 +239,13 @@ POST /v3/conversations/{conversationId}/activities
 | Nome da propriedade | Descrição |
 |---|---|
 | **type** | Tipo de atividade. |
-| **text** | O conteúdo de texto da mensagem. |
+| **text** | O conteúdo do texto da mensagem. |
 | **resumo** | O texto de resumo da mensagem. |
-| **channelData.notification.alertInMeeting** | Booliano que indica se uma notificação deve ser mostrada ao usuário durante uma reunião. |
+| **channelData.notification.alertInMeeting** | Booliano indicando se uma notificação deve ser mostrada ao usuário durante uma reunião. |
 | **channelData.notification.externalResourceUrl** | O valor da URL de recurso externo da notificação.|
 | **replyToId** | A ID da mensagem pai ou raiz do thread. |
-| **APP_ID** | ID do aplicativo declarada no manifesto. |
-| **completionBotId** | ID do aplicativo de bot |
+| **APP_ID** | ID do aplicativo declarada em manifesto. |
+| **completionBotId** | ID do aplicativo bot |
 
 ### <a name="response-codes"></a>Códigos de resposta
 
@@ -272,7 +272,7 @@ Para usar a API de Detalhes da Reunião, você deve obter uma permissão RSC dif
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.12 e posterior</b></summary>
+<summary><b>Para manifesto de aplicativo versão 1.12 e posterior</b></summary>
 
 Use o exemplo a seguir para configurar as propriedades `webApplicationInfo` e `authorization` para qualquer reunião privada:
 
@@ -320,7 +320,7 @@ Use o exemplo a seguir para configurar as propriedades `webApplicationInfo` e `a
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.11 e anterior</b></summary>
+<summary><b>Para manifesto de aplicativo versão 1.11 e anterior</b></summary>
 
 Use o exemplo a seguir para configurar a propriedade `webApplicationInfo` do manifesto do aplicativo para qualquer reunião privada:
 
@@ -353,7 +353,7 @@ Use o exemplo a seguir para configurar a propriedade `webApplicationInfo` do man
 > [!NOTE]
 >
 > * O bot pode receber eventos de início ou término de reunião automaticamente de todas as reuniões criadas em todos os canais adicionando `ChannelMeeting.ReadBasic.Group` ao manifesto para a permissão RSC.
-> * Para uma chamada um-para-um `organizer` é o iniciador do chat e para chamadas de `organizer` grupo é o iniciador de chamada. Para reuniões de canal `organizer` público é a pessoa que criou a postagem do canal.
+> * Para uma chamada `organizer` individual, é o iniciador do chat e para chamadas `organizer` em grupo é o iniciador de chamadas. Para reuniões `organizer` de canal público é a pessoa que criou a postagem do canal.
 
 ### <a name="query-parameter"></a>Parâmetro de consulta
 
@@ -443,7 +443,7 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
     }
     ```
 
-* **Chamadas um-a-um:**
+* **Chamadas um a um:**
 
     ```json
     {
@@ -466,7 +466,7 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
     
     ```
 
-* **Chamadas de grupo:**
+* **Chamadas em grupo:**
 
     ```json
     {
@@ -523,32 +523,32 @@ O corpo da resposta JSON para a API de Detalhes da Reunião é o seguinte:
 | Nome da propriedade | Descrição |
 |---|---|
 | **details.id** | A ID da reunião, codificada como uma cadeia de caracteres BASE64. |
-| **details.msGraphResourceId** | O MsGraphResourceId, usado especificamente para chamadas de API do Graph MS. |
+| **details.msGraphResourceId** | O MsGraphResourceId, usado especificamente para chamadas de ms API do Graph. |
 | **details.scheduledStartTime** | A hora de início agendada da reunião, em UTC. |
 | **details.scheduledEndTime** | A hora de término agendada da reunião, em UTC. |
 | **details.joinUrl** | A URL usada para ingressar na reunião. |
 | **details.title** | O título da reunião. |
 | **details.type** | O tipo da reunião (OneToOneCall, GroupCall, Scheduled, Recurring, MeetNow, ChannelScheduled e ChannelRecurring). |
-| **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
+| **conversation.isGroup** | Booliano indicando se a conversa tem mais de dois participantes. |
 | **conversation.conversationType** | O tipo de conversa. |
-| **conversation.id** | A ID de chat da reunião. |
-| **organizer.id** | A ID de usuário do Organizador. |
-| **organizer.aadObjectId** | A ID de objeto do Azure Active Directory do Organizador. |
-| **organizer.tenantId** | A ID de locatário do Azure Active Directory do Organizador. |
+| **conversation.id** | A ID do chat da reunião. |
+| **organizer.id** | A ID do usuário do Organizador. |
+| **organizer.aadObjectId** | ID do objeto do Azure Active Directory do Organizador. |
+| **organizer.tenantId** | A ID do locatário do Azure Active Directory do Organizador. |
 
-No caso de tipo de reunião recorrente,
+No caso do tipo de reunião recorrente,
 
-**startDate**: especifica a data para começar a aplicar o padrão. O valor de startDate deve corresponder ao valor de data da propriedade start no recurso de evento. Observe que a primeira ocorrência da reunião poderá não ocorrer nessa data se ela não se ajustar ao padrão.
+**startDate**: especifica a data para começar a aplicar o padrão. O valor de startDate deve corresponder ao valor de data da propriedade inicial no recurso de evento. Observe que a primeira ocorrência da reunião pode não ocorrer nesta data se não se ajustar ao padrão.
 
-**endDate**: especifica a data para parar de aplicar o padrão. Observe que a última ocorrência da reunião poderá não ocorrer nessa data se ela não se ajustar ao padrão.
+**endDate**: especifica a data para parar de aplicar o padrão. Observe que a última ocorrência da reunião pode não ocorrer nesta data se não se ajustar ao padrão.
 
 ## <a name="send-real-time-captions-api"></a>API de envio de legendas em tempo real
 
-A API de envio de legendas em tempo real expõe um ponto de extremidade POST para legendas DE CART (conversão em tempo real) de acesso de comunicação do Teams, legendas ocultas com tipo humano. O conteúdo de texto enviado para esse ponto de extremidade aparece para os usuários finais em uma reunião do Teams quando eles têm legendas habilitadas.
+A API enviar legendas em tempo real expõe um ponto de extremidade POST para legendas cart (tradução em tempo real) de acesso de comunicação do Teams, legendas fechadas com tipo humano. O conteúdo de texto enviado para este ponto de extremidade aparece para usuários finais em uma reunião do Teams quando eles têm legendas habilitadas.
 
 ### <a name="cart-url"></a>URL DO CART
 
-Você pode obter a URL do CART para o ponto de extremidade POST na página **de opções da** Reunião em uma reunião do Teams. Para obter mais informações, consulte [legendas CART em uma reunião do Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Você não precisa modificar a URL do CART para usar legendas CART.
+Você pode obter a URL do CART para o ponto de extremidade POST na página **Opções de reunião** em uma reunião do Teams. Para obter mais informações, consulte [legendas CART em uma reunião do Microsoft Teams](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). Você não precisa modificar a URL do CART para usar legendas CART.
 
 #### <a name="query-parameter"></a>Parâmetro de Consulta
 
@@ -601,7 +601,7 @@ A tabela a seguir fornece os códigos de erro:
 ## <a name="get-real-time-teams-meeting-events-api"></a>Obter API de eventos de reunião do Teams em tempo real
 
 > [!NOTE]
-> Eventos de reunião do Teams em tempo real só têm suporte para reuniões agendadas.
+> Os eventos de reunião do Teams em tempo real só têm suporte para reuniões agendadas.
 
 O usuário pode receber eventos de reunião em tempo real. Assim que qualquer aplicativo é associado a uma reunião, a hora real de início e término da reunião é compartilhada com o bot. A hora real de início e término de uma reunião é diferente da hora de início e término agendada. A API de Detalhes da Reunião fornece a hora de início e término agendada. O evento fornece a hora real de início e término.
 
@@ -615,7 +615,7 @@ O manifesto do aplicativo deve ter a propriedade `webApplicationInfo` para receb
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.12 e posterior</b></summary>
+<summary><b>Para manifesto de aplicativo versão 1.12 e posterior</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -642,7 +642,7 @@ O manifesto do aplicativo deve ter a propriedade `webApplicationInfo` para receb
 
 <details>
 
-<summary><b>Para o manifesto do aplicativo versão 1.11 e anterior</b></summary>
+<summary><b>Para manifesto de aplicativo versão 1.11 e anterior</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -798,25 +798,25 @@ O código a seguir fornece um exemplo de conteúdo de evento final de reunião:
 | **type** | Tipo de atividade. |
 | **timestamp** | Data e hora locais da mensagem, expressas no formato ISO-8601. |
 | **id** | ID da atividade. |
-| **channelId** | Canal ao qual essa atividade está associada. |
-| **Serviceurl** | URL do serviço em que as respostas a essa atividade devem ser enviadas. |
+| **channelId** | Canalizar essa atividade está associado. |
+| **Serviceurl** | URL de serviço para onde as respostas a essa atividade devem ser enviadas. |
 | **from.id** | ID do usuário que enviou a solicitação. |
 | **from.aadObjectId** | ID de objeto do Azure Active Directory do usuário que enviou a solicitação. |
-| **conversation.isGroup** | Booliano que indica se a conversa tem mais de dois participantes. |
+| **conversation.isGroup** | Booliano indicando se a conversa tem mais de dois participantes. |
 | **conversation.tenantId** | ID do locatário do Azure Active Directory da conversa ou reunião. |
-| **conversation.id** | A ID de chat da reunião. |
+| **conversation.id** | A ID do chat da reunião. |
 | **recipient.id** | ID do usuário que recebe a solicitação. |
 | **recipient.name** | Nome do usuário que recebe a solicitação. |
-| **entities.locale** | que contém metadados sobre localidade. |
-| **entities.country** | que contém metadados sobre o país. |
-| **entities.type** | que contém metadados sobre o cliente. |
+| **entities.locale** | entidade que contém metadados sobre a localidade. |
+| **entities.country** | entidade que contém metadados sobre o país. |
+| **entities.type** | entidade que contém metadados sobre o cliente. |
 | **channelData.tenant.id** | Locatário do Azure Active Directory. |
-| **channelData.source** | O nome de origem de onde o evento é acionado ou invocado. |
+| **channelData.source** | O nome de origem de onde o evento é disparado ou invocado. |
 | **channelData.meeting.id** | A ID padrão associada à reunião. |
 | **Valor. MeetingType** | O tipo de reunião. |
 | **Valor. Título** | O assunto da reunião. |
 | **Valor. Id** | A ID padrão associada à reunião. |
-| **Valor. JoinUrl** | A URL de ingresso da reunião. |
+| **Valor. JoinUrl** | A URL de junção da reunião. |
 | **Valor. Starttime** | A hora de início da reunião em UTC. |
 | **Valor. Endtime** | A hora de término da reunião em UTC. |
 | **locale**| A localidade da mensagem definida pelo cliente. |
@@ -827,8 +827,8 @@ A `getIncomingClientAudioState` API permite que um aplicativo obtenha a configur
 
 > [!NOTE]
 >
-> * No `getIncomingClientAudioState` momento, a API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
-> * O consentimento específico do recurso está disponível para o manifesto versão 1.12 e versões posteriores, portanto, essa API não funciona para o manifesto versão 1.11 e versões anteriores.
+> * Atualmente, a `getIncomingClientAudioState` API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+> * O consentimento específico do recurso está disponível para versões 1.12 e posteriores do manifesto, portanto, essa API não funciona para versões de manifesto versão 1.11 e anteriores.
 
 ### <a name="manifest"></a>Manifesto
 
@@ -866,7 +866,7 @@ A tabela a seguir inclui o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro ou `SdkError` quando `null` a busca de áudio for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso quando a busca de áudio for bem-sucedida ou nula quando a busca de áudio falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false. |
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo `SdkError` de erro ou `null` quando a busca de áudio for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso quando a busca de áudio for bem-sucedida ou nula quando a busca de áudio falhar. O áudio de entrada será silenciado se o resultado for verdadeiro e desmutado se o resultado for falso. |
   
 ### <a name="response-codes"></a>Códigos de resposta
 
@@ -876,16 +876,16 @@ A tabela a seguir fornece os códigos de resposta:
 |---|---|
 | **500** | Erro interno. |
 | **501** | A API não tem suporte no contexto atual.|
-| **1.000** | O aplicativo não tem permissões adequadas para permitir o compartilhamento em estágios.|
+| **1.000** | O aplicativo não tem permissões adequadas para permitir que o compartilhamento seja estágio.|
 
 ## <a name="toggle-incoming-audio"></a>Alternar áudio de entrada
 
-A `toggleIncomingClientAudio` API permite que um aplicativo alterne a configuração de estado de áudio de entrada para o usuário da reunião de mudo para mudo ou vice-versa. A API está disponível por meio do SDK do cliente do Teams.
+A `toggleIncomingClientAudio` API permite que um aplicativo alterne a configuração de estado de áudio de entrada para o usuário da reunião de mudo para unmute ou vice-versa. A API está disponível por meio do SDK do cliente do Teams.
 
 > [!NOTE]
 >
-> * No `toggleIncomingClientAudio` momento, a API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
-> * O consentimento específico do recurso está disponível para o manifesto versão 1.12 e versões posteriores, portanto, essa API não funciona para o manifesto versão 1.11 e versões anteriores.
+> * Atualmente, a `toggleIncomingClientAudio` API para dispositivos móveis está disponível na [Versão Prévia do Desenvolvedor Público](../resources/dev-preview/developer-preview-intro.md).
+> * O consentimento específico do recurso está disponível para versões 1.12 e posteriores do manifesto, portanto, essa API não funciona para versões de manifesto versão 1.11 e anteriores.
 
 ### <a name="manifest"></a>Manifesto
 
@@ -923,7 +923,7 @@ A tabela a seguir inclui o parâmetro de consulta:
 
 |Valor|Tipo|Obrigatório|Descrição|
 |---|---|----|---|
-|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo de erro `SdkError` ou `null` quando a alternância for bem-sucedida. O *resultado* pode conter valor verdadeiro ou falso, quando a alternância for bem-sucedida ou nula quando a alternância falhar. O áudio de entrada será ativado se o resultado for true e não for permutado se o resultado for false.
+|**callback**| Cadeia de caracteres | Sim | O retorno de chamada contém dois parâmetros `error` e `result`. O *erro* pode conter um tipo `SdkError` de erro ou `null` quando o alternância for bem-sucedido. O *resultado* pode conter valor verdadeiro ou falso, quando o alternância for bem-sucedido ou nulo quando o alternância falhar. O áudio de entrada será silenciado se o resultado for verdadeiro e desmutado se o resultado for falso.
   
 ### <a name="response-code"></a>Código da resposta
 
@@ -933,16 +933,16 @@ A tabela a seguir fornece os códigos de resposta:
 |---|---|
 | **500** | Erro interno. |
 | **501** | A API não tem suporte no contexto atual.|
-| **1.000** | O aplicativo não tem permissões adequadas para permitir o compartilhamento em estágios.|
+| **1.000** | O aplicativo não tem permissões adequadas para permitir que o compartilhamento seja estágio.|
 
 ## <a name="code-sample"></a>Exemplo de código
 
 |Nome do exemplo | Descrição | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Extensibilidade de reuniões | Exemplo de extensibilidade de reunião do Teams para passar tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Bot de bolha de conteúdo de reunião | Exemplo de extensibilidade de reunião do Teams para interagir com o bot de bolha de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Painel lateral da reunião | Exemplo de extensibilidade de reunião do Teams para interagir com o painel lateral na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Guia Detalhes na Reunião | Exemplo de extensibilidade de reunião do Teams para interagir com a guia Detalhes na reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Bot de bolha de conteúdo de reunião | Exemplo de extensibilidade de reunião do Teams para interagir com o bot de bolhas de conteúdo em uma reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Painel lateral da reunião | Exemplo de extensibilidade de reunião do Teams para interagir com o painel lateral em reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Guia Detalhes na Reunião | Exemplo de extensibilidade de reunião do Teams para interagir com a Guia de Detalhes em reunião. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 | Exemplo de eventos de reunião | Aplicativo de exemplo para mostrar eventos de reunião do Teams em tempo real|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 | Exemplo de convite de reunião |Aplicativo de exemplo para mostrar a experiência de reunião para cenário de recrutamento.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 | Instalação de aplicativo usando código QR |Aplicativo de exemplo que gera o código QR e instala o aplicativo usando o código QR|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
@@ -952,6 +952,7 @@ A tabela a seguir fornece os códigos de resposta:
 * [Fluxo de autenticação de equipes para guias](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicativos para reuniões do Teams](teams-apps-in-meetings.md)
 * [SDK do Live Share](teams-live-share-overview.md)
+* [Gravação de reuniões na nuvem do Teams](/microsoftteams/cloud-recording)
 
 ## <a name="next-steps"></a>Próximas etapas
 

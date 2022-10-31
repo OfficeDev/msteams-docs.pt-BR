@@ -1,16 +1,16 @@
 ---
 title: Bots e SDKs
 author: surbhigupta
-description: Neste artigo, saiba mais sobre ferramentas e SDKs do Bot Framework (C#, Python, Java,JavaScript) para bots do Microsoft Teams e suas vantagens e desvantagens.
+description: Neste artigo, saiba mais sobre ferramentas e SDKs do Bot Framework(C#, Python, Java,JavaScript) para bots do Microsoft Teams e suas vantagens e desvantagens.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605016"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789895"
 ---
 # <a name="bots-and-sdks"></a>Bots e SDKs
 
@@ -52,7 +52,7 @@ O [Bot Framework](https://dev.botframework.com/) é um SDK avançado usado para 
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Bots com webhooks e conectores
 
-Webhooks e conectores conectam seu bot aos seus serviços Web. Usando webhooks e conectores, você pode criar um bot para interação básica, como criar um fluxo de trabalho ou outros comandos simples. Eles estão disponíveis apenas na equipe em que você os cria e são destinados a processos simples específicos para o fluxo de trabalho da sua empresa. Para obter mais informações, confira [o que são webhooks e conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks e conectores conectam seu bot aos seus serviços Web. Usando webhooks e conectores, você pode criar um bot para interação básica, como criar um fluxo de trabalho ou outros comandos simples. Elas estão disponíveis apenas na equipe em que você as cria e são destinadas a processos simples específicos ao fluxo de trabalho da sua empresa. Para obter mais informações, confira [o que são webhooks e conectores](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## <a name="advantages-of-bots"></a>Vantagens dos bots
 
@@ -66,7 +66,7 @@ Os bots no Microsoft Teams podem fazer parte de uma conversa privadas, um chat e
 
 ### <a name="in-a-channel"></a>Em um canal.
 
-Os canais contêm conversas encadeadas entre várias pessoas até dois mil. Isso potencialmente dá ao seu bot um alcance enorme, mas as interações individuais devem ser concisas. As interações tradicionais de vários turnos não funcionam. Em vez disso, procure usar cartões interativos ou módulos de tarefas, ou mover a conversa para uma conversa privada se precisar coletar muitas informações. Seu bot só tem acesso a mensagens em que está `@mentioned`. Você pode recuperar mensagens adicionais da conversa usando as permissões do Microsoft Graph no nível da organização.
+Os canais contêm conversas encadeadas entre várias pessoas até dois mil. Isso potencialmente dá ao seu bot um alcance enorme, mas as interações individuais devem ser concisas. Interações tradicionais de várias voltas não funcionam. Em vez disso, procure usar cartões interativos ou módulos de tarefas, ou mover a conversa para uma conversa privada se precisar coletar muitas informações. Seu bot só tem acesso a mensagens em que ele está `@mentioned`. Você pode recuperar mensagens adicionais da conversa usando as permissões do Microsoft Graph no nível da organização.
 
 Os bots funcionam melhor em um canal nos seguintes casos:
 
@@ -77,7 +77,7 @@ Os bots funcionam melhor em um canal nos seguintes casos:
 
 ### <a name="in-a-group-chat"></a>Em um chat em grupo
 
-Os chats de grupo são conversas não-encadeadas entre três ou mais pessoas. Tendem a ter menos membros do que um canal e são mais temporários. Semelhante a um canal, seu bot só tem acesso a mensagens em que ele está `@mentioned` diretamente.
+Os chats de grupo são conversas não-encadeadas entre três ou mais pessoas. Tendem a ter menos membros do que um canal e são mais temporários. Semelhante a um canal, o bot só tem acesso a mensagens em que está `@mentioned` diretamente.
 
 Nos casos em que os bots funcionam melhor em um canal também funcionam melhor em um chat em grupo.
 
@@ -88,16 +88,16 @@ O chat privado é a maneira tradicional de um bot de conversação interagir com
 * Bots de P e R
 * bots que iniciam fluxos de trabalho em outros sistemas.
 * bots que contam piadas.
-* bots que anotam.
-Antes de criar chatbots um-para-um, considere se uma interface baseada em conversa é a melhor maneira de apresentar sua funcionalidade.
+* bots que fazem anotações.
+Antes de criar chatbots individuais, considere se uma interface baseada em conversa é a melhor maneira de apresentar sua funcionalidade.
 
 ## <a name="disadvantages-of-bots"></a>Desvantagens dos bots
 
-Uma caixa de diálogo extensa entre o bot e o usuário é uma maneira lenta e complexa de concluir uma tarefa. Um bot que dá suporte a comandos excessivos, especialmente uma ampla variedade de comandos, não é bem-sucedido ou exibido positivamente pelos usuários.
+Uma caixa de diálogo extensa entre o bot e o usuário é uma maneira lenta e complexa de concluir uma tarefa. Um bot que dá suporte a comandos excessivos, especialmente uma ampla gama de comandos, não é bem-sucedido ou exibido positivamente pelos usuários.
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>Ter experiências de vários turnos no chat
 
-Uma caixa de diálogo extensa exige que o desenvolvedor mantenha o estado. Para sair desse estado, um usuário deve ter um tempo limite ou selecionar **Cancelar**. Além disso, o processo é entediante. Por exemplo, consulte o seguinte cenário de conversa:
+Uma caixa de diálogo extensa exige que o desenvolvedor mantenha o estado. Para sair desse estado, um usuário deve ter tempo limite ou selecionar **Cancelar**. Além disso, o processo é entediante. Por exemplo, consulte o seguinte cenário de conversa:
 
 USER: Agende uma reunião com Sara.
 
@@ -117,7 +117,7 @@ Como há apenas seis comandos visíveis no menu do bot atual, é improvável que
 
 ### <a name="maintain-a-large-knowledge-base"></a>Manter uma grande base de dados de conhecimento
 
-Uma das desvantagens dos bots é que é difícil manter uma grande recuperação base de dados de conhecimento respostas não listadas. Os bots são mais adequados para interações rápidas e curtas e não passam por listas longas em busca de uma resposta.
+Uma das desvantagens dos bots é que é difícil manter uma grande base de dados de conhecimento de recuperação com respostas não classificadas. Os bots são mais adequados para interações rápidas e curtas e não passam por listas longas em busca de uma resposta.
 
 ## <a name="code-snippets"></a>Trechos de código
 
@@ -209,7 +209,8 @@ this.onMessage(async (context, next) => {
 * [Bots de chamadas e reuniões](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversas de bot](~/bots/how-to/conversations/conversation-basics.md)
 * [Menus de comando do bot](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Criar gatilhos personalizados no Bot Framework Composer](/composer/how-to-create-custom-triggers)
 * [Fluxo de autenticação para bots no Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Usar módulos de tarefas dos bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Publicar seu bot no Azure](/azure/bot-service/bot-builder-deploy-az-cli)
-* [Referência de API para o serviço conector do Bot Framework](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Referência de API para o serviço Do Conector do Bot Framework](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
