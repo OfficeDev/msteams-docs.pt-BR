@@ -1,31 +1,31 @@
 ---
 title: Manipuladores de atividade de bot
 author: surbhigupta
-description: Saiba mais sobre eventos e manipuladores de atividades do Microsoft Teams para mensagens, canais, equipes, membros, menções, autenticação, ações de cartão usando Microsoft Bot Framework SDK.
+description: Saiba mais sobre eventos do Microsoft Teams e manipuladores de atividades para mensagens, canais, equipes, membros, menções, auth, ações de cartão usando Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: 6599fbecd9166e053952bbbf70c7a2bea7ab48e3
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321205"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791675"
 ---
 # <a name="bot-activity-handlers"></a>Manipuladores de atividade de bot
 
 Este documento se baseia no artigo sobre [como os bots funcionam](https://aka.ms/how-bots-work) na principal [Documentação Bot Framework](https://aka.ms/azure-bot-service-docs). A principal diferença entre os bots desenvolvidos para o Microsoft Teams e o Bot Framework principal está nos recursos fornecidos no Teams.
 
-Para organizar a lógica de conversação do seu bot, é usado um manipulador de atividades. As atividades são tratadas de duas maneiras usando os manipuladores de atividades do Teams e a lógica de bot. O manipulador de atividades do Teams adiciona suporte para interações e eventos específicos do Teams. O objeto de bot contém o raciocínio ou a lógica de conversação para um turno e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
+Um manipulador de atividades é usado para organizar a lógica de conversa para o bot. As atividades são tratadas de duas maneiras usando os manipuladores de atividades do Teams e a lógica de bot. O manipulador de atividades do Teams adiciona suporte para eventos e interações específicos do Teams. O objeto de bot contém o raciocínio ou a lógica de conversação para um turno e expõe um manipulador de turnos, que é o método que pode aceitar atividades de entrada do adaptador de bot.
 
 ## <a name="teams-activity-handlers"></a>Manipuladores de atividades do Teams
 
 O manipulador de atividades do Teams é derivado do manipulador de atividades do Microsoft Bot Framework. Ele roteia todas as atividades do Teams antes de permitir que as atividades específicas que não sejam do Teams sejam tratadas.
 
-Quando um bot do Teams recebe uma atividade, ele é roteado para os manipuladores de atividade. Todas as atividades são roteadas por meio de um manipulador base chamado manipulador de turnos. O manipulador de turnos chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O bot do Teams é derivado da classe `TeamsActivityHandler`, que é derivada da classe `ActivityHandler` do Bot Framework.
+Quando um bot do Teams recebe uma atividade, ele é roteado para os manipuladores de atividades. Todas as atividades são roteadas por meio de um manipulador base chamado manipulador de turnos. O manipulador de turnos chama o manipulador de atividades necessário para gerenciar qualquer atividade recebida. O bot do Teams é derivado da classe `TeamsActivityHandler`, que é derivada da classe `ActivityHandler` do Bot Framework.
 
 > [!NOTE]
-> Se a atividade do bot levar mais de 15 segundos para ser processda, o Teams enviará uma solicitação de repetição para o ponto de extremidade do bot. Portanto, você verá solicitações duplicadas em seu bot.
+> Se a atividade do bot levar mais de 15 segundos para ser processada, o Teams enviará uma solicitação de repetição para o ponto de extremidade do bot. Portanto, você verá solicitações duplicadas em seu bot.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Os bots são criados usando o Bot Framework. Se os bots receberem uma atividade 
 
 Na classe do manipulador de atividades do Teams, há dois manipuladores de atividades principais do Teams, `OnConversationUpdateActivityAsync` e `OnInvokeActivityAsync`. A classe `OnConversationUpdateActivityAsync` roteia todas as atividades de atualização de conversa e a classe `OnInvokeActivityAsync` roteia todas as atividades de invocação do Teams.
 
-Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há nenhuma implementação base para esses manipuladores. Portanto, adicione a lógica desejada em sua substituição.
+Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há implementação base para esses manipuladores. Portanto, adicione a lógica desejada em sua substituição.
 
 Os trechos de código para manipuladores de atividades do Teams:
 
@@ -173,13 +173,13 @@ Os bots são criados usando o Bot Framework. Se os bots receberem uma atividade 
 
 Na classe do manipulador de atividades do Teams, há dois manipuladores de atividades principais do Teams, `on_conversation_update_activity` e `on_invoke_activity`. A classe `on_conversation_update_activity` roteia todas as atividades de atualização de conversa e a classe `on_invoke_activity` roteia todas as atividades de invocação do Teams.
 
-Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há nenhuma implementação base para esses manipuladores. Portanto, adicione a lógica desejada em sua substituição.
+Para implementar sua lógica de manipuladores de atividades específicos do Teams, você deve substituir os métodos em seu bot, conforme mostrado na seção [lógica do bot](#bot-logic). Não há implementação base para esses manipuladores. Portanto, adicione a lógica desejada em sua substituição.
 
 ---
 
 ## <a name="bot-logic"></a>Lógica do bot
 
-A lógica do bot processa atividades de entrada de um ou mais de seus canais de bot e, em resposta, gera atividades de saída. Ele ainda é verdadeiro para bots derivados da classe de manipulador de atividades do Teams, que primeiro verifica as atividades do Teams. Depois de verificar as atividades do Teams, ele passa todas as outras atividades para o manipulador de atividades do Bot Framework.
+A lógica do bot processa atividades de entrada de um ou mais de seus canais de bot e, em resposta, gera atividades de saída. Ainda é verdade para bots derivados da classe manipulador de atividades do Teams, que primeiro verifica as atividades do Teams. Depois de verificar as atividades do Teams, ele passa todas as outras atividades para o manipulador de atividades do Bot Framework.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -192,7 +192,7 @@ A lógica do bot processa atividades de entrada de um ou mais de seus canais de 
 
 Os manipuladores de atividade são diferentes no contexto de uma equipe, onde um novo membro é adicionado à equipe em vez de um thread de mensagens.
 
-A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
+A lista de manipuladores definidos em `ActivityHandler` inclui os seguintes eventos:
 
 | Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
@@ -208,7 +208,7 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
 #### <a name="teams-specific-activity-handlers"></a>Manipuladores de atividades específicos do Teams
 
-O manipulador `TeamsActivityHandler` estende a lista de manipuladores na seção principal de manipuladores do Bot Framework para incluir o seguinte:
+O `TeamsActivityHandler` estende a lista de manipuladores na seção principal de manipuladores do Bot Framework para incluir os seguintes eventos:
 
 | Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
@@ -221,7 +221,7 @@ O manipulador `TeamsActivityHandler` estende a lista de manipuladores na seção
 
 #### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
 
-A lista de manipuladores de atividades do Teams chamados do manipulador `OnInvokeActivityAsync` de atividades do Teams inclui o seguinte:
+A lista de manipuladores de atividades do Teams chamados do manipulador de atividades do `OnInvokeActivityAsync` Teams inclui os seguintes tipos de invocação:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -229,12 +229,12 @@ A lista de manipuladores de atividades do Teams chamados do manipulador `OnInvok
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | Esse método é invocado quando um cartão de consentimento de arquivo é aceito pelo usuário. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | Esse método é invocado quando uma atividade de cartão de consentimento de arquivo é recebida do conector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | Esse método é invocado quando um cartão de consentimento de arquivo é recusado pelo usuário. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Esse método é invocado quando uma Office 365 de ação do cartão do conector é recebida do conector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | Esse método é invocado quando uma atividade de ação de cartão do conector Office 365 é recebida do conector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | Esse método é invocado quando uma atividade de estado de verificação de entrada é recebida do conector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
 
-As atividades invoke listadas nesta seção são para bots de conversa no Teams. O Bot Framework SDK também é compatível com atividades de invocação específicas para extensões de mensagem. Para saber mais, confira [o que são extensões de mensagem](https://aka.ms/azure-bot-what-are-messaging-extensions).
+As atividades de invocação listadas nesta seção são para bots de conversa no Teams. O Bot Framework SDK também é compatível com atividades de invocação específicas para extensões de mensagem. Para saber mais, confira [o que são extensões de mensagem](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -245,7 +245,7 @@ As atividades invoke listadas nesta seção são para bots de conversa no Teams.
 
 Os manipuladores de atividade são diferentes no contexto de uma equipe, onde o novo membro é adicionado à equipe em vez de um thread de mensagens.
 
-A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
+A lista de manipuladores definidos em `ActivityHandler` inclui os seguintes eventos:
 
 | Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
@@ -260,7 +260,7 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
 #### <a name="teams-specific-activity-handlers"></a>Manipuladores de atividades específicos do Teams
 
-O manipulador `TeamsActivityHandler` estende a lista de manipuladores na seção principal de manipuladores do Bot Framework para incluir o seguinte:
+O `TeamsActivityHandler` estende a lista de manipuladores na seção principal de manipuladores do Bot Framework para incluir os seguintes eventos:
 
 | Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
@@ -273,7 +273,7 @@ O manipulador `TeamsActivityHandler` estende a lista de manipuladores na seção
 
 #### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
 
-A lista de manipuladores de atividades do Teams chamados do manipulador `onInvokeActivity` de atividades do Teams inclui o seguinte:
+A lista de manipuladores de atividades do Teams chamados do manipulador de atividades do `onInvokeActivity` Teams inclui o seguinte:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -281,7 +281,7 @@ A lista de manipuladores de atividades do Teams chamados do manipulador `onInvok
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | Esse método é invocado quando um cartão de consentimento de arquivo é aceito pelo usuário. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | Esse método é invocado quando uma atividade de cartão de consentimento de arquivo é recebida do conector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | Esse método é invocado quando um cartão de consentimento de arquivo é recusado pelo usuário. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Esse método é invocado quando uma Office 365 de ação do cartão do conector é recebida do conector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | Esse método é invocado quando uma atividade de ação de cartão do conector Office 365 é recebida do conector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | Esse método é invocado quando uma atividade de estado de verificação de entrada é recebida do conector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
@@ -297,7 +297,7 @@ As atividades de invocação listadas nesta seção são para bots de conversaç
 
 Os manipuladores de atividade são diferentes no contexto de uma equipe, onde o novo membro é adicionado à equipe em vez de um thread de mensagens.
 
-A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
+A lista de manipuladores definidos em `ActivityHandler` inclui os seguintes eventos:
 
 | Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
@@ -313,7 +313,7 @@ A lista de manipuladores definidos `ActivityHandler` inclui o seguinte:
 
 #### <a name="teams-specific-activity-handlers"></a>Manipuladores de atividades específicos do Teams
 
-O manipulador `TeamsActivityHandler` estende a lista de manipuladores da seção principal de manipuladores do Bot Framework para incluir o seguinte:
+O `TeamsActivityHandler` estende a lista de manipuladores da seção principal de manipuladores do Bot Framework para incluir os seguintes eventos:
 
 | Evento | Manipulador | Descrição |
 | :-- | :-- | :-- |
@@ -326,7 +326,7 @@ O manipulador `TeamsActivityHandler` estende a lista de manipuladores da seção
 
 #### <a name="teams-invoke-activities"></a>Atividades de invocação do Teams
 
-A lista de manipuladores de atividades do Teams chamados do manipulador `on_invoke_activity` de atividades do Teams inclui o seguinte:
+A lista de manipuladores de atividades do Teams chamados do manipulador de atividades do `on_invoke_activity` Teams inclui os seguintes tipos de invocação:
 
 | Invocar tipos                    | Manipulador                              | Descrição                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -334,7 +334,7 @@ A lista de manipuladores de atividades do Teams chamados do manipulador `on_invo
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | Esse método é invocado quando um cartão de consentimento de arquivo é aceito pelo usuário. |
 | fileConsent/invoke              | `on_teams_file_consent`            | Esse método é invocado quando uma atividade de cartão de consentimento de arquivo é recebida do conector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | Esse método é invocado quando um cartão de consentimento de arquivo é recusado pelo usuário. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Esse método é invocado quando uma Office 365 de ação do cartão do conector é recebida do conector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | Esse método é invocado quando uma atividade de ação de cartão do conector Office 365 é recebida do conector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | Esse método é invocado quando uma atividade de estado de verificação de entrada é recebida do conector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é buscado. |
 | task/submit                     | `on_teams_task_module_submit`       | Esse método pode ser substituído em uma classe derivada para fornecer lógica quando um módulo de tarefa é enviado. |
@@ -345,7 +345,7 @@ As atividades de invocação listadas nesta seção são para bots de conversaç
 
 ---
 
-Agora que você se familiarizou com os manipuladores de atividade do bot, vamos ver como os bots se comportam de forma diferente, dependendo da conversa e das mensagens que ele recebe ou envia.
+Agora que você se familiarizou com manipuladores de atividades de bot, vamos ver como os bots se comportam de forma diferente dependendo da conversa e das mensagens que ele recebe ou envia.
 
 ## <a name="next-step"></a>Próxima etapa
 

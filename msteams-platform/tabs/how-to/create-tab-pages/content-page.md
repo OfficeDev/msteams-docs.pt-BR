@@ -5,12 +5,12 @@ description: Saiba mais sobre a página da Web no cliente do Teams e faz parte d
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
-ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68773440"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791535"
 ---
 # <a name="create-a-content-page"></a>Criar uma página de conteúdo
 
@@ -111,7 +111,7 @@ A partir do [esquema de manifesto v1.7](../../../resources/schema/manifest-schem
 
 > [!NOTE]
 >
-> * O comportamento em clientes móveis não é configurável por meio da propriedade de indicador de carregamento nativo. Os clientes móveis mostram esse indicador por padrão em páginas de conteúdo e módulos de tarefas baseados em iframe. Esse indicador no celular é mostrado quando uma solicitação é feita para buscar conteúdo e é ignorada assim que a solicitação é concluída.
+> O comportamento em clientes móveis não é configurável por meio da propriedade de indicador de carregamento nativo. Os clientes móveis mostram esse indicador por padrão em páginas de conteúdo e módulos de tarefas baseados em iframe. Esse indicador no celular é mostrado quando uma solicitação é feita para buscar conteúdo e é ignorada assim que a solicitação é concluída.
 
 Se você indicar `showLoadingIndicator : true` no manifesto do aplicativo, todas as configurações de guia, conteúdo, páginas de remoção e todos os módulos de tarefa baseados em iframe deverão seguir estas etapas:
 

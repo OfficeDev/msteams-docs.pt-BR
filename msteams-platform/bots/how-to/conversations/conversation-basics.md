@@ -1,15 +1,15 @@
 ---
 title: Noções básicas sobre conversas
-description: Neste módulo, saiba mais sobre o tipo de conversa do bot em um canal, chat pessoal e escopos de chat em grupo no Microsoft Teams.
+description: Neste módulo, saiba mais sobre o tipo de conversa de bot em um canal, chat pessoal e escopos de chat em grupo no Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 23a72486ffb76d207eeabbef23b5ec5238234dc4
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: ab27bc6000712cd046d92d9e020bfbe8fa65daa0
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321212"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791814"
 ---
 # <a name="conversation-basics"></a>Noções básicas sobre conversas
 
@@ -21,22 +21,22 @@ Uma conversa é uma série de mensagens enviadas entre o bot do Microsoft Teams 
 | ------- | ----------- |
 | `channel` | Esse tipo de conversa é visível para todos os membros do canal. |
 | `personal` | Esse tipo de conversa inclui conversas entre bots e um único usuário. |
-| `groupChat` | Esse tipo de conversa inclui chat entre um bot e dois ou mais usuários. Ele também habilita seu bot em chats de reunião. |
+| `groupChat` | Esse tipo de conversa inclui chat entre um bot e dois ou mais usuários. Ele também habilita o bot em chats de reunião. |
 
-Um bot se comporta de maneira diferente, dependendo da conversa em que ele está envolvido:
+Um bot se comporta de forma diferente dependendo da conversa em que está envolvido:
 
 * Bots nas conversas de chat de canal e grupo exigem que o usuário @mencione o bot para invocá-lo em um canal.
 
-* Os bots em uma conversa um-para-um não exigem um @mention. Todas as mensagens enviadas pelo usuário são encaminhadas para o bot.
+* Bots em uma conversa privada não exigem uma @menção. Todas as mensagens enviadas pelas rotas do usuário para o bot.
 
 > [!NOTE]
-> Os bots podem ser habilitados para receber todas as mensagens de canal em uma equipe sem @mentioned permissões de RSC (consentimento específicos do recurso). No momento, esse recurso está disponível somente em [visualização pública do desenvolvedor](../../../resources/dev-preview/developer-preview-intro.md). Para obter mais informações, confira [receber todas as mensagens de canal com o RSC](channel-messages-with-rsc.md).
+> Os bots podem ser habilitados para receber todas as mensagens de canal em uma equipe sem serem @mentioned usando permissões RSC (consentimento específico do recurso). No momento, esse recurso está disponível somente em [visualização pública do desenvolvedor](../../../resources/dev-preview/developer-preview-intro.md). Para obter mais informações, confira [receber todas as mensagens de canal com o RSC](channel-messages-with-rsc.md).
 
-Para que o bot funcione em uma conversa ou escopo específico, adicione suporte a esse escopo no manifesto [do aplicativo](~/resources/schema/manifest-schema.md).
+Para que o bot funcione em uma conversa ou escopo específico, adicione suporte a esse escopo no [manifesto do aplicativo](~/resources/schema/manifest-schema.md).
 
-Cada mensagem em uma conversa de bot é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, o Teams posta a mensagem em seu bot e o bot manipula a mensagem. Além disso, para definir os comandos principais aos quais o bot responde, você pode adicionar um menu de comandos com uma lista suspensa de comandos para o bot. Os bots em um grupo ou canal só recebem mensagens quando são mencionados o @nomedobot. O Teams envia notificações ao bot de eventos de conversa que ocorrem em escopos onde o bot está ativo. Você pode capturar esses eventos em seu código e tomar medidas sobre eles.
+Cada mensagem em uma conversa de bot é um `Activity` objeto do tipo `messageType: message`. Quando um usuário envia uma mensagem, o Teams posta a mensagem no bot e o bot manipula a mensagem. Além disso, para definir comandos principais aos quais o bot responde, você pode adicionar um menu de comando com uma lista suspensa de comandos para o bot. Bots em um grupo ou canal só recebem mensagens quando são mencionados @botname. O Teams envia notificações ao bot de eventos de conversa que ocorrem em escopos onde o bot está ativo. Você pode capturar esses eventos em seu código e tomar medidas sobre eles.
 
-Um bot também pode enviar mensagens proativas aos usuários. Uma mensagem proativa é qualquer mensagem enviada por um bot que não está em resposta a uma solicitação de um usuário. Você pode formatar suas mensagens de bot para incluir cartões avançados que incluem elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante. O bot pode atualizar mensagens dinamicamente depois de enviá-las, em vez de ter suas mensagens como instantâneos estáticos de dados. As mensagens também podem ser excluídas usando o método `DeleteActivity` do Bot Framework.
+Um bot também pode enviar mensagens proativas aos usuários. Uma mensagem proativa é qualquer mensagem enviada por um bot que não responde a uma solicitação de um usuário. Você pode formatar suas mensagens de bot para incluir cartões avançados que incluem elementos interativos, como botões, texto, imagens, áudio, vídeo e assim por diante. O bot pode atualizar dinamicamente as mensagens depois de enviá-las, em vez de ter suas mensagens como instantâneos estáticos de dados. As mensagens também podem ser excluídas usando o método `DeleteActivity` do Bot Framework.
 
 ## <a name="next-step"></a>Próxima etapa
 

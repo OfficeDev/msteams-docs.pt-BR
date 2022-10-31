@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: microsoft teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ade66f40662140b86fcc9ae2e185fc10ea09d2f2
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189882"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791710"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Testar permissões de consentimento específicas do recurso no Teams
 
@@ -28,7 +28,7 @@ Verifique se as seguintes alterações de manifesto do aplicativo para consentim
 
 <details>
 
-<summary><b>Permissões de RSC para o manifesto do aplicativo versão 1.12 e posterior</b></summary>
+<summary><b>Permissões RSC para manifesto de aplicativo versão 1.12 e posterior</b></summary>
 
 Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
@@ -194,7 +194,7 @@ Exemplo de RSC em um chat
 
 <details>
 
-<summary><b>Permissões de RSC para o manifesto do aplicativo versão 1.11 e anteriores</b></summary>
+<summary><b>Permissões RSC para manifesto de aplicativo versão 1.11 e anterior</b></summary>
 
 Adicione uma chave [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) ao manifesto do aplicativo com os seguintes valores:
 
@@ -273,7 +273,7 @@ Para verificar se as permissões RSC estão sendo respeitadas pelo conteúdo da 
 
 * `azureADAppId`: a ID do aplicativo do Azure AD do aplicativo.
 * `azureADAppSecret`: sua senha de aplicativo do Azure AD.
-* `token_scope`: o escopo é necessário para obter um token. defina o valor como https://graph.microsoft.com/.default.
+* `token_scope`: o escopo é necessário para obter um token. Defina o valor como `https://graph.microsoft.com/.default`.
 * `teamGroupId`: você pode obter a ID do grupo de equipes do cliente do Teams da seguinte maneira:
 
     1. No cliente do Teams, selecione **Teams** na barra de navegação à esquerda.
@@ -288,7 +288,7 @@ Para verificar se as permissões RSC estão sendo respeitadas pelo conteúdo da 
 
 * `azureADAppId`: a ID do aplicativo do Azure AD do aplicativo.
 * `azureADAppSecret`: sua senha de aplicativo do Azure AD.
-* `token_scope`: o escopo é necessário para obter um token. defina o valor como https://graph.microsoft.com/.default.
+* `token_scope`: o escopo é necessário para obter um token. Defina o valor como `https://graph.microsoft.com/.default`.
 * `tenantId`: o nome ou a ID de Objeto do Azure AD do seu locatário.
 * `chatId`: você pode obter a ID do thread de chat do *cliente web* do Teams da seguinte maneira:
 

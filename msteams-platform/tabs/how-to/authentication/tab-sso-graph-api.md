@@ -4,12 +4,12 @@ description: Configure permissões e escopos adicionais com o Microsoft Graph pa
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: guias de autenticação de equipes do Microsoft Azure Active Directory (AD do Azure) do escopo do token de acesso de permissão delegada da API do Graph
-ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 11620e10ed736ce9fe88e3bb755acfbabfec3f47
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780846"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791717"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Estender o aplicativo de guia com permissões e escopo do Microsoft Graph
 
@@ -221,7 +221,7 @@ Você pode solicitar o consentimento usando a API de Autenticação. Outra abord
     - Em vez de `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Certifique-se de que `{scopes}` inclua todos os escopos que você está solicitando ao usuário, por exemplo, `Mail.Read` ou `User.Read`.
 
-    Para lidar com o consentimento incremental para o aplicativo tab, consulte [o consentimento do usuário incremental e dinâmico](/azure/active-directory/develop/v2-permissions-and-consent).
+    Para lidar com o consentimento incremental do aplicativo de guias, consulte [consentimento incremental e dinâmico do usuário](/azure/active-directory/develop/v2-permissions-and-consent).
 5. Depois que o usuário do aplicativo conceder mais permissões, tente novamente o fluxo de OBO para obter acesso a essas outras APIs.
     </details>
 

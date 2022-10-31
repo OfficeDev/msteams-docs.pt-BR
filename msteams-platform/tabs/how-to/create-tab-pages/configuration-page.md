@@ -1,16 +1,16 @@
 ---
 title: Criar uma página de configuração
 author: surbhigupta
-description: Crie uma página de configuração para coletar informações do usuário. Além disso, obtenha dados de contexto para as guias do Microsoft Teams, saiba mais sobre autenticação, modifique ou remova guias.
+description: Crie uma página de configuração para coletar informações do usuário. Além disso, obtenha dados de contexto para guias do Microsoft Teams, saiba mais sobre autenticação, modificação ou remoção de guias.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560656"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791685"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -24,13 +24,13 @@ Uma página de configuração é um tipo especial de [página de conteúdo](cont
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>Configurar um canal ou guia de chat em grupo
 
-O aplicativo deve fazer referência ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) e chamar `app.initialize()`. As URLs usadas devem ser pontos de extremidade HTTPS protegidos e estão disponíveis na nuvem.
+O aplicativo deve fazer referência ao [SDK do cliente JavaScript do Microsoft Teams](/javascript/api/overview/msteams-client) e chamar `app.initialize()`. As URLs usadas devem ter pontos de extremidade HTTPS protegidos e estão disponíveis na nuvem.
 
 ### <a name="example"></a>Exemplo
 
 Um exemplo de uma página de configuração é mostrado na imagem a seguir:
 
-<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="A captura de tela mostra a página de configuração.":::
 
 O código a seguir é um exemplo de código correspondente para a página de configuração:
 
@@ -160,11 +160,11 @@ Escolha o botão **Selecionar cinza** ou **Selecionar vermelho** na página de c
 
 A imagem a seguir exibe o conteúdo da guia com o ícone **Cinza** selecionado:
 
-<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="A captura de tela mostra a guia configurar com o cinza selecionado.":::
 
 A imagem a seguir exibe o conteúdo da guia com o ícone **Vermelho** selecionado:
 
-<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="A captura de tela mostra a guia configurar com a seleção vermelha.":::
 
 Escolher o botão apropriado aciona `saveGray()` ou `saveRed()` e invoca o seguinte:
 
@@ -172,14 +172,14 @@ Escolher o botão apropriado aciona `saveGray()` ou `saveRed()` e invoca o segui
 * O manipulador de eventos `pages.config.registerOnSaveHandler()` é acionado.
 * **Salvar** na página de configuração do aplicativo, está habilitado.
 
-O código da página de configuração informa ao Teams que os requisitos de configuração foram atendidos e que a instalação pode continuar. Quando o usuário seleciona **Salvar**, os parâmetros de `pages.config.setConfig()` são definidos, conforme definido pela interface `Config`. Para obter mais informações, consulte [a interface de configuração](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
+O código da página de configuração informa ao Teams que os requisitos de configuração são atendidos e a instalação pode continuar. Quando o usuário seleciona **Salvar**, os parâmetros de `pages.config.setConfig()` são definidos, conforme definido pela interface `Config`. Para obter mais informações, consulte [interface de configuração](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` é chamado para indicar que a URL do conteúdo foi resolvida com sucesso.
 
 >[!NOTE]
 >
 >* Você tem 30 segundos para concluir a operação de salvamento (o retorno de chamada para `registerOnSaveHandler`) antes do tempo limite. Após o tempo limite, uma mensagem de erro genérica é exibida.
 >* Se você registrar um manipulador de salvamento usando `registerOnSaveHandler()`, o retorno de chamada deverá invocar `saveEvent.notifySuccess()` ou `saveEvent.notifyFailure()` para indicar o resultado da configuração.
 >* Se você não registrar um manipulador de salvamento, a chamada `saveEvent.notifySuccess()` será feita automaticamente quando o usuário selecionar **Salvar**.
->* Certifique-se de ter exclusivo `entityId`. Redirecionamentos `entityId` duplicados para a primeira instância da guia.
+>* Certifique-se de ter um exclusivo `entityId`. Redirecionamentos duplicados `entityId` para a primeira instância da guia.
 
 ### <a name="get-context-data-for-your-tab-settings"></a>Obter dados de contexto para suas configurações de guia
 
@@ -247,7 +247,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>Use a função `getContext()` para recuperar o contexto
 
-A `app.getContext()` função retorna uma promessa que é resolvida com o objeto [de interface de](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) contexto.
+A `app.getContext()` função retorna uma promessa que é resolvida com o objeto [de interface de contexto](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) .
 
 O código a seguir fornece um exemplo de adição dessa função à página de configuração para recuperar valores de contexto:
 
@@ -295,7 +295,7 @@ Autentique antes de permitir que um usuário configure seu aplicativo. Caso cont
 
 ## <a name="modify-or-remove-a-tab"></a>Modificar ou remover uma guia
 
-Defina a propriedade do manifesto `canUpdateConfiguration` como `true`. Ele permite que os usuários modifiquem ou reconfigurem uma guia de canal ou grupo. Você só pode renomear sua guia por meio da interface do usuário do Teams. Informe o usuário sobre o impacto no conteúdo quando uma guia for removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` `setConfig()` propriedade na configuração ( `setSettings()`anteriormente). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
+Defina a propriedade do `canUpdateConfiguration` manifesto como `true`. Ele permite que os usuários modifiquem ou reconfigurem uma guia de canal ou grupo. Você só pode renomear sua guia por meio da interface do usuário do Teams. Informe o usuário sobre o impacto no conteúdo quando uma guia é removida. Para fazer isso, inclua uma página de opções de remoção no aplicativo e defina um valor para a `removeUrl` propriedade na `setConfig()` configuração (anteriormente `setSettings()`). O usuário pode desinstalar guias pessoais, mas não pode modificá-las. Para obter mais informações, consulte [criar uma página de remoção para sua guia](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Configuração do Microsoft Teams `setConfig()` (anteriormente `setSettings()`) para página de remoção:
 

@@ -1,26 +1,26 @@
 ---
 title: Link de guias desdobradas e Exibição de Estágio
 author: Rajeshwari-v
-description: Saiba mais sobre o modo de exibição de estágio, um componente de interface do usuário de tela inteira invocado para exibir o conteúdo da Web. O desfralamento de link é usado para transformar URLs em uma guia usando Cartões Adaptáveis.
+description: Saiba mais sobre o modo de exibição de estágio, um componente de interface do usuário de tela inteira invocado para mostrar o conteúdo da Web. A desenrolamento de link é usada para transformar URLs em uma guia usando Cartões Adaptáveis.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
-ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
+ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2022
-ms.locfileid: "68484917"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791563"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Link de guias desdobradas e Exibição de Estágio
 
-O Modo de Exibição de Estágio é um novo componente de interface do usuário. Ele permite renderizar o conteúdo que é aberto em tela inteira no Teams e fixado como uma guia.
+O Stage View é um novo componente da interface do usuário (interface do usuário). Ele permite renderizar o conteúdo que é aberto em tela inteira no Teams e fixado como uma guia.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="stage-view"></a>Modo de Exibição de Estágio
 
-O Modo de Exibição de Estágio é um componente de interface do usuário IU de tela inteira que você pode invocar para exibir o conteúdo da web. O serviço de desatar vínculo existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Quando um usuário envia um URL em um chat ou canal, a URL é desfralda para um Cartão Adaptável. O usuário pode selecionar **Exibir** no cartão e fixar o conteúdo como uma guia diretamente do Modo de Exibição de Estágio.
+O Modo de Exibição de Estágio é um componente de interface do usuário IU de tela inteira que você pode invocar para exibir o conteúdo da web. O serviço de desenrolamento de link existente é atualizado para que ele seja usado para transformar URLs em uma guia usando um Cartão Adaptável e Serviços de Chat. Quando um usuário envia um URL em um chat ou canal, a URL é desfralda para um Cartão Adaptável. O usuário pode selecionar **Exibir** no cartão e fixar o conteúdo como uma guia diretamente do Modo de Exibição de Estágio.
 
 ## <a name="advantage-of-stage-view"></a>Vantagem do Modo de Exibição de Estágio
 
@@ -30,7 +30,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 |Modo de Exibição de Estágio|Módulo de tarefa|
 |:-----------|:-----------|
-|O Modo de Exibição de Estágio é útil quando você tem conteúdo avançado para exibir aos usuários, como uma página, um painel, um arquivo e assim por diante. Ele fornece recursos avançados que ajudam a renderizar seu conteúdo na tela de tela inteira.|[Módulo de tarefa](../task-modules-and-cards/task-modules/task-modules-tabs.md) é especialmente útil para exibir mensagens que exigem atenção do usuário ou coletar informações necessárias para passar para a próxima etapa.|
+|O Modo de Exibição de Estágio é útil quando você tem conteúdo avançado para exibir aos usuários, como uma página, um painel, um arquivo e assim por diante. Ele fornece recursos avançados que ajudam a renderizar seu conteúdo na tela inteira.|[Módulo de tarefa](../task-modules-and-cards/task-modules/task-modules-tabs.md) é especialmente útil para exibir mensagens que exigem atenção do usuário ou coletar informações necessárias para passar para a próxima etapa.|
   
 ## <a name="invoke-stage-view"></a>Invocar Modo de Exibição de Estágio
 
@@ -45,9 +45,9 @@ Quando o usuário insere uma URL no cliente da área de trabalho do Teams, o bot
 
 As imagens a seguir exibem um estágio aberto de um Cartão Adaptável:
 
-[![Abra um estágio do Cartão Adaptável](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="A captura de tela mostra o estágio aberto do cartão Adaptável."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![Abra um estágio](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="A captura de tela mostra o estágio aberto do cartão."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### <a name="example"></a>Exemplo
 
@@ -90,7 +90,7 @@ Veja a seguir o processo para invocar o Modo de Exibição de Estágio:
 
 > [!NOTE]
 >
-> Em clientes móveis do Teams, invocar o Modo de Exibição de Estágio para aplicativos distribuídos por meio da loja do [Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no parâmetro `websiteUrl` do objeto `TabInfo`.
+> Nos clientes móveis do Teams, invocar o Stage View para aplicativos distribuídos pela [loja do Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) e não ter uma experiência otimizada para dispositivos móveis abre o navegador da Web padrão do dispositivo. O navegador abre a URL especificada no parâmetro `websiteUrl` do objeto `TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocar Modo de Exibição de Estágio por meio de link profundo
 
@@ -104,7 +104,7 @@ A seguir está a sintaxe de link profundo:
 
 ### <a name="examples"></a>Exemplos
 
-Quando um usuário insere uma URL, ela é desfralda em um cartão adaptável.
+Quando um usuário insere uma URL, ela é desenrolada em um cartão Adaptável.
 
 A seguir estão os exemplos de link profundo para invocar o Modo de Exibição de Estágio:
 

@@ -4,12 +4,12 @@ description: Saiba mais sobre novos recursos e atualizações de desenvolvedores
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740608"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791584"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novidades para desenvolvedores no Microsoft Teams
 
@@ -27,7 +27,7 @@ Descubra os recursos da plataforma do Microsoft Teams que geralmente estão disp
 :::column-end:::
 :::column span="2":::
 
-Recursos da plataforma Microsoft Teams que estão disponíveis para todos os desenvolvedores de aplicativos.
+Recursos da plataforma do Teams que estão disponíveis para todos os desenvolvedores de aplicativos.
 
 **Outubro de 2022**
 
@@ -94,8 +94,8 @@ Recursos da plataforma Microsoft Teams que estão disponíveis para todos os des
 | 24/02/2022 | Apresentado guia passo a passo para criar Webhooks de saída | Criar webhooks e conectores > Criar Webhooks de Saída > [Criar Webhooks de Saída](sbs-outgoing-webhooks.yml)|
 | 23/02/2022 | Parâmetros de classificação da loja do Microsoft Teams| Distribua seu aplicativo > Publicar na loja do Microsoft Teams > [Parâmetros de classificação da loja do Microsoft Teams](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 18/02/2022 | Apresentado o Glossário extensivo para a Documentação do Desenvolvedor do Microsoft Teams para ajudá-lo a encontrar a definição sobre um termo rapidamente | [Glossário](~/get-started/glossary.md) |
-| 18/02/2022 | Atualizado o módulo Visão geral para mapear o aplicativo do Microsoft Teams para metas organizacionais, história do usuário e exploração dos recursos do aplicativo do Microsoft Teams | [Visão geral > Aplicativo Teams adequado](overview.md) |
-| 18/02/2022 | Atualizado o módulo conceitos básicos do aplicativo para Planejar seu aplicativo para incluir casos de uso de mapeamento para recursos do Microsoft Teams e lista de verificação de planejamento de aplicativos | [Planejar seu aplicativo > Visão geral](~/concepts/app-fundamentals-overview.md) |
+| 18/02/2022 | Atualizado o módulo Visão geral para mapear o aplicativo do Microsoft Teams para metas organizacionais, história do usuário e exploração dos recursos do aplicativo do Microsoft Teams | Visão geral > [aplicativo do Teams que se encaixa](overview.md) |
+| 18/02/2022 | Atualizado o módulo conceitos básicos do aplicativo para Planejar seu aplicativo para incluir casos de uso de mapeamento para recursos do Microsoft Teams e lista de verificação de planejamento de aplicativos | Planejar a [visão geral](~/concepts/app-fundamentals-overview.md) do > do aplicativo |
 | 17/02/2022 | O que esperar depois de enviar seu aplicativo ou?| Distribuir seu aplicativo > Publicar na loja do Teams > [Visão geral](concepts/deploy-and-publish/appsource/publish.md) |
 | 15/02/2022 | Introduzido o guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot | Build bots > Enviar e receber arquivos > [Guia passo a passo de como fazer upload de arquivos para o Microsoft Teams a partir de um bot](sbs-file-handling-in-bot.yml) |
 | 02/11/2022 | Estágio de reunião compartilhada| • Criar aplicativos para reuniões do Teams > [Janela de conteúdo compartilhado na reunião](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Criar aplicativos para reuniões do Teams > [Criar aplicativos para reuniões do Teams](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • Manifesto do aplicativo > Visualização pública do desenvolvedor > [Esquema do manifesto de visualização do desenvolvedor](resources/schema/manifest-schema-dev-preview.md)|
@@ -233,7 +233,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | 23/04/2019 | As extensões de mensagens baseadas em ação já estão disponíveis. | [Extensões de mensagem baseadas em ação](~/concepts/messaging-extensions/create-extensions.md) |
 | 18/02/2019 | Criando links profundos para o chat privado. | [Vinculação profunda a um chat](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 23/01/2019 | Identificando informações de SKU e de tipo de licença no contexto da guia. | [Contexto da guia](~/concepts/tabs/tabs-context.md) |
-|
+
 </details>
 
 <br>
@@ -269,7 +269,7 @@ Explore as atualizações das versões anteriores do GA listadas aqui.
 | 15/03/2018 | Documentação refatorada para cartões. |[Cartões](~/concepts/cards/cards.md), [Ações de cartão](~/concepts/cards/cards-actions.md), [Formatação de cartão](~/concepts/cards/cards-format.md), [Referência de cartão](~/concepts/cards/cards-reference.md)|
 | 27/02/2018 | Código de exemplo adicionado para demonstrar o método AsTeamsChannelAccounts(). |[Obter contexto para o bot](~/concepts/bots/bots-context.md)|
 | 05/02/2018 | Tópicos adicionados para começar a usar C#. |[Introdução à plataforma do Microsoft Teams com C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
-|
+
 </details>
 </details>
 </details>
@@ -330,7 +330,7 @@ Descubra os recursos da plataforma do Microsoft Teams preteridos. Agora você po
 :::column-end:::
 :::column span="2":::
 
-Recursos da plataforma do Microsoft Teams que não estão disponíveis.
+Recursos da plataforma do Teams que não estão disponíveis.
 
 **Agosto de 2022**
 
@@ -355,7 +355,7 @@ Você pode obter as atualizações mais recentes da plataforma Teams configurand
 
 ### <a name="to-configure-rss-feed"></a>Para configurar RSS feed
 
-1. Abra o Microsoft Teams.
+1. Abra o Teams.
 1. Selecione **Teams** no painel esquerdo.
 1. Selecione um canal na equipe.
 1. Selecione reticências &#x25CF;&#x25CF;&#x25CF; e, na lista suspensa, selecione **Conectores**.

@@ -1,16 +1,16 @@
 ---
 title: Planejar o Teams para dispositivos móveis
 author: surbhigupta
-description: Com este módulo de aprendizagem, você aprenderá a planejar a criação de um aplicativo no Teams Mobile e a entender diferentes estágios para criar o aplicativo.
+description: Com este módulo de aprendizagem, você aprenderá a planejar a criação de um aplicativo no teams móvel e entenderá diferentes estágios para criar aplicativo.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e7cf4508f723efa1b2a0445d304e080677b257ff
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66483988"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791556"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planejar guias responsivas para o aplicativo móvel do Teams
 
@@ -40,8 +40,8 @@ Depois de identificar o escopo do aplicativo, é hora de entender os três está
 
    Forneça experiências completas de aplicativo para se envolver em dispositivos móveis. À medida que os usuários se envolvem com seu aplicativo, forneça uma experiência imersiva completa em dispositivos móveis, seja em par ou melhor do que a experiência desktop. Para fornecer uma boa experiência para seus usuários, torne todos os casos de uso responsivos em dispositivos móveis.
 
-> [!TIP]
-> Para obter informações sobre as diretrizes de design, consulte [processo de design para aplicativos do Teams](design-teams-app-process.md).
+    > [!TIP]
+    > Para obter informações sobre as diretrizes de design, consulte [processo de design para aplicativos do Teams](design-teams-app-process.md).
 
 ## <a name="use-cases"></a>Casos de uso
 
@@ -71,11 +71,11 @@ Ações rápidas:
 
 No segundo estágio, os usuários podem trabalhar nos gráficos e visuais existentes da experiência desktop. Você pode introduzir as seguintes ações:
 
-* Pesquisar conteúdo.
+* Pesquise conteúdo.
 * Filtrar dados.
-* Criar indicadores.
+* Crie indicadores.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Ações rápidas no gráfico e visuais existentes.":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Ações rápidas no gráfico e nos visuais existentes.":::
 
 Capacitação:
 
@@ -84,7 +84,7 @@ No terceiro estágio, permita que os usuários criem conteúdo como gráficos e 
 Você pode fornecer o seguinte acesso aos usuários:
 
 * Modifique o título e a descrição.
-* Inserir itens de dados para criar visualizações.
+* Insira itens de dados para criar visualizações.
 * Compartilhe visualizações em um canal ou chat em grupo.
 
 :::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Permitir que os usuários criem conteúdo, como gráficos gráficos.":::
@@ -112,10 +112,10 @@ Ações rápidas:
 No segundo estágio, você pode fornecer o seguinte acesso de aplicativo aos usuários:
 
 * Crie tarefas ou itens com os campos obrigatórios para reduzir a carga cognitiva dos usuários.
-* Altere o tipo de quadro ou o modo de exibição.
+* Altere o tipo ou a exibição do quadro.
 * Examine as tarefas expandindo a exibição.
 * Use módulos de tarefa para ver a exibição detalhada.
-* Mova as tarefas para categorias diferentes.
+* Mova as tarefas para diferentes categorias.
 * Compartilhe tarefas relevantes em chats e canais por meio de emails e feed de atividades.
 
 :::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Crie tarefas para reduzir a carga cognitiva dos usuários.":::
@@ -124,11 +124,11 @@ Capacitação:
 
 No terceiro estágio, você pode habilitar a experiência dos usuários com as seguintes atividades:
 
-* Adicione novos projetos e quadros.
-* Adicione e modifique categorias diferentes, como **Proposta**, **Ativa** e **Fechada**.
+* Adicione novos projetos e placas.
+* Adicione e modifique diferentes categorias, como **Proposed**, **Active** e **Closed**.
 * Configure as tarefas para comentários, anexos e outros recursos complexos.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Habilite a experiência do usuário adicionando projetos e quadros.":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Habilite a experiência do usuário adicionando projetos e placas.":::
 
 <br>
 
@@ -147,8 +147,8 @@ Consumo:
 No primeiro estágio, você pode considerar a experiência desktop para mostrar o conteúdo e os ativos em seu aplicativo.  Você pode mostrar as seguintes funções:
 
 * Comentários ou comentários.
-* Ampliar ou reduzir.
-* Estágio atual ou progresso de um documento pendente.
+* Ampliar ou diminuir o zoom.
+* Estágio ou progresso atual de um documento pendente.
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Mostra conteúdo e ativos na experiência da área de trabalho.":::
 
@@ -163,7 +163,7 @@ No segundo estágio, você pode introduzir as seguintes ações:
 > [!TIP]
 > Você expõe ações, que podem ser mostradas facilmente nas telas pequenas.
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Apresenta a criação de uma nova placa para colaboração.":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Apresenta para criar um novo quadro para colaboração.":::
 
 Capacitação:
 
@@ -171,7 +171,7 @@ No terceiro estágio, forneça experiência completa aos usuários. Você pode h
 
 * Adicionando texto, formas e anotações rápidas.
 * Navegue pelo conteúdo.
-* Adicionar camadas e filtros.
+* Adicione camadas e filtros.
 * Excluir, desfazer e refazer operações.
 * Acesse a câmera e o microfone usando APIs do SDK do JS. Para obter mais informações sobre os recursos do dispositivo, consulte [visão geral dos recursos de dispositivo](../device-capabilities/device-capabilities-overview.md).
 

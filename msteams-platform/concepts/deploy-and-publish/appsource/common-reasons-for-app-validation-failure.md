@@ -1,16 +1,16 @@
 ---
 title: Motivos comuns para falhas na validação do aplicativo
-description: Conheça os motivos mais comuns para falha na validação do aplicativo, como links desfeitos, erros inesperados, falhas, violação de diretrizes de domínio válidas, bugs funcionais.
+description: Saiba os motivos mais comuns para falha de validação de aplicativo, como links quebrados, erros inesperados, falhas, violação de diretrizes de domínio válidas, bugs funcionais.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 006fe6d9e939d9578fa84c61daaa4c404a10d5f6
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560649"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791724"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Motivos comuns para falhas na validação do aplicativo
 
@@ -155,7 +155,7 @@ O nome do aplicativo desempenha uma função fundamental para que os usuários d
 * Uso inconsistente do nome do aplicativo em toda a funcionalidade do aplicativo.
 * Incompatibilidade entre o nome do aplicativo mencionado no manifesto do aplicativo enviado como parte do pacote do aplicativo e o Partner Center.
 * Nomes de aplicativos anexados com *Beta*, *Dev* e *Prod* para indicar que o aplicativo não está pronto para produção.
-* Envios de plicativos em que o desenvolvedor alterou o nome do aplicativo, mas o antigo nome do aplicativo ainda é usado dentro do aplicativo.
+* Envios de aplicativo em que o desenvolvedor alterou o nome do aplicativo, mas o nome do aplicativo antigo ainda é usado no aplicativo.
 
 ## <a name="support-link"></a>Link de suporte
 

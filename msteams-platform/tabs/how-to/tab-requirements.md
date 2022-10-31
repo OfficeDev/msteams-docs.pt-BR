@@ -1,16 +1,16 @@
 ---
 title: Pré-requisitos
 author: surbhigupta
-description: Neste artigo, conheça os pré-requisitos para criar a guia pessoal, canal ou grupo do Microsoft Teams. Conheça as ferramentas necessárias para criar sua guia.
+description: Neste artigo, aprenda os pré-requisitos para criar a guia pessoal, canal ou grupo do Microsoft Teams. Conheça as ferramentas necessárias para criar sua guia.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450412"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791808"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -30,13 +30,13 @@ Certifique-se de aderir aos seguintes pré-requisitos ao criar sua guia pessoal 
 
 * Estilize suas guias com base no tema, design e intenção do cliente do Teams. As guias funcionam melhor quando são criadas para atender a uma necessidade específica e se concentram em um pequeno conjunto de tarefas ou um subconjunto de dados relevantes para o local do canal da guia.
 
-* Dentro da sua página de conteúdo, adicione uma referência ao [SDK do cliente JavaScript do Microsoft Teams ](/javascript/api/overview/msteams-client) usando marcas de script. Depois que a página for carregada, faça uma chamada `app.initialize()`para, caso contrário, sua página não será exibida.
+* Dentro da sua página de conteúdo, adicione uma referência ao [SDK do cliente JavaScript do Microsoft Teams ](/javascript/api/overview/msteams-client) usando marcas de script. Depois que sua página for carregada, faça uma chamada para `app.initialize()`, caso contrário, sua página não será exibida.
 
 * Para que a autenticação funcione em clientes móveis, você deve atualizar para o SDK JavaScript 1.4.1 do Teams e posterior.
 
 * Se você optar por fazer com que seu canal ou guia de grupo apareça no cliente móvel do Teams, a configuração de `setConfig()` deve ter um valor para a propriedade `websiteUrl`.
 
-* A guia Microsoft Teams não dá suporte à capacidade de carregar sites da intranet que usam certificados autoassinados.
+* A guia Microsoft Teams não dá suporte à capacidade de carregar sites de intranet que usam certificados autoassinados.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -45,10 +45,10 @@ Certifique-se de aderir aos seguintes pré-requisitos ao criar sua guia pessoal 
 | &nbsp; | Instalar | Para usar... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do v16 LTS.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do V16 LTS.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/) | Um navegador com ferramentas de desenvolvedor. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Ambientes de compilação JavaScript, TypeScript ou Estrutura do SharePoint (SPFx). |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET e desenvolvimento Web** ou carga de trabalho de **desenvolvimento de Plataforma Cruzada .NET Core** | .NET. Você pode instalar a edição gratuita da comunidade do Visual Studio 2019. |
+| &nbsp; | Carga de trabalho de **desenvolvimento entre plataformas** do [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET e web** ou .NET Core | .NET. Você pode instalar a edição gratuita da comunidade do Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git para usar o repositório de aplicativos de exemplo do GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | O Microsoft Teams para colaborar com todos com quem você trabalha por meio de aplicativos para chats, reuniões, chamadas - tudo em um só lugar. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok é uma ferramenta de software de proxy reverso. A Ngrok cria um túnel para os pontos de extremidade HTTPS disponíveis publicamente do seu servidor Web em execução local. Os pontos de extremidade da Web do seu servidor estão disponíveis durante a sessão atual no seu computador. Quando o computador é desligado ou entra no modo de suspensão, o serviço não está mais disponível. |

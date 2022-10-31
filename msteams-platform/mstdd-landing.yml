@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Documentação do desenvolvedor do Microsoft Teams
-summary: Bem-vindo à visão geral da documentação do desenvolvedor do Microsoft Teams. Os aplicativos do Microsoft Teams trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas se reúnem, aprendem e trabalham cada vez mais.
+summary: Bem-vindo à visão geral da documentação do desenvolvedor do Microsoft Teams. Os aplicativos do Teams trazem informações importantes, ferramentas comuns e processos confiáveis para onde as pessoas cada vez mais se reúnem, aprendem e trabalham.
 metadata:
   title: Documentação do desenvolvedor do Microsoft Teams
   description: Apresentando aplicativos de construção para o Teams
@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 35cdd8a9e70ced7e78377f35184ba033dcf36154
-  ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+  ms.openlocfilehash: 7a21f1d000d586124aa1338eb5f7f74dc5b43c71
+  ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/28/2022
-  ms.locfileid: "68773496"
+  ms.lasthandoff: 10/31/2022
+  ms.locfileid: "68791794"
 landingContent:
 - title: Explorar as últimas
   linkLists:
@@ -151,14 +151,12 @@ landingContent:
       url: ~/sbs-meeting-token-generator.yml
     - text: Gerar sidepanel de reunião
       url: ~/sbs-meetings-sidepanel.yml
-  - linkListType: tutorial
-    links:
     - text: Enviar notificação do feed de atividades
       url: ~/sbs-graphactivity-feedbroadcast.yml
-    - text: Criar um aplicativo de assinatura de documento em reunião
-      url: ~/sbs-inmeeting-document-signing.yml
   - linkListType: tutorial
     links:
+    - text: Criar um aplicativo de assinatura de documento em reunião
+      url: ~/sbs-inmeeting-document-signing.yml
     - text: Compilar um bot de comando com JavaScript
       url: sbs-gs-commandbot.yml
     - text: Compilar um bot de notificação com JavaScript
@@ -177,6 +175,8 @@ landingContent:
       url: ~/sbs-outgoing-webhooks.yml
     - text: Desenrolar links no Teams usando bot
       url: ~/sbs-botbuilder-linkunfurling.yml
+  - linkListType: tutorial
+    links:
     - text: Criar conectores do Teams
       url: ~/sbs-teams-connectors.yml
 - title: Cenários de aplicativo do Teams

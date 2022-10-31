@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: abcda0dd19388d1cdce2f2b440ecbae833b5f9c3
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: a0bec3166228b53dd4a6da336b42632ba2475582
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740601"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791752"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adicionar recursos aos aplicativos do Teams
 
@@ -94,7 +94,7 @@ A tabela a seguir mostra as alterações que podem ser vistas nos arquivos do ap
 |Bot, extensão de mensagem e guia|Inclui informações relacionadas a&nbsp;bot ou tab nos arquivos teamsfx e provisionamento que são para integrar funções do Azure.|Os arquivos em `templates/azure/teamsfx` são atualizados e `templates/azure/provision/xxx`os arquivos .bicep são regenerados.|
 |Bot, extensão de mensagem e guia|Garante que seu projeto esteja definido com configurações corretas para a funcionalidade recém-adicionada.|Os arquivos em `.fx/config` são regenerados|
 
-## <a name="step-by-step-guide"></a>Guias passo a passo
+## <a name="step-by-step-guides"></a>Guias passo a passo
 
 * Siga o guia [passo a passo](../sbs-gs-commandbot.yml) para criar um bot de comando no Microsoft Teams.
 

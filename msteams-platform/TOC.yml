@@ -274,8 +274,6 @@
     - name: Criar guias com Cartões Adaptáveis
       href: tabs/how-to/build-adaptive-card-tabs.md
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
-    - name: Usar o Fluid com o Microsoft Teams
-      href: tabs/how-to/using-fluid-msteam.md
     - name: Link de guias desdobradas e Exibição de Estágio
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -570,6 +568,8 @@
     - name: Introdução
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
       displayName: 'Access, report, MSAL2'
+    - name: Permissões de aplicativo do Teams
+      href: graph-api/app-permissions/teams-app-permissions.md
     - name: Consentimento específico do recurso
       href: graph-api/rsc/resource-specific-consent.md
       displayName: 'Permissions, delegated'

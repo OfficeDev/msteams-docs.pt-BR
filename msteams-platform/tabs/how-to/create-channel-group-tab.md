@@ -1,23 +1,23 @@
 ---
 title: Criar uma guia de canal ou guia de grupo
 author: laujan
-description: Criar canal personalizado, guia agrupar com Node.js, ASP.NET Core, ASP.NET Core MVC. Gerar aplicativo, criar pacote, compilar e executar aplicativo, túnel secreto, carregar no Teams
+description: Criar canal personalizado, guia de grupo com Node.js, ASP.NET Core ASP.NET Core MVC. Gerar aplicativo, criar pacote, criar e executar aplicativo, túnel secreto, carregar no Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615237"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791661"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>Criar uma guia de canal ou guia de grupo
 
 As guias de canal ou grupo fornecem conteúdo para canais e chats em grupo, o que ajuda a criar espaços colaborativos em torno de conteúdo dedicado baseado na Web.
 
-Verifique se você tem todos os [pré-requisitos para](~/tabs/how-to/tab-requirements.md) criar a guia canal ou grupo.
+Verifique se você tem todos os [pré-requisitos](~/tabs/how-to/tab-requirements.md) para criar sua guia de canal ou grupo.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -55,7 +55,7 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
     yo teams
     ```
 
-1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o `manifest.json` arquivo:
+1. Forneça seus valores a uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar seu `manifest.json` arquivo:
 
     ![captura de tela de abertura do gerador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ A seguir estão as etapas para criar uma guia de canal ou grupo:
 
     * **O nome da sua (empresa)? (máximo de 32 caracteres)**
 
-        O nome da empresa pode ser usado no manifesto do aplicativo. Insira um nome para a empresa ou selecione **Enter** para aceitar o nome padrão.
+        O nome da sua empresa pode ser usado no manifesto do aplicativo. Insira um nome para a empresa ou selecione **Enter** para aceitar o nome padrão.
 
     * **Qual versão do manifesto você gostaria de usar?**
 
@@ -214,12 +214,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Siga as instruções para adicionar uma guia. Há uma caixa de diálogo de configuração personalizada para seu canal ou guia de grupo.
+1. Siga as instruções para adicionar uma guia. Há uma caixa de diálogo de configuração personalizada para a guia canal ou grupo.
 1. Selecione **Salvar** e sua guia será adicionada à barra de guias do canal.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Guia de canal carregada":::
 
-    Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
+    Agora você criou com êxito e adicionou sua guia de canal ou grupo no Teams.
 
 ::: zone-end
 
@@ -296,7 +296,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone transparente de contorno** medindo 32 x 32 pixels.
 * Um arquivo `manifest.json` que especifica os atributos do seu aplicativo.
 
-Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. Quando um usuário opta por adicionar ou atualizar sua guia, o Teams `configurationUrl` carrega o especificado em seu manifesto, insere-o em um IFrame e o renderiza em sua guia.
+Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. Quando um usuário opta por adicionar ou atualizar sua guia, o Teams carrega o especificado em seu manifesto, insere-o `configurationUrl` em um IFrame e renderiza-o em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -324,7 +324,7 @@ Na janela do Gerenciador de Soluções do Visual Studio, clique com o botão dir
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro para sua guia:
+No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro na guia:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -349,9 +349,9 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Insira uma chamada para `microsoftTeams.app.initialize();` na marca `script`.
 
-1. No Visual Studio Gerenciador de Soluções, vá para a pasta **Páginas** e abra **Tab.cshtml**
+1. No Visual Studio Gerenciador de Soluções, acesse a pasta **Páginas** e abra **Tab.cshtml**
 
-    Em **Tab.cshtml**, o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+    Em **Tab.cshtml**, o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O botão **Selecionar Cinza** ou **Selecionar Vermelho** dispara `saveGray()` ou `saveRed()` , respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode prosseguir com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 
@@ -410,10 +410,10 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Abra **Aplicativos** e selecione **Importar aplicativo**.
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. O nome do pacote do aplicativo é `tab.zip`. Ele está disponível no seguinte caminho:
 
@@ -431,7 +431,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Em **urls de aplicativo**, atualize a política de privacidade para `https://<yourngrokurl>/privacy` e Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-1. Em **Recursos do aplicativo**, selecione **Grupo e aplicativo de canal**. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
+1. Em **Recursos de** aplicativo, selecione **Grupo e aplicativo de canal**. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
 
 1. Selecione **Salvar**.
 
@@ -445,7 +445,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="guia Cana dal ASPNET carregada":::
 
-    Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
+    Agora você criou com êxito e adicionou sua guia de canal ou grupo no Teams.
 
 ::: zone-end
 
@@ -518,7 +518,7 @@ Esses arquivos precisam ser compactados em um pacote de aplicativos para uso no 
 
 #### <a name="csproj"></a>.csproj
 
-Na janela do Gerenciador de Soluções do Visual Studio, clique com o botão direito do mouse no projeto e selecione **Editar arquivo de projeto**. No final do arquivo, você verá o seguinte código que cria e atualiza sua pasta zip quando o aplicativo é compilado:
+Na janela do Gerenciador de Soluções do Visual Studio, clique com o botão direito do mouse no projeto e selecione **Editar arquivo de projeto**. No final do arquivo, confira o seguinte código que cria e atualiza sua pasta zip quando o aplicativo cria:
 
 ```xml
 <PropertyGroup>
@@ -546,9 +546,9 @@ Na janela do Gerenciador de Soluções do Visual Studio, clique com o botão dir
 
 Estas são as diferentes exibições no ASP.NET Core MVC:
 
-* ASP.NET Core trata arquivos chamados **Índice** como o padrão ou página inicial para o site. Quando a URL do navegador aponta para a raiz do site, **Index.cshtml** pode ser exibida como a home page do aplicativo.
+* ASP.NET Core trata arquivos chamados **Índice** como o padrão ou página inicial para o site. Quando a URL do navegador aponta para a raiz do site, **Index.cshtml** pode ser exibida como a home page do seu aplicativo.
 
-* Compartilhado: a marcação de exibição parcial **_Layout.cshtml** contém a estrutura geral da página do aplicativo e os elementos visuais compartilhados que também fazem referência à Biblioteca do Teams.
+* Compartilhado: a marcação de exibição parcial **_Layout.cshtml** contém a estrutura geral da página do aplicativo e elementos visuais compartilhados que também fazem referência à Biblioteca do Teams.
 
 #### <a name="controllers"></a>Controladores
 
@@ -558,7 +558,7 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro para sua guia:
+No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro na guia:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -583,9 +583,9 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Insira uma chamada para `microsoftTeams.app.initialize();` na marca `script`.
 
-1. No Visual Studio Gerenciador de Soluções, vá para a pasta **Tab** e abra **Tab.cshtml**
+1. No Visual Studio Gerenciador de Soluções, acesse a pasta **Tab** e abra **Tab.cshtml**
 
-    Em **Tab.cshtml**, o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O **botão Selecionar Cinza** **ou Selecionar Vermelho** `saveGray()` `saveRed()` dispara ou, respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode continuar com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
+    Em **Tab.cshtml**, o aplicativo apresenta ao usuário duas opções para exibir a guia com um ícone vermelho ou cinza. O botão **Selecionar Cinza** ou **Selecionar Vermelho** dispara `saveGray()` ou `saveRed()` , respectivamente, define `pages.config.setValidityState(true)`e habilita **Salvar** na página de configuração. Esse código permite que o Teams saiba que você concluiu a configuração de requisitos e pode prosseguir com a instalação. Os parâmetros de `pages.config.setConfig` são definidos. Por fim, `saveEvent.notifySuccess()` é chamado para indicar que a URL de conteúdo foi resolvida com êxito.
 
 1. Atualize os valores `websiteUrl` e `contentUrl` em cada função com a URL HTTPS do ngrok para sua guia.
 
@@ -655,7 +655,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
 1. Em **urls de aplicativo**, atualize a política de privacidade para `https://<yourngrokurl>/privacy` e Termos de uso para `https://<yourngrokurl>/tou` e salvar.
 
-1. Em **Recursos do aplicativo**, selecione **Grupo e aplicativo de canal**. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
+1. Em **Recursos de** aplicativo, selecione **Grupo e aplicativo de canal**. Atualize a **URL de configuração** com `https://<yourngrokurl>/tab` e selecione sua guia **Escopo**.
 
 1. Selecione **Salvar**.
 
@@ -669,7 +669,7 @@ Certifique-se de manter o prompt de comando com ngrok em execução e anote a UR
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Guia de canal do ASPNET MVC carregado":::
 
-    Agora você criou e adicionou com êxito seu canal ou guia de grupo no Teams.
+    Agora você criou com êxito e adicionou sua guia de canal ou grupo no Teams.
 
 ::: zone-end
 

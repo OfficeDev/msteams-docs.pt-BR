@@ -3,16 +3,16 @@ title: Documentação do desenvolvedor do Microsoft Teams - Glossário
 description: Saiba mais sobre os termos, significados e definições comuns usados na documentação do desenvolvedor do Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 74717387d83e32e240a21b83d87a89bcb4591145
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615230"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791437"
 ---
 # <a name="glossary"></a>Glossário
 
-Termos e definições comuns usados na documentação do desenvolvedor do Teams.
+Termos e definições comuns usados na documentação do desenvolvedor do Microsoft Teams.
 
 ## <a name="a"></a>A
 
@@ -27,9 +27,9 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | [Escopo do aplicativo](../concepts/design/understand-use-cases.md#app-scope) | Uma área no Teams em que as pessoas podem usar seu aplicativo. Os aplicativos podem ter um ou vários escopos, incluindo pessoal, canais, chats e reuniões. Um aplicativo teams pode existir entre escopos. |
 | Bandeja de aplicativos | Uma bandeja de aplicativos localizada na barra inferior de um aplicativo móvel do Teams. Ela coleta todos os aplicativos abertos, mas não usados no momento ou ativos. <br>**Consulte também**: [Teams para dispositivos móveis](#t) |
 | [Recurso do Azure](../toolkit/provision.md) | Um serviço que está disponível por meio do Azure que seu aplicativo Teams pode usar para implantação do Azure. Pode ser contas de armazenamento, aplicativos Web, bancos de dados e muito mais. |
-| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | É o serviço de gerenciamento de identidades e acesso baseado na nuvem da Microsoft. Ele ajuda os usuários autenticados a acessar recursos internos e externos. |
+| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | É o serviço de gerenciamento de identidades e acesso baseado na nuvem da Microsoft. Ele ajuda usuários autenticados a acessar recursos internos e externos. |
 | [Autenticação](../concepts/authentication/authentication.md) | O processo para validar a identidade de um usuário para acessar seu aplicativo. <br> **Consulte também**: [Provedores de identidade](#i); [SSO](#s) |
-| [Fluxo de autenticação](../concepts/authentication/authentication.md) | A maneira como um usuário se autentica em seu aplicativo. Para aplicativos do Teams, recomendamos usar o SSO (logon único) usando o AAD (Azure Active Directory), mas uma alternativa é usar um provedor OAuth de terceiros.|
+| [Fluxo de autenticação](../concepts/authentication/authentication.md) | A maneira como um usuário se autentica em seu aplicativo. Para aplicativos do Teams, recomendamos usar o SSO (Logon Único) usando o AAD (Azure Active Directory), mas uma alternativa é usar um provedor OAuth de terceiros.|
 
 ## <a name="b"></a>B
 
@@ -49,7 +49,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | [Recursos](../toolkit/add-capability.md) | Um recurso do Teams que você pode criar em seu aplicativo para interagir com os usuários do aplicativo. Uma funcionalidade de aplicativo é usada para estender o Teams para atender às suas necessidades de aplicativo. Um aplicativo pode ter uma ou mais funcionalidades principais, tais como guias, bots e extensão de mensagem. <br>**Consulte também**: [Funcionalidade do dispositivo](#d); [Funcionalidade de mídia](#m) |
 | [Bot de chat](../bots/how-to/conversations/conversation-basics.md) | Um bot também é conhecido como chatbot ou bot de conversa. É um aplicativo que executa tarefas simples e repetitivas para usuários, como atendimento ao cliente ou equipe de suporte. <br> **Consulte também**: [Bot de conversa](#c) |
 | Canal | Um único local para uma equipe compartilhar mensagens, ferramentas e arquivos. Você pode usar um canal para trabalho em equipe e comunicação. <br>**Consulte também**: [Conversa](#c) |
-| [Segredo do cliente](../bots/how-to/authentication/add-authentication.md) | Uma cadeia de caracteres secreta que o aplicativo usa para provar sua identidade ao solicitar um token. Além disso, ele pode ser chamado de senha do aplicativo.|
+| [Segredo do cliente](../bots/how-to/authentication/add-authentication.md) | Uma cadeia de caracteres secreta que o aplicativo usa para provar sua identidade ao solicitar um token. Além disso, ela pode ser chamada de senha do aplicativo.|
 | [Recursos de nuvem](../toolkit/add-resource.md) | Um serviço que está disponível na nuvem por meio da Internet que seu aplicativo Teams pode usar. Pode ser contas de armazenamento, aplicativos Web, bancos de dados e muito mais. |
 | [Aplicativo de colaboração](../concepts/extensibility-points.md) | Um aplicativo com funcionalidades para um usuário trabalhar em um workspace colaborativo com outros usuários. <br> **Consulte também**: [ Aplicativo autônomo](#s) |
 | [Extensão Compose](../resources/schema/manifest-schema.md#composeextensions) | Uma propriedade no manifesto do aplicativo (`composeExtensions`) que se refere à funcionalidade de extensão de mensagem. Ele é usado quando sua extensão precisa ser autenticada ou configurada para continuar. <br>**Consulte também**: [Manifesto do aplicativo](#a); [Extensão de mensagem](#m) |
@@ -63,7 +63,7 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 | Termo | Definição |
 | --- | --- |
 | [Link profundo](../concepts/build-and-test/deep-links.md) | Em um aplicativo do Teams, você pode criar links profundos para informações e recursos no Teams ou para ajudar o usuário a navegar até o conteúdo em seu aplicativo. |
-|[Departamento de Defesa (DOD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Os ambientes do DoD oferecem conformidade com as Diretrizes dos Requisitos de Segurança do Departamento de Defesa, o DFARS (Regulamento Federal de Aquisição de Defesa) e o ITAR (International Traffic in Arms Regulations).|
+|[Departamento de Defesa (DOD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| Os ambientes do DoD fornecem conformidade com as Diretrizes de Requisitos de Segurança do Departamento de Defesa, o DFARS (Suplemento de Regulamentos de Aquisição Federal de Defesa) e o ITAR (International Traffic in Arms Regulations).|
 | [Portal do Desenvolvedor do Teams](../concepts/build-and-test/teams-developer-portal.md) | A principal ferramenta para configurar, distribuir e gerenciar seus aplicativos do Microsoft Teams. Com Portal do Desenvolvedor, você pode colaborar com colegas em seu aplicativo, configurar ambientes de runtime e muito mais. |
 | [Pré-visualização do desenvolvedor](../resources/dev-preview/developer-preview-intro.md) | Um programa público para desenvolvedores que fornece acesso antecipado a recursos não lançados no Microsoft Teams. Isso permite que você explore e teste os recursos futuros para uma possível inclusão em seu aplicativo Microsoft Teams. |
 | Implantar | Um processo para carregar o código de back-end e front-end para o aplicativo. Na Implantação, o código do aplicativo é copiado para os recursos criados durante o provisionamento. <br>**Consulte também**: [Provisionamento](#p) |
@@ -85,14 +85,14 @@ Termos e definições comuns usados na documentação do desenvolvedor do Teams.
 
 | Termo | Definição |
 | --- | --- |
-| [Experiência de primeira execução](../concepts/design/design-teams-app-ui-templates.md)|Uma FRE (Experiência de Primeira Execução) é a introdução de um usuário ao seu produto. A FRE ajuda os usuários a começar a usar as funções, os recursos e os benefícios do produto e influencia os usuários a voltar e continuar usando seu produto.|
+| [Experiência de primeira execução](../concepts/design/design-teams-app-ui-templates.md)|Uma FRE (Experiência de Primeira Execução) é a introdução do usuário ao seu produto. O FRE ajuda os usuários a começar a usar as funções, os recursos e os benefícios do produto e influencia os usuários a voltar e continuar usando seu produto.|
 
 ## <a name="g"></a>G
 
 | Termo | Definição |
 | --- | --- |
-|[GCC (nuvem da comunidade governamental)](../concepts/app-fundamentals-overview.md#government-community-cloud)| O ambiente GCC fornece conformidade com os requisitos federais para serviços de nuvem, incluindo FedRAMP High, DFARS (Federal Acquisition Regulations Supplement) e requisitos para justiça criminal e sistemas de informações fiscais federais (tipos de dados CJI e FTI).|
-|[GCC (nuvem da comunidade governamental) Alta](../concepts/app-fundamentals-overview.md#government-community-cloud)|Os ambientes de alta disponibilidade da GCC oferecem conformidade com as Diretrizes de Requisitos de Segurança do Departamento de Defesa (DoD), o DFARS (Federal Acquisition Regulations Supplement) de Defesa e o ITAR (International Traffic in Arms Regulations).<br>**Consulte também**: [Departamento de Defesa (DoD)](#d)|
+|[GCC (nuvem da comunidade governamental)](../concepts/app-fundamentals-overview.md#government-community-cloud)| O ambiente do GCC fornece conformidade com os requisitos federais para serviços de nuvem, incluindo o FedRAMP High, o DFARS (Defense Federal Acquisition Regulations Supplement) e os requisitos para justiça criminal e sistemas federais de informações fiscais (tipos de dados CJI e FTI).|
+|[GCC (nuvem da comunidade governamental) Alta](../concepts/app-fundamentals-overview.md#government-community-cloud)|Os ambientes altos do GCC fornecem conformidade com diretrizes de requisitos de segurança do Departamento de Defesa (DoD), Suplemento de Regulamentos de Aquisição Federal de Defesa (DFARS) e ITAR (International Traffic in Arms Regulations).<br>**Confira também**: [Departamento de Defesa (DoD)](#d)|
 | [API do Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | O Microsoft Graph é uma API Web RESTful que permite que você acesse os recursos de serviço do Microsoft Cloud. <br>**Consulte também**: [Microsoft Graph Explorer](#m) |
 | [Chat em grupo](../resources/bot-v3/bot-conversations/bots-conversations.md) | Um recurso de chat em que um usuário pode conversar com um bot em uma configuração de grupo usando @mencionar para invocar o bot. <br>**Consulte  também**: [Chat um a um](#o); [Bot de chat](#c) |
 
