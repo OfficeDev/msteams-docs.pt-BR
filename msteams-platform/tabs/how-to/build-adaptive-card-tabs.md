@@ -1,22 +1,22 @@
 ---
 title: Criar guias de cartão adaptável
 author: KirtiPereira
-description: Saiba como criar guias usando Cartões Adaptáveis em que o front-end é renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. Explore as atividades de invocação e manipule envios.
+description: Aprenda a criar guias usando Cartões Adaptáveis em que o front-end é renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. Explore as atividades de invocação e manipule os envios.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 31aecc7ab7744d0b45061d2434d8709c776c52e8
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499283"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820126"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Criar guias com Cartões Adaptáveis
 
 > [!IMPORTANT]
 >
-> As guias com Cartões Adaptáveis atualmente só têm suporte como aplicativos pessoais.
+> As guias com cartões adaptáveis só têm suporte como aplicativos pessoais.
 
 Ao desenvolver uma guia usando o método tradicional, você pode ter estes problemas:
 
@@ -25,7 +25,7 @@ Ao desenvolver uma guia usando o método tradicional, você pode ter estes probl
 * Restrições de iFrame
 * Manutenção e custos do servidor
 
-As guias do Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de inserir conteúdo da Web em um iFrame, você pode renderizar Cartões Adaptáveis em uma guia. Embora o front-end seja renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
+As guias do Cartão Adaptável são uma nova maneira de criar guias no Teams. Em vez de inserir conteúdo da Web em um iFrame, você pode renderizar Cartões Adaptáveis em uma guia. Enquanto o front-end é renderizado com Cartões Adaptáveis, o back-end é alimentado por um bot. O bot é responsável por aceitar solicitações e responder adequadamente com o Cartão Adaptável renderizado.
 
 Você pode criar suas guias com blocos de construção prontos para interface do usuário (UI) nativos na área de trabalho, na Web e em dispositivos móveis. Este artigo ajuda você a entender as alterações necessárias para serem feitas no manifesto do aplicativo. O artigo também identifica como a atividade de invocação solicita e envia informações na guia com Cartões Adaptáveis e seu efeito no fluxo de trabalho do módulo de tarefa.
 
@@ -45,7 +45,7 @@ Antes de começar a Cartões Adaptáveis para criar guias, você deve:
 Aplicativos pessoais que renderizam guias devem incluir uma matriz `staticTabs` no manifesto do aplicativo. As guias cartão adaptável são renderizadas quando a propriedade `contentBotId` é fornecida na definição `staticTab`. As definições de guia estáticas devem conter uma `contentBotId`, especificando uma guia Cartão Adaptável ou uma `contentUrl`, especificando uma experiência típica de guia de conteúdo da Web hospedada.
 
 > [!NOTE]
-> A propriedade `contentBotId` está disponível no manifesto versão 1.9 ou posterior.
+> A `contentBotId` propriedade está disponível no manifesto versão 1.9 ou posterior.
 
 Forneça a propriedade `contentBotId` com a `botId` com a qual a guia Cartão Adaptável deve se comunicar. O `entityId` configurado para a guia Cartão Adaptável é enviado no parâmetro `tabContext` de cada solicitação de invocação e pode ser usado para diferenciar as Guias de Cartão Adaptável que são ativadas pelo mesmo bot. Para obter mais informações sobre outros campos de definição de guia estática, consulte [esquema de manifesto](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -437,9 +437,8 @@ O código a seguir mostra um exemplo de solicitação reemitida:
 
 ## <a name="see-also"></a>Confira também
 
-* [Cartão Adaptável](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Guias do Teams](~/tabs/what-are-tabs.md)
-* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
-* [Criar uma guia de canal ou grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-* [Comentários de preenchimento do formulário](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Compilar guias para o Teams](../what-are-tabs.md)
+* [Guias em dispositivos móveis](../design/tabs-mobile.md)
+* [Cartões](../../task-modules-and-cards/what-are-cards.md)
+* [Usar módulos de tarefas nas guias](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Comentários de preenchimento do formulário](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

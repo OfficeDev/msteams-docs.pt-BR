@@ -5,12 +5,12 @@ description: Saiba como as extensões de mensagem são usadas, seus tipos e cen�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6b486e732542cbd6fdfeaecbef74b9724a024e67
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791731"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819972"
 ---
 # <a name="message-extensions"></a>Extensões de mensagens
 
@@ -247,6 +247,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 ## <a name="see-also"></a>Confira também
 
-* [Defina o comando de extensão de mensagem de pesquisa](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [Crie uma extensão de mensagem](../build-your-first-app/build-messaging-extension.md)
-* [Ações Universais para extensões de mensagens baseadas em pesquisa](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [Funcionalidades do aplicativo mapeados para recursos](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
+* [Criar seu primeiro aplicativo de extensão de mensagem usando JavaScript](../sbs-gs-msgext.yml)
+* [Como criar sua extensão de mensagens do Microsoft Teams](design/messaging-extension-design.md)
+* [Definir comandos de ação de extensão de mensagem](how-to/action-commands/define-action-command.md)
+* [Definir comandos de pesquisa de extensão de mensagem](how-to/search-commands/define-search-command.md)
+* [Adicionar desenrolamento de link](how-to/link-unfurling.md)
+* [Esquema de manifesto do aplicativo para o Teams](../resources/schema/manifest-schema.md)
+* [Portal do Desenvolvedor do Teams](../concepts/build-and-test/teams-developer-portal.md)

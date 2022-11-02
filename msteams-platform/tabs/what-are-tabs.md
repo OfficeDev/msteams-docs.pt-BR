@@ -5,12 +5,12 @@ description: Aprenda a criar guias, páginas da Web inseridas no Microsoft Teams
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
-ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
+ms.openlocfilehash: cd8e57a0773a5c1b8cd145176de703018c4e45e7
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772505"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819986"
 ---
 # <a name="build-tabs-for-teams"></a>Compilar guias para o Teams
 
@@ -90,9 +90,7 @@ Você pode ter vários canais ou guias de grupo e até 16 guias pessoais por apl
 
 ## <a name="see-also"></a>Confira também
 
-* [Guias personalizadas no Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
-* [Solicitar permissões do dispositivo](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrar recursos de mídia](../concepts/device-capabilities/media-capabilities.md)
-* [Integrar um scanner de código de barras QR](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [Integrar os recursos de localização](../concepts/device-capabilities/location-capability.md)
+* [Projete sua guia para o Microsoft Teams](design/tabs.md)
+* [Funcionalidades de dispositivo](../concepts/device-capabilities/device-capabilities-overview.md)
 * [Guias em dispositivos móveis](design/tabs-mobile.md#tabs-on-mobile)
+* [Funcionalidades do aplicativo mapeados para recursos](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)

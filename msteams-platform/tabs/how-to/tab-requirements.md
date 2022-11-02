@@ -5,12 +5,12 @@ description: Neste artigo, aprenda os pré-requisitos para criar a guia pessoal,
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4471d88b7f9b0fd6364c833f6b3dd910aadb300a
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791808"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819958"
 ---
 # <a name="prerequisites"></a>Pré-requisitos
 
@@ -65,5 +65,7 @@ Agora vamos criar sua guia. Mas primeiro selecione sua escolha de guia para comp
 
 ## <a name="see-also"></a>Confira também
 
-* [Guias do Teams](~/tabs/what-are-tabs.md)
+* [Compilar guias para o Teams](../what-are-tabs.md)
+* [Crie seu primeiro aplicativo de guia usando JavaScript](../../sbs-gs-javascript.yml)
+* [Registrar o aplicativo de guia no Azure AD](authentication/tab-sso-register-aad.md)
 * [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)

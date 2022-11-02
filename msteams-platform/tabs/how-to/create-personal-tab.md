@@ -1,17 +1,17 @@
 ---
 title: Criar uma guia pessoal
 author: laujan
-description: Aprenda a criar uma guia pessoal. Selecione o Node.js, ASP.NET Core ou ambiente ASP.NET Core MVC. Gere o aplicativo, adicione conteúdo, crie um pacote, crie e execute o aplicativo.
+description: Aprenda a criar uma guia pessoal. Selecione o ambiente de MVC Node.js, ASP.NET Core ou ASP.NET Core. Gerar aplicativo, adicionar conteúdo, criar pacote, compilar e executar aplicativo.
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 5afb145bdba5639b71a7b56ac8884dc465127d35
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560733"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820000"
 ---
 # <a name="create-a-personal-tab"></a>Criar uma guia pessoal
 
@@ -56,7 +56,7 @@ A seguir estão as etapas para criar uma guia pessoal:
     yo teams
     ```
 
-1. Forneça seus valores para uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar o `manifest.json` arquivo.
+1. Forneça seus valores a uma série de perguntas solicitadas pelo gerador de aplicativos do Microsoft Teams para atualizar seu `manifest.json` arquivo.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Gerador do Teams":::
 
@@ -131,7 +131,7 @@ A seguir estão as etapas para criar uma guia pessoal:
 
       Escolha **não** para incluir o suporte de logon único do Azure AD para a guia. O padrão é sim, insira **n**.
     > [!NOTE]
-    > Em uma guia, a página inicial da guia é exibida somente quando o usuário seleciona o botão Voltar (ou sai da guia) e volta para a home page. A guia não mantém nem mantém o estado anterior por design.
+    > Em uma guia, a página inicial da guia é exibida somente quando o usuário seleciona o botão voltar (ou sai da guia) e volta para a home page. A guia não mantém ou mantém o estado anterior por design.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Adicionar uma página de conteúdo à guia pessoal
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. No painel esquerdo do Teams, selecione reticências &#x25CF;&#x25CF;&#x25CF; e escolha seu aplicativo carregado para exibir sua guia pessoal.
 
-   Agora você criou e adicionou com êxito sua guia pessoal no Teams.
+   Agora você criou com êxito e adicionou sua guia pessoal no Teams.
   
    Como você tem sua guia pessoal no Teams, você também pode [reordenar](#reorder-static-personal-tabs) sua guia pessoal.
 
@@ -371,7 +371,7 @@ No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mo
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. No Visual Studio Gerenciador de Soluções, abra **PersonalTab.cshtml** na pasta **Páginas** e adicione `microsoftTeams.app.initialize()` as `<script>` marcas.
+1. No Visual Studio Gerenciador de Soluções, abra **PersonalTab.cshtml** da pasta **Páginas** e adicione `microsoftTeams.app.initialize()` as `<script>` marcas.
 
 1. Selecione **Salvar**.
 
@@ -379,7 +379,7 @@ No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mo
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro para sua guia:
+No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro na guia:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Abra **Aplicativos** e selecione **Importar aplicativo**.
 
-1. O nome do arquivo do pacote `tab.zip` do aplicativo é e está disponível no `/bin/Debug/netcoreapp3.1/tab.zip` caminho.
+1. O nome do arquivo do pacote de aplicativo é `tab.zip` e está disponível no `/bin/Debug/netcoreapp3.1/tab.zip` caminho.
 
 1. Selecione `tab.zip` e abra-o no Portal do Desenvolvedor.
 
@@ -401,9 +401,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Em **Informações do desenvolvedor**, adicione os detalhes necessários e, no site do **(deve ser uma URL HTTPS válida),** forneça sua URL HTTPS ngrok.
 
-1. Em **URLs do Aplicativo**, atualize a política de privacidade e `https://<yourngrokurl>/privacy` os Termos de uso para `https://<yourngrokurl>/tou` e selecione **Salvar**.
+1. Em **URLs** de aplicativo, atualize a política de privacidade para `https://<yourngrokurl>/privacy` e Termos de uso para `https://<yourngrokurl>/tou` e selecione **Salvar**.
 
-1. Em **Recursos do aplicativo**, selecione **Aplicativo Pessoal** > **Criar sua primeira guia de aplicativo pessoal** , insira o nome e atualize a **URL de** Conteúdo com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
+1. Em **Recursos de** aplicativo, selecione **Aplicativo** >  pessoal **Criar sua primeira guia de aplicativo pessoal** e insira o nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
 
 1. Selecione **Salvar**.
 
@@ -417,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Guia padrão":::
 
-   Agora você criou e adicionou com êxito sua guia pessoal no Teams.
+   Agora você criou com êxito e adicionou sua guia pessoal no Teams.
   
    Como você tem sua guia pessoal no Teams, você também pode [reordenar](#reorder-static-personal-tabs) sua guia pessoal.
 
@@ -487,7 +487,7 @@ Esta pasta contém os seguintes arquivos de pacote de aplicativos necessários:
 * Um **ícone transparente de contorno** medindo 32 x 32 pixels.
 * Um arquivo `manifest.json` que especifica os atributos do seu aplicativo.
 
-Esses arquivos devem ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. O Teams carrega `contentUrl` o especificado em seu manifesto, o insere em um iFrame e o renderiza em sua guia.
+Esses arquivos devem ser compactados em um pacote de aplicativos para uso no carregamento de sua guia para o Teams. O Teams carrega o especificado em seu manifesto, insere-o `contentUrl` em um iFrame e o renderiza em sua guia.
 
 #### <a name="csproj"></a>.csproj
 
@@ -538,7 +538,7 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. No Visual Studio Gerenciador de Soluções, abra **PersonalTab.cshtml** na pasta **Views** > **PersonalTab** e adicione `microsoftTeams.app.initialize()` dentro das `<script>` marcas.
+1. No Visual Studio Gerenciador de Soluções, abra **PersonalTab.cshtml** da pasta **Views** > **PersonalTab** e adicione `microsoftTeams.app.initialize()` dentro das `<script>` marcas.
 
 1. Selecione **Salvar**.
 
@@ -546,7 +546,7 @@ Os controladores usam a propriedade `ViewBag` para transferir valores dinamicame
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Estabelecer um túnel seguro para sua guia
 
-No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro para sua guia:
+No prompt de comando na raiz do diretório do projeto, execute o seguinte comando para estabelecer um túnel seguro na guia:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -570,11 +570,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Adicione a descrição Curta e Longa para seu aplicativo em **Descrições**.
 
-1. Nas **informações do desenvolvedor**, adicione os detalhes necessários e, no site (deve ser uma **URL HTTPS válida), forneça a** URL HTTPS do ngrok.
+1. Em **Informações do Desenvolvedor**, adicione os detalhes necessários e no **Site (deve ser uma URL HTTPS válida)** forneça sua URL HTTPS ngrok.
 
-1. Em **URLs do Aplicativo**, atualize a política de privacidade e `https://<yourngrokurl>/privacy` os Termos de uso para `https://<yourngrokurl>/tou` e selecione **Salvar**.
+1. Em **URLs** de aplicativo, atualize a política de privacidade para `https://<yourngrokurl>/privacy` e Termos de uso para `https://<yourngrokurl>/tou` e selecione **Salvar**.
 
-1. Em **Recursos do aplicativo**, selecione **Aplicativo Pessoal** > **Criar sua primeira guia de aplicativo pessoal** , insira o nome e atualize a **URL de** Conteúdo com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
+1. Em **Recursos de** aplicativo, selecione **Aplicativo** >  pessoal **Criar sua primeira guia de aplicativo pessoal** e insira o nome e atualize a **URL de Conteúdo** com `https://<yourngrokurl>/personalTab`. Deixe o campo URL do Site em branco e selecione **Contexto** como personalTab na lista suspensa e selecione **Confirmar**.
 
 1. Selecione **Salvar**.
 
@@ -588,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Guia pessoal":::
   
-   Agora você criou e adicionou com êxito sua guia pessoal no Teams.
+   Agora você criou com êxito e adicionou sua guia pessoal no Teams.
 
    Como você tem sua guia pessoal no Teams, você também pode [reordenar](#reorder-static-personal-tabs) sua guia pessoal.
 
@@ -596,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Reordenar guias pessoais estáticas
 
-A partir da versão 1.7 do manifesto, os desenvolvedores podem reorganizar todas as guias em seu aplicativo pessoal. Você pode mover a **guia de chat do bot** , que sempre assume como padrão a primeira posição, em qualquer lugar no cabeçalho da guia do aplicativo pessoal. Duas palavras-chave da guia reservada `entityId` são reservadas, **conversas** e **sobre**.
+A partir da versão 1.7 do manifesto, os desenvolvedores podem reorganizar todas as guias em seu aplicativo pessoal. Você pode mover a guia **chat do bot** , que sempre é padrão para a primeira posição, em qualquer lugar no cabeçalho da guia do aplicativo pessoal. Duas palavras-chave da guia reservada `entityId` são reservadas, **conversas** e **sobre**.
 
 Se você criar um bot com um escopo **pessoal**, ele aparecerá na primeira posição da guia em um aplicativo pessoal por padrão. Se você quiser movê-lo para outra posição, deverá adicionar um objeto de guia estático ao manifesto com a palavra-chave reservada, **conversas**. A guia **conversa** aparece na Web ou na área de trabalho, dependendo de onde você adiciona a guia **conversa** na matriz `staticTabs`.
 
@@ -625,8 +625,10 @@ Se você criar um bot com um escopo **pessoal**, ele aparecerá na primeira posi
 
 ## <a name="see-also"></a>Confira também
 
-* [Guias do Teams](~/tabs/what-are-tabs.md)
-* [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
-* [Criar guias com Cartões Adaptáveis](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Criar abas para conversação](~/tabs/how-to/conversational-tabs.md)
+* [Compilar guias para o Teams](../what-are-tabs.md)
+* [Criar uma guia de canal ou guia de grupo](create-channel-group-tab.md)
 * [Compartilhar com o Teams a partir do aplicativo ou guia pessoal](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Portal do Desenvolvedor do Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [Esquema de manifesto do aplicativo para o Teams](../../resources/schema/manifest-schema.md)
+* [Criar guias com Cartões Adaptáveis](build-adaptive-card-tabs.md)
+* [Guias em dispositivos móveis](../design/tabs-mobile.md)

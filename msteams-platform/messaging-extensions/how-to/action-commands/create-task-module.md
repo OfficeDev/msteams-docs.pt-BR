@@ -5,12 +5,12 @@ description: Saiba como criar e enviar módulos de tarefa. Manipule a ação de 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 08629f59979923a397c08809fc20b50c81a30c58
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100312"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820112"
 ---
 # <a name="create-and-send-task-module"></a>Criar e enviar o módulo de tarefas
 
@@ -648,7 +648,7 @@ Responda à solicitação de invocação com um objeto `task` que contém um obj
 
 |Nome da propriedade|Objetivo|
 |---|---|
-|`type`| Pode ser para `continue` apresentar um formulário ou para `message` um pop-up simples. |
+|`type`| Pode ser `continue` apresentar um formulário ou `message` para um pop-up simples. |
 |`value`| Um objeto `taskInfo` para um formulário ou um `string` para uma mensagem. |
 
 O esquema para o objeto taskInfo é:
@@ -995,4 +995,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>Confira também
 
-[Definir comandos de ação](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Cartões](../../../task-modules-and-cards/what-are-cards.md)
+* [Seletor de Pessoas em Cartões Adaptáveis](../../../task-modules-and-cards/cards/people-picker.md)
+* [Módulos de tarefas](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Esquema de manifesto do aplicativo para o Teams](../../../resources/schema/manifest-schema.md)
+* [Definir comandos de ação de extensão de mensagem](define-action-command.md)
+* [Extensões de mensagens](../../what-are-messaging-extensions.md)

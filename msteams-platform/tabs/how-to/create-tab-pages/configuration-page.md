@@ -5,12 +5,12 @@ description: Crie uma página de configuração para coletar informações do us
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6cd9ed8572b3df2db4a727225159774156008fa6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791685"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820168"
 ---
 # <a name="create-a-configuration-page"></a>Criar uma página de configuração
 
@@ -340,8 +340,9 @@ Se você optar por exibir sua guia de canal ou grupo nos clientes móveis do Tea
 
 ## <a name="see-also"></a>Confira também
 
-* [Guias do Teams](~/tabs/what-are-tabs.md)
-* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
-* [Criar uma guia de canal ou grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Criar uma página de conteúdo](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Guias em dispositivos móveis](~/tabs/design/tabs-mobile.md)
+* [Compilar guias para o Teams](../../what-are-tabs.md)
+* [Atualizar manifesto para SSO e aplicativo de visualização](../authentication/tab-sso-manifest.md)
+* [Configurar autenticação OAuth IdP de terceiros](../authentication/auth-tab-aad.md)
+* [Criar Conectores do Office 365](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Obtenha contexto para sua guia](../access-teams-context.md)
+* [Guias em dispositivos móveis](../../design/tabs-mobile.md)

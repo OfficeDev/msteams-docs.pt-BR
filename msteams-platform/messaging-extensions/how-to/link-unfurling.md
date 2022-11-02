@@ -1,36 +1,36 @@
 ---
 title: Desenrolamento de link
 author: surbhigupta
-description: Adicione o link desfralizando com a extensão de mensagens em um aplicativo do Microsoft Teams com manifesto do aplicativo ou manualmente. Adicione o link desfraldamento usando o Portal do Desenvolvedor. Como atualizar o código do serviço Web para manipular a solicitação de invocação.
+description: Adicione o unfurling de link com a extensão de mensagens em um aplicativo do Microsoft Teams com manifesto de aplicativo ou manualmente. Adicionar o unfurling de link usando o Portal do Desenvolvedor. Como atualizar o código do serviço Web para lidar com a solicitação de invocação.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: c706bd4caf8ab7859fb0c8f9b5b9e8f337a3b269
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100627"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820147"
 ---
 # <a name="add-link-unfurling"></a>Adicionar desenrolamento de link
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Este documento orienta você sobre como adicionar link desfralhamento ao manifesto do aplicativo usando o Portal do Desenvolvedor ou manualmente. Com o desenrolamento de link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando as URLs com um domínio específico são coladas na área de mensagem de redação. Contém `invoke` a URL completa que foi colada na área de mensagem de composição. Você pode responder com um cartão que o usuário pode desafralar para obter informações ou ações adicionais. Isso funciona como um comando de pesquisa com a URL como o termo de pesquisa.
+Este documento orienta como adicionar a desenrolação de link ao manifesto do aplicativo usando o Portal do Desenvolvedor ou manualmente. Com o desenrolamento de link, seu aplicativo pode se registrar para receber uma atividade `invoke` quando as URLs com um domínio específico são coladas na área de mensagem de redação. O `invoke` contém a URL completa que foi colada na área de mensagem de composição. Você pode responder com um cartão que o usuário pode cancelar para obter informações ou ações adicionais. Isso funciona como um comando de pesquisa com a URL como o termo de pesquisa.
 
 > [!NOTE]
 >
 > * Atualmente, não há suporte para desenrolamento de link em clientes móveis.
 > * O resultado da desenrolamento de link é armazenado em cache por 30 minutos.
-> * Os comandos de extensão de mensagens não são necessários para a desfralização do Link. No entanto, deve haver pelo menos um comando no manifesto, pois é uma propriedade obrigatória em extensões de mensagens. Para obter mais informações, consulte [extensões de composição](/microsoftteams/platform/resources/schema/manifest-schema)
+> * Os comandos de extensão de mensagens não são necessários para a desenrolação do Link. No entanto, deve haver pelo menos um comando no manifesto, pois é uma propriedade obrigatória em extensões de mensagens. Para obter mais informações, consulte [extensões de composição](/microsoftteams/platform/resources/schema/manifest-schema)
 
-A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário coleu uma URL para um item no Azure DevOps que a extensão de mensagem resolveu em um cartão:
+A Azure DevOps de mensagem usa o desenrolamento de link para procurar URLs coladas na área de mensagem de composição apontando para um item de trabalho. Na imagem a seguir, um usuário coleu uma URL para um item no Azure DevOps que a extensão da mensagem resolveu em um cartão:
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Exemplo de desenrolamento de link":::
 
-Confira o vídeo a seguir para saber mais sobre o desaqueamento de link:
+Confira o vídeo a seguir para saber mais sobre a desenrolação do link:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Adicionar desenrolamento de link ao manifesto do aplicativo
@@ -38,15 +38,15 @@ Confira o vídeo a seguir para saber mais sobre o desaqueamento de link:
 Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma nova matriz `messageHandlers` à seção `composeExtensions` do manifesto do aplicativo JSON. Você pode adicionar a matriz com a ajuda do Portal do Desenvolvedor ou manualmente. As listagens de domínio podem incluir caracteres curinga, por exemplo, `*.example.com`. Isso corresponde exatamente a um segmento do domínio; se você precisar corresponder `a.b.example.com` use `*.*.example.com`.
 
 > [!NOTE]
-> Não adicione domínios que não estão em seu controle, diretamente ou por meio de caracteres curinga. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Os domínios de nível superior são proibidos, por exemplo, `*.com`, `*.org`.
+> Não adicione domínios que não estejam no controle, diretamente ou por meio de curingas. Por exemplo, `yourapp.onmicrosoft.com` é válido, mas `*.onmicrosoft.com` não é válido. Os domínios de nível superior são proibidos, por exemplo, `*.com`, . `*.org`
 
-### <a name="add-link-unfurling-using-developer-portal"></a>Adicionar link desfralização usando o Portal do Desenvolvedor
+### <a name="add-link-unfurling-using-developer-portal"></a>Adicionar unfurling de link usando o Portal do Desenvolvedor
 
-1. Abra **o Portal do** Desenvolvedor no cliente do Microsoft Teams e selecione a **guia Aplicativos** .
+1. Abra o **Portal do Desenvolvedor** no cliente do Microsoft Teams e selecione a guia **Aplicativos** .
 1. Carregue o manifesto do aplicativo.
-1. Na página **Extensão de Mensagens,** em **Recursos do aplicativo**, selecione o bot existente ou crie um novo bot.
+1. Na página **Extensão de Mensagens** em **Recursos de aplicativo**, selecione bot existente ou crie um novo bot.
 1. Selecione **Salvar**.
-1. Selecione **Adicionar um domínio na** seção **Links de visualização** e insira um domínio válido.
+1. Selecione **Adicionar um domínio** na seção **Visualizar links** e, em seguida, insira domínio válido.
 1. Selecione **Adicionar**. A imagem a seguir explica o processo:
 
    :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Captura de tela da seção manipuladores de mensagens no Portal do Desenvolvedor." lightbox="../../assets/images/tdp/add-domain.PNG":::
@@ -54,7 +54,7 @@ Para adicionar o desenrolamento de link ao manifesto do aplicativo, adicione uma
 ### <a name="add-link-unfurling-manually"></a>Adicionar link desfraldando manualmente
 
 > [!NOTE]
-> Se a autenticação for adicionada por meio Azure AD, [desfasar links no Teams usando o bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+> Se a autenticação for adicionada por meio de Azure AD, [desmarca os links no Teams usando o bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 Para habilitar sua extensão de mensagem para interagir com links, primeiro você deve adicionar a matriz `messageHandlers` ao manifesto do aplicativo. O exemplo a seguir explica como adicionar o link desfraldamento manualmente:
 
@@ -197,5 +197,7 @@ Siga o [guia passo a passo](../../sbs-botbuilder-linkunfurling.yml) para desenro
 
 ## <a name="see-also"></a>Confira também
 
-* [Cartões](~/task-modules-and-cards/what-are-cards.md)
-* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
+* [Extensões de mensagens](../what-are-messaging-extensions.md)
+* [Cartões Adaptáveis](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Link de guias desdobradas e Exibição de Estágio](../../tabs/tabs-link-unfurling.md)
+* [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)

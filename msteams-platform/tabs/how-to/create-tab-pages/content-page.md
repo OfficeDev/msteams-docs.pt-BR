@@ -5,12 +5,12 @@ description: Saiba mais sobre a página da Web no cliente do Teams e faz parte d
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4074b3bb4499cca2453a9d928a83b1cd04f5c064
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791535"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820161"
 ---
 # <a name="create-a-content-page"></a>Criar uma página de conteúdo
 
@@ -139,8 +139,8 @@ Para mostrar o indicador de carregamento:
 
 ## <a name="see-also"></a>Confira também
 
-* [Guias do Teams](~/tabs/what-are-tabs.md)
-* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
-* [Link de guias desdobradas e Exibição de Estágio](~/tabs/tabs-link-unfurling.md)
-* [Criar uma página de configuração](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Compilar guias para o Teams](../../what-are-tabs.md)
+* [Criar uma guia pessoal](../create-personal-tab.md)
+* [Criar uma guia de canal ou guia de grupo](../create-channel-group-tab.md)
+* [Esquema de manifesto do aplicativo para o Teams](../../../resources/schema/manifest-schema.md)
 * [Guias do DevTools para o Microsoft Teams](~/tabs/how-to/developer-tools.md)

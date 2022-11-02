@@ -3,12 +3,12 @@ title: Obter contexto para sua guia
 description: Aprenda a contextualar para sua guia, contexto de usuário, equipe ou empresa, acessar informações, recuperar contexto em canais privados ou compartilhados e manipular a alteração do tema.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: d4dee147da2fd0091e038526ca56d66a9b80f7e5
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791542"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820105"
 ---
 # <a name="get-context-for-your-tab"></a>Obtenha contexto para sua guia
 
@@ -286,8 +286,9 @@ O `theme` argumento na função é uma cadeia de caracteres com um valor de `def
 
 ## <a name="see-also"></a>Confira também
 
-* [Diretrizes de design de guia](../../tabs/design/tabs.md)
-* [Guias do Teams](~/tabs/what-are-tabs.md)
-* [Criar uma guia pessoal](~/tabs/how-to/create-personal-tab.md)
-* [Criar uma guia de canal ou grupo](~/tabs/how-to/create-channel-group-tab.md)
-* [Usar módulos de tarefas nas guias](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Compilar guias para o Teams](../what-are-tabs.md)
+* [Projete sua guia para o Microsoft Teams](../design/tabs.md)
+* [Habilitar o logon único para o aplicativo de guia](authentication/tab-sso-overview.md)
+* [Conexão Microsoft Teams canais compartilhados](../../concepts/build-and-test/shared-channels.md)
+* [Esquema de manifesto do aplicativo para o Teams](../../resources/schema/manifest-schema.md)
+* [Usar módulos de tarefas nas guias](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

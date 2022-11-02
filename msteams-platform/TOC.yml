@@ -257,9 +257,9 @@
     - name: Criar uma página de conteúdo
       href: tabs/how-to/create-tab-pages/content-page.md
       displayName: 'Loading indicator, personal-scoped custom tab, channel or group custom tab'
-    - name: Criar página de configuração
+    - name: Criar uma página de configuração
       href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Criar página de remoção
+    - name: Criar uma página de remoção
       href: tabs/how-to/create-tab-pages/removal-page.md
       displayName: 'Reconfigure tab, register remove handler'
     - name: Guias em dispositivos móveis
