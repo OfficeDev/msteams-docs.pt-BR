@@ -3,12 +3,12 @@ title: Adicionar ações de cartão em um bot
 description: Neste módulo, saiba o que são ações de cartão no Microsoft Teams, tipos de ação e como usá-las em seus bots
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 1111e8dfe71ad1289f5057b6cb76b98c3ca8d99b
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 77f2631ae55f5794567d83233e1311d935cefabc
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858885"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833174"
 ---
 # <a name="card-actions"></a>Ações do cartão
 
@@ -22,7 +22,7 @@ Os cartões usados por bots e extensões de mensagem no Teams são compatíveis 
 | `openUrl` | Abre uma URL no navegador padrão. |
 | `messageBack` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Envia uma mensagem separada para o fluxo de chat. |
 | `imBack`| Envia uma mensagem para o bot do usuário que selecionou o botão ou tocou no cartão. Essa mensagem do usuário para o bot é visível para todos os participantes da conversa. |
-| `invoke` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Esta mensagem não está visível. |
+| `invoke` | Envia uma mensagem e conteúdo para o bot do usuário que selecionou o botão ou tocou no cartão. Essa mensagem não está visível. |
 | `signin` | Inicia o fluxo OAuth, permitindo que os bots se conectem com serviços seguros. |
 
 > [!NOTE]
@@ -38,8 +38,8 @@ O tipo de ação `openUrl` especifica uma URL a ser iniciada no navegador padrã
 
 > [!NOTE]
 >
-> * Seu bot não recebe nenhum aviso sobre qual botão foi selecionado.
-> * Não há suporte para nomes de computador com números na URL.
+> * O bot não recebe nenhum aviso em qual botão foi selecionado.
+> * Não há suporte para nomes de máquina com números na URL.
 
 Com `openUrl`, você pode criar uma ação com as seguintes propriedades:
 
@@ -95,11 +95,11 @@ Com `messageBack`, você pode criar uma ação totalmente personalizada com as s
 | Propriedade | Descrição |
 | --- | --- |
 | `title` | Aparece como o rótulo do botão. |
-| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Esse texto não é enviado para o bot. |
+| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Este texto não é enviado para o bot. |
 | `value` | Enviado ao bot quando a ação é executada. Você pode codificar o contexto para a ação, como identificadores exclusivos ou um objeto JSON. |
 | `text` | Enviado ao bot quando a ação é executada. Use essa propriedade para simplificar o desenvolvimento de bots. Seu código pode verificar uma única propriedade de nível superior para expedir a lógica do bot. |
 
-A flexibilidade de `messageBack` significa que seu código não pode deixar uma mensagem de usuário visível no histórico simplesmente não usando `displayText`.
+A flexibilidade de `messageBack` significa que seu código não pode deixar uma mensagem de usuário visível no histórico simplesmente por não usar `displayText`.
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -433,7 +433,7 @@ Você também pode modificar a carga do Cartão Adaptável `Action.Submit` para 
 > [!NOTE]
 >* Adicionar `msteams` a dados com uma Bot Framework não funciona com um módulo de tarefa de Cartão Adaptável.
 > 
->* Não há suporte para primário ou desativel `ActionStyle` no Microsoft Teams. 
+>* Não há suporte para primário ou desctutivo `ActionStyle` no Microsoft Teams. 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>Cartões Adaptáveis com a ação messageBack
 
@@ -445,7 +445,7 @@ Para incluir uma ação`messageBack` com um Cartão Adaptável, inclua os seguin
 | Propriedade | Descrição |
 | --- | --- |
 | `type` | Definido como `messageBack` |
-| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Esse texto não é enviado para o bot. |
+| `displayText` | Opcional. Usado pelo usuário no fluxo de chat quando a ação é executada. Este texto não é enviado para o bot. |
 | `value` | Enviado ao bot quando a ação é executada. Você pode codificar o contexto para a ação, como identificadores exclusivos ou um objeto JSON. |
 | `text` | Enviado ao bot quando a ação é executada. Use essa propriedade para simplificar o desenvolvimento de bots. Seu código pode verificar uma única propriedade de nível superior para expedir a lógica do bot. |
 
@@ -563,10 +563,10 @@ O código a seguir mostra um exemplo de Cartões Adaptáveis com a ação `invok
 
 ## <a name="code-samples"></a>Exemplos de código
 
-|S.no|Cartão| description|.NET|Javascript|Python|Java|
+|S.no|Cartão| description|.NET|JavaScript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
-|1|Usando cartões|Apresenta todos os tipos de cartão, incluindo miniatura, áudio, mídia etc. Compila o welcomeing user + multi-prompt bot apresentando um cartão com botões na mensagem de boas-vindas que roteiam para a caixa de diálogo apropriada.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
-|2|Cartões adaptáveis|Demonstra como a caixa de diálogo de vários turnos pode usar um cartão para obter a entrada do usuário para nome e idade.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+|1|Usando cartões|Apresenta todos os tipos de cartão, incluindo miniatura, áudio, mídia etc. Baseia-se em Receber usuário + bot de vários prompts apresentando um cartão com botões na mensagem de boas-vindas que roteiam para a caixa de diálogo apropriada.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Cartões adaptáveis|Demonstra como a caixa de diálogo de várias voltas pode usar um cartão para obter a entrada do usuário para nome e idade.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Exibir](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
 > Não há suporte para elementos de mídia para cartão adaptável no Teams

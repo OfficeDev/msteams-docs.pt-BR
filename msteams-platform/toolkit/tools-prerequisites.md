@@ -1,59 +1,59 @@
 ---
-title: Pré-requisitos para criar seu aplicativo Teams usando o Visual Studio Code
+title: Pré-requisitos para criar seu aplicativo teams usando Visual Studio Code
 author: zyxiaoyuer
-description: Neste módulo, conheça os pré-requisitos necessários para Ferramentas e SDK
+description: Neste módulo, aprenda os pré-requisitos necessários para Ferramentas e SDK
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 412b7bfedb6ba39f1d38f42aac56cc793ea385b1
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 1870f42a4f5d6589603d31dae955aa6d487b0305
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617016"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833181"
 ---
-# <a name="prerequisites-for-creating-your-teams-app"></a>Pré-requisitos para criar seu aplicativo teams
+# <a name="prerequisites-for-creating-your-teams-app"></a>Pré-requisitos para criar seu aplicativo do Teams
 
-Verifique se os seguintes pré-requisitos foram atendidos antes de começar a criar seu aplicativo teams:
+Verifique se os seguintes pré-requisitos são atendidos antes de começar a criar seu aplicativo do Teams:
 
 * [Requisitos básicos para criar seu aplicativo teams](#basic-requirements-to-build-your-teams-app)
-* [Preparar contas para criar seu aplicativo do Teams](#accounts-to-build-your-teams-app)
+* [Preparar contas para criar seu aplicativo teams](#accounts-to-build-your-teams-app)
 * [Permissão de sideload](#sideloading-permission)
 
 ## <a name="basic-requirements-to-build-your-teams-app"></a>Requisitos básicos para criar seu aplicativo teams
 
-Verifique se os seguintes requisitos foram atendidos antes de começar a criar seu aplicativo do Teams:
+Verifique se os seguintes requisitos são atendidos antes de começar a compilar seu aplicativo do Teams:
 
-| &nbsp; | Requisitos básicos | Para usar| Para o tipo de ambiente|
+| &nbsp; | Requisitos básicos | Para usar| Para tipo de ambiente|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
-   | &nbsp; | Kit de ferramentas do Teams| Uma extensão Visual Studio Code Microsoft que cria um scaffolding de projeto para seu aplicativo. Use a versão mais recente. | JavaScript e SPFx|
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Colabore com todas as pessoas com quem você trabalha por meio de aplicativos para chat, reuniões, chamadas – tudo em um só lugar.| JavaScript e SPFx|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do v16 LTS.| JavaScript e SPFx|
-   | &nbsp; |[NPM (Gerenciador de Pacotes de Nó)](https://www.npmjs.com/package/@microsoft/teamsfx) | Instale e gerencie pacotes para uso em Node.js e ASP.NET Core aplicativos.| JavaScript e SPFx|
+   | &nbsp; | Kit de ferramentas do Teams| Uma extensão do Microsoft Visual Studio Code que cria um scaffolding de projeto para seu aplicativo. Use a versão mais recente. | JavaScript e SPFx|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Colabore com todos com quem você trabalha por meio de aplicativos para chat, reuniões, chamadas - tudo em um só lugar.| JavaScript e SPFx|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Ambiente de runtime do JavaScript de back-end. Use a versão mais recente do V16 LTS.| JavaScript e SPFx|
+   | &nbsp; |[NPM (Gerenciador de Pacotes de Nós)](https://www.npmjs.com/package/@microsoft/teamsfx) | Instale e gerencie pacotes para uso em aplicativos Node.js e ASP.NET Core.| JavaScript e SPFx|
    | &nbsp; | [Microsoft&nbsp; Edge](https://www.microsoft.com/edge) (recomendado) ou [Google Chrome](https://www.google.com/chrome/) | Um navegador com ferramentas de desenvolvedor. | JavaScript e SPFx|
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Ambientes de compilação JavaScript, TypeScript ou Estrutura do SharePoint (SPFx). Use a versão 1.55 ou posterior. | JavaScript e SPFx|
    | **Opcional** | &nbsp; | &nbsp; | &nbsp; |
-   | &nbsp; | [Ferramentas do Azure para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) [CLI do Azure](/cli/azure/install-azure-cli) | Acesse dados armazenados ou implante um back-end baseado em nuvem para seu aplicativo Teams no Azure. | JavaScript|
-   | &nbsp; | [React Developer Tools para Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OU [React Developer Tools para Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Uma extensão de DevTools do navegador para a biblioteca javaScript React software livre. | JavaScript|
-   | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Uma ferramenta baseada em navegador que permite executar uma consulta de dados do Microsoft Graph. | JavaScript e SPFx|
+   | &nbsp; | [Ferramentas do Azure para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) e [CLI do Azure](/cli/azure/install-azure-cli) | Acesse dados armazenados ou implante um back-end baseado em nuvem para seu aplicativo teams no Azure. | JavaScript|
+   | &nbsp; | [React Ferramentas de Desenvolvedor para Ferramentas de Desenvolvedor do Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React para Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Uma extensão DevTools do navegador para a biblioteca JavaScript React de código aberto. | JavaScript|
+   | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Uma ferramenta baseada no navegador que permite executar uma consulta de dados do Microsoft Graph. | JavaScript e SPFx|
    | &nbsp; | [Portal do Desenvolvedor do Teams](https://dev.teams.microsoft.com/) | Portal baseado na Web para configurar, gerenciar e distribuir seu aplicativo do Teams, inclusive para sua organização ou para a loja do Teams.| JavaScript e SPFx|
 
    > [!NOTE]
    >
-   > * O documento é testado com o Kit de Ferramentas do Teams versão 4.0.0 e o Nodejs versão 16.
-   > * Marcar o Explorador do Microsoft Graph para saber mais sobre os serviços do Microsoft Graph. Essa ferramenta baseada em navegador permite que você consulte e acesse o Microsoft Graph fora de um aplicativo.
+   > * O documento é testado com o Teams Toolkit versão 4.0.0 e Nodejs versão 16.
+   > * Marque o Microsoft Graph Explorer para saber mais sobre os serviços do Microsoft Graph. Essa ferramenta baseada no navegador permite consultar e acessar o Microsoft Graph fora de um aplicativo.
 
-## <a name="accounts-to-build-your-teams-app"></a>Contas para criar seu aplicativo teams
+## <a name="accounts-to-build-your-teams-app"></a>Contas para criar seu aplicativo do Teams
 
-Verifique se você tem as seguintes contas antes de começar a criar seu aplicativo teams:
+Verifique se você tem as seguintes contas antes de começar a criar seu aplicativo do Teams:
 
-| Contas | Para usar| Para o tipo de ambiente|
+| Contas | Para usar| Para tipo de ambiente|
 | --- | --- |
-|[Conta do Microsoft 365 com uma assinatura válida](#microsoft-365-developer-program)|Conta de desenvolvedor do Teams ao desenvolver um aplicativo.| JavaScript e SPFx|
-|[Conta do Azure](accounts.md#azure-account-to-host-backend-resources)|Recursos de back-end no Azure.| JavaScript e SPFx|
-|[Conta de administrador do site do conjunto do SharePoint](#sharepoint-collection-site-administrator-account) |Implantação para hospedagem.| SPFx|
+|[Conta do Microsoft 365 com uma assinatura válida](#microsoft-365-developer-program)|Conta de desenvolvedor do Teams durante o desenvolvimento de um aplicativo.| JavaScript e SPFx|
+|[Conta do Azure](#azure-account)|Recursos de back-end no Azure.| JavaScript e SPFx|
+|[Conta de administrador do site de coleção do SharePoint](#sharepoint-collection-site-administrator-account) |Implantação para hospedagem.| SPFx|
 
 ### <a name="microsoft-365-developer-program"></a>Programa para desenvolvedores do Microsoft 365
 
@@ -86,13 +86,13 @@ Você pode se inscrever no programa para desenvolvedores usando um dos seguintes
 
     :::column span="3":::
 
-       A conta fornece acesso a todos os serviços de nuvem da Microsoft de pequeno, médio e médio porte. Os serviços incluem o Azure, Microsoft Intune ou Microsoft 365. 
+       A conta fornece acesso a todos os serviços de nuvem da Microsoft de pequeno, médio e nível empresarial. Os serviços incluem O Azure, Microsoft Intune ou Microsoft 365. 
 
        Quando você se inscreve em um desses serviços como uma organização, um diretório baseado em nuvem é provisionado automaticamente no Microsoft Azure AD para representar sua organização.
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="conta corporativa.":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="conta de trabalho.":::
     :::column-end:::
 
   :::row-end:::
@@ -107,21 +107,21 @@ Para criar uma conta de desenvolvedor gratuita do Microsoft 365, ingresse no pro
 
    Você pode ver a seguinte imagem após a conclusão da assinatura:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account.png" alt-text="Conta do M365":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account.png" alt-text="Conta M365":::
 
 ### <a name="azure-account"></a>Conta do Azure
 
-Você precisa de uma conta do Azure para hospedar um aplicativo do Teams ou os recursos de back-end para seu aplicativo teams usando o Kit de Ferramentas do Teams Visual Studio Code. Você deve precisar da assinatura do Azure nos seguintes cenários:
+Você precisa de uma conta do Azure para hospedar um aplicativo do Teams ou os recursos de back-end para seu aplicativo teams usando o Teams Toolkit no Visual Studio Code. Você deve precisar da assinatura do Azure nos seguintes cenários:
 
-* Se você já tiver um aplicativo existente em um provedor de nuvem diferente do Azure e quiser integrar o aplicativo na plataforma Teams, deverá ter uma assinatura do Azure.
-* Você pode selecionar uma assinatura do Azure para hospedar seus recursos de back-end usando outro provedor de nuvem ou em seus próprios servidores, se eles estiverem disponíveis no domínio público.
+* Se você já tiver um aplicativo existente em um provedor de nuvem diferente do Azure e quiser integrar o aplicativo na plataforma do Teams, deverá ter uma assinatura do Azure.
+* Você pode selecionar uma assinatura do Azure para hospedar seus recursos de back-end usando outro provedor de nuvem ou em seus próprios servidores se eles estiverem disponíveis no domínio público.
 
 > [!NOTE]
-> Você precisa criar [uma conta gratuita antes](https://azure.microsoft.com/free/) de começar.
+> Você precisa [criar uma conta gratuita](https://azure.microsoft.com/free/) antes de começar.
 
-### <a name="sharepoint-collection-site-administrator-account"></a>Conta de administrador do site do conjunto do SharePoint
+### <a name="sharepoint-collection-site-administrator-account"></a>Conta de administrador do site de coleção do SharePoint
 
-Ao criar o aplicativo Teams usando o ambiente SPFx, você precisará da conta de administrador do site do conjunto do SharePoint na implantação para hospedagem. Se você estiver usando um locatário do programa de desenvolvedor do Microsoft 365, poderá usar a conta de administrador criada no momento.
+Ao criar o aplicativo Teams usando o ambiente SPFx, você precisará da conta de administrador do site de coleta do SharePoint na implantação para hospedagem. Se você estiver usando um locatário do programa de desenvolvedor do Microsoft 365, poderá usar a conta de administrador que você criou no momento.
 
 ## <a name="sideloading-permission"></a>Permissão de sideload
 
@@ -134,11 +134,11 @@ Você pode verificar se a permissão de sideload está habilitada usando o Visua
 <summary><b>Verificar a permissão de sideload usando o Visual Studio Code</b></summary>
 
 1. Abra o **Visual Studio Code**.
-1. Selecione o ícone do Kit de Ferramentas do :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: Teams na barra de ferramentas do Kit de Ferramentas do Teams.
+1. Selecione o ícone kit de ferramentas :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: do Teams na barra de ferramentas do Teams Toolkit.
 
    > [!NOTE]
-   > Se você não conseguir ver a opção, consulte Instalar o [Kit](install-Teams-Toolkit.md) de Ferramentas do Teams para instalar a extensão kit de ferramentas do Teams Visual Studio Code.
-1. Selecione **Entrar no M365 em** **CONTAS** e entre em sua conta do Microsoft 365.
+   > Se você não conseguir ver a opção, consulte [Instalar o Kit de Ferramentas do Teams](install-Teams-Toolkit.md) para instalar a extensão do Teams Toolkit no Visual Studio Code.
+1. Selecione **Entrar no M365** em **CONTAS** e entrar em sua conta do Microsoft 365.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/accounts.png" alt-text="detalhes das contas":::
 
@@ -165,7 +165,7 @@ Você pode verificar se a permissão de sideload está habilitada usando o Visua
 
 ### <a name="enable-sideloading-using-admin-center"></a>Habilitar o sideload usando o centro de administração
 
-Se você não conseguir exibir a opção Carregar um aplicativo personalizado, isso indicará que você não tem **a** permissão necessária para sideload.
+Se você não conseguir exibir a opção **Carregar um aplicativo personalizado,** ele indica que você não tem a permissão necessária para sideload.
 
 * Quanto a um administrador de locatários, habilite a configuração do sideload do seu locatário ou organização no Centro de administração do Teams.
 * Se você não for um administrador de locatários, precisará entrar em contato com o administrador do locatário para habilitar o sideload.
@@ -174,21 +174,21 @@ Se você tiver direitos de administrador, execute as seguintes etapas para carre
 
   1. Entre no [Centro de administração do Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) com suas credenciais de administrador.
 
-  1. Selecione o ícone :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: > **Teams**.
+  1. Selecione o :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: ícone > **Teams**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Administração Microsoft 365 central":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="centro de Administração Microsoft 365":::
 
      > [!Note]
      > Pode levar **até 24 horas** para a opção **Teams** ser exibida. Você pode [carregar seu aplicativo personalizado em um ambiente do Teams](/microsoftteams/upload-custom-apps) para teste e validação.
 
-  1. Entre no Centro de administração do Microsoft Teams com suas credenciais de administrador.
-  1. Selecione o ícone > :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: **configuração de aplicativos** > **do** Teams.
+  1. Entre no centro de administração do Microsoft Teams com suas credenciais de administrador.
+  1. Selecione o :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: ícone >**políticas de instalação** **de aplicativos** >  do Teams.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Administração Microsoft 365 center1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Administração Microsoft 365 central1":::
 
-  1. Selecionar **Global (padrão em toda a organização)**
+  1. Selecione **Global (padrão em toda a organização)**
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies.png" alt-text="Selecionar Gerenciar Políticas":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies.png" alt-text="Selecione Gerenciar Políticas":::
 
   1. Configurar alternar **Carregar aplicativos personalizados** para a posição **Ativado**.
 
@@ -199,7 +199,7 @@ Se você tiver direitos de administrador, execute as seguintes etapas para carre
      > [!Note]
      > Pode levar até 24 horas para que os dados sejam preenchidos. Enquanto isso, você pode usar **carregamento do seu locatário** para testar seu aplicativo. Para carregar o arquivo do pacote .zip do aplicativo, consulte [Carregar aplicativos personalizados](/microsoftteams/teams-app-setup-policies).
 
-     Verifique se, agora você tem a permissão de sideload usando as etapas mencionadas na verificação da permissão de [sideload usando o Visual Studio Code ou o cliente do Teams.](#sideloading-permission)
+     Verifique se agora você tem a permissão de sideload usando as etapas mencionadas na [verificação da permissão de sideload usando Visual Studio Code ou cliente do Teams.](#sideloading-permission)
 
 </details>
 
@@ -208,5 +208,5 @@ Se você tiver direitos de administrador, execute as seguintes etapas para carre
 * [Gerenciar políticas de aplicativo personalizado e as configurações no Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Gerenciar políticas de configuração de aplicativo no Teams](/microsoftteams/teams-app-setup-policies)
 * [Carregar aplicativos personalizados](/microsoftteams/teams-app-setup-policies)
-* [Provisionar recursos de nuvem usando o Kit de Ferramentas do Teams](provision.md)
+* [Provisionar recursos de nuvem usando o Teams Toolkit](provision.md)
 * [Implantar o aplicativo Teams na nuvem](deploy.md)
