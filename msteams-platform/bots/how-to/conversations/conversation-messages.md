@@ -4,12 +4,12 @@ description: Saiba como enviar uma mensagem, ações sugeridas, notificação, a
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99594722225350e102b47d7a77314212192f7820
-ms.sourcegitcommit: 75ce5a6f7540775b768f69a9cf18dac17e5055d4
+ms.openlocfilehash: 16849a9e8ed97854e91934aef9de463eb355fec5
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2022
-ms.locfileid: "68657622"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833202"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensagens em conversas de bot
 
@@ -18,7 +18,7 @@ Cada mensagem em uma conversa é um `Activity` objeto do tipo `messageType: mess
 As conversas básicas são tratadas por meio do conector do Bot Framework, uma única API REST. Essa API permite que seu bot se comunique com o Teams e outros canais. O SDK do Construtor de Bots fornece os seguintes recursos:
 
 * Acesso fácil ao conector do Bot Framework.
-* Funcionalidade adicional para gerenciar o fluxo e o estado da conversa.
+* Funcionalidade para gerenciar o fluxo e o estado da conversa.
 * Maneiras simples de incorporar serviços cognitivos, como o NLP (processamento de linguagem natural).
 
 O bot recebe mensagens do Teams usando a `Text` propriedade e envia respostas de mensagens individuais ou múltiplas para os usuários.
@@ -460,8 +460,9 @@ Certifique-se de lidar com esses erros adequadamente em seu aplicativo do Teams.
 | 400 | **Código**: `Bad Argument` <br/> **Mensagem**: *cenário específico | Carga de solicitação inválida fornecida pelo bot. Consulte mensagem de erro para obter detalhes específicos. | Não | Reavaliar o conteúdo da solicitação para erros. Verifique a mensagem de erro retornada para obter detalhes. |
 | 401 | **Código**: `BotNotRegistered` <br/> **Mensagem**: nenhum registro encontrado para este bot. | O registro desse bot não foi encontrado. | Não | Verifique a ID do bot e a senha. Verifique se a ID do bot (ID do AAD) está registrada no Portal do Desenvolvedor do Teams ou por meio do registro de canal de bot do Azure no Azure com o canal 'Teams' habilitado.|
 | 403 | **Código**: `BotDisabledByAdmin` <br/> **Mensagem**: o administrador do locatário desabilitou este bot | O administrador do locatário bloqueou as interações entre o usuário e o aplicativo bot. O administrador do locatário precisa permitir o aplicativo para o usuário dentro das políticas de aplicativo. Para obter mais informações, consulte [políticas de aplicativo](/microsoftteams/app-policies). | Não | Pare de postar na conversa até que a interação com o bot seja iniciada explicitamente por um usuário na conversa indicando que o bot não está mais bloqueado. |
-| 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensagem**: o bot não faz parte da lista de conversas. | O bot não faz parte da conversa. O aplicativo precisa ser reinstalado na conversa. | Não | Antes de tentar enviar solicitações de conversa adicionais, aguarde por um [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) evento, o que indica que o bot foi adicionado novamente.|
+| 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensagem**: o bot não faz parte da lista de conversas. | O bot não faz parte da conversa. O aplicativo precisa ser reinstalado na conversa. | Não | Antes de tentar enviar outra solicitação de conversa, aguarde um [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) evento, o que indica que o bot foi adicionado novamente.|
 | 403 | **Código**: `ConversationBlockedByUser` <br/> **Mensagem**: o usuário bloqueou a conversa com o bot. | O usuário bloqueou o bot no chat pessoal ou em um canal por meio de configurações de moderação. | Não | Exclua a conversa do cache. Pare de tentar postar em conversas até que a interação com o bot seja iniciada explicitamente por um usuário na conversa, indicando que o bot não está mais bloqueado. |
+| 403 |**Código**: `InvalidBotApiHost` <br/> **Mensagem**: host de api de bot inválido. Para locatários do GCC, chame `https://smba.infra.gcc.teams.microsoft.com`.|O bot chamou o ponto de extremidade da API pública para uma conversa que pertence a um locatário do GCC.| Não | Atualize a URL de serviço para `https://smba.infra.gcc.teams.microsoft.com` a conversa e tente novamente a solicitação.|
 | 403 | **Código**: `NotEnoughPermissions` <br/> **Mensagem**: *cenário específico | O bot não tem permissões necessárias para executar a ação solicitada. | Não | Determine a ação necessária da mensagem de erro. |
 | 404 | **Código**: `ActivityNotFoundInConversation` <br/> **Mensagem**: conversa não encontrada. | A ID da mensagem fornecida não pôde ser encontrada na conversa. A mensagem não existe ou foi excluída. | Não | Verifique se a ID da mensagem enviada é um valor esperado. Remova a ID se ela estiver armazenada em cache. |
 | 404 | **Código**: `ConversationNotFound` <br/> **Mensagem**: conversa não encontrada. | A conversa não foi encontrada, pois ela não existe ou foi excluída. | Não | Verifique se a ID da conversa enviada é um valor esperado. Remova a ID se ela estiver armazenada em cache. |
@@ -479,6 +480,7 @@ As diretrizes gerais de repetição para cada código de status estão listadas 
 
 |Código de status | Estratégia de repetição |
 |----------------|-----------------|
+| 403 | Tente novamente chamando a API `https://smba.infra.gcc.teams.microsoft.com` do GCC para `InvalidBotApiHost`.|
 | 412 | Tente novamente usando backoff exponencial. |
 | 429 | Tente novamente usar `Retry-After` o cabeçalho para determinar o tempo de espera em segundos e entre as solicitações, se estiver disponível. Caso contrário, tente novamente usar o backoff exponencial com a ID do thread, se possível. |
 | 502 | Tente novamente usando backoff exponencial. |
@@ -489,8 +491,8 @@ As diretrizes gerais de repetição para cada código de status estão listadas 
 
 | Nome do exemplo | Descrição | Node.js | .NETCore | Python | .NET |
 |----------------|-----------------|--------------|----------------|-----------|-----|
-| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
-| Localização do aplicativo Teams | Localização do aplicativo teams usando bot e guia. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Bot de conversas do Teams | Sistema de mensagens e manipulação de eventos de conversa. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [Exibir](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
+| Localização do aplicativo Teams | Localização do aplicativo teams usando bot e guia. | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [Exibir](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>Próxima etapa
 
