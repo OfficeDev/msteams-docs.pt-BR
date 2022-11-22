@@ -502,14 +502,13 @@
   items:
     - name: Visão Geral
       href: concepts/authentication/authentication.md
-      displayName: Authentication method
-    - name: Guias
+    - name: Habilitar o SSO para seu aplicativo teams
       items:
-        - name: Habilitar o logon único para o aplicativo de guia
+        - name: Habilitar o SSO para seu aplicativo de guia
           items:
-            - name: Visão Geral
+            - name: Visão geral do SSO da guia
               href: tabs/how-to/authentication/tab-sso-overview.md
-            - name: Registrar o aplicativo de guia no Azure AD
+            - name: Configurar seu aplicativo de guia no Azure AD
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: Adicionar código para habilitar o logon único
               href: tabs/how-to/authentication/tab-sso-code.md
@@ -517,33 +516,32 @@
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: Conceder permissões e escopos ao Microsoft Graph
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-              displayName: Configure authentication for different platforms
-            - name: Solucionar problemas de autenticação de SSO
-              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-        - name: Usar autenticação OAuth IdP de terceiros
+        - name: Habilitar o SSO para seu aplicativo de extensão de bot e mensagem
           items:
-            - name: Visão Geral
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: Configurar autenticação OAuth IdP de terceiros
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: Usar provedores OAuth externos
-              href: tabs/how-to/authentication/auth-oauth-provider.md
-    - name: Bots
+            - name: Visão geral
+              href: bots/how-to/authentication/bot-sso-overview.md
+            - name: Configurar seu aplicativo no Azure AD
+              href: bots/how-to/authentication/bot-sso-register-aad.md
+            - name: Adicionar código para habilitar o logon único
+              href: bots/how-to/authentication/bot-sso-code.md
+            - name: Atualizar manifesto para SSO e aplicativo de visualização
+              href: bots/how-to/authentication/bot-sso-manifest.md
+            - name: Conceder permissões e escopos ao Microsoft Graph
+              href: bots/how-to/authentication/bot-sso-graph-api.md
+        - name: Solucionar problemas de autenticação de SSO
+          href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    - name: Usar autenticação IdP de terceiros
       items:
-        - name: Fluxo de autenticação em bots
-          href: bots/how-to/authentication/auth-flow-bot.md
-        - name: Adicionar autenticação ao seu bot
+        - name: Visão geral
+          href: tabs/how-to/authentication/auth-flow-tab.md
+        - name: Adicionar autenticação IdP de terceiros ao aplicativo tab
+          href: tabs/how-to/authentication/auth-tab-aad.md
+        - name: Adicionar autenticação IdP de terceiros ao aplicativo bot
           href: bots/how-to/authentication/add-authentication.md
-          displayName: 'Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams'
-        - name: Usar autenticação SSO
-          href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: Extensões de mensagens
-      items:
-        - name: Adicionar autenticação à sua extensão de mensagens
+        - name: Adicionar autenticação IdP de terceiros ao aplicativo de extensão de mensagens
           href: messaging-extensions/how-to/add-authentication.md
-          displayName: Configuration
-        - name: Habilitar Logon único para extensões de mensagens
-          href: messaging-extensions/how-to/enable-SSO-auth-me.md
+    - name: Usar provedores OAuth externos
+      href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrar as funcionalidades do dispositivo
   items:
     - name: Visão Geral
